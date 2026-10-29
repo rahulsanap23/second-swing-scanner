@@ -1,12 +1,26 @@
 # Swing shortlist: data as of 2026-10-28
 
-Data status: fresh. Run at 2026-10-29T13:39+05:30.
+Data status: fresh. Run at 2026-10-29T13:52+05:30.
 
 **Regime: RED** (Nifty 500 above 200-day SMA: False; 10 EMA above 20 EMA: False)
 Nifty 50 22698.85 (50-day 23303.8, 200-day 24066.22); Nifty 500 21727.45 (200-day 22797.06)
 Breadth: 15.3% above 50-day, 31.4% above 200-day, net new highs -64
 Top sectors (50-day RS vs Nifty): Media +10.5, Telecommunications +8.8, IT +8.0
 Funnel: {'equities_with_1y_history': 1993, 'tradable': 1088, 'trend_template': 121, 'rs_70_plus': 121, 'actionable_setups': 18}
+
+## Best 5
+
+**Market is RED: the research rule is no new buys. These are the best 5 if you buy anyway.**
+
+| # | Symbol | Setup | RS | Close | Buy above | Stop | Qty | Amount | Target 1 | Trail | Profit YoY | Next results |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | SONACOMS | BREAKOUT | 95 | 879.45 | 885.72 | 854.59 | 80 | 70,857 | 963.54 | 20 EMA | +19% (Sep 2026) | not announced |
+| 2 | TVSMOTOR | BREAKOUT | 81 | 4239.90 | 4266.52 | 4135.28 | 19 | 81,064 | 4594.61 | 20 EMA | +52% (Sep 2026) | not announced |
+| 3 | SHREEJISPG | PULLBACK | 99 | 840.30 | 846.54 | 787.28 | 42 | 35,555 | 909.13 | 20 EMA | +22% (Jun 2026) | not announced |
+| 4 | EBGNG | PULLBACK | 98 | 723.25 | 734.02 | 682.63 | 48 | 35,233 | 833.80 | 10 EMA | +60% (Jun 2026) | not announced |
+| 5 | LAURUSLABS | PULLBACK | 97 | 2181.90 | 2203.20 | 2048.97 | 16 | 35,251 | 2365.22 | 20 EMA | +84% (Jun 2026) | not announced |
+
+Skipped: SAREGAMA (results on 2026-11-04), TFCILTD (results on 2026-11-03), WSTCSTPAPR (results on 2026-11-06), DIVISLAB (results on 2026-11-07), STOVEKRAFT (results on 2026-11-04)
 
 ## Setups
 
