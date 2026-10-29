@@ -1,12 +1,12 @@
-# Swing shortlist: data as of 2026-10-28
+# Swing shortlist: data as of 2026-10-29
 
-Data status: fresh. Run at 2026-10-29T14:30+05:30.
+Data status: fresh. Run at 2026-10-29T19:41+05:30.
 
 **Regime: RED** (Nifty 500 above 200-day SMA: False; 10 EMA above 20 EMA: False)
-Nifty 50 22698.85 (50-day 23303.8, 200-day 24066.22); Nifty 500 21727.45 (200-day 22797.06)
-Breadth: 15.3% above 50-day, 31.4% above 200-day, net new highs -64
-Top sectors (50-day RS vs Nifty): Media +10.5, Telecommunications +8.8, IT +8.0
-Funnel: {'equities_with_1y_history': 1993, 'tradable': 1088, 'trend_template': 121, 'rs_70_plus': 121, 'actionable_setups': 18}
+Nifty 50 22936.75 (50-day 23276.78, 200-day 24050.01); Nifty 500 21941.5 (200-day 22786.71)
+Breadth: 17.3% above 50-day, 32.1% above 200-day, net new highs -31
+Top sectors (50-day RS vs Nifty): Media +9.8, IT +9.5, Telecommunications +8.0
+Funnel: {'equities_with_1y_history': 1993, 'tradable': 1084, 'trend_template': 129, 'rs_70_plus': 129, 'actionable_setups': 31}
 
 ## Best 5
 
@@ -14,56 +14,66 @@ Funnel: {'equities_with_1y_history': 1993, 'tradable': 1088, 'trend_template': 1
 
 | # | Symbol | Setup | RS | Close | Buy above | Stop | Qty | Amount | Target 1 | Trail | Profit YoY | Next results |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | SONACOMS (Sona BLW Precision Forgings Limited) | BREAKOUT | 95 | 879.45 | 885.72 | 854.59 | 80 | 70,857 | 963.54 | 20 EMA | +19% (Sep 2026) | not announced |
-| 2 | TVSMOTOR (TVS Motor Company Limited) | BREAKOUT | 81 | 4239.90 | 4266.52 | 4135.28 | 19 | 81,064 | 4594.61 | 20 EMA | +52% (Sep 2026) | not announced |
-| 3 | SHREEJISPG (Shreeji Shipping Global Limited) | PULLBACK | 99 | 840.30 | 846.54 | 787.28 | 42 | 35,555 | 909.13 | 20 EMA | +22% (Jun 2026) | not announced |
-| 4 | EBGNG (GNG Electronics Limited) | PULLBACK | 98 | 723.25 | 734.02 | 682.63 | 48 | 35,233 | 833.80 | 10 EMA | +60% (Jun 2026) | not announced |
-| 5 | LAURUSLABS (Laurus Labs Limited) | PULLBACK | 97 | 2181.90 | 2203.20 | 2048.97 | 16 | 35,251 | 2365.22 | 20 EMA | +84% (Jun 2026) | not announced |
+| 1 | KRISHANA (Krishana Phoschem Limited) | BREAKOUT | 97 | 222.63 | 227.45 | 217.00 | 239 | 54,362 | 253.60 | 20 EMA | +52% (Jun 2026) | not announced |
+| 2 | SOUTHBANK (The South Indian Bank Limited) | BREAKOUT | 90 | 56.57 | 57.39 | 55.06 | 1070 | 61,412 | 63.23 | 20 EMA | +21% (Sep 2026) | not announced |
+| 3 | TVSMOTOR (TVS Motor Company Limited) | BREAKOUT | 81 | 4280.00 | 4316.72 | 4180.39 | 18 | 77,701 | 4657.52 | 20 EMA | +52% (Sep 2026) | not announced |
+| 4 | MBAPL (Madhya Bharat Agro Products Limited) | PULLBACK | 95 | 174.00 | 175.34 | 163.07 | 203 | 35,594 | 192.48 | 20 EMA | +18% (Jun 2026) | not announced |
+| 5 | DPABHUSHAN (D. P. Abhushan Limited) | PULLBACK | 95 | 2105.00 | 2128.15 | 1991.43 | 18 | 38,307 | 2540.11 | 10 EMA | +78% (Jun 2026) | not announced |
 
-Skipped: SAREGAMA (results on 2026-11-04), TFCILTD (results on 2026-11-03), WSTCSTPAPR (results on 2026-11-06), DIVISLAB (results on 2026-11-07), STOVEKRAFT (results on 2026-11-04)
+Skipped: CEMPRO (results on 2026-11-05), NYKAA (results on 2026-11-04), SAREGAMA (results on 2026-11-04), RATNAVEER (results on 2026-10-30), BLUSPRING (results on 2026-11-06), WSTCSTPAPR (results on 2026-11-06), NITINSPIN (results on 2026-10-31), UTTAMSUGAR (results on 2026-10-31)
 
 ## Setups
 
 | Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |
 |---|---|---|---|---|---|---|---|---|---|---|
-| SONACOMS | BREAKOUT | 95 | 879.45 | 885.72 | 854.59 | 3.5 | 80 | 70,857 | 963.54 | 20 EMA |
-| SAREGAMA | BREAKOUT | 87 | 523.95 | 529.06 | 507.71 | 4.0 | 117 | 61,900 | 582.41 | 20 EMA |
-| TVSMOTOR | BREAKOUT | 81 | 4239.90 | 4266.52 | 4135.28 | 3.1 | 19 | 81,064 | 4594.61 | 20 EMA |
-| SHREEJISPG | PULLBACK | 99 | 840.30 | 846.54 | 787.28 | 7.0 | 42 | 35,555 | 909.13 | 20 EMA |
-| TFCILTD | PULLBACK | 98 | 156.94 | 157.83 | 146.78 | 7.0 | 226 | 35,668 | 176.07 | 20 EMA |
-| EBGNG | PULLBACK | 98 | 723.25 | 734.02 | 682.63 | 7.0 | 48 | 35,233 | 833.80 | 10 EMA |
-| LAURUSLABS | PULLBACK | 97 | 2181.90 | 2203.20 | 2048.97 | 7.0 | 16 | 35,251 | 2365.22 | 20 EMA |
-| SGMART | PULLBACK | 96 | 802.95 | 829.66 | 774.75 | 6.6 | 45 | 37,335 | 937.67 | 10 EMA |
-| KRISHANA | PULLBACK | 96 | 217.47 | 218.43 | 203.14 | 7.0 | 163 | 35,603 | 242.76 | 20 EMA |
-| WSTCSTPAPR | PULLBACK | 96 | 816.05 | 826.35 | 768.50 | 7.0 | 43 | 35,533 | 986.54 | 10 EMA |
-| KINGFA | PULLBACK | 94 | 6852.00 | 6891.76 | 6409.33 | 7.0 | 5 | 34,459 | 7538.57 | 20 EMA |
-| DIVISLAB | PULLBACK | 93 | 9558.50 | 9718.90 | 9038.58 | 7.0 | 3 | 29,157 | 10399.99 | 20 EMA |
-| CRAFTSMAN | PULLBACK | 92 | 11014.00 | 11311.58 | 10519.77 | 7.0 | 3 | 33,935 | 12376.67 | 20 EMA |
-| THELEELA | PULLBACK | 91 | 605.20 | 612.17 | 569.32 | 7.0 | 58 | 35,506 | 699.13 | 10 EMA |
-| STOVEKRAFT | PULLBACK | 90 | 856.30 | 861.52 | 801.21 | 7.0 | 41 | 35,322 | 949.51 | 20 EMA |
-| 63MOONS | PULLBACK | 89 | 932.50 | 949.19 | 882.75 | 7.0 | 37 | 35,120 | 1075.65 | 10 EMA |
-| FEDERALBNK | PULLBACK | 84 | 346.00 | 348.65 | 337.20 | 3.3 | 218 | 76,005 | 374.34 | 20 EMA |
-| ZYDUSLIFE | PULLBACK | 84 | 1175.50 | 1186.67 | 1103.60 | 7.0 | 30 | 35,600 | 1274.03 | 20 EMA |
+| KRISHANA | BREAKOUT | 97 | 222.63 | 227.45 | 217.00 | 4.6 | 239 | 54,362 | 253.60 | 20 EMA |
+| CEMPRO | BREAKOUT | 94 | 1287.40 | 1301.50 | 1232.58 | 5.3 | 36 | 46,854 | 1473.80 | 10 EMA |
+| SOUTHBANK | BREAKOUT | 90 | 56.57 | 57.39 | 55.06 | 4.1 | 1070 | 61,412 | 63.23 | 20 EMA |
+| NYKAA | BREAKOUT | 88 | 352.90 | 353.61 | 342.46 | 3.1 | 224 | 79,208 | 381.47 | 20 EMA |
+| SAREGAMA | BREAKOUT | 88 | 536.00 | 540.38 | 519.39 | 3.9 | 119 | 64,305 | 592.85 | 20 EMA |
+| TVSMOTOR | BREAKOUT | 81 | 4280.00 | 4316.72 | 4180.39 | 3.2 | 18 | 77,701 | 4657.52 | 20 EMA |
+| RATNAVEER | PULLBACK | 99 | 352.85 | 356.96 | 331.98 | 7.0 | 100 | 35,696 | 404.68 | 10 EMA |
+| BLUSPRING | PULLBACK | 98 | 153.24 | 157.31 | 146.30 | 7.0 | 227 | 35,710 | 188.20 | 10 EMA |
+| WSTCSTPAPR | PULLBACK | 96 | 839.85 | 874.75 | 813.51 | 7.0 | 40 | 34,990 | 1046.80 | 10 EMA |
+| MBAPL | PULLBACK | 95 | 174.00 | 175.34 | 163.07 | 7.0 | 203 | 35,594 | 192.48 | 20 EMA |
+| NITINSPIN | PULLBACK | 95 | 648.05 | 656.31 | 610.37 | 7.0 | 54 | 35,441 | 724.58 | 20 EMA |
+| DPABHUSHAN | PULLBACK | 95 | 2105.00 | 2128.15 | 1991.43 | 6.4 | 18 | 38,307 | 2540.11 | 10 EMA |
+| UTTAMSUGAR | PULLBACK | 95 | 360.70 | 365.98 | 340.36 | 7.0 | 97 | 35,500 | 445.45 | 10 EMA |
+| THELEELA | PULLBACK | 93 | 639.90 | 644.14 | 599.05 | 7.0 | 55 | 35,427 | 732.96 | 10 EMA |
+| NAZARA | PULLBACK | 93 | 405.40 | 410.82 | 386.60 | 5.9 | 103 | 42,314 | 452.60 | 20 EMA |
+| LUMAXTECH | PULLBACK | 93 | 2058.50 | 2128.55 | 1979.55 | 7.0 | 16 | 34,057 | 2408.00 | 10 EMA |
+| DIVISLAB | PULLBACK | 92 | 9664.00 | 9704.87 | 9067.00 | 6.6 | 3 | 29,115 | 10381.16 | 20 EMA |
+| VADILALIND | PULLBACK | 92 | 7580.00 | 7605.18 | 7072.82 | 7.0 | 4 | 30,421 | 8204.55 | 20 EMA |
+| SMSPHARMA | PULLBACK | 92 | 485.80 | 490.98 | 456.61 | 7.0 | 72 | 35,351 | 547.90 | 20 EMA |
+| APOLLO | PULLBACK | 91 | 421.55 | 426.45 | 402.95 | 5.5 | 106 | 45,204 | 479.23 | 20 EMA |
+| GESHIP | PULLBACK | 89 | 1618.80 | 1650.29 | 1534.77 | 7.0 | 21 | 34,656 | 1781.03 | 20 EMA |
+| MANCREDIT | PULLBACK | 87 | 239.94 | 242.78 | 225.79 | 7.0 | 147 | 35,689 | 271.80 | 20 EMA |
+| COFORGE | PULLBACK | 86 | 1962.00 | 1982.46 | 1903.80 | 4.0 | 31 | 61,456 | 2162.80 | 20 EMA |
+| KARURVYSYA | PULLBACK | 85 | 354.50 | 360.77 | 337.25 | 6.5 | 106 | 38,242 | 398.97 | 20 EMA |
+| WESTLIFE | PULLBACK | 85 | 610.35 | 627.25 | 583.34 | 7.0 | 56 | 35,126 | 711.75 | 10 EMA |
+| ZYDUSLIFE | PULLBACK | 84 | 1184.40 | 1190.18 | 1150.60 | 3.3 | 63 | 74,981 | 1276.07 | 20 EMA |
+| ADANIPORTS | PULLBACK | 84 | 1872.00 | 1875.74 | 1744.44 | 7.0 | 19 | 35,639 | 2008.22 | 20 EMA |
+| ETERNAL | PULLBACK | 82 | 337.85 | 340.03 | 323.35 | 4.9 | 149 | 50,664 | 369.49 | 20 EMA |
+| PHOENIXLTD | PULLBACK | 78 | 1969.90 | 1983.86 | 1894.00 | 4.5 | 27 | 53,564 | 2128.34 | 20 EMA |
+| ARIS | PULLBACK | 78 | 143.15 | 144.29 | 135.05 | 6.4 | 270 | 38,958 | 164.60 | 10 EMA |
+| AARTIDRUGS | PULLBACK | 77 | 449.00 | 458.87 | 426.75 | 7.0 | 77 | 35,333 | 505.24 | 20 EMA |
 
 ## Strongest without a setup
 
 | Symbol | RS | Close | % off high | Pivot |
 |---|---|---|---|---|
-| CUPID | 99 | 314.55 | -14.7 | 368.95 |
-| INDSWFTLAB | 99 | 378.95 | -10.8 | 424.75 |
-| GCSL | 99 | 751.35 | -0.7 | 749.5 |
-| WELCORP | 99 | 2564.3 | -11.6 | 2900.0 |
-| SETL | 99 | 386.65 | -17.4 | 437.75 |
+| CUPID | 99 | 320.15 | -13.2 | 368.95 |
+| SHREEJISPG | 99 | 832.6 | -2.0 | 847.4 |
+| GCSL | 99 | 761.75 | -0.2 | 756.8 |
+| SETL | 99 | 405.35 | -13.4 | 437.75 |
+| RAYMOND | 99 | 1101.9 | -17.7 | 1339.0 |
 
-Extended, don't chase: SSWL, CCAVENUE, UNITEDPOLY, ACUTAAS, TIPSMUSIC, PPLPHARMA
+Extended, don't chase: INDSWFTLAB, SSWL, CCAVENUE, SGMART, ACUTAAS, UNITEDPOLY, OPTIEMUS, SGFIN, SATIN, TIPSMUSIC, NILKAMAL, PPLPHARMA
 
-## Previous shortlist (2026-10-23) today
+## Previous shortlist (2026-10-28) today
 
-- GCSL: TRIGGERED
-- RATNAVEER: TRIGGERED
-- KMEW: TRIGGERED
-- SGMART: TRIGGERED
-- DPABHUSHAN: STOP LEVEL BROKEN, setup void
-- KRISHANA: TRIGGERED
-- NAZARA: TRIGGERED
-- ANANDRATHI: TRIGGERED
+- SONACOMS: TRIGGERED
+- TVSMOTOR: TRIGGERED, stop also touched (check order of moves)
+- SHREEJISPG: TRIGGERED
+- EBGNG: not triggered
+- LAURUSLABS: TRIGGERED
