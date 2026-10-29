@@ -256,7 +256,7 @@ def run(data_dir, prev=None):
     # ---------- Yesterday's shortlist: did the buy-stop fill today? did the stop get hit?
     follow = []
     if prev and prev.get("asof") and prev["asof"] < str(asof.date()):
-        for c in prev.get("candidates", []):
+        for c in prev.get("best5") or prev.get("candidates", []):
             if c.get("setup") not in ACTIONABLE or c.get("entry") is None:
                 continue
             b = bars.get(c["symbol"])
@@ -291,6 +291,22 @@ def to_markdown(o, status=None):
           f"200-day, net new highs {o['breadth']['net_new_highs']}",
           "Top sectors (50-day RS vs Nifty): " + ", ".join(f"{s['sector']} {s['rs50_vs_nifty']:+}" for s in o["sectors_top"][:3]),
           f"Funnel: {o['funnel']}", ""]
+    if "best5" in o:
+        L += ["## Best 5", ""]
+        if o["regime"] == "RED":
+            L += ["**Market is RED: the research rule is no new buys. These are the best 5 if you buy anyway.**", ""]
+        L += ["| # | Symbol | Setup | RS | Close | Buy above | Stop | Qty | Amount | Target 1 | Trail | Profit YoY | Next results |",
+              "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+        for i, c in enumerate(o["best5"], 1):
+            yoy = f"{c['profit_yoy_pct']:+.0f}% ({c.get('latest_quarter')})" if c.get("profit_yoy_pct") is not None else "n/a"
+            L.append(f"| {i} | {c['symbol']} | {c['setup']} | {c['rs_rating']} | {c['close']:.2f} | {c['entry']:.2f} | "
+                     f"{c['stop']:.2f} | {c['qty']:.0f} | {c['amount']:,.0f} | {c['t1']:.2f} | {c['trail']} | {yoy} | "
+                     f"{c.get('next_results') or 'not announced'} |")
+        if not o["best5"]:
+            L.append("| - | no stock passed today | | | | | | | | | | | |")
+        if o.get("skipped"):
+            L += ["", "Skipped: " + ", ".join(f"{x['symbol']} ({x['reason']})" for x in o["skipped"])]
+        L.append("")
     setups = [c for c in o["candidates"] if c["setup"] in ACTIONABLE + ("BASING",)]
     L += ["## Setups", "", "| Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |",
           "|---|---|---|---|---|---|---|---|---|---|---|"]
