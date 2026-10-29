@@ -37,18 +37,22 @@ def main():
             return 0
 
     status = fetch_data.update(EOD2)
+    print(json.dumps(status, indent=1), flush=True)
+    json.dump(status, open(status_path, "w"), indent=1)       # saved early so a later crash still leaves it
     prev = json.load(open(latest_path)) if os.path.exists(latest_path) else None
     out = screener.run(EOD2, prev)
     if prev and prev.get("asof") == out["asof"]:          # same-day re-run: keep yesterday's follow-up
         out["yesterday"], out["previous_asof"] = prev.get("yesterday", []), prev.get("previous_asof")
     status["scan_asof"] = out["asof"]
+    if out["asof"] < status["data_date"]:      # indices arrived but stock prices didn't
+        status["fresh"] = False
+        status["errors"].append(f"stock prices only up to {out['asof']}; indices up to {status['data_date']}")
 
     json.dump(out, open(latest_path, "w"), indent=1)
     json.dump(out, open(os.path.join(RES, "history", f"{out['asof']}.json"), "w"), indent=1)
     json.dump(status, open(status_path, "w"), indent=1)
     md = screener.to_markdown(out, status)
     open(os.path.join(RES, "latest.md"), "w").write(md)
-    print(json.dumps(status, indent=1))
     print(md)
 
     if not status["fresh"] and os.environ.get("FINAL_ATTEMPT") == "1":

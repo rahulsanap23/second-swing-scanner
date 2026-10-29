@@ -81,10 +81,22 @@ def run(data_dir, prev=None):
     s2i = json.load(open(os.path.join(data_dir, "isin_symbol_map.json")))["sym2isin"]
     s2i = {k.lower(): v for k, v in s2i.items()}
 
+    # ---------- Scan date = latest date that most stock files have (indices may run a day ahead)
+    from collections import Counter
+    last = Counter()
+    for fn in os.listdir(daily):
+        isin = s2i.get(fn[:-4])
+        if isin and isin.startswith("INE"):
+            with open(os.path.join(daily, fn), "rb") as fh:
+                fh.seek(0, 2)
+                fh.seek(max(0, fh.tell() - 200))
+                last[fh.read().decode(errors="ignore").strip().splitlines()[-1][:10]] += 1
+    top = max(last.values())
+    asof = pd.Timestamp(max(d for d, n in last.items() if n >= 0.5 * top))
+
     # ---------- Market regime (Clenow index > 200 DMA; Qullamaggie 10 > 20 MA; MarketSmith market direction)
-    n500 = load(os.path.join(daily, "nifty 500.csv"))
-    n50 = load(os.path.join(daily, "nifty 50.csv"))
-    asof = n500.index[-1]
+    n500 = load(os.path.join(daily, "nifty 500.csv")).loc[:asof]
+    n50 = load(os.path.join(daily, "nifty 50.csv")).loc[:asof]
     s500, s50 = index_state(n500), index_state(n50)
     s50["date"] = str(n50.index[-1].date())
     conds = [s500["close"] > s500["sma200"], s500["ema10"] > s500["ema20"]]
@@ -96,7 +108,7 @@ def run(data_dir, prev=None):
         f = os.path.join(daily, s + ".csv")
         if not os.path.exists(f):
             continue
-        d = load(f)
+        d = load(f).loc[:asof]
         j = d.Close.align(n50.Close, join="inner")
         rsl = j[0] / j[1]
         rs50 = (rsl.iloc[-1] / rsl.iloc[-51] - 1) * 100
@@ -114,7 +126,9 @@ def run(data_dir, prev=None):
         if not isin or not isin.startswith("INE"):   # equities only (drops ETFs 'INF', SME, indices)
             continue
         d = load(os.path.join(daily, fn))
-        if d is None or d.index[-1] != asof:
+        if d is not None:
+            d = d.loc[:asof]
+        if d is None or d.empty or d.index[-1] != asof:
             continue
         bars[sym.upper()] = dict(high=float(d.High.iloc[-1]), low=float(d.Low.iloc[-1]), close=float(d.Close.iloc[-1]))
         if len(d) < P["min_history"] or str(d["Series"].iloc[-1]) != "EQ":   # BE / trade-to-trade excluded
