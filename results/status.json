@@ -1,6 +1,40 @@
 {
+ "run_at_ist": "2026-10-29T13:36+05:30",
+ "expected_date": "2026-10-28",
+ "eod2_last_update": "2026-10-23",
+ "days_needed": [
+  "2026-10-26",
+  "2026-10-27",
+  "2026-10-28"
+ ],
+ "days": [
+  {
+   "date": "2026-10-26",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 0,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-10-27",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 0,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-10-28",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 0,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  }
+ ],
+ "errors": [
+  "stock prices only up to 2026-10-23; indices up to 2026-10-28"
+ ],
+ "data_date": "2026-10-28",
  "fresh": false,
- "crashed": true,
- "crash": "AttributeError: 'DataFrame' object has no attribute 'rs_raw'",
- "run_at_ist": "2026-10-29T13:34+05:30"
+ "sectors_stale": false,
+ "scan_asof": "2026-10-23"
 }

@@ -1,0 +1,34 @@
+# Swing shortlist: data as of 2026-10-23
+
+Data status: STALE (expected 2026-10-28). Run at 2026-10-29T13:36+05:30.
+
+**Regime: RED** (Nifty 500 above 200-day SMA: False; 10 EMA above 20 EMA: False)
+Nifty 50 22600.0 (50-day 23403.72, 200-day 24118.84); Nifty 500 21427.6 (200-day 22832.04)
+Breadth: 9.5% above 50-day, 27.1% above 200-day, net new highs -408
+Top sectors (50-day RS vs Nifty): Telecommunications +9.8, Media +9.0, IT +8.9
+Funnel: {'equities_with_1y_history': 1988, 'tradable': 1088, 'trend_template': 64, 'rs_70_plus': 64, 'actionable_setups': 8}
+
+## Setups
+
+| Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |
+|---|---|---|---|---|---|---|---|---|---|---|
+| GCSL | PULLBACK | 99 | 726.20 | 732.31 | 691.90 | 5.5 | 61 | 44,671 | 780.78 | 20 EMA |
+| RATNAVEER | PULLBACK | 99 | 330.70 | 334.62 | 311.19 | 7.0 | 106 | 35,470 | 378.32 | 10 EMA |
+| KMEW | PULLBACK | 98 | 3149.70 | 3189.77 | 2967.30 | 7.0 | 11 | 35,087 | 3595.25 | 10 EMA |
+| SGMART | PULLBACK | 97 | 796.80 | 806.36 | 749.91 | 7.0 | 44 | 35,480 | 909.25 | 10 EMA |
+| DPABHUSHAN | PULLBACK | 97 | 2186.00 | 2225.94 | 2070.13 | 7.0 | 16 | 35,615 | 2686.85 | 10 EMA |
+| KRISHANA | PULLBACK | 96 | 199.66 | 201.78 | 191.16 | 5.3 | 235 | 47,419 | 223.30 | 20 EMA |
+| NAZARA | PULLBACK | 94 | 402.15 | 405.21 | 376.84 | 7.0 | 88 | 35,658 | 446.23 | 20 EMA |
+| ANANDRATHI | PULLBACK | 90 | 2235.00 | 2246.48 | 2164.90 | 3.6 | 30 | 67,395 | 2398.94 | 20 EMA |
+
+## Strongest without a setup
+
+| Symbol | RS | Close | % off high | Pivot |
+|---|---|---|---|---|
+| CUPID | 99 | 306.45 | -16.9 | 368.95 |
+| SHREEJISPG | 99 | 776.6 | -8.3 | 847.4 |
+| WHEELS | 99 | 2157.8 | -14.2 | 2515.8 |
+| RAYMOND | 99 | 1063.4 | -20.6 | 1339.0 |
+| SBC | 98 | 61.05 | -8.0 | 66.35 |
+
+Extended, don't chase: SKYGOLD, CCAVENUE, SSWL, KROSS
