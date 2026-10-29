@@ -60,4 +60,16 @@ def main():
 
 
 if __name__ == "__main__":
-    sys.exit(main())
+    try:
+        sys.exit(main())
+    except Exception as e:  # record the crash so the morning report can say what went wrong
+        import datetime as dt
+        import traceback
+        traceback.print_exc()
+        os.makedirs(RES, exist_ok=True)
+        path = os.path.join(RES, "status.json")
+        st = json.load(open(path)) if os.path.exists(path) else {}
+        st.update(fresh=False, crashed=True, crash=f"{type(e).__name__}: {e}"[:500],
+                  run_at_ist=dt.datetime.now(fetch_data.IST).isoformat(timespec="minutes"))
+        json.dump(st, open(path, "w"), indent=1)
+        sys.exit(1)

@@ -75,11 +75,11 @@ class NSE:
         except requests.RequestException:
             pass
 
-    def get(self, url, tries=3):
+    def get(self, url, tries=2):
         last = None
         for i in range(tries):
             try:
-                r = self.s.get(url, timeout=40)
+                r = self.s.get(url, timeout=25)
                 if r.status_code == 200 and len(r.content) > 500:
                     return r.content
                 last = f"HTTP {r.status_code} ({len(r.content)} bytes)"

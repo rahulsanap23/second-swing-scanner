@@ -24,9 +24,9 @@ jobs:
     runs-on: ubuntu-latest
     timeout-minutes: 30
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
 
-      - uses: actions/setup-python@v5
+      - uses: actions/setup-python@v6
         with:
           python-version: "3.12"
           cache: pip
@@ -37,7 +37,10 @@ jobs:
         env:
           FINAL_ATTEMPT: ${{ github.event.schedule == '37 0 * * 2-6' && '1' || '0' }}
           FORCE: ${{ inputs.force && '1' || '0' }}
-        run: python run_daily.py
+        run: |
+          mkdir -p results
+          set -o pipefail
+          python -u run_daily.py 2>&1 | tee results/last_run.log
 
       - name: Commit results
         if: always()
