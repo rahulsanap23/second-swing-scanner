@@ -57,6 +57,19 @@ def results_calendar():
     return out, None
 
 
+def nse_names():
+    """{SYMBOL: company name} from NSE's listed-equity master file."""
+    try:
+        r = requests.get("https://nsearchives.nseindia.com/content/equities/EQUITY_L.csv",
+                         headers=HEADERS | {"Referer": "https://www.nseindia.com/"}, timeout=30)
+        r.raise_for_status()
+        df = pd.read_csv(io.BytesIO(r.content))
+        df.columns = [c.strip() for c in df.columns]
+        return dict(zip(df["SYMBOL"].astype(str).str.strip(), df["NAME OF COMPANY"].astype(str).str.strip()))
+    except Exception:  # noqa: BLE001
+        return {}
+
+
 def screener_info(sym):
     """Latest quarter, its net-profit YoY change, and any board-meeting date mentioned on Screener.in."""
     url = f"https://www.screener.in/company/{requests.utils.quote(sym, safe='')}/"
@@ -67,7 +80,7 @@ def screener_info(sym):
         return dict(screener_error=type(e).__name__)
     html = r.text
     info = {}
-    m = re.search(r"<h1[^>]*>\s*([^<]+?)\s*</h1>", html)   # company name, e.g. "Sona BLW Precision Forgings Ltd"
+    m = re.search(r"<title>\s*([^<|]+?)\s+share price", html, re.I)   # "<Company> share price | ... - Screener"
     if m:
         info["company"] = re.sub(r"\s+", " ", m.group(1)).strip()
     try:
@@ -117,13 +130,13 @@ def enrich_and_pick(out, hol, capital, n_pick=5):
     setups = [c for c in cands if c["setup"] in SETUP_RANK][:15]
     trend = [c for c in cands if c["setup"] == "TREND"][:5]
     cal, cal_err = results_calendar()
+    master = nse_names()
     lq = last_quarter_end(asof)
     lq_label = lq.strftime("%b %Y")
     for c in setups + trend:
         info = screener_info(c["symbol"])
         c.update(info)
-        if not c.get("company") and NAMES.get(c["symbol"]):
-            c["company"] = NAMES[c["symbol"]]
+        c["company"] = master.get(c["symbol"]) or c.get("company") or NAMES.get(c["symbol"])
         nxt = cal.get(c["symbol"])
         if not nxt and info.get("board_meeting_mentioned"):
             d = dt.date.fromisoformat(info["board_meeting_mentioned"])
