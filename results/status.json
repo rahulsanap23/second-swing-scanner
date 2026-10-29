@@ -1,0 +1,6 @@
+{
+ "fresh": false,
+ "crashed": true,
+ "crash": "AttributeError: 'DataFrame' object has no attribute 'rs_raw'",
+ "run_at_ist": "2026-10-29T13:34+05:30"
+}
