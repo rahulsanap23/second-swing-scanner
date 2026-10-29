@@ -1,5 +1,5 @@
 {
- "run_at_ist": "2026-10-29T13:52+05:30",
+ "run_at_ist": "2026-10-29T14:27+05:30",
  "expected_date": "2026-10-28",
  "eod2_last_update": "2026-10-23",
  "days_needed": [
@@ -37,7 +37,7 @@
 }
 # Swing shortlist: data as of 2026-10-28
 
-Data status: fresh. Run at 2026-10-29T13:52+05:30.
+Data status: fresh. Run at 2026-10-29T14:27+05:30.
 
 **Regime: RED** (Nifty 500 above 200-day SMA: False; 10 EMA above 20 EMA: False)
 Nifty 50 22698.85 (50-day 23303.8, 200-day 24066.22); Nifty 500 21727.45 (200-day 22797.06)
@@ -51,11 +51,11 @@ Funnel: {'equities_with_1y_history': 1993, 'tradable': 1088, 'trend_template': 1
 
 | # | Symbol | Setup | RS | Close | Buy above | Stop | Qty | Amount | Target 1 | Trail | Profit YoY | Next results |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | SONACOMS | BREAKOUT | 95 | 879.45 | 885.72 | 854.59 | 80 | 70,857 | 963.54 | 20 EMA | +19% (Sep 2026) | not announced |
-| 2 | TVSMOTOR | BREAKOUT | 81 | 4239.90 | 4266.52 | 4135.28 | 19 | 81,064 | 4594.61 | 20 EMA | +52% (Sep 2026) | not announced |
-| 3 | SHREEJISPG | PULLBACK | 99 | 840.30 | 846.54 | 787.28 | 42 | 35,555 | 909.13 | 20 EMA | +22% (Jun 2026) | not announced |
-| 4 | EBGNG | PULLBACK | 98 | 723.25 | 734.02 | 682.63 | 48 | 35,233 | 833.80 | 10 EMA | +60% (Jun 2026) | not announced |
-| 5 | LAURUSLABS | PULLBACK | 97 | 2181.90 | 2203.20 | 2048.97 | 16 | 35,251 | 2365.22 | 20 EMA | +84% (Jun 2026) | not announced |
+| 1 | SONACOMS (name n/a) | BREAKOUT | 95 | 879.45 | 885.72 | 854.59 | 80 | 70,857 | 963.54 | 20 EMA | +19% (Sep 2026) | not announced |
+| 2 | TVSMOTOR (name n/a) | BREAKOUT | 81 | 4239.90 | 4266.52 | 4135.28 | 19 | 81,064 | 4594.61 | 20 EMA | +52% (Sep 2026) | not announced |
+| 3 | SHREEJISPG (name n/a) | PULLBACK | 99 | 840.30 | 846.54 | 787.28 | 42 | 35,555 | 909.13 | 20 EMA | +22% (Jun 2026) | not announced |
+| 4 | EBGNG (name n/a) | PULLBACK | 98 | 723.25 | 734.02 | 682.63 | 48 | 35,233 | 833.80 | 10 EMA | +60% (Jun 2026) | not announced |
+| 5 | LAURUSLABS (name n/a) | PULLBACK | 97 | 2181.90 | 2203.20 | 2048.97 | 16 | 35,251 | 2365.22 | 20 EMA | +84% (Jun 2026) | not announced |
 
 Skipped: SAREGAMA (results on 2026-11-04), TFCILTD (results on 2026-11-03), WSTCSTPAPR (results on 2026-11-06), DIVISLAB (results on 2026-11-07), STOVEKRAFT (results on 2026-11-04)
 

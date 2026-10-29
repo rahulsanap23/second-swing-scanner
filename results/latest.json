@@ -272,6 +272,7 @@
    "profit_year_ago_cr": 40.0,
    "profit_yoy_pct": 32.5,
    "board_meeting_mentioned": "2026-11-04",
+   "company": "Saregama India Limited",
    "next_results": "2026-11-04",
    "results_in_sessions": 5,
    "reported_latest_quarter": false
@@ -371,6 +372,7 @@
    "profit_latest_cr": 61.0,
    "profit_year_ago_cr": 31.0,
    "profit_yoy_pct": 96.8,
+   "company": "Tourism Finance Corporation of India Limited",
    "next_results": "2026-11-03",
    "results_in_sessions": 4,
    "reported_latest_quarter": false
@@ -536,6 +538,7 @@
    "profit_latest_cr": 109.0,
    "profit_year_ago_cr": 41.0,
    "profit_yoy_pct": 165.9,
+   "company": "West Coast Paper Mills Limited",
    "next_results": "2026-11-06",
    "results_in_sessions": 7,
    "reported_latest_quarter": false
@@ -602,6 +605,7 @@
    "profit_latest_cr": 891.0,
    "profit_year_ago_cr": 557.0,
    "profit_yoy_pct": 60.0,
+   "company": "Divi's Laboratories Limited",
    "next_results": "2026-11-07",
    "results_in_sessions": 7,
    "reported_latest_quarter": false
@@ -702,6 +706,7 @@
    "profit_year_ago_cr": 10.0,
    "profit_yoy_pct": 70.0,
    "board_meeting_mentioned": "2026-11-04",
+   "company": "Stove Kraft Limited",
    "next_results": "2026-11-04",
    "results_in_sessions": 5,
    "reported_latest_quarter": false
@@ -880,6 +885,7 @@
    "profit_latest_cr": 2.1,
    "profit_year_ago_cr": 0.41,
    "profit_yoy_pct": 412.2,
+   "company": "Gretex Corporate Services Limited",
    "next_results": "2026-11-05",
    "results_in_sessions": 6,
    "reported_latest_quarter": false
@@ -946,6 +952,7 @@
    "profit_latest_cr": 16.0,
    "profit_year_ago_cr": 15.0,
    "profit_yoy_pct": 6.7,
+   "company": "Standard Engineering Technology Limited",
    "next_results": "2026-11-05",
    "results_in_sessions": 6,
    "reported_latest_quarter": false
@@ -3886,6 +3893,7 @@
    "profit_latest_cr": 2.1,
    "profit_year_ago_cr": 0.41,
    "profit_yoy_pct": 412.2,
+   "company": "Gretex Corporate Services Limited",
    "next_results": "2026-11-05",
    "results_in_sessions": 6,
    "reported_latest_quarter": false
@@ -3952,13 +3960,14 @@
    "profit_latest_cr": 16.0,
    "profit_year_ago_cr": 15.0,
    "profit_yoy_pct": 6.7,
+   "company": "Standard Engineering Technology Limited",
    "next_results": "2026-11-05",
    "results_in_sessions": 6,
    "reported_latest_quarter": false
   }
  ],
  "enrich_notes": {
-  "results_calendar": "NSE event calendar: 837 companies",
+  "results_calendar": "NSE event calendar: 839 companies",
   "latest_quarter_expected": "Sep 2026"
  }
 }
