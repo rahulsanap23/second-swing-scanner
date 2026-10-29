@@ -94,8 +94,8 @@ class NSE:
             raw = self.get(f"https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_{d:%d%m%Y}.csv")
             df = pd.read_csv(io.BytesIO(raw))
             df.columns = [c.strip() for c in df.columns]
-            for c in df.columns:
-                if df[c].dtype == object:
+            for c in df.columns:   # NSE pads text fields with spaces (pandas 3 uses a string dtype, not object)
+                if not pd.api.types.is_numeric_dtype(df[c]):
                     df[c] = df[c].astype(str).str.strip()
             out = pd.DataFrame(dict(
                 symbol=df.SYMBOL, series=df.SERIES,
