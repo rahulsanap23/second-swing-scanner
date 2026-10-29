@@ -1,0 +1,51 @@
+name: daily-swing-scan
+
+on:
+  schedule:
+    - cron: "17 13 * * 1-5"   # 6:47 PM IST, Mon-Fri (NSE files are usually online by ~6 PM)
+    - cron: "7 16 * * 1-5"    # 9:37 PM IST retry
+    - cron: "37 0 * * 2-6"    # 6:07 AM IST next morning, final retry (fails the job if data is still stale)
+  workflow_dispatch:
+    inputs:
+      force:
+        description: "Re-run even if results are already up to date"
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: daily-swing-scan
+  cancel-in-progress: false
+
+jobs:
+  scan:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - run: pip install -r requirements.txt
+
+      - name: Fetch data and scan
+        env:
+          FINAL_ATTEMPT: ${{ github.event.schedule == '37 0 * * 2-6' && '1' || '0' }}
+          FORCE: ${{ inputs.force && '1' || '0' }}
+        run: python run_daily.py
+
+      - name: Commit results
+        if: always()
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add results
+          if git diff --cached --quiet; then echo "No result changes"; exit 0; fi
+          git commit -m "Scan results $(TZ=Asia/Kolkata date '+%Y-%m-%d %H:%M IST')"
+          git pull --rebase --quiet
+          git push
