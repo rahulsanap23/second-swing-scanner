@@ -26,6 +26,7 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 SETUP_RANK = {"BREAKOUT": 0, "READY": 1, "PULLBACK": 2}
+NAMES = {}
 MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
                                       "nov", "dec"], 1)}
 
@@ -52,6 +53,7 @@ def results_calendar():
         sym = str(x.get("symbol", "")).upper()
         if sym and (sym not in out or d < out[sym]):
             out[sym] = d
+            NAMES[sym] = str(x.get("company", "")).strip()
     return out, None
 
 
@@ -65,6 +67,9 @@ def screener_info(sym):
         return dict(screener_error=type(e).__name__)
     html = r.text
     info = {}
+    m = re.search(r"<h1[^>]*>\s*([^<]+?)\s*</h1>", html)   # company name, e.g. "Sona BLW Precision Forgings Ltd"
+    if m:
+        info["company"] = re.sub(r"\s+", " ", m.group(1)).strip()
     try:
         for t in pd.read_html(io.StringIO(html)):
             first = t.iloc[:, 0].astype(str).str.replace(r"[^A-Za-z ]", "", regex=True).str.strip()
@@ -117,6 +122,8 @@ def enrich_and_pick(out, hol, capital, n_pick=5):
     for c in setups + trend:
         info = screener_info(c["symbol"])
         c.update(info)
+        if not c.get("company") and NAMES.get(c["symbol"]):
+            c["company"] = NAMES[c["symbol"]]
         nxt = cal.get(c["symbol"])
         if not nxt and info.get("board_meeting_mentioned"):
             d = dt.date.fromisoformat(info["board_meeting_mentioned"])

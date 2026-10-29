@@ -299,7 +299,7 @@ def to_markdown(o, status=None):
               "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for i, c in enumerate(o["best5"], 1):
             yoy = f"{c['profit_yoy_pct']:+.0f}% ({c.get('latest_quarter')})" if c.get("profit_yoy_pct") is not None else "n/a"
-            L.append(f"| {i} | {c['symbol']} | {c['setup']} | {c['rs_rating']} | {c['close']:.2f} | {c['entry']:.2f} | "
+            L.append(f"| {i} | {c['symbol']} ({c.get('company') or 'name n/a'}) | {c['setup']} | {c['rs_rating']} | {c['close']:.2f} | {c['entry']:.2f} | "
                      f"{c['stop']:.2f} | {c['qty']:.0f} | {c['amount']:,.0f} | {c['t1']:.2f} | {c['trail']} | {yoy} | "
                      f"{c.get('next_results') or 'not announced'} |")
         if not o["best5"]:
