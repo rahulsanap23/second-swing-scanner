@@ -1,5 +1,5 @@
 {
- "run_at_ist": "2026-11-02T19:55+05:30",
+ "run_at_ist": "2026-11-02T20:25+05:30",
  "expected_date": "2026-11-02",
  "eod2_last_update": "2026-10-23",
  "days_needed": [
@@ -50,7 +50,7 @@
    "date": "2026-11-02",
    "stocks_source": "nse-sec_bhavdata_full",
    "stocks_rows": 2947,
-   "indices_rows": 156,
+   "indices_rows": 141,
    "indices_source": "nse-ind_close_all"
   }
  ],
@@ -61,7 +61,7 @@
 }
 # Swing shortlist: data as of 2026-11-02
 
-Data status: fresh. Run at 2026-11-02T19:55+05:30.
+Data status: fresh. Run at 2026-11-02T20:25+05:30.
 
 **Regime: RED** (Nifty 500 above 200-day SMA: False; 10 EMA above 20 EMA: False)
 Nifty 50 23440.8 (50-day 23242.0, 200-day 24022.39); Nifty 500 22241.4 (200-day 22768.92)
@@ -144,3 +144,4 @@ Extended, don't chase: MENONBE, CCAVENUE, RATNAVEER, LAURUSLABS, KRISHANA, ATHER
 - ALIVUS: TRIGGERED
 - AJANTPHARM: STOP LEVEL BROKEN, setup void
 
+Tracker: {"stock_ideas": 19, "triggered": 8, "target_hit": 1, "stop_hit": 1, "expired": 0, "open": 6, "waiting": 5, "not_triggered": 6, "skipped": 0, "data_issue": 0, "win_rate": 50, "avg_days_to_target": 2.0, "avg_days_to_stop": 1.0, "avg_result_pct": 1.9, "avg_r": 0.0}

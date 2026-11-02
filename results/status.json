@@ -1,5 +1,5 @@
 {
- "run_at_ist": "2026-11-02T19:55+05:30",
+ "run_at_ist": "2026-11-02T20:25+05:30",
  "expected_date": "2026-11-02",
  "eod2_last_update": "2026-10-23",
  "days_needed": [
@@ -50,7 +50,7 @@
    "date": "2026-11-02",
    "stocks_source": "nse-sec_bhavdata_full",
    "stocks_rows": 2947,
-   "indices_rows": 156,
+   "indices_rows": 141,
    "indices_source": "nse-ind_close_all"
   }
  ],
