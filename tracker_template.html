@@ -18,7 +18,7 @@
   --bg: #11161d; --panel: #171e27; --fg: #e4e9ef; --muted: #95a1b1; --line: #2a3441; --accent: #6fb1e0;
   --win: #5fd394; --win-bg: #173527; --loss: #f2827b; --loss-bg: #3b1f1e;
   --open: #6fb1e0; --open-bg: #183048; --idle: #9aa5b3; --idle-bg: #232c38; color-scheme: dark }
-body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 17px; line-height: 1.45;
+body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-size: 16px; line-height: 1.45;
   padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
 .wrap { max-width: 1120px; margin: 0 auto; padding-block: 32px 48px; display: grid; gap: 26px; }
 .wrap > * { min-width: 0; }
@@ -33,14 +33,15 @@ h1 { font-size: 32px; font-weight: 700; margin: 0 0 4px; }
 @media (max-width: 520px) { .score { grid-template-columns: 1fr; } }
 .tscroll { overflow-x: auto; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
 table { border-collapse: collapse; width: 100%; }
-th, td { padding: 14px 16px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
-th { font-size: 13.5px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+th, td { padding: 12px 8px; text-align: left; border-bottom: 1px solid var(--line); white-space: nowrap; }
+th { font-size: 13px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); white-space: normal; vertical-align: bottom; }
 tr:last-child td { border-bottom: 0; }
 td.r, th.r { text-align: right; }
 .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
-td .sub { display: block; font-size: 14.5px; color: var(--muted); font-family: var(--sans); }
+td .sub { display: block; font-size: 14px; color: var(--muted); font-family: var(--sans); }
 td b { font-family: var(--mono); font-weight: 600; }
-.pill { display: inline-block; padding: 4px 12px; border-radius: 999px; font-size: 14.5px; font-weight: 600; }
+td.stock { white-space: normal; min-width: 120px; max-width: 160px; }
+.pill { display: inline-block; padding: 3px 10px; border-radius: 999px; font-size: 14px; font-weight: 600; }
 .p-win { color: var(--win); background: var(--win-bg); } .p-loss { color: var(--loss); background: var(--loss-bg); }
 .p-open { color: var(--open); background: var(--open-bg); } .p-idle { color: var(--idle); background: var(--idle-bg); }
 .x { margin-left: 6px; font-size: 13px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 4px; }
@@ -85,7 +86,7 @@ const STATUS = {
 };
 function when(t) {
   if (t.status === "TARGET HIT" || t.status === "STOP HIT") return `day ${t.days}<span class="sub">${esc(day(t.exit_date))}</span>`;
-  if (t.status === "OPEN") return `day ${t.days} so far`;
+  if (t.status === "OPEN") return `day ${t.days}<span class="sub">so far</span>`;
   if (t.status === "EXPIRED") return `${t.days} days<span class="sub">${pct(t.result_pct)}</span>`;
   return "–";
 }
@@ -97,17 +98,17 @@ if (!T.length) {
     T.map(t => {
       const s = t.suggested || [], st = STATUS[t.status] || [t.status, "p-idle"];
       return `<tr>
-        <td><b>${esc(t.symbol)}</b><span class="sub">${esc(t.company || "")}</span></td>
+        <td class="stock"><b>${esc(t.symbol)}</b><span class="sub">${esc(t.company || "")}</span></td>
         <td>${esc(day(s[0]))}${s.length > 1 ? `<span class="x" title="Suggested ${s.length} days">×${s.length}</span>` : ""}</td>
         <td class="r num">${fmt(t.entry)}</td>
         <td class="r num">${fmt(t.t1)}<span class="sub">${pct(t.t1_pct)}</span></td>
         <td class="r num">${fmt(t.stop)}<span class="sub">${pct(t.stop_pct)}</span></td>
-        <td class="r num">${fmt(t.cmp)}<span class="sub">${t.cmp == null ? "" : pct((t.cmp / t.entry - 1) * 100) + " vs buy"}</span></td>
+        <td class="r num">${fmt(t.cmp)}<span class="sub">${t.cmp == null ? "" : pct((t.cmp / t.entry - 1) * 100)}</span></td>
         <td><span class="pill ${st[1]}">${st[0]}</span></td>
         <td class="num">${when(t)}</td></tr>`;
     }).join("") + "</tbody>";
 }
 
 $("note").textContent = "Day 1 is the day the stock was bought. Not bought = it didn't reach Buy above the next trading day. " +
-  "×2, ×3 = suggested on that many days. Price now is the latest NSE close, updated every trading day. Win rate = target hits out of target + stop hits.";
+  "×2, ×3 = suggested on that many days. Price now is the latest NSE close (with % from Buy above), updated every trading day. Win rate = target hits out of target + stop hits.";
 </script>
