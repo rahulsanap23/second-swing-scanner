@@ -5,6 +5,7 @@ results/status.json   did today's data arrive (fresh), which sources were used, 
 results/latest.json   full scan output (read by the Claude morning report)
 results/latest.md     readable summary
 results/history/      one JSON per data date
+results/tracker.json  every past best-5 pick followed to Target 1 / Stop (tracker.html = dashboard page)
 Env: EOD2_DIR (default /tmp/eod2_data), FORCE=1 to re-run, FINAL_ATTEMPT=1 to fail the job if data is stale.
 """
 import json
@@ -15,6 +16,7 @@ import sys
 import enrich
 import fetch_data
 import screener
+import tracker
 
 ROOT = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.join(ROOT, "results")
@@ -60,6 +62,13 @@ def main():
     md = screener.to_markdown(out, status)
     open(os.path.join(RES, "latest.md"), "w").write(md)
     print(md)
+
+    try:                                       # follow every past pick to target / stop (dashboard data)
+        tr = tracker.run(EOD2)
+        tracker.write(tr)
+        print("Tracker:", json.dumps({k: v for k, v in tr["summary"].items() if not k.startswith("by_")}))
+    except Exception as e:  # noqa: BLE001  never let the tracker break the scan
+        print(f"::warning::Tracker failed: {type(e).__name__}: {e}")
 
     if not status["fresh"] and os.environ.get("FINAL_ATTEMPT") == "1":
         print(f"::error::Data still stale: have {status['data_date']}, expected {exp}")
