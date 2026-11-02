@@ -11,6 +11,10 @@ on:
         description: "Re-run even if results are already up to date"
         type: boolean
         default: false
+      tracker_only:
+        description: "Only rebuild the pick tracker (does not touch scan results)"
+        type: boolean
+        default: false
 
 permissions:
   contents: write
@@ -37,10 +41,12 @@ jobs:
         env:
           FINAL_ATTEMPT: ${{ github.event.schedule == '37 0 * * 2-6' && '1' || '0' }}
           FORCE: ${{ inputs.force && '1' || '0' }}
+          TRACKER_ONLY: ${{ inputs.tracker_only && '1' || '0' }}
+          LOG: ${{ inputs.tracker_only && 'tracker_run.log' || 'results/last_run.log' }}
         run: |
           mkdir -p results
           set -o pipefail
-          python -u run_daily.py 2>&1 | tee results/last_run.log
+          python -u run_daily.py 2>&1 | tee "$LOG"
 
       - name: Commit results
         if: always()

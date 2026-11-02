@@ -68,7 +68,7 @@ const pct = n => n == null ? "" : (n > 0 ? "+" : "") + Number(n).toFixed(1) + "%
 const day = s => s ? new Date(s + "T00:00:00").toLocaleDateString("en-IN", {day: "numeric", month: "short"}) : "–";
 const days = n => n + " day" + (n === 1 ? "" : "s");
 
-$("meta").textContent = T.length ? `Prices up to NSE close ${day(DATA.data_date)} · picks since ${day(DATA.first_pick)}` : "No picks tracked yet.";
+$("meta").textContent = T.length ? `Price now = NSE close on ${day(DATA.data_date)} · picks since ${day(DATA.first_pick)}` : "No picks tracked yet.";
 
 $("score").innerHTML =
   `<div class="tile win"><span class="k">Target hit</span><span class="v">${S.target_hit ?? 0}</span>
@@ -85,7 +85,7 @@ const STATUS = {
 };
 function when(t) {
   if (t.status === "TARGET HIT" || t.status === "STOP HIT") return `day ${t.days}<span class="sub">${esc(day(t.exit_date))}</span>`;
-  if (t.status === "OPEN") return `day ${t.days}<span class="sub">${pct(t.result_pct)} now</span>`;
+  if (t.status === "OPEN") return `day ${t.days} so far`;
   if (t.status === "EXPIRED") return `${t.days} days<span class="sub">${pct(t.result_pct)}</span>`;
   return "–";
 }
@@ -93,7 +93,7 @@ if (!T.length) {
   $("ledger").innerHTML = `<tr><td class="empty">Picks appear here the evening after the scanner suggests them.</td></tr>`;
 } else {
   $("ledger").innerHTML = `<thead><tr><th>Stock</th><th>Suggested</th><th class="r">Buy above</th><th class="r">Target 1</th>
-    <th class="r">Stop</th><th>Status</th><th>Hit on</th></tr></thead><tbody>` +
+    <th class="r">Stop</th><th class="r">Price now</th><th>Status</th><th>Hit on</th></tr></thead><tbody>` +
     T.map(t => {
       const s = t.suggested || [], st = STATUS[t.status] || [t.status, "p-idle"];
       return `<tr>
@@ -102,11 +102,12 @@ if (!T.length) {
         <td class="r num">${fmt(t.entry)}</td>
         <td class="r num">${fmt(t.t1)}<span class="sub">${pct(t.t1_pct)}</span></td>
         <td class="r num">${fmt(t.stop)}<span class="sub">${pct(t.stop_pct)}</span></td>
+        <td class="r num">${fmt(t.cmp)}<span class="sub">${t.cmp == null ? "" : pct((t.cmp / t.entry - 1) * 100) + " vs buy"}</span></td>
         <td><span class="pill ${st[1]}">${st[0]}</span></td>
         <td class="num">${when(t)}</td></tr>`;
     }).join("") + "</tbody>";
 }
 
 $("note").textContent = "Day 1 is the day the stock was bought. Not bought = it didn't reach Buy above the next trading day. " +
-  "×2, ×3 = suggested on that many days. Win rate = target hits out of target + stop hits.";
+  "×2, ×3 = suggested on that many days. Price now is the latest NSE close, updated every trading day. Win rate = target hits out of target + stop hits.";
 </script>

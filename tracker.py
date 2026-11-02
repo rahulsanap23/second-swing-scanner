@@ -129,6 +129,8 @@ def track_symbol(picks, rows):
         trades.append(cur)
     for t in trades:
         t.pop("eval_date", None)
+        t["cmp"] = rows[-1].Close if rows else None          # latest NSE close for the dashboard
+        t["cmp_date"] = rows[-1].Date if rows else None
         t["times_suggested"] = len(t["suggested"])
         t["t1_pct"] = round((t["t1"] / t["entry"] - 1) * 100, 1)
         t["stop_pct"] = round((t["stop"] / t["entry"] - 1) * 100, 1)

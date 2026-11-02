@@ -6,7 +6,8 @@ results/latest.json   full scan output (read by the Claude morning report)
 results/latest.md     readable summary
 results/history/      one JSON per data date
 results/tracker.json  every past best-5 pick followed to Target 1 / Stop (tracker.html = dashboard page)
-Env: EOD2_DIR (default /tmp/eod2_data), FORCE=1 to re-run, FINAL_ATTEMPT=1 to fail the job if data is stale.
+Env: EOD2_DIR (default /tmp/eod2_data), FORCE=1 to re-run, FINAL_ATTEMPT=1 to fail the job if data is stale,
+     TRACKER_ONLY=1 to refresh prices and rebuild only results/tracker.* (scan results untouched).
 """
 import json
 import os
@@ -33,6 +34,12 @@ def main():
 
     hol, _ = fetch_data.holidays(EOD2)
     exp = fetch_data.expected_date(hol).isoformat()
+    if os.environ.get("TRACKER_ONLY") == "1":    # rebuild the tracker only; scan results are left untouched
+        print(json.dumps(fetch_data.update(EOD2), indent=1), flush=True)
+        tr = tracker.run(EOD2)
+        tracker.write(tr)
+        print("Tracker:", json.dumps({k: v for k, v in tr["summary"].items() if not k.startswith("by_")}))
+        return 0
     if os.path.exists(status_path) and os.environ.get("FORCE") != "1":
         st = json.load(open(status_path))
         if st.get("fresh") and st.get("data_date", "") >= exp:
