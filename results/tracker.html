@@ -48,6 +48,7 @@ td.hit { font-variant-numeric: tabular-nums; }
 .x { margin-left: 6px; font-size: 13px; font-weight: 600; color: var(--accent); border: 1px solid var(--accent); border-radius: 4px; padding: 0 4px; }
 .note { font-size: 15px; color: var(--muted); max-width: 80ch; }
 .empty { padding: 28px; text-align: center; color: var(--muted); }
+td .sub.pos { color: var(--win); } td .sub.neg { color: var(--loss); }
 </style>
 
 <div class="wrap">
@@ -104,7 +105,7 @@ if (!T.length) {
         <td class="r num">${fmt(t.entry)}</td>
         <td class="r num">${fmt(t.t1)}<span class="sub">${pct(t.t1_pct)}</span></td>
         <td class="r num">${fmt(t.stop)}<span class="sub">${pct(t.stop_pct)}</span></td>
-        <td class="r num">${fmt(t.cmp)}<span class="sub">${t.cmp == null ? "" : pct((t.cmp / t.entry - 1) * 100)}</span></td>
+        <td class="r num">${fmt(t.cmp)}<span class="sub ${t.cmp == null ? "" : t.cmp > t.entry ? "pos" : t.cmp < t.entry ? "neg" : ""}">${t.cmp == null ? "" : pct((t.cmp / t.entry - 1) * 100)}</span></td>
         <td><span class="pill ${st[1]}">${st[0]}</span></td>
         <td class="hit">${when(t)}</td></tr>`;
     }).join("") + "</tbody>";
