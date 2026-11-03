@@ -1,12 +1,12 @@
-# Swing shortlist: data as of 2026-11-02
+# Swing shortlist: data as of 2026-11-03
 
-Data status: fresh. Run at 2026-11-02T19:55+05:30.
+Data status: fresh. Run at 2026-11-03T19:53+05:30.
 
 **Regime: RED** (Nifty 500 above 200-day SMA: False; 10 EMA above 20 EMA: False)
-Nifty 50 23440.8 (50-day 23242.0, 200-day 24022.39); Nifty 500 22241.4 (200-day 22768.92)
-Breadth: 18.0% above 50-day, 32.6% above 200-day, net new highs -40
-Top sectors (50-day RS vs Nifty): IT +9.5, Pharma +5.8, Media +4.7
-Funnel: {'equities_with_1y_history': 1990, 'tradable': 1084, 'trend_template': 121, 'rs_70_plus': 121, 'actionable_setups': 36}
+Nifty 50 23810.85 (50-day 23233.58, 200-day 24013.03); Nifty 500 22520.35 (200-day 22764.18)
+Breadth: 20.1% above 50-day, 33.2% above 200-day, net new highs -15
+Top sectors (50-day RS vs Nifty): IT +8.0, Pharma +4.9, Telecommunications +3.1
+Funnel: {'equities_with_1y_history': 2005, 'tradable': 1081, 'trend_template': 126, 'rs_70_plus': 126, 'actionable_setups': 34}
 
 ## Best 5
 
@@ -14,71 +14,69 @@ Funnel: {'equities_with_1y_history': 1990, 'tradable': 1084, 'trend_template': 1
 
 | # | Symbol | Setup | RS | Close | Buy above | Stop | Qty | Amount | Target 1 | Trail | Profit YoY | Next results |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | INDGN (Indegene Limited) | BREAKOUT | 86 | 619.40 | 639.28 | 618.64 | 121 | 77,352 | 690.86 | 20 EMA | -3% (Sep 2026) | not announced |
-| 2 | CUPID (Cupid Limited) | PULLBACK | 99 | 340.50 | 341.68 | 317.76 | 104 | 35,535 | 386.03 | 10 EMA | +193% (Jun 2026) | not announced |
-| 3 | MACPOWER (Macpower CNC Machines Limited) | PULLBACK | 98 | 2098.40 | 2114.22 | 1966.22 | 16 | 33,828 | 2490.67 | 10 EMA | +44% (Sep 2026) | not announced |
-| 4 | BHAGERIA (Bhageria Industries Limited) | PULLBACK | 98 | 379.85 | 388.53 | 361.33 | 91 | 35,356 | 466.54 | 10 EMA | +383% (Sep 2026) | not announced |
-| 5 | NITINSPIN (Nitin Spinners Limited) | PULLBACK | 96 | 664.30 | 681.36 | 633.66 | 52 | 35,431 | 759.79 | 20 EMA | +154% (Sep 2026) | not announced |
+| 1 | MCX (Multi Commodity Exchange of India Limited) | BREAKOUT | 93 | 3490.10 | 3545.08 | 3419.99 | 19 | 67,356 | 3857.79 | 20 EMA | +108% (Jun 2026) | not announced |
+| 2 | RAYMOND (Raymond Limited) | PULLBACK | 99 | 1172.30 | 1187.37 | 1104.25 | 30 | 35,621 | 1375.75 | 10 EMA | +156% (Sep 2026) | not announced |
+| 3 | MACPOWER (Macpower CNC Machines Limited) | PULLBACK | 98 | 2136.70 | 2236.36 | 2079.82 | 15 | 33,545 | 2634.69 | 10 EMA | +44% (Sep 2026) | not announced |
+| 4 | GRWRHITECH (Garware Hi-Tech Films Limited) | PULLBACK | 97 | 7395.50 | 7439.85 | 6919.06 | 4 | 29,759 | 8369.92 | 10 EMA | +31% (Sep 2026) | not announced |
+| 5 | NAVINFLUOR (Navin Fluorine International Limited) | PULLBACK | 91 | 8530.00 | 8627.22 | 8242.00 | 6 | 51,763 | 9375.19 | 20 EMA | +53% (Sep 2026) | not announced |
 
-Skipped: DIVISLAB (results on 2026-11-07), RUBICON (results on 2026-11-05), KMEW (results on 2026-11-06), OAL (results on 2026-11-04), ICIL (results on 2026-11-04)
+Skipped: SAREGAMA (results on 2026-11-04), BOSCHLTD (results on 2026-11-06), SANSERA (results on 2026-11-05), RUBICON (results on 2026-11-05), GLAND (results on 2026-11-06), KINGFA (results on 2026-11-05), ICIL (results on 2026-11-04), STEELCAS (results on 2026-11-13), AVTNPL (results on 2026-11-11)
 
 ## Setups
 
 | Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |
 |---|---|---|---|---|---|---|---|---|---|---|
-| DIVISLAB | BREAKOUT | 93 | 9945.50 | 10009.98 | 9737.75 | 2.7 | 9 | 90,090 | 10690.56 | 20 EMA |
-| INDGN | BREAKOUT | 86 | 619.40 | 639.28 | 618.64 | 3.2 | 121 | 77,352 | 690.86 | 20 EMA |
-| CUPID | PULLBACK | 99 | 340.50 | 341.68 | 317.76 | 7.0 | 104 | 35,535 | 386.03 | 10 EMA |
-| RUBICON | PULLBACK | 98 | 1667.40 | 1708.11 | 1588.54 | 7.0 | 20 | 34,162 | 1887.72 | 20 EMA |
-| MACPOWER | PULLBACK | 98 | 2098.40 | 2114.22 | 1966.22 | 7.0 | 16 | 33,828 | 2490.67 | 10 EMA |
-| BHAGERIA | PULLBACK | 98 | 379.85 | 388.53 | 361.33 | 7.0 | 91 | 35,356 | 466.54 | 10 EMA |
-| KMEW | PULLBACK | 97 | 3224.00 | 3245.48 | 3018.29 | 7.0 | 11 | 35,700 | 3678.07 | 10 EMA |
-| OAL | PULLBACK | 97 | 588.90 | 596.19 | 554.46 | 7.0 | 59 | 35,175 | 700.94 | 10 EMA |
-| NITINSPIN | PULLBACK | 96 | 664.30 | 681.36 | 633.66 | 7.0 | 52 | 35,431 | 759.79 | 20 EMA |
-| CHENNPETRO | PULLBACK | 95 | 1546.00 | 1566.83 | 1468.70 | 6.3 | 25 | 39,171 | 1801.34 | 10 EMA |
-| SAMBHV | PULLBACK | 95 | 165.01 | 167.84 | 156.09 | 7.0 | 212 | 35,581 | 190.39 | 10 EMA |
-| ICIL | PULLBACK | 94 | 459.30 | 463.78 | 431.31 | 7.0 | 77 | 35,711 | 519.27 | 20 EMA |
-| UTTAMSUGAR | PULLBACK | 94 | 347.15 | 356.81 | 331.84 | 7.0 | 100 | 35,681 | 441.18 | 10 EMA |
-| PTCIL | PULLBACK | 93 | 24385.00 | 24533.97 | 23465.00 | 4.4 | 2 | 49,068 | 26903.05 | 20 EMA |
-| ACMESOLAR | PULLBACK | 93 | 418.75 | 423.40 | 400.80 | 5.3 | 110 | 46,573 | 474.96 | 20 EMA |
-| STEELCAS | PULLBACK | 93 | 364.40 | 367.73 | 342.05 | 7.0 | 97 | 35,670 | 411.60 | 20 EMA |
-| NAZARA | PULLBACK | 92 | 401.65 | 404.81 | 390.52 | 3.5 | 174 | 70,437 | 442.78 | 20 EMA |
-| SHYAMMETL | PULLBACK | 90 | 1191.00 | 1224.84 | 1139.11 | 7.0 | 29 | 35,520 | 1345.13 | 20 EMA |
-| AUROPHARMA | PULLBACK | 89 | 1683.80 | 1692.28 | 1635.10 | 3.4 | 43 | 72,768 | 1801.79 | 20 EMA |
-| CEIGALL | PULLBACK | 89 | 392.45 | 396.64 | 379.80 | 4.2 | 148 | 58,703 | 434.87 | 20 EMA |
-| IPCALAB | PULLBACK | 88 | 1949.90 | 1972.94 | 1899.44 | 3.7 | 34 | 67,080 | 2141.02 | 20 EMA |
-| ABDL | PULLBACK | 88 | 708.25 | 716.33 | 679.05 | 5.2 | 67 | 47,994 | 796.38 | 20 EMA |
-| GABRIEL | PULLBACK | 87 | 1443.80 | 1467.93 | 1400.80 | 4.6 | 37 | 54,313 | 1606.43 | 20 EMA |
-| AARTIPHARM | PULLBACK | 86 | 888.80 | 900.35 | 855.00 | 5.0 | 55 | 49,519 | 1017.94 | 10 EMA |
-| NUVAMA | PULLBACK | 85 | 1805.10 | 1823.74 | 1700.80 | 6.7 | 20 | 36,475 | 2030.28 | 20 EMA |
-| ETERNAL | PULLBACK | 85 | 344.00 | 349.05 | 324.61 | 7.0 | 102 | 35,603 | 378.31 | 20 EMA |
-| ADANIPORTS | PULLBACK | 84 | 1854.00 | 1867.73 | 1775.10 | 5.0 | 26 | 48,561 | 1999.29 | 20 EMA |
-| KOLTEPATIL | PULLBACK | 83 | 457.40 | 462.92 | 435.90 | 5.8 | 92 | 42,589 | 520.18 | 20 EMA |
-| KPRMILL | PULLBACK | 81 | 1131.50 | 1138.57 | 1065.20 | 6.4 | 34 | 38,711 | 1250.80 | 20 EMA |
-| PHOENIXLTD | PULLBACK | 80 | 2016.60 | 2042.38 | 1899.41 | 7.0 | 17 | 34,720 | 2205.03 | 20 EMA |
-| GLENMARK | PULLBACK | 80 | 2382.00 | 2404.90 | 2291.30 | 4.7 | 22 | 52,908 | 2579.05 | 20 EMA |
-| MARKOLINES | PULLBACK | 79 | 177.12 | 181.36 | 168.67 | 7.0 | 196 | 35,547 | 199.18 | 20 EMA |
-| BEML | PULLBACK | 79 | 2030.90 | 2090.67 | 1946.20 | 6.9 | 17 | 35,541 | 2291.76 | 20 EMA |
-| ARIS | PULLBACK | 77 | 140.35 | 143.74 | 134.72 | 6.3 | 277 | 39,815 | 163.36 | 10 EMA |
-| HAL | PULLBACK | 76 | 4855.00 | 4906.39 | 4777.10 | 2.6 | 19 | 93,221 | 5206.41 | 20 EMA |
-| IIFLCAPS | PULLBACK | 71 | 348.00 | 348.70 | 343.95 | 1.4 | 358 | 124,833 | 360.28 | 20 EMA |
+| MCX | BREAKOUT | 93 | 3490.10 | 3545.08 | 3419.99 | 3.5 | 19 | 67,356 | 3857.79 | 20 EMA |
+| SAREGAMA | BREAKOUT | 91 | 562.20 | 566.13 | 544.69 | 3.8 | 116 | 65,671 | 619.73 | 20 EMA |
+| BOSCHLTD | BREAKOUT | 90 | 49645.00 | 50601.00 | 49431.68 | 2.3 | 2 | 101,202 | 53524.30 | 20 EMA |
+| RAYMOND | PULLBACK | 99 | 1172.30 | 1187.37 | 1104.25 | 7.0 | 30 | 35,621 | 1375.75 | 10 EMA |
+| SANSERA | PULLBACK | 98 | 4225.20 | 4252.49 | 4006.00 | 5.8 | 10 | 42,525 | 4688.33 | 20 EMA |
+| RUBICON | PULLBACK | 98 | 1718.00 | 1736.37 | 1614.82 | 7.0 | 20 | 34,727 | 1914.86 | 20 EMA |
+| MACPOWER | PULLBACK | 98 | 2136.70 | 2236.36 | 2079.82 | 7.0 | 15 | 33,545 | 2634.69 | 10 EMA |
+| GRWRHITECH | PULLBACK | 97 | 7395.50 | 7439.85 | 6919.06 | 7.0 | 4 | 29,759 | 8369.92 | 10 EMA |
+| GLAND | PULLBACK | 95 | 3158.90 | 3174.64 | 3035.00 | 4.4 | 17 | 53,969 | 3464.80 | 20 EMA |
+| KINGFA | PULLBACK | 94 | 6737.00 | 6793.56 | 6566.38 | 3.3 | 11 | 74,729 | 7396.29 | 20 EMA |
+| ICIL | PULLBACK | 94 | 466.85 | 477.45 | 444.03 | 7.0 | 74 | 35,332 | 535.60 | 20 EMA |
+| STEELCAS | PULLBACK | 93 | 369.15 | 374.75 | 348.52 | 7.0 | 95 | 35,601 | 418.70 | 20 EMA |
+| AVTNPL | PULLBACK | 93 | 96.88 | 99.70 | 92.72 | 7.0 | 358 | 35,692 | 116.15 | 10 EMA |
+| NAVINFLUOR | PULLBACK | 91 | 8530.00 | 8627.22 | 8242.00 | 4.5 | 6 | 51,763 | 9375.19 | 20 EMA |
+| PARACABLES | PULLBACK | 91 | 61.77 | 63.73 | 59.27 | 7.0 | 560 | 35,687 | 74.63 | 10 EMA |
+| AUROPHARMA | PULLBACK | 90 | 1694.50 | 1700.79 | 1647.20 | 3.1 | 46 | 78,237 | 1811.94 | 20 EMA |
+| CEIGALL | PULLBACK | 90 | 397.20 | 400.80 | 385.35 | 3.9 | 161 | 64,529 | 438.95 | 20 EMA |
+| SHYAMMETL | PULLBACK | 90 | 1219.50 | 1256.01 | 1168.09 | 7.0 | 28 | 35,168 | 1380.53 | 20 EMA |
+| IPCALAB | PULLBACK | 89 | 1950.10 | 1988.47 | 1917.05 | 3.6 | 35 | 69,596 | 2157.19 | 20 EMA |
+| NUVAMA | PULLBACK | 87 | 1866.20 | 1877.25 | 1745.84 | 7.0 | 19 | 35,668 | 2080.99 | 20 EMA |
+| AARTIPHARM | PULLBACK | 87 | 919.95 | 933.06 | 867.75 | 7.0 | 38 | 35,456 | 1053.29 | 10 EMA |
+| EMCURE | PULLBACK | 86 | 1976.60 | 2075.94 | 1930.63 | 7.0 | 17 | 35,291 | 2263.29 | 20 EMA |
+| LALPATHLAB | PULLBACK | 84 | 1925.70 | 1939.87 | 1856.50 | 4.3 | 29 | 56,256 | 2101.35 | 20 EMA |
+| MUFIN | PULLBACK | 83 | 136.35 | 139.16 | 132.00 | 5.1 | 349 | 48,566 | 151.21 | 20 EMA |
+| GLENMARK | PULLBACK | 82 | 2408.00 | 2424.84 | 2291.30 | 5.5 | 18 | 43,647 | 2599.19 | 20 EMA |
+| KPRMILL | PULLBACK | 82 | 1160.00 | 1165.93 | 1084.31 | 7.0 | 30 | 34,978 | 1281.51 | 20 EMA |
+| MINDACORP | PULLBACK | 81 | 684.60 | 715.38 | 665.30 | 7.0 | 49 | 35,054 | 785.69 | 20 EMA |
+| PHOENIXLTD | PULLBACK | 81 | 2048.70 | 2064.12 | 1919.63 | 7.0 | 17 | 35,090 | 2228.09 | 20 EMA |
+| MARKOLINES | PULLBACK | 80 | 179.33 | 184.88 | 171.94 | 7.0 | 193 | 35,682 | 202.99 | 20 EMA |
+| BEML | PULLBACK | 79 | 2051.70 | 2083.06 | 1952.80 | 6.2 | 19 | 39,578 | 2282.29 | 20 EMA |
+| ARIS | PULLBACK | 79 | 143.52 | 146.59 | 136.33 | 7.0 | 243 | 35,622 | 166.68 | 10 EMA |
+| METROPOLIS | PULLBACK | 78 | 568.70 | 573.39 | 541.15 | 5.6 | 77 | 44,151 | 628.61 | 20 EMA |
+| HAL | PULLBACK | 76 | 4958.60 | 4984.55 | 4795.00 | 3.8 | 13 | 64,799 | 5295.53 | 20 EMA |
+| PRINCEPIPE | PULLBACK | 72 | 275.90 | 295.89 | 275.18 | 7.0 | 120 | 35,507 | 332.39 | 20 EMA |
 
 ## Strongest without a setup
 
 | Symbol | RS | Close | % off high | Pivot |
 |---|---|---|---|---|
-| SHREEJISPG | 99 | 873.65 | -1.1 | 850.0 |
-| GCSL | 99 | 770.65 | -0.9 | 773.0 |
-| SETL | 99 | 400.6 | -14.4 | 437.75 |
-| RAYMOND | 99 | 1125.0 | -16.0 | 1339.0 |
-| SBC | 98 | 65.34 | -2.8 | 67.25 |
+| CUPID | 99 | 338.5 | -8.2 | 368.95 |
+| SHREEJISPG | 99 | 851.0 | -3.7 | 883.5 |
+| GCSL | 99 | 773.35 | -1.9 | 777.5 |
+| SETL | 99 | 406.4 | -13.2 | 437.75 |
+| SBC | 98 | 66.71 | -1.3 | 67.25 |
 
-Extended, don't chase: MENONBE, CCAVENUE, RATNAVEER, LAURUSLABS, KRISHANA, ATHERENERG, MBAPL, SGMART, WELSPUNLIV, ACUTAAS, THELEELA, SMSPHARMA, SHREEPUSHK, PPLPHARMA
+Extended, don't chase: SPECTRUM, MENONBE, CCAVENUE, RATNAVEER, SSWL, ATHERENERG, WELSPUNLIV, KRISHANA, SGMART, ACUTAAS, SHREEPUSHK, SMSPHARMA, PPLPHARMA, AARTIDRUGS
 
-## Previous shortlist (2026-10-30) today
+## Previous shortlist (2026-11-02) today
 
-- MBAPL: TRIGGERED
-- NAVINFLUOR: STOP LEVEL BROKEN, setup void
-- COFORGE: TRIGGERED
-- ALIVUS: TRIGGERED
-- AJANTPHARM: STOP LEVEL BROKEN, setup void
+- INDGN: STOP LEVEL BROKEN, setup void
+- CUPID: TRIGGERED
+- MACPOWER: TRIGGERED
+- BHAGERIA: STOP LEVEL BROKEN, setup void
+- NITINSPIN: TRIGGERED
