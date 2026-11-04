@@ -1,5 +1,10 @@
 #!/usr/bin/env python3
-"""Follow every past best-5 pick: did the buy-stop trigger, then did it hit Target 1 or the Stop, and when.
+"""Follow every past shortlisted pick: did the buy-stop trigger, then did it hit Target 1 or the Stop, and when.
+
+Which stocks: the whole ranked shortlist (top 10) of each day, so every stock the morning report can pick
+is tracked. "best_on" lists the days a stock was in GitHub's own best picks (before the morning checks);
+the dashboard shows the morning report's final picks (reported.json, saved into the dashboard by the
+morning task) and falls back to best_on for days without that file.
 
 Rules (kept in line with the morning report's "How to trade" lines):
   - A pick's buy-stop is valid on the next trading day only.
@@ -39,10 +44,11 @@ def load_picks():
     picks = {}
     for f in sorted(glob.glob(os.path.join(RES, "history", "*.json"))):
         d = json.load(open(f))
-        for c in d.get("best5") or []:
+        best = {c["symbol"] for c in d.get("best5") or []}
+        for c in d.get("shortlist") or d.get("best5") or []:
             if c.get("entry") is None or c.get("stop") is None or c.get("t1") is None:
                 continue
-            c = dict(c, asof=d["asof"], regime=d.get("regime"))
+            c = dict(c, asof=d["asof"], regime=d.get("regime"), in_best=c["symbol"] in best)
             picks.setdefault(c["symbol"], []).append(c)
     return picks
 
@@ -59,9 +65,15 @@ def prices(daily, symbol, since):
 
 def new_trade(p):
     return dict(symbol=p["symbol"], company=p.get("company"), setup=p["setup"], regime=p.get("regime"),
-                suggested=[p["asof"]], close_at_pick=p["close"], entry=p["entry"], stop=p["stop"], t1=p["t1"],
+                suggested=[p["asof"]], best_on=[p["asof"]] if p.get("in_best") else [], close_at_pick=p["close"], entry=p["entry"], stop=p["stop"], t1=p["t1"],
                 status="WAITING", entry_date=None, fill=None, exit_date=None, exit_price=None,
                 days=None, last_close=None, result_pct=None, r_mult=None, flag="")
+
+
+def add_day(t, p, date):
+    t["suggested"].append(date)
+    if p.get("in_best"):
+        t["best_on"].append(date)
 
 
 def finish(t, status, date, price):
@@ -120,9 +132,9 @@ def track_symbol(picks, rows):
         if not p:
             continue
         if cur and cur["status"] == "OPEN":
-            cur["suggested"].append(r.Date)
+            add_day(cur, p, r.Date)
         elif cur and cur["status"] in ("NOT TRIGGERED", "SKIPPED") and cur.get("eval_date") == r.Date:
-            cur["suggested"].append(r.Date)
+            add_day(cur, p, r.Date)
             cur.update(status="WAITING", entry=p["entry"], stop=p["stop"], t1=p["t1"], setup=p["setup"], flag="")
         else:
             if cur:
@@ -131,7 +143,7 @@ def track_symbol(picks, rows):
     for p in picks:                                      # picks newer than the last price row
         if not rows or p["asof"] > rows[-1].Date:
             if cur and cur["status"] in ("WAITING", "OPEN") and p["asof"] not in cur["suggested"]:
-                cur["suggested"].append(p["asof"])
+                add_day(cur, p, p["asof"])
             elif not cur or p["asof"] not in cur["suggested"]:
                 if cur:
                     trades.append(cur)
