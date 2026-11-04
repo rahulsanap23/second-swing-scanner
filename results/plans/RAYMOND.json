@@ -1,0 +1,14 @@
+{
+ "symbol": "RAYMOND",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-03",
+ "entry": 1187.37,
+ "stop": 1104.25,
+ "target": 1375.75,
+ "risk_per_share": 83.12,
+ "risk_pct": 7.0,
+ "reward_risk": 2.27,
+ "max_hold_days": 5,
+ "stop_rule": "price:1104.25",
+ "qty": 15
+}
