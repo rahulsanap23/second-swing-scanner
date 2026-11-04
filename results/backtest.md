@@ -1,6 +1,6 @@
 # History test: 2021-10-23 to 2026-10-23
 
-Every setup the scanner would have found on each trading day, traded the way the report says: buy-stop next session (skipped if it opens > 3% above), stop as planned, stop moved to the buy price after +1R, sell at the close of day 5 if neither stop nor target was hit. Returns are after about 0.25% Zerodha charges. 2205 stocks. Generated 2026-11-04T13:14+05:30.
+Every setup the scanner would have found on each trading day, traded the way the report says: buy-stop next session (skipped if it opens > 3% above), stop as planned, stop moved to the buy price after +1R, sell at the close of day 5 if neither stop nor target was hit. Returns are after about 0.25% Zerodha charges. 2205 stocks. Generated 2026-11-04T14:08+05:30.
 
 ## 1. Setup × market mood (live plan: target 2.5 ADR, sell on day 5)
 
