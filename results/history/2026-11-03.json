@@ -123,17 +123,7 @@
   "max_ext_ema21": 10.0,
   "max_stop_pct": 7.0,
   "risk_per_trade": 0.5,
-  "max_position": 25.0,
-  "hold_sessions": 5,
-  "t1_adr": 2.5,
-  "breakeven_at_r": 1.0,
-  "gap_skip_pct": 3.0,
-  "picks_green": 5,
-  "picks_yellow": 5,
-  "picks_red": 3,
-  "size_yellow": 0.5,
-  "size_red": 0.5,
-  "shortlist_n": 10
+  "max_position": 25.0
  },
  "previous_asof": "2026-11-02",
  "yesterday": [
@@ -212,11 +202,16 @@
    "qty": 19.0,
    "amount": 67356.44,
    "t1": 3857.79,
-   "skip_above": 3651.43,
-   "breakeven_at": 3670.16,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.1
+   "company": "Multi Commodity Exchange of India Limited",
+   "latest_quarter": "Jun 2026",
+   "profit_latest_cr": 327.0,
+   "profit_year_ago_cr": 157.0,
+   "profit_yoy_pct": 108.3,
+   "next_results": null,
+   "results_in_sessions": null,
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SAREGAMA",
@@ -241,11 +236,17 @@
    "qty": 116.0,
    "amount": 65671.08,
    "t1": 619.73,
-   "skip_above": 583.11,
-   "breakeven_at": 587.57,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.1
+   "company": "Saregama India Limited",
+   "latest_quarter": "Jun 2026",
+   "profit_latest_cr": 53.0,
+   "profit_year_ago_cr": 40.0,
+   "profit_yoy_pct": 32.5,
+   "board_meeting_mentioned": "2026-11-04",
+   "next_results": "2026-11-04",
+   "results_in_sessions": 1,
+   "reported_latest_quarter": false
   },
   {
    "symbol": "BOSCHLTD",
@@ -270,11 +271,16 @@
    "qty": 2.0,
    "amount": 101202.0,
    "t1": 53524.3,
-   "skip_above": 52119.03,
-   "breakeven_at": 51770.32,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.1
+   "company": "Bosch Limited",
+   "latest_quarter": "Jun 2026",
+   "profit_latest_cr": 702.0,
+   "profit_year_ago_cr": 1115.0,
+   "profit_yoy_pct": -37.0,
+   "next_results": "2026-11-06",
+   "results_in_sessions": 3,
+   "reported_latest_quarter": false
   },
   {
    "symbol": "RAYMOND",
@@ -296,14 +302,11 @@
    "stop": 1104.25,
    "risk_pct": 7.0,
    "pos_pct": 7.12,
-   "qty": 15,
-   "amount": 17810.55,
+   "qty": 30.0,
+   "amount": 35621.1,
    "t1": 1375.75,
-   "skip_above": 1222.99,
-   "breakeven_at": 1270.49,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.04,
    "company": "Raymond Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 1.59,
@@ -311,14 +314,7 @@
    "profit_yoy_pct": 155.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   },
   {
    "symbol": "SANSERA",
@@ -343,11 +339,8 @@
    "qty": 10.0,
    "amount": 42524.88,
    "t1": 4688.33,
-   "skip_above": 4380.06,
-   "breakeven_at": 4498.98,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.02,
    "company": "Sansera Engineering Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 87.0,
@@ -355,14 +348,7 @@
    "profit_yoy_pct": 45.0,
    "next_results": "2026-11-05",
    "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": false
   },
   {
    "symbol": "RUBICON",
@@ -387,11 +373,8 @@
    "qty": 20.0,
    "amount": 34727.32,
    "t1": 1914.86,
-   "skip_above": 1788.46,
-   "breakeven_at": 1857.91,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.16,
    "company": "Rubicon Research Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 82.0,
@@ -399,14 +382,7 @@
    "profit_yoy_pct": 134.3,
    "next_results": "2026-11-05",
    "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": false
   },
   {
    "symbol": "MACPOWER",
@@ -428,14 +404,11 @@
    "stop": 2079.82,
    "risk_pct": 7.0,
    "pos_pct": 6.71,
-   "qty": 7,
-   "amount": 15654.52,
+   "qty": 15.0,
+   "amount": 33545.46,
    "t1": 2634.69,
-   "skip_above": 2303.45,
-   "breakeven_at": 2392.91,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.17,
    "company": "Macpower CNC Machines Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 13.0,
@@ -443,14 +416,7 @@
    "profit_yoy_pct": 44.4,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   },
   {
    "symbol": "GRWRHITECH",
@@ -472,14 +438,11 @@
    "stop": 6919.06,
    "risk_pct": 7.0,
    "pos_pct": 5.95,
-   "qty": 2,
-   "amount": 14879.7,
+   "qty": 4.0,
+   "amount": 29759.4,
    "t1": 8369.92,
-   "skip_above": 7663.05,
-   "breakeven_at": 7960.64,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.06,
    "company": "Garware Hi-Tech Films Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 140.0,
@@ -487,14 +450,7 @@
    "profit_yoy_pct": 30.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   },
   {
    "symbol": "GLAND",
@@ -519,11 +475,8 @@
    "qty": 17.0,
    "amount": 53968.82,
    "t1": 3464.8,
-   "skip_above": 3269.88,
-   "breakeven_at": 3314.27,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.05,
    "company": "Gland Pharma Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 364.0,
@@ -531,14 +484,7 @@
    "profit_yoy_pct": 35.3,
    "next_results": "2026-11-06",
    "results_in_sessions": 3,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": false
   },
   {
    "symbol": "KINGFA",
@@ -563,11 +509,8 @@
    "qty": 11.0,
    "amount": 74729.16,
    "t1": 7396.29,
-   "skip_above": 6997.37,
-   "breakeven_at": 7020.74,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.05,
    "company": "Kingfa Science & Technology (India) Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 80.0,
@@ -575,14 +518,7 @@
    "profit_yoy_pct": 100.0,
    "next_results": "2026-11-05",
    "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": false
   },
   {
    "symbol": "ICIL",
@@ -607,11 +543,8 @@
    "qty": 74.0,
    "amount": 35331.52,
    "t1": 535.6,
-   "skip_above": 491.78,
-   "breakeven_at": 510.87,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.1,
    "company": "Indo Count Industries Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 67.0,
@@ -620,14 +553,7 @@
    "board_meeting_mentioned": "2026-11-04",
    "next_results": "2026-11-04",
    "results_in_sessions": 1,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": false
   },
   {
    "symbol": "STEELCAS",
@@ -652,11 +578,8 @@
    "qty": 95.0,
    "amount": 35601.06,
    "t1": 418.7,
-   "skip_above": 385.99,
-   "breakeven_at": 400.98,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.07,
    "company": "Steelcast Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 24.0,
@@ -665,14 +588,7 @@
    "board_meeting_mentioned": "2026-11-13",
    "next_results": "2026-11-13",
    "results_in_sessions": 7,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": false
   },
   {
    "symbol": "AVTNPL",
@@ -697,11 +613,8 @@
    "qty": 358.0,
    "amount": 35692.24,
    "t1": 116.15,
-   "skip_above": 102.69,
-   "breakeven_at": 106.68,
    "trail": "10 EMA",
    "note": "",
-   "r10": -0.03,
    "company": "AVT Natural Products Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 24.0,
@@ -710,14 +623,7 @@
    "board_meeting_mentioned": "2026-11-11",
    "next_results": "2026-11-11",
    "results_in_sessions": 5,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": false
   },
   {
    "symbol": "NAVINFLUOR",
@@ -739,14 +645,11 @@
    "stop": 8242.0,
    "risk_pct": 4.47,
    "pos_pct": 10.35,
-   "qty": 3,
-   "amount": 25881.66,
+   "qty": 6.0,
+   "amount": 51763.32,
    "t1": 9375.19,
-   "skip_above": 8886.04,
-   "breakeven_at": 9012.44,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.05,
    "company": "Navin Fluorine International Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 205.0,
@@ -754,14 +657,7 @@
    "profit_yoy_pct": 53.0,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   },
   {
    "symbol": "PARACABLES",
@@ -783,14 +679,11 @@
    "stop": 59.27,
    "risk_pct": 7.0,
    "pos_pct": 7.14,
-   "qty": 280,
-   "amount": 17844.4,
+   "qty": 560.0,
+   "amount": 35687.23,
    "t1": 74.63,
-   "skip_above": 65.64,
-   "breakeven_at": 68.19,
    "trail": "10 EMA",
    "note": "",
-   "r10": -0.07,
    "company": "Paramount Communications Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 24.0,
@@ -798,14 +691,7 @@
    "profit_yoy_pct": 84.6,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   },
   {
    "symbol": "AUROPHARMA",
@@ -827,29 +713,11 @@
    "stop": 1647.2,
    "risk_pct": 3.15,
    "pos_pct": 15.65,
-   "qty": 23,
-   "amount": 39118.17,
+   "qty": 46.0,
+   "amount": 78236.56,
    "t1": 1811.94,
-   "skip_above": 1751.82,
-   "breakeven_at": 1754.39,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "Aurobindo Pharma Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 737.0,
-   "profit_year_ago_cr": 559.0,
-   "profit_yoy_pct": 31.8,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "CEIGALL",
@@ -874,26 +742,8 @@
    "qty": 161.0,
    "amount": 64528.8,
    "t1": 438.95,
-   "skip_above": 412.82,
-   "breakeven_at": 416.25,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.01,
-   "company": "Ceigall India Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 75.0,
-   "profit_year_ago_cr": 56.0,
-   "profit_yoy_pct": 33.9,
-   "next_results": "2026-11-05",
-   "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "SHYAMMETL",
@@ -915,29 +765,11 @@
    "stop": 1168.09,
    "risk_pct": 7.0,
    "pos_pct": 7.03,
-   "qty": 14,
-   "amount": 17584.14,
+   "qty": 28.0,
+   "amount": 35168.2,
    "t1": 1380.53,
-   "skip_above": 1293.69,
-   "breakeven_at": 1343.93,
    "trail": "20 EMA",
-   "note": "",
-   "r10": -0.01,
-   "company": "Shyam Metalics and Energy Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 198.0,
-   "profit_year_ago_cr": 136.0,
-   "profit_yoy_pct": 45.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "IPCALAB",
@@ -962,26 +794,8 @@
    "qty": 35.0,
    "amount": 69596.42,
    "t1": 2157.19,
-   "skip_above": 2048.12,
-   "breakeven_at": 2059.88,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.07,
-   "company": "IPCA Laboratories Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 373.0,
-   "profit_year_ago_cr": 262.0,
-   "profit_yoy_pct": 42.4,
-   "next_results": "2026-11-05",
-   "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "NUVAMA",
@@ -1006,26 +820,8 @@
    "qty": 19.0,
    "amount": 35667.69,
    "t1": 2080.99,
-   "skip_above": 1933.56,
-   "breakeven_at": 2008.65,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "Nuvama Wealth Management Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 255.0,
-   "profit_year_ago_cr": 221.0,
-   "profit_yoy_pct": 15.4,
-   "next_results": "2026-11-06",
-   "results_in_sessions": 3,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "AARTIPHARM",
@@ -1047,29 +843,11 @@
    "stop": 867.75,
    "risk_pct": 7.0,
    "pos_pct": 7.09,
-   "qty": 19,
-   "amount": 17728.14,
+   "qty": 38.0,
+   "amount": 35456.37,
    "t1": 1053.29,
-   "skip_above": 961.05,
-   "breakeven_at": 998.38,
    "trail": "10 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "Aarti Pharmalabs Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 66.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 112.9,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "EMCURE",
@@ -1091,29 +869,11 @@
    "stop": 1930.63,
    "risk_pct": 7.0,
    "pos_pct": 7.06,
-   "qty": 8,
-   "amount": 16607.52,
+   "qty": 17.0,
+   "amount": 35291.04,
    "t1": 2263.29,
-   "skip_above": 2138.22,
-   "breakeven_at": 2221.26,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.12,
-   "company": "Emcure Pharmaceuticals Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 248.0,
-   "profit_year_ago_cr": 118.0,
-   "profit_yoy_pct": 110.2,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "LALPATHLAB",
@@ -1135,29 +895,11 @@
    "stop": 1856.5,
    "risk_pct": 4.3,
    "pos_pct": 11.25,
-   "qty": 14,
-   "amount": 27158.18,
+   "qty": 29.0,
+   "amount": 56256.29,
    "t1": 2101.35,
-   "skip_above": 1998.07,
-   "breakeven_at": 2023.24,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.04,
-   "company": "Dr. Lal Path Labs Ltd.",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 166.0,
-   "profit_year_ago_cr": 129.0,
-   "profit_yoy_pct": 28.7,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "note": ""
   },
   {
    "symbol": "MUFIN",
@@ -1182,11 +924,8 @@
    "qty": 349.0,
    "amount": 48566.06,
    "t1": 151.21,
-   "skip_above": 143.33,
-   "breakeven_at": 146.32,
    "trail": "20 EMA",
-   "note": "",
-   "r10": -0.04
+   "note": ""
   },
   {
    "symbol": "GLENMARK",
@@ -1211,11 +950,8 @@
    "qty": 18.0,
    "amount": 43647.12,
    "t1": 2599.19,
-   "skip_above": 2497.59,
-   "breakeven_at": 2558.38,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.09
+   "note": ""
   },
   {
    "symbol": "KPRMILL",
@@ -1240,11 +976,8 @@
    "qty": 30.0,
    "amount": 34977.82,
    "t1": 1281.51,
-   "skip_above": 1200.91,
-   "breakeven_at": 1247.54,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.08
+   "note": ""
   },
   {
    "symbol": "MINDACORP",
@@ -1269,11 +1002,8 @@
    "qty": 49.0,
    "amount": 35053.52,
    "t1": 785.69,
-   "skip_above": 736.84,
-   "breakeven_at": 765.45,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.08
+   "note": ""
   },
   {
    "symbol": "PHOENIXLTD",
@@ -1298,11 +1028,8 @@
    "qty": 17.0,
    "amount": 35090.04,
    "t1": 2228.09,
-   "skip_above": 2126.04,
-   "breakeven_at": 2208.61,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.09
+   "note": ""
   },
   {
    "symbol": "MARKOLINES",
@@ -1327,11 +1054,8 @@
    "qty": 193.0,
    "amount": 35681.65,
    "t1": 202.99,
-   "skip_above": 190.43,
-   "breakeven_at": 197.82,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "BEML",
@@ -1356,11 +1080,8 @@
    "qty": 19.0,
    "amount": 39578.1,
    "t1": 2282.29,
-   "skip_above": 2145.55,
-   "breakeven_at": 2213.32,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.06
+   "note": ""
   },
   {
    "symbol": "ARIS",
@@ -1385,11 +1106,8 @@
    "qty": 243.0,
    "amount": 35622.0,
    "t1": 166.68,
-   "skip_above": 150.99,
-   "breakeven_at": 156.85,
    "trail": "10 EMA",
-   "note": "",
-   "r10": 0.04
+   "note": ""
   },
   {
    "symbol": "METROPOLIS",
@@ -1414,11 +1132,8 @@
    "qty": 77.0,
    "amount": 44151.38,
    "t1": 628.61,
-   "skip_above": 590.6,
-   "breakeven_at": 605.64,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.1
+   "note": ""
   },
   {
    "symbol": "HAL",
@@ -1443,11 +1158,8 @@
    "qty": 13.0,
    "amount": 64799.14,
    "t1": 5295.53,
-   "skip_above": 5134.09,
-   "breakeven_at": 5174.1,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.0
+   "note": ""
   },
   {
    "symbol": "PRINCEPIPE",
@@ -1472,11 +1184,8 @@
    "qty": 120.0,
    "amount": 35506.87,
    "t1": 332.39,
-   "skip_above": 304.77,
-   "breakeven_at": 316.6,
    "trail": "20 EMA",
-   "note": "",
-   "r10": 0.0
+   "note": ""
   },
   {
    "symbol": "CUPID",
@@ -1501,11 +1210,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.01,
    "company": "Cupid Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 44.0,
@@ -1513,8 +1219,7 @@
    "profit_yoy_pct": 193.3,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SHREEJISPG",
@@ -1539,11 +1244,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05,
    "company": "Shreeji Shipping Global Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 45.0,
@@ -1551,8 +1253,7 @@
    "profit_yoy_pct": 21.6,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "GCSL",
@@ -1577,11 +1278,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06,
    "company": "Gretex Corporate Services Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 2.1,
@@ -1589,8 +1287,7 @@
    "profit_yoy_pct": 412.2,
    "next_results": "2026-11-05",
    "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SETL",
@@ -1615,11 +1312,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.18,
    "company": "Standard Engineering Technology Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 16.0,
@@ -1627,8 +1321,7 @@
    "profit_yoy_pct": 6.7,
    "next_results": "2026-11-05",
    "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SBC",
@@ -1653,11 +1346,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.03,
    "company": "SBC Exports Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 11.0,
@@ -1666,8 +1356,7 @@
    "board_meeting_mentioned": "2026-10-15",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": null
+   "reported_latest_quarter": true
   },
   {
    "symbol": "LAURUSLABS",
@@ -1692,11 +1381,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.12
+   "note": ""
   },
   {
    "symbol": "DIACABS",
@@ -1721,11 +1407,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.06
+   "note": ""
   },
   {
    "symbol": "CPPLUS",
@@ -1750,11 +1433,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.03
+   "note": ""
   },
   {
    "symbol": "RPEL",
@@ -1779,11 +1459,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.02
+   "note": ""
   },
   {
    "symbol": "SKYGOLD",
@@ -1808,11 +1485,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.15
+   "note": ""
   },
   {
    "symbol": "TFCILTD",
@@ -1837,11 +1511,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.04
+   "note": ""
   },
   {
    "symbol": "WHEELS",
@@ -1866,11 +1537,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.08
+   "note": ""
   },
   {
    "symbol": "BHAGERIA",
@@ -1895,11 +1563,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.04
+   "note": ""
   },
   {
    "symbol": "MBAPL",
@@ -1924,11 +1589,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.12
+   "note": ""
   },
   {
    "symbol": "KMEW",
@@ -1953,11 +1615,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.03
+   "note": ""
   },
   {
    "symbol": "BLUSPRING",
@@ -1982,11 +1641,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.11
+   "note": ""
   },
   {
    "symbol": "EBGNG",
@@ -2011,11 +1667,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.02
+   "note": ""
   },
   {
    "symbol": "OAL",
@@ -2040,11 +1693,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.1
+   "note": ""
   },
   {
    "symbol": "WSTCSTPAPR",
@@ -2069,11 +1719,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.03
+   "note": ""
   },
   {
    "symbol": "ROSSTECH",
@@ -2098,11 +1745,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.05
+   "note": ""
   },
   {
    "symbol": "IBULLSLTD",
@@ -2127,11 +1771,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.12
+   "note": ""
   },
   {
    "symbol": "UNITEDPOLY",
@@ -2156,11 +1797,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.05
+   "note": ""
   },
   {
    "symbol": "SONACOMS",
@@ -2185,11 +1823,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.13
+   "note": ""
   },
   {
    "symbol": "NITINSPIN",
@@ -2214,11 +1849,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.02
+   "note": ""
   },
   {
    "symbol": "PGIL",
@@ -2243,11 +1875,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.01
+   "note": ""
   },
   {
    "symbol": "OPTIEMUS",
@@ -2272,11 +1901,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.07
+   "note": ""
   },
   {
    "symbol": "VALIANTORG",
@@ -2301,11 +1927,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.1
+   "note": ""
   },
   {
    "symbol": "SAILIFE",
@@ -2330,11 +1953,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.12
+   "note": ""
   },
   {
    "symbol": "THELEELA",
@@ -2359,11 +1979,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.05
+   "note": ""
   },
   {
    "symbol": "RML",
@@ -2388,11 +2005,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "CENTUM",
@@ -2417,11 +2031,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.04
+   "note": ""
   },
   {
    "symbol": "CHENNPETRO",
@@ -2446,11 +2057,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.08
+   "note": ""
   },
   {
    "symbol": "LUMAXTECH",
@@ -2475,11 +2083,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.08
+   "note": ""
   },
   {
    "symbol": "SAMBHV",
@@ -2504,11 +2109,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.03
+   "note": ""
   },
   {
    "symbol": "UTTAMSUGAR",
@@ -2533,11 +2135,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.04
+   "note": ""
   },
   {
    "symbol": "DIVISLAB",
@@ -2562,11 +2161,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.11
+   "note": ""
   },
   {
    "symbol": "ALIVUS",
@@ -2591,11 +2187,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.17
+   "note": ""
   },
   {
    "symbol": "PVRINOX",
@@ -2620,11 +2213,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.09
+   "note": ""
   },
   {
    "symbol": "ORIENTHOT",
@@ -2649,11 +2239,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.1
+   "note": ""
   },
   {
    "symbol": "KROSS",
@@ -2678,11 +2265,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "gap>=15% in 90d (check news/split)",
-   "r10": -0.09
+   "note": "gap>=15% in 90d (check news/split)"
   },
   {
    "symbol": "NAZARA",
@@ -2707,11 +2291,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.01
+   "note": ""
   },
   {
    "symbol": "PTCIL",
@@ -2736,11 +2317,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.04
+   "note": ""
   },
   {
    "symbol": "LOTUSDEV",
@@ -2765,11 +2343,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "KAMDHENU",
@@ -2794,11 +2369,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "ONEPOINT",
@@ -2823,11 +2395,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.13
+   "note": ""
   },
   {
    "symbol": "TCPLPACK",
@@ -2852,11 +2421,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.0
+   "note": ""
   },
   {
    "symbol": "ENGINERSIN",
@@ -2881,11 +2447,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.07
+   "note": ""
   },
   {
    "symbol": "PAYTM",
@@ -2910,11 +2473,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.02
+   "note": ""
   },
   {
    "symbol": "SGFIN",
@@ -2939,11 +2499,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.04
+   "note": ""
   },
   {
    "symbol": "CEMPRO",
@@ -2968,11 +2525,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.09
+   "note": ""
   },
   {
    "symbol": "ANANDRATHI",
@@ -2997,11 +2551,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.06
+   "note": ""
   },
   {
    "symbol": "COFORGE",
@@ -3026,11 +2577,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.07
+   "note": ""
   },
   {
    "symbol": "SATIN",
@@ -3055,11 +2603,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.06
+   "note": ""
   },
   {
    "symbol": "TIPSMUSIC",
@@ -3084,11 +2629,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.02
+   "note": ""
   },
   {
    "symbol": "APOLLO",
@@ -3113,11 +2655,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.05
+   "note": ""
   },
   {
    "symbol": "NYKAA",
@@ -3142,11 +2681,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.05
+   "note": ""
   },
   {
    "symbol": "ARFIN",
@@ -3171,11 +2707,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.05
+   "note": ""
   },
   {
    "symbol": "ZYDUSLIFE",
@@ -3200,11 +2733,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.11
+   "note": ""
   },
   {
    "symbol": "MAYURUNIQ",
@@ -3229,11 +2759,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.0
+   "note": ""
   },
   {
    "symbol": "SOUTHBANK",
@@ -3258,11 +2785,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.01
+   "note": ""
   },
   {
    "symbol": "ABDL",
@@ -3287,11 +2811,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.06
+   "note": ""
   },
   {
    "symbol": "ETERNAL",
@@ -3316,11 +2837,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.09
+   "note": ""
   },
   {
    "symbol": "MANCREDIT",
@@ -3345,11 +2863,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.11
+   "note": ""
   },
   {
    "symbol": "INDHOTEL",
@@ -3374,11 +2889,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.1
+   "note": ""
   },
   {
    "symbol": "GESHIP",
@@ -3403,11 +2915,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "ADANIPORTS",
@@ -3432,11 +2941,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.06
+   "note": ""
   },
   {
    "symbol": "GOODLUCK",
@@ -3461,11 +2967,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.13
+   "note": ""
   },
   {
    "symbol": "63MOONS",
@@ -3490,11 +2993,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "INDGN",
@@ -3519,11 +3019,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.04
+   "note": ""
   },
   {
    "symbol": "GABRIEL",
@@ -3548,11 +3045,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.06
+   "note": ""
   },
   {
    "symbol": "WESTLIFE",
@@ -3577,11 +3071,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.1
+   "note": ""
   },
   {
    "symbol": "TECHM",
@@ -3606,11 +3097,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "KOLTEPATIL",
@@ -3635,11 +3123,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.05
+   "note": ""
   },
   {
    "symbol": "TVSMOTOR",
@@ -3664,11 +3149,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.06
+   "note": ""
   },
   {
    "symbol": "SANATHAN",
@@ -3693,11 +3175,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.05
+   "note": ""
   },
   {
    "symbol": "MAHLOG",
@@ -3722,11 +3201,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.03
+   "note": ""
   },
   {
    "symbol": "DELTACORP",
@@ -3751,11 +3227,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": -0.06
+   "note": ""
   },
   {
    "symbol": "IIFLCAPS",
@@ -3780,11 +3253,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.01
+   "note": ""
   },
   {
    "symbol": "SPECTRUM",
@@ -3809,11 +3279,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.14
+   "note": ""
   },
   {
    "symbol": "MENONBE",
@@ -3838,11 +3305,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.19
+   "note": ""
   },
   {
    "symbol": "CCAVENUE",
@@ -3867,11 +3331,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "gap>=15% in 90d (check news/split)",
-   "r10": -0.03
+   "note": "gap>=15% in 90d (check news/split)"
   },
   {
    "symbol": "RATNAVEER",
@@ -3896,11 +3357,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.08
+   "note": ""
   },
   {
    "symbol": "SSWL",
@@ -3925,11 +3383,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.24
+   "note": ""
   },
   {
    "symbol": "ATHERENERG",
@@ -3954,11 +3409,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.23
+   "note": ""
   },
   {
    "symbol": "WELSPUNLIV",
@@ -3983,11 +3435,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.16
+   "note": ""
   },
   {
    "symbol": "KRISHANA",
@@ -4012,11 +3461,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.09
+   "note": ""
   },
   {
    "symbol": "SGMART",
@@ -4041,11 +3487,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.14
+   "note": ""
   },
   {
    "symbol": "ACUTAAS",
@@ -4070,11 +3513,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.2
+   "note": ""
   },
   {
    "symbol": "SHREEPUSHK",
@@ -4099,11 +3539,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.23
+   "note": ""
   },
   {
    "symbol": "SMSPHARMA",
@@ -4128,11 +3565,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.18
+   "note": ""
   },
   {
    "symbol": "PPLPHARMA",
@@ -4157,11 +3591,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.2
+   "note": ""
   },
   {
    "symbol": "AARTIDRUGS",
@@ -4186,15 +3617,46 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
-   "note": "",
-   "r10": 0.17
+   "note": ""
   }
  ],
  "best5": [
   {
+   "symbol": "MCX",
+   "setup": "BREAKOUT",
+   "rs_rating": 93,
+   "close": 3490.1,
+   "off_high": -1.35,
+   "ext_ema21": 8.04,
+   "adr": 3.53,
+   "turnover_cr": 495.18,
+   "r63": 0.32,
+   "r126": 0.2,
+   "rs65": 0.35,
+   "volmom": 1.39,
+   "sma50": 3260.55,
+   "ema21": 3230.26,
+   "pivot": 3415.0,
+   "entry": 3545.08,
+   "stop": 3419.99,
+   "risk_pct": 3.53,
+   "pos_pct": 13.47,
+   "qty": 19.0,
+   "amount": 67356.44,
+   "t1": 3857.79,
+   "trail": "20 EMA",
+   "note": "or entry-day low if tighter",
+   "company": "Multi Commodity Exchange of India Limited",
+   "latest_quarter": "Jun 2026",
+   "profit_latest_cr": 327.0,
+   "profit_year_ago_cr": 157.0,
+   "profit_yoy_pct": 108.3,
+   "next_results": null,
+   "results_in_sessions": null,
+   "reported_latest_quarter": false
+  },
+  {
    "symbol": "RAYMOND",
    "setup": "PULLBACK",
    "rs_rating": 99,
@@ -4214,14 +3676,11 @@
    "stop": 1104.25,
    "risk_pct": 7.0,
    "pos_pct": 7.12,
-   "qty": 15,
-   "amount": 17810.55,
+   "qty": 30.0,
+   "amount": 35621.1,
    "t1": 1375.75,
-   "skip_above": 1222.99,
-   "breakeven_at": 1270.49,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.04,
    "company": "Raymond Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 1.59,
@@ -4229,14 +3688,7 @@
    "profit_yoy_pct": 155.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   },
   {
    "symbol": "MACPOWER",
@@ -4258,14 +3710,11 @@
    "stop": 2079.82,
    "risk_pct": 7.0,
    "pos_pct": 6.71,
-   "qty": 7,
-   "amount": 15654.52,
+   "qty": 15.0,
+   "amount": 33545.46,
    "t1": 2634.69,
-   "skip_above": 2303.45,
-   "breakeven_at": 2392.91,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.17,
    "company": "Macpower CNC Machines Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 13.0,
@@ -4273,14 +3722,7 @@
    "profit_yoy_pct": 44.4,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   },
   {
    "symbol": "GRWRHITECH",
@@ -4302,14 +3744,11 @@
    "stop": 6919.06,
    "risk_pct": 7.0,
    "pos_pct": 5.95,
-   "qty": 2,
-   "amount": 14879.7,
+   "qty": 4.0,
+   "amount": 29759.4,
    "t1": 8369.92,
-   "skip_above": 7663.05,
-   "breakeven_at": 7960.64,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.06,
    "company": "Garware Hi-Tech Films Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 140.0,
@@ -4317,62 +3756,45 @@
    "profit_yoy_pct": 30.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
+  },
+  {
+   "symbol": "NAVINFLUOR",
+   "setup": "PULLBACK",
+   "rs_rating": 91,
+   "close": 8530.0,
+   "off_high": -4.69,
+   "ext_ema21": 2.76,
+   "adr": 3.47,
+   "turnover_cr": 91.93,
+   "r63": 0.13,
+   "r126": 0.26,
+   "rs65": 0.2,
+   "volmom": 1.3,
+   "sma50": 8388.43,
+   "ema21": 8301.05,
+   "pivot": 8745.0,
+   "entry": 8627.22,
+   "stop": 8242.0,
+   "risk_pct": 4.47,
+   "pos_pct": 10.35,
+   "qty": 6.0,
+   "amount": 51763.32,
+   "t1": 9375.19,
+   "trail": "20 EMA",
+   "note": "",
+   "company": "Navin Fluorine International Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 205.0,
+   "profit_year_ago_cr": 134.0,
+   "profit_yoy_pct": 53.0,
+   "next_results": null,
+   "results_in_sessions": null,
+   "reported_latest_quarter": true
   }
  ],
  "reserve": [
   {
-   "symbol": "NAVINFLUOR",
-   "setup": "PULLBACK",
-   "rs_rating": 91,
-   "close": 8530.0,
-   "off_high": -4.69,
-   "ext_ema21": 2.76,
-   "adr": 3.47,
-   "turnover_cr": 91.93,
-   "r63": 0.13,
-   "r126": 0.26,
-   "rs65": 0.2,
-   "volmom": 1.3,
-   "sma50": 8388.43,
-   "ema21": 8301.05,
-   "pivot": 8745.0,
-   "entry": 8627.22,
-   "stop": 8242.0,
-   "risk_pct": 4.47,
-   "pos_pct": 10.35,
-   "qty": 3,
-   "amount": 25881.66,
-   "t1": 9375.19,
-   "skip_above": 8886.04,
-   "breakeven_at": 9012.44,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "Navin Fluorine International Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 205.0,
-   "profit_year_ago_cr": 134.0,
-   "profit_yoy_pct": 53.0,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
    "symbol": "PARACABLES",
    "setup": "PULLBACK",
    "rs_rating": 91,
@@ -4392,14 +3814,11 @@
    "stop": 59.27,
    "risk_pct": 7.0,
    "pos_pct": 7.14,
-   "qty": 280,
-   "amount": 17844.4,
+   "qty": 560.0,
+   "amount": 35687.23,
    "t1": 74.63,
-   "skip_above": 65.64,
-   "breakeven_at": 68.19,
    "trail": "10 EMA",
    "note": "",
-   "r10": -0.07,
    "company": "Paramount Communications Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 24.0,
@@ -4407,746 +3826,18 @@
    "profit_yoy_pct": 84.6,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "AUROPHARMA",
-   "setup": "PULLBACK",
-   "rs_rating": 90,
-   "close": 1694.5,
-   "off_high": -2.61,
-   "ext_ema21": 2.29,
-   "adr": 2.61,
-   "turnover_cr": 130.34,
-   "r63": 0.09,
-   "r126": 0.23,
-   "rs65": 0.11,
-   "volmom": 1.47,
-   "sma50": 1665.52,
-   "ema21": 1656.57,
-   "pivot": 1715.0,
-   "entry": 1700.79,
-   "stop": 1647.2,
-   "risk_pct": 3.15,
-   "pos_pct": 15.65,
-   "qty": 23,
-   "amount": 39118.17,
-   "t1": 1811.94,
-   "skip_above": 1751.82,
-   "breakeven_at": 1754.39,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "Aurobindo Pharma Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 737.0,
-   "profit_year_ago_cr": 559.0,
-   "profit_yoy_pct": 31.8,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "SHYAMMETL",
-   "setup": "PULLBACK",
-   "rs_rating": 90,
-   "close": 1219.5,
-   "off_high": -2.71,
-   "ext_ema21": 6.53,
-   "adr": 3.97,
-   "turnover_cr": 40.86,
-   "r63": 0.19,
-   "r126": 0.35,
-   "rs65": 0.24,
-   "volmom": 1.18,
-   "sma50": 1096.32,
-   "ema21": 1144.78,
-   "pivot": 1240.5,
-   "entry": 1256.01,
-   "stop": 1168.09,
-   "risk_pct": 7.0,
-   "pos_pct": 7.03,
-   "qty": 14,
-   "amount": 17584.14,
-   "t1": 1380.53,
-   "skip_above": 1293.69,
-   "breakeven_at": 1343.93,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": -0.01,
-   "company": "Shyam Metalics and Energy Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 198.0,
-   "profit_year_ago_cr": 136.0,
-   "profit_yoy_pct": 45.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "AARTIPHARM",
-   "setup": "PULLBACK",
-   "rs_rating": 87,
-   "close": 919.95,
-   "off_high": -8.23,
-   "ext_ema21": 4.55,
-   "adr": 5.15,
-   "turnover_cr": 46.83,
-   "r63": 0.36,
-   "r126": 0.14,
-   "rs65": 0.41,
-   "volmom": 0.25,
-   "sma50": 872.16,
-   "ema21": 879.89,
-   "pivot": 991.8,
-   "entry": 933.06,
-   "stop": 867.75,
-   "risk_pct": 7.0,
-   "pos_pct": 7.09,
-   "qty": 19,
-   "amount": 17728.14,
-   "t1": 1053.29,
-   "skip_above": 961.05,
-   "breakeven_at": 998.38,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "Aarti Pharmalabs Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 66.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 112.9,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "EMCURE",
-   "setup": "PULLBACK",
-   "rs_rating": 86,
-   "close": 1976.6,
-   "off_high": -5.91,
-   "ext_ema21": 5.78,
-   "adr": 3.61,
-   "turnover_cr": 15.89,
-   "r63": 0.0,
-   "r126": 0.1,
-   "rs65": 0.07,
-   "volmom": 0.93,
-   "sma50": 1892.58,
-   "ema21": 1868.68,
-   "pivot": 1974.0,
-   "entry": 2075.94,
-   "stop": 1930.63,
-   "risk_pct": 7.0,
-   "pos_pct": 7.06,
-   "qty": 8,
-   "amount": 16607.52,
-   "t1": 2263.29,
-   "skip_above": 2138.22,
-   "breakeven_at": 2221.26,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.12,
-   "company": "Emcure Pharmaceuticals Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 248.0,
-   "profit_year_ago_cr": 118.0,
-   "profit_yoy_pct": 110.2,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "LALPATHLAB",
-   "setup": "PULLBACK",
-   "rs_rating": 84,
-   "close": 1925.7,
-   "off_high": -5.54,
-   "ext_ema21": 1.29,
-   "adr": 3.33,
-   "turnover_cr": 44.02,
-   "r63": 0.01,
-   "r126": 0.22,
-   "rs65": 0.06,
-   "volmom": 0.83,
-   "sma50": 1914.79,
-   "ema21": 1901.1,
-   "pivot": 2027.6,
-   "entry": 1939.87,
-   "stop": 1856.5,
-   "risk_pct": 4.3,
-   "pos_pct": 11.25,
-   "qty": 14,
-   "amount": 27158.18,
-   "t1": 2101.35,
-   "skip_above": 1998.07,
-   "breakeven_at": 2023.24,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.04,
-   "company": "Dr. Lal Path Labs Ltd.",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 166.0,
-   "profit_year_ago_cr": 129.0,
-   "profit_yoy_pct": 28.7,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
+   "reported_latest_quarter": true
   }
  ],
- "shortlist": [
-  {
-   "symbol": "RAYMOND",
-   "setup": "PULLBACK",
-   "rs_rating": 99,
-   "close": 1172.3,
-   "off_high": -12.45,
-   "ext_ema21": 5.79,
-   "adr": 6.35,
-   "turnover_cr": 91.79,
-   "r63": 0.95,
-   "r126": 1.52,
-   "rs65": 1.09,
-   "volmom": 2.49,
-   "sma50": 998.64,
-   "ema21": 1108.14,
-   "pivot": 1339.0,
-   "entry": 1187.37,
-   "stop": 1104.25,
-   "risk_pct": 7.0,
-   "pos_pct": 7.12,
-   "qty": 15,
-   "amount": 17810.55,
-   "t1": 1375.75,
-   "skip_above": 1222.99,
-   "breakeven_at": 1270.49,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.04,
-   "company": "Raymond Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 1.59,
-   "profit_year_ago_cr": -2.85,
-   "profit_yoy_pct": 155.8,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "MACPOWER",
-   "setup": "PULLBACK",
-   "rs_rating": 98,
-   "close": 2136.7,
-   "off_high": -5.08,
-   "ext_ema21": 9.06,
-   "adr": 7.12,
-   "turnover_cr": 9.31,
-   "r63": 0.47,
-   "r126": 0.75,
-   "rs65": 0.5,
-   "volmom": 2.02,
-   "sma50": 1957.91,
-   "ema21": 1959.17,
-   "pivot": 2251.0,
-   "entry": 2236.36,
-   "stop": 2079.82,
-   "risk_pct": 7.0,
-   "pos_pct": 6.71,
-   "qty": 7,
-   "amount": 15654.52,
-   "t1": 2634.69,
-   "skip_above": 2303.45,
-   "breakeven_at": 2392.91,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.17,
-   "company": "Macpower CNC Machines Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 13.0,
-   "profit_year_ago_cr": 9.0,
-   "profit_yoy_pct": 44.4,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "GRWRHITECH",
-   "setup": "PULLBACK",
-   "rs_rating": 97,
-   "close": 7395.5,
-   "off_high": -7.44,
-   "ext_ema21": 5.58,
-   "adr": 5.0,
-   "turnover_cr": 33.7,
-   "r63": 0.03,
-   "r126": 0.73,
-   "rs65": 0.11,
-   "volmom": 1.8,
-   "sma50": 6935.22,
-   "ema21": 7004.82,
-   "pivot": 7388.0,
-   "entry": 7439.85,
-   "stop": 6919.06,
-   "risk_pct": 7.0,
-   "pos_pct": 5.95,
-   "qty": 2,
-   "amount": 14879.7,
-   "t1": 8369.92,
-   "skip_above": 7663.05,
-   "breakeven_at": 7960.64,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.06,
-   "company": "Garware Hi-Tech Films Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 140.0,
-   "profit_year_ago_cr": 107.0,
-   "profit_yoy_pct": 30.8,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "NAVINFLUOR",
-   "setup": "PULLBACK",
-   "rs_rating": 91,
-   "close": 8530.0,
-   "off_high": -4.69,
-   "ext_ema21": 2.76,
-   "adr": 3.47,
-   "turnover_cr": 91.93,
-   "r63": 0.13,
-   "r126": 0.26,
-   "rs65": 0.2,
-   "volmom": 1.3,
-   "sma50": 8388.43,
-   "ema21": 8301.05,
-   "pivot": 8745.0,
-   "entry": 8627.22,
-   "stop": 8242.0,
-   "risk_pct": 4.47,
-   "pos_pct": 10.35,
-   "qty": 3,
-   "amount": 25881.66,
-   "t1": 9375.19,
-   "skip_above": 8886.04,
-   "breakeven_at": 9012.44,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "Navin Fluorine International Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 205.0,
-   "profit_year_ago_cr": 134.0,
-   "profit_yoy_pct": 53.0,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "PARACABLES",
-   "setup": "PULLBACK",
-   "rs_rating": 91,
-   "close": 61.77,
-   "off_high": -18.4,
-   "ext_ema21": 1.23,
-   "adr": 6.84,
-   "turnover_cr": 14.97,
-   "r63": -0.07,
-   "r126": 0.54,
-   "rs65": 0.02,
-   "volmom": 0.79,
-   "sma50": 61.1,
-   "ema21": 61.02,
-   "pivot": 69.7,
-   "entry": 63.73,
-   "stop": 59.27,
-   "risk_pct": 7.0,
-   "pos_pct": 7.14,
-   "qty": 280,
-   "amount": 17844.4,
-   "t1": 74.63,
-   "skip_above": 65.64,
-   "breakeven_at": 68.19,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": -0.07,
-   "company": "Paramount Communications Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 24.0,
-   "profit_year_ago_cr": 13.0,
-   "profit_yoy_pct": 84.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "AUROPHARMA",
-   "setup": "PULLBACK",
-   "rs_rating": 90,
-   "close": 1694.5,
-   "off_high": -2.61,
-   "ext_ema21": 2.29,
-   "adr": 2.61,
-   "turnover_cr": 130.34,
-   "r63": 0.09,
-   "r126": 0.23,
-   "rs65": 0.11,
-   "volmom": 1.47,
-   "sma50": 1665.52,
-   "ema21": 1656.57,
-   "pivot": 1715.0,
-   "entry": 1700.79,
-   "stop": 1647.2,
-   "risk_pct": 3.15,
-   "pos_pct": 15.65,
-   "qty": 23,
-   "amount": 39118.17,
-   "t1": 1811.94,
-   "skip_above": 1751.82,
-   "breakeven_at": 1754.39,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "Aurobindo Pharma Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 737.0,
-   "profit_year_ago_cr": 559.0,
-   "profit_yoy_pct": 31.8,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "SHYAMMETL",
-   "setup": "PULLBACK",
-   "rs_rating": 90,
-   "close": 1219.5,
-   "off_high": -2.71,
-   "ext_ema21": 6.53,
-   "adr": 3.97,
-   "turnover_cr": 40.86,
-   "r63": 0.19,
-   "r126": 0.35,
-   "rs65": 0.24,
-   "volmom": 1.18,
-   "sma50": 1096.32,
-   "ema21": 1144.78,
-   "pivot": 1240.5,
-   "entry": 1256.01,
-   "stop": 1168.09,
-   "risk_pct": 7.0,
-   "pos_pct": 7.03,
-   "qty": 14,
-   "amount": 17584.14,
-   "t1": 1380.53,
-   "skip_above": 1293.69,
-   "breakeven_at": 1343.93,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": -0.01,
-   "company": "Shyam Metalics and Energy Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 198.0,
-   "profit_year_ago_cr": 136.0,
-   "profit_yoy_pct": 45.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "AARTIPHARM",
-   "setup": "PULLBACK",
-   "rs_rating": 87,
-   "close": 919.95,
-   "off_high": -8.23,
-   "ext_ema21": 4.55,
-   "adr": 5.15,
-   "turnover_cr": 46.83,
-   "r63": 0.36,
-   "r126": 0.14,
-   "rs65": 0.41,
-   "volmom": 0.25,
-   "sma50": 872.16,
-   "ema21": 879.89,
-   "pivot": 991.8,
-   "entry": 933.06,
-   "stop": 867.75,
-   "risk_pct": 7.0,
-   "pos_pct": 7.09,
-   "qty": 19,
-   "amount": 17728.14,
-   "t1": 1053.29,
-   "skip_above": 961.05,
-   "breakeven_at": 998.38,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "Aarti Pharmalabs Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 66.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 112.9,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "EMCURE",
-   "setup": "PULLBACK",
-   "rs_rating": 86,
-   "close": 1976.6,
-   "off_high": -5.91,
-   "ext_ema21": 5.78,
-   "adr": 3.61,
-   "turnover_cr": 15.89,
-   "r63": 0.0,
-   "r126": 0.1,
-   "rs65": 0.07,
-   "volmom": 0.93,
-   "sma50": 1892.58,
-   "ema21": 1868.68,
-   "pivot": 1974.0,
-   "entry": 2075.94,
-   "stop": 1930.63,
-   "risk_pct": 7.0,
-   "pos_pct": 7.06,
-   "qty": 8,
-   "amount": 16607.52,
-   "t1": 2263.29,
-   "skip_above": 2138.22,
-   "breakeven_at": 2221.26,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.12,
-   "company": "Emcure Pharmaceuticals Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 248.0,
-   "profit_year_ago_cr": 118.0,
-   "profit_yoy_pct": 110.2,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  },
-  {
-   "symbol": "LALPATHLAB",
-   "setup": "PULLBACK",
-   "rs_rating": 84,
-   "close": 1925.7,
-   "off_high": -5.54,
-   "ext_ema21": 1.29,
-   "adr": 3.33,
-   "turnover_cr": 44.02,
-   "r63": 0.01,
-   "r126": 0.22,
-   "rs65": 0.06,
-   "volmom": 0.83,
-   "sma50": 1914.79,
-   "ema21": 1901.1,
-   "pivot": 2027.6,
-   "entry": 1939.87,
-   "stop": 1856.5,
-   "risk_pct": 4.3,
-   "pos_pct": 11.25,
-   "qty": 14,
-   "amount": 27158.18,
-   "t1": 2101.35,
-   "skip_above": 1998.07,
-   "breakeven_at": 2023.24,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.04,
-   "company": "Dr. Lal Path Labs Ltd.",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 166.0,
-   "profit_year_ago_cr": 129.0,
-   "profit_yoy_pct": 28.7,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": {
-    "avg_ret": -0.31,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "trades": 2319
-   }
-  }
- ],
- "picks_today": 3,
- "size_multiplier": 0.5,
- "evidence": {
-  "line": "**History warning:** in a RED market no setup made money over one week in the last 5 years. The least-bad, PULLBACK, averaged -0.31% a trade after charges (40% winners, 2319 past trades). Picks are cut and sized down; waiting is the safer choice.",
-  "available": true,
-  "keep": [
-   "PULLBACK",
-   "READY"
-  ],
-  "dropped": [
-   "BREAKOUT"
-  ],
-  "period": "2021-10-23 to 2026-10-23",
-  "stats": {
-   "BREAKOUT": {
-    "signals": 337,
-    "trades": 183,
-    "trigger_pct": 54.3,
-    "win_pct": 18.0,
-    "target_pct": 6.6,
-    "stop_pct": 53.6,
-    "breakeven_pct": 14.8,
-    "time_pct": 25.1,
-    "avg_ret": -1.6,
-    "median_ret": -2.89,
-    "avg_r": -0.44,
-    "avg_win": 5.09,
-    "avg_loss": -3.07,
-    "avg_days": 3.2,
-    "enough": true
-   },
-   "READY": {
-    "signals": 131,
-    "trades": 25,
-    "trigger_pct": 19.1,
-    "win_pct": 20.0,
-    "target_pct": 0.0,
-    "stop_pct": 60.0,
-    "breakeven_pct": 16.0,
-    "time_pct": 24.0,
-    "avg_ret": -1.25,
-    "median_ret": -2.1,
-    "avg_r": -0.57,
-    "avg_win": 2.01,
-    "avg_loss": -2.06,
-    "avg_days": 2.7,
-    "enough": false
-   },
-   "PULLBACK": {
-    "signals": 4112,
-    "trades": 2319,
-    "trigger_pct": 56.4,
-    "win_pct": 39.6,
-    "target_pct": 11.9,
-    "stop_pct": 32.4,
-    "breakeven_pct": 7.5,
-    "time_pct": 48.2,
-    "avg_ret": -0.31,
-    "median_ret": -0.69,
-    "avg_r": -0.06,
-    "avg_win": 5.55,
-    "avg_loss": -4.15,
-    "avg_days": 4.1,
-    "enough": true
-   }
-  }
- },
  "skipped": [
+  {
+   "symbol": "SAREGAMA",
+   "reason": "results on 2026-11-04"
+  },
+  {
+   "symbol": "BOSCHLTD",
+   "reason": "results on 2026-11-06"
+  },
   {
    "symbol": "SANSERA",
    "reason": "results on 2026-11-05"
@@ -5174,30 +3865,6 @@
   {
    "symbol": "AVTNPL",
    "reason": "results on 2026-11-11"
-  },
-  {
-   "symbol": "CEIGALL",
-   "reason": "results on 2026-11-05"
-  },
-  {
-   "symbol": "IPCALAB",
-   "reason": "results on 2026-11-05"
-  },
-  {
-   "symbol": "NUVAMA",
-   "reason": "results on 2026-11-06"
-  },
-  {
-   "symbol": "MCX",
-   "reason": "BREAKOUT lost money on average in RED markets"
-  },
-  {
-   "symbol": "SAREGAMA",
-   "reason": "BREAKOUT lost money on average in RED markets"
-  },
-  {
-   "symbol": "BOSCHLTD",
-   "reason": "BREAKOUT lost money on average in RED markets"
   }
  ],
  "watch_trend": [
@@ -5224,11 +3891,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.01,
    "company": "Cupid Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 44.0,
@@ -5236,8 +3900,7 @@
    "profit_yoy_pct": 193.3,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SHREEJISPG",
@@ -5262,11 +3925,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05,
    "company": "Shreeji Shipping Global Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 45.0,
@@ -5274,8 +3934,7 @@
    "profit_yoy_pct": 21.6,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "GCSL",
@@ -5300,11 +3959,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06,
    "company": "Gretex Corporate Services Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 2.1,
@@ -5312,8 +3968,7 @@
    "profit_yoy_pct": 412.2,
    "next_results": "2026-11-05",
    "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SETL",
@@ -5338,11 +3993,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.18,
    "company": "Standard Engineering Technology Limited",
    "latest_quarter": "Jun 2026",
    "profit_latest_cr": 16.0,
@@ -5350,8 +4002,7 @@
    "profit_yoy_pct": 6.7,
    "next_results": "2026-11-05",
    "results_in_sessions": 2,
-   "reported_latest_quarter": false,
-   "history": null
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SBC",
@@ -5376,11 +4027,8 @@
    "qty": null,
    "amount": null,
    "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.03,
    "company": "SBC Exports Limited",
    "latest_quarter": "Sep 2026",
    "profit_latest_cr": 11.0,
@@ -5389,12 +4037,11 @@
    "board_meeting_mentioned": "2026-10-15",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true,
-   "history": null
+   "reported_latest_quarter": true
   }
  ],
  "enrich_notes": {
-  "results_calendar": "NSE event calendar: 593 companies",
+  "results_calendar": "NSE event calendar: 773 companies",
   "latest_quarter_expected": "Sep 2026"
  }
 }
