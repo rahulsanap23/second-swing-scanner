@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T14:06+05:30",
+ "generated": "2026-11-04T16:10+05:30",
  "data_date": "2026-11-03",
  "first_pick": "2026-10-28",
  "rules": {
@@ -107,6 +107,9 @@
    "suggested": [
     "2026-11-03"
    ],
+   "best_on": [
+    "2026-11-03"
+   ],
    "close_at_pick": 1172.3,
    "entry": 1187.37,
    "stop": 1104.25,
@@ -133,6 +136,9 @@
    "setup": "PULLBACK",
    "regime": "RED",
    "suggested": [
+    "2026-11-03"
+   ],
+   "best_on": [
     "2026-11-03"
    ],
    "close_at_pick": 8530.0,
@@ -163,6 +169,9 @@
    "suggested": [
     "2026-11-03"
    ],
+   "best_on": [
+    "2026-11-03"
+   ],
    "close_at_pick": 3490.1,
    "entry": 3545.08,
    "stop": 3419.99,
@@ -191,6 +200,9 @@
    "suggested": [
     "2026-11-03"
    ],
+   "best_on": [
+    "2026-11-03"
+   ],
    "close_at_pick": 7395.5,
    "entry": 7439.85,
    "stop": 6919.06,
@@ -217,6 +229,9 @@
    "setup": "PULLBACK",
    "regime": "RED",
    "suggested": [
+    "2026-11-02"
+   ],
+   "best_on": [
     "2026-11-02"
    ],
    "close_at_pick": 664.3,
@@ -250,6 +265,10 @@
     "2026-11-02",
     "2026-11-03"
    ],
+   "best_on": [
+    "2026-11-02",
+    "2026-11-03"
+   ],
    "close_at_pick": 2098.4,
    "entry": 2114.22,
    "stop": 1966.22,
@@ -280,6 +299,9 @@
    "suggested": [
     "2026-11-02"
    ],
+   "best_on": [
+    "2026-11-02"
+   ],
    "close_at_pick": 619.4,
    "entry": 639.28,
    "stop": 618.64,
@@ -306,6 +328,9 @@
    "setup": "PULLBACK",
    "regime": "RED",
    "suggested": [
+    "2026-11-02"
+   ],
+   "best_on": [
     "2026-11-02"
    ],
    "close_at_pick": 340.5,
@@ -338,6 +363,9 @@
    "suggested": [
     "2026-11-02"
    ],
+   "best_on": [
+    "2026-11-02"
+   ],
    "close_at_pick": 379.85,
    "entry": 388.53,
    "stop": 361.33,
@@ -366,6 +394,9 @@
    "suggested": [
     "2026-10-30"
    ],
+   "best_on": [
+    "2026-10-30"
+   ],
    "close_at_pick": 8680.0,
    "entry": 8762.49,
    "stop": 8468.14,
@@ -392,6 +423,9 @@
    "setup": "BREAKOUT",
    "regime": "RED",
    "suggested": [
+    "2026-10-30"
+   ],
+   "best_on": [
     "2026-10-30"
    ],
    "close_at_pick": 2045.0,
@@ -424,6 +458,9 @@
    "suggested": [
     "2026-10-30"
    ],
+   "best_on": [
+    "2026-10-30"
+   ],
    "close_at_pick": 1415.3,
    "entry": 1502.0,
    "stop": 1396.86,
@@ -454,6 +491,9 @@
    "suggested": [
     "2026-10-30"
    ],
+   "best_on": [
+    "2026-10-30"
+   ],
    "close_at_pick": 3508.8,
    "entry": 3627.14,
    "stop": 3373.24,
@@ -480,6 +520,9 @@
    "setup": "BREAKOUT",
    "regime": "RED",
    "suggested": [
+    "2026-10-29"
+   ],
+   "best_on": [
     "2026-10-29"
    ],
    "close_at_pick": 4280.0,
@@ -510,6 +553,9 @@
    "suggested": [
     "2026-10-29"
    ],
+   "best_on": [
+    "2026-10-29"
+   ],
    "close_at_pick": 56.57,
    "entry": 57.39,
    "stop": 55.06,
@@ -536,6 +582,10 @@
    "setup": "PULLBACK",
    "regime": "RED",
    "suggested": [
+    "2026-10-29",
+    "2026-10-30"
+   ],
+   "best_on": [
     "2026-10-29",
     "2026-10-30"
    ],
@@ -569,6 +619,9 @@
    "suggested": [
     "2026-10-29"
    ],
+   "best_on": [
+    "2026-10-29"
+   ],
    "close_at_pick": 222.63,
    "entry": 227.45,
    "stop": 217.0,
@@ -599,6 +652,9 @@
    "suggested": [
     "2026-10-29"
    ],
+   "best_on": [
+    "2026-10-29"
+   ],
    "close_at_pick": 2105.0,
    "entry": 2128.15,
    "stop": 1991.43,
@@ -627,6 +683,9 @@
    "suggested": [
     "2026-10-28"
    ],
+   "best_on": [
+    "2026-10-28"
+   ],
    "close_at_pick": 4239.9,
    "entry": 4266.52,
    "stop": 4135.28,
@@ -653,6 +712,9 @@
    "setup": "BREAKOUT",
    "regime": "RED",
    "suggested": [
+    "2026-10-28"
+   ],
+   "best_on": [
     "2026-10-28"
    ],
    "close_at_pick": 879.45,
@@ -685,6 +747,9 @@
    "suggested": [
     "2026-10-28"
    ],
+   "best_on": [
+    "2026-10-28"
+   ],
    "close_at_pick": 840.3,
    "entry": 846.54,
    "stop": 787.28,
@@ -715,6 +780,9 @@
    "suggested": [
     "2026-10-28"
    ],
+   "best_on": [
+    "2026-10-28"
+   ],
    "close_at_pick": 2181.9,
    "entry": 2203.2,
    "stop": 2048.97,
@@ -741,6 +809,9 @@
    "setup": "PULLBACK",
    "regime": "RED",
    "suggested": [
+    "2026-10-28"
+   ],
+   "best_on": [
     "2026-10-28"
    ],
    "close_at_pick": 723.25,
