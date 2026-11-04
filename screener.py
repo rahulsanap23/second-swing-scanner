@@ -39,6 +39,8 @@ P = dict(
     picks_green=5, picks_yellow=5, picks_red=3,   # how many picks per market mood
     size_yellow=0.5, size_red=0.5,                # position size multiplier per market mood
     shortlist_n=10,        # ranked candidates handed to the morning Claude checks
+    setups_allowed=("PULLBACK",),  # only these setup types can be picked (user's choice, Nov 2026);
+                                   # set to None to let the history test choose the types again
 )
 
 SECTORS = ["nifty auto", "nifty bank", "nifty it", "nifty pharma", "nifty fmcg", "nifty metal",

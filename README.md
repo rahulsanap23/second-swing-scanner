@@ -35,7 +35,7 @@ Days appended from the daily files are not split-adjusted until EOD2 catches up;
 2. Minervini trend template (price/50/150/200-day SMA order, 200-day rising, ≥30% above 52-week low, within 25% of high)
 3. RS rating ≥ 70 (40% 3-month + 20% each 6/9/12-month return, percentile)
 4. Setup: BREAKOUT (close > 21-day high on ≥1.5× volume), READY (tight base within 3% of pivot), PULLBACK (to rising 20 EMA); skip if > 10% above 21 EMA
-5. Ranking by evidence: setups are ordered by their average one-week result in today's market mood (from the history test). A setup that lost money on average is dropped that day; if all did (RED markets so far), only the least-bad is kept, with a warning in the report. Then profit growth, then RS rating. Skip if results fall within 7 sessions
+5. Setup types: only PULLBACK setups are picked (`setups_allowed` in `screener.py`; set it to `None` to let the history test choose). Ranking by evidence: setups are ordered by their average one-week result in today's market mood (from the history test). A setup that lost money on average is dropped that day; if all did (RED markets so far), only the least-bad is kept, with a warning in the report. Then profit growth, then RS rating. Skip if results fall within 7 sessions
 6. Picks: 5 in GREEN, 5 at half size in YELLOW (RS 85+), 3 at half size in RED
 7. One-week plan: buy-stop +0.2% above pivot/high (skip if it opens > 3% above); stop ≤ min(1 ADR, 7%); risk 0.5% of ₹5 lakh (₹2,500) before the size cut; Target 1 = +2.5 ADR; stop to the buy price after +1R; sell at the close of day 5
 

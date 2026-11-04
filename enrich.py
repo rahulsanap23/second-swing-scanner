@@ -173,6 +173,24 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
     n_pick = n_pick or P.get(f"picks_{regime.lower()}", 5)
     size = P.get(f"size_{regime.lower()}", 1.0)
     ev = evidence(regime)
+    allowed = P.get("setups_allowed")
+    if allowed:                                         # user's fixed choice overrides the history test
+        allowed = [s for s in allowed if s in SETUP_RANK]
+        ev["keep"] = set(allowed)
+        parts = []
+        for s in allowed:
+            st = ev["stats"].get(s) or {}
+            if st.get("avg_ret") is not None:
+                parts.append(f"{s} {st['avg_ret']:+.2f}% a trade after charges ({st['win_pct']:.0f}% winners, "
+                             f"{st['trades']} past trades)")
+        if ev["available"] and parts:
+            ev["line"] = (f"History ({ev.get('period')}), one-week result in a {regime} market: " + "; ".join(parts)
+                          + ". Only " + ", ".join(s.lower() + "s" for s in allowed) + " are picked (your setting).")
+            bad = [s for s in allowed if (ev["stats"].get(s) or {}).get("enough") and ev["stats"][s]["avg_ret"] <= 0]
+            if bad:
+                ev["line"] = "**History warning:** " + ev["line"] + (" In this market they lost money on average; "
+                             "picks are cut and sized down, and waiting is the safer choice.")
+        ev["dropped"] = [s for s in SETUP_RANK if s not in ev["keep"]]
     exp = lambda c: (ev["stats"].get(c["setup"], {}).get("avg_ret") if ev["available"] else None)
     rank = lambda c: (-(exp(c) if exp(c) is not None else -99), SETUP_RANK[c["setup"]], -c["rs_rating"])
 
@@ -238,7 +256,8 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
                            dropped=ev.get("dropped", []), period=ev.get("period"),
                            stats={k: v for k, v in ev["stats"].items() if v})
     out["skipped"] = ([dict(symbol=c["symbol"], reason=c["skip_reason"]) for c in skipped] +
-                      [dict(symbol=c["symbol"], reason=f"{c['setup']} lost money on average in {regime} markets")
+                      [dict(symbol=c["symbol"], reason=(f"{c['setup']} not picked (setting: pullbacks only)" if allowed
+                                                        else f"{c['setup']} lost money on average in {regime} markets"))
                        for c in dropped_by_history][:15])
     out["watch_trend"] = trend
     out["enrich_notes"] = dict(results_calendar=cal_err or f"NSE event calendar: {len(cal)} companies",
