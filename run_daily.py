@@ -5,10 +5,13 @@ results/status.json   did today's data arrive (fresh), which sources were used, 
 results/latest.json   full scan output (read by the Claude morning report)
 results/latest.md     readable summary
 results/history/      one JSON per data date
-results/tracker.json  every past best-5 pick followed to Target 1 / Stop (tracker.html = dashboard page)
+results/tracker.json  every past best-5 pick followed to Target 1 / Stop / day-5 sell (tracker.html = dashboard page)
+results/plans/        one plan file per shortlisted stock, in the india-timemachine skill's plan format
+results/backtest.*    the 5-year history test (written weekly by backtest.py, read here for ranking)
 Env: EOD2_DIR (default /tmp/eod2_data), FORCE=1 to re-run, FINAL_ATTEMPT=1 to fail the job if data is stale,
      TRACKER_ONLY=1 to refresh prices and rebuild only results/tracker.* (scan results untouched).
 """
+import glob
 import json
 import os
 import subprocess
@@ -22,6 +25,25 @@ import tracker
 ROOT = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.join(ROOT, "results")
 EOD2 = os.environ.get("EOD2_DIR", "/tmp/eod2_data")
+
+
+def write_plans(out):
+    """One india-timemachine plan file per shortlisted stock, so the morning task replays exact levels."""
+    d = os.path.join(RES, "plans")
+    os.makedirs(d, exist_ok=True)
+    for f in glob.glob(os.path.join(d, "*.json")):
+        os.remove(f)
+    hold = screener.P.get("hold_sessions", 5)
+    for c in out.get("shortlist") or out.get("best5") or []:
+        risk = c["entry"] - c["stop"]
+        if risk <= 0:
+            continue
+        plan = dict(symbol=c["symbol"], setup=f"second-scanner {c['setup'].lower()}", asof=out["asof"],
+                    entry=round(c["entry"], 2), stop=round(c["stop"], 2), target=round(c["t1"], 2),
+                    risk_per_share=round(risk, 2), risk_pct=round(risk / c["entry"] * 100, 2),
+                    reward_risk=round((c["t1"] - c["entry"]) / risk, 2), max_hold_days=hold,
+                    stop_rule="price:%.2f" % c["stop"], qty=int(c.get("qty") or 0))
+        json.dump(plan, open(os.path.join(d, f"{c['symbol']}.json"), "w"), indent=1)
 
 
 def main():
@@ -63,6 +85,10 @@ def main():
         status["fresh"] = False
         status["errors"].append(f"stock prices only up to {out['asof']}; indices up to {status['data_date']}")
 
+    try:
+        write_plans(out)
+    except Exception as e:  # noqa: BLE001
+        print(f"::warning::Plan files failed: {type(e).__name__}: {e}")
     json.dump(out, open(latest_path, "w"), indent=1)
     json.dump(out, open(os.path.join(RES, "history", f"{out['asof']}.json"), "w"), indent=1)
     json.dump(status, open(status_path, "w"), indent=1)

@@ -31,6 +31,14 @@ P = dict(
     max_stop_pct=7.0,      # Kasliwal / Minervini: stop no wider than ~7%
     risk_per_trade=0.5,    # Qullamaggie: risk 0.25-1% of capital per trade
     max_position=25.0,     # Qullamaggie: positions 5-25% of capital
+    # ---- one-week swing plan (checked against 5 years of NSE data by backtest.py; see results/backtest.md)
+    hold_sessions=5,       # time stop: sell at the close of the 5th session after buying (user's one-week hold)
+    t1_adr=2.5,            # Target 1 = entry + 2.5 x ADR. History test: closer targets (1-1.5 ADR, 2R) did worse
+    breakeven_at_r=1.0,    # move the stop to the buy price once the trade is up 1R
+    gap_skip_pct=3.0,      # don't buy if the stock opens more than 3% above "Buy above"
+    picks_green=5, picks_yellow=5, picks_red=3,   # how many picks per market mood
+    size_yellow=0.5, size_red=0.5,                # position size multiplier per market mood
+    shortlist_n=10,        # ranked candidates handed to the morning Claude checks
 )
 
 SECTORS = ["nifty auto", "nifty bank", "nifty it", "nifty pharma", "nifty fmcg", "nifty metal",
@@ -156,7 +164,7 @@ def run(data_dir, prev=None):
             hi252=hi252, lo252=lo252,
             new_high=bool(h.iloc[-1] >= h.iloc[-252:-1].max()), new_low=bool(l.iloc[-1] <= l.iloc[-252:-1].min()),
             rs_raw=0.4 * r(63) + 0.2 * r(126) + 0.2 * r(189) + 0.2 * r(251),
-            r21=r(21), r63=r(63), r126=r(126), r251=r(251),
+            r10=r(10), r21=r(21), r63=r(63), r126=r(126), r251=r(251),
             volmom=(r(126) / sigma + r(251) / sigma) / 2 if sigma > 0 else np.nan,
             rs65=float(rsl.iloc[-1] / rsl.iloc[-66] - 1),
             atr_pct=atr14 / C * 100, atr_contract=bool(atr14 < atr50),
@@ -221,7 +229,7 @@ def run(data_dir, prev=None):
         cap = min(x.adr, P["max_stop_pct"])
         note = "gap>=15% in 90d (check news/split)" if x.gap15 else ""
         empty = dict(entry=np.nan, stop=np.nan, risk_pct=np.nan, pos_pct=np.nan, qty=np.nan, amount=np.nan,
-                     t1=np.nan, trail="", note=note)
+                     t1=np.nan, skip_above=np.nan, breakeven_at=np.nan, trail="", note=note)
         if x.setup in ("READY", "BREAKOUT"):
             # Qullamaggie: stop = entry-day low, never wider than 1 ADR; Kasliwal/Minervini: <= 7%
             entry = (x.pivot if x.setup == "READY" else x.high) * 1.002
@@ -239,7 +247,9 @@ def run(data_dir, prev=None):
         qty = math.floor(P["capital"] * P["risk_per_trade"] / 100 / (entry - stop))
         qty = min(qty, math.floor(P["capital"] * P["max_position"] / 100 / entry))
         return pd.Series(dict(entry=entry, stop=stop, risk_pct=risk, pos_pct=qty * entry / P["capital"] * 100,
-                              qty=qty, amount=qty * entry, t1=entry * (1 + 2.5 * x.adr / 100),
+                              qty=qty, amount=qty * entry, t1=entry * (1 + P["t1_adr"] * x.adr / 100),
+                              skip_above=entry * (1 + P["gap_skip_pct"] / 100),
+                              breakeven_at=entry + P["breakeven_at_r"] * (entry - stop),
                               trail="10 EMA" if x.adr >= 5 else "20 EMA", note=note))
 
     if len(u):
@@ -250,7 +260,7 @@ def run(data_dir, prev=None):
 
     cols = ["symbol", "setup", "rs_rating", "close", "off_high", "ext_ema21", "adr", "turnover_cr", "r63", "r126",
             "rs65", "volmom", "sma50", "ema21", "pivot", "entry", "stop", "risk_pct", "pos_pct", "qty", "amount",
-            "t1", "trail", "note"]
+            "t1", "skip_above", "breakeven_at", "trail", "note", "r10"]
     cands = json.loads(u[cols].round(2).to_json(orient="records")) if len(u) else []
 
     # ---------- Yesterday's shortlist: did the buy-stop fill today? did the stop get hit?
@@ -292,20 +302,31 @@ def to_markdown(o, status=None):
           "Top sectors (50-day RS vs Nifty): " + ", ".join(f"{s['sector']} {s['rs50_vs_nifty']:+}" for s in o["sectors_top"][:3]),
           f"Funnel: {o['funnel']}", ""]
     if "best5" in o:
-        L += ["## Best 5", ""]
-        if o["regime"] == "RED":
-            L += ["**Market is RED: the research rule is no new buys. These are the best 5 if you buy anyway.**", ""]
-        L += ["| # | Symbol | Setup | RS | Close | Buy above | Stop | Qty | Amount | Target 1 | Trail | Profit YoY | Next results |",
-              "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+        hold = o.get("params", P).get("hold_sessions", 5)
+        L += [f"## Best {len(o['best5'])} (one-week plan)" if o["best5"] else "## Best picks (one-week plan)", ""]
+        ev = o.get("evidence") or {}
+        if ev.get("line"):
+            L += [ev["line"], ""]
+        L += ["| # | Symbol | Setup | RS | Close | Buy above | Skip if opens above | Stop | Target 1 | Sell by | "
+              "History (avg 1-week) | Qty | Amount | Profit YoY | Next results |",
+              "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for i, c in enumerate(o["best5"], 1):
             yoy = f"{c['profit_yoy_pct']:+.0f}% ({c.get('latest_quarter')})" if c.get("profit_yoy_pct") is not None else "n/a"
-            L.append(f"| {i} | {c['symbol']} ({c.get('company') or 'name n/a'}) | {c['setup']} | {c['rs_rating']} | {c['close']:.2f} | {c['entry']:.2f} | "
-                     f"{c['stop']:.2f} | {c['qty']:.0f} | {c['amount']:,.0f} | {c['t1']:.2f} | {c['trail']} | {yoy} | "
+            hist = c.get("history") or {}
+            hs = (f"{hist['avg_ret']:+.2f}%, wins {hist['win_pct']:.0f}%" if hist.get("avg_ret") is not None else "n/a")
+            L.append(f"| {i} | {c['symbol']} ({c.get('company') or 'name n/a'}) | {c['setup']} | {c['rs_rating']} | "
+                     f"{c['close']:.2f} | {c['entry']:.2f} | {c['skip_above']:.2f} | {c['stop']:.2f} | {c['t1']:.2f} | "
+                     f"close of day {hold} | {hs} | {c['qty']:.0f} | {c['amount']:,.0f} | {yoy} | "
                      f"{c.get('next_results') or 'not announced'} |")
         if not o["best5"]:
-            L.append("| - | no stock passed today | | | | | | | | | | | |")
+            L.append("| - | no stock passed today | | | | | | | | | | | | | |")
+        L += ["", f"How to trade: buy-stop at Buy above (never at the open); skip if it opens above the skip price; "
+              f"stop-loss order the same day you're filled; move the stop to your buy price once up 1R; "
+              f"sell at Target 1 or at the close of day {hold}, whichever comes first."]
         if o.get("skipped"):
             L += ["", "Skipped: " + ", ".join(f"{x['symbol']} ({x['reason']})" for x in o["skipped"])]
+        if o.get("reserve"):
+            L += ["", "Reserve (next in line): " + ", ".join(f"{c['symbol']} ({c['setup']})" for c in o["reserve"])]
         L.append("")
     setups = [c for c in o["candidates"] if c["setup"] in ACTIONABLE + ("BASING",)]
     L += ["## Setups", "", "| Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |",

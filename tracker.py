@@ -8,7 +8,10 @@ Rules (kept in line with the morning report's "How to trade" lines):
   - After entry, each day: low <= Stop -> STOP HIT; high >= Target 1 -> TARGET HIT.
     Both on the same day counts as STOP HIT (we can't know which came first), unless the day
     opened beyond one of them. A gap through a level fills at the open.
-  - Day 1 = the entry day. No hit after 20 trading days -> EXPIRED at that day's close.
+  - Once a day's high reaches entry + 1R, the stop moves to the buy price from the next day;
+    a later exit there is BREAKEVEN.
+  - Day 1 = the entry day. No hit by the close of day 5 (screener.P["hold_sessions"]) -> SOLD DAY 5
+    at that close (the one-week time stop).
   - Repeats: a stock picked again while its trade is open is the same trade (suggested count +1).
     A stock picked again on the day its buy-stop missed carries on as the same idea with the new levels.
 
@@ -22,10 +25,14 @@ import sys
 
 import pandas as pd
 
+import screener
+
 ROOT = os.path.dirname(os.path.abspath(__file__))
 RES = os.path.join(ROOT, "results")
-SKIP_GAP_PCT = 3.0
-MAX_DAYS = 20
+SKIP_GAP_PCT = screener.P.get("gap_skip_pct", 3.0)
+MAX_DAYS = screener.P.get("hold_sessions", 5)
+BE_AT_R = screener.P.get("breakeven_at_r", 1.0)
+CLOSED = ("TARGET HIT", "STOP HIT", "BREAKEVEN", "SOLD DAY %d" % MAX_DAYS)
 
 
 def load_picks():
@@ -65,18 +72,22 @@ def finish(t, status, date, price):
 
 def check_exit(t, r):
     o, h, l, c = r.Open, r.High, r.Low, r.Close
-    hit_stop, hit_t1 = l <= t["stop"], h >= t["t1"]
+    stop = t.get("active_stop") or t["stop"]
+    stop_name = "BREAKEVEN" if stop >= t["fill"] else "STOP HIT"
+    hit_stop, hit_t1 = l <= stop, h >= t["t1"]
     if hit_stop and hit_t1:
         if o >= t["t1"]:
             return finish(t, "TARGET HIT", r.Date, o)
         t["flag"] = "stop and target both touched that day; counted as stop"
-        return finish(t, "STOP HIT", r.Date, min(o, t["stop"]))
+        return finish(t, stop_name, r.Date, min(o, stop))
     if hit_stop:
-        return finish(t, "STOP HIT", r.Date, min(o, t["stop"]))
+        return finish(t, stop_name, r.Date, min(o, stop))
     if hit_t1:
         return finish(t, "TARGET HIT", r.Date, max(o, t["t1"]))
     if t["days"] >= MAX_DAYS:
-        return finish(t, "EXPIRED", r.Date, c)
+        return finish(t, "SOLD DAY %d" % MAX_DAYS, r.Date, c)
+    if h >= t["fill"] + BE_AT_R * (t["fill"] - t["stop"]):     # up 1R: stop to the buy price from tomorrow
+        t["active_stop"] = max(stop, t["fill"])
 
 
 def track_symbol(picks, rows):
@@ -129,6 +140,7 @@ def track_symbol(picks, rows):
         trades.append(cur)
     for t in trades:
         t.pop("eval_date", None)
+        t.pop("active_stop", None)
         t["cmp"] = rows[-1].Close if rows else None          # latest NSE close for the dashboard
         t["cmp_date"] = rows[-1].Date if rows else None
         t["times_suggested"] = len(t["suggested"])
@@ -138,7 +150,7 @@ def track_symbol(picks, rows):
 
 
 def summarize(trades):
-    done = [t for t in trades if t["status"] in ("TARGET HIT", "STOP HIT", "EXPIRED")]
+    done = [t for t in trades if t["status"] in CLOSED]
     tgt = [t for t in done if t["status"] == "TARGET HIT"]
     stp = [t for t in done if t["status"] == "STOP HIT"]
     avg = lambda xs: round(sum(xs) / len(xs), 1) if xs else None
@@ -147,28 +159,37 @@ def summarize(trades):
         out = {}
         for t in trades:
             k = key(t)
-            g = out.setdefault(k, dict(picks=0, triggered=0, target=0, stop=0, expired=0, open=0))
+            g = out.setdefault(k, dict(picks=0, triggered=0, target=0, stop=0, breakeven=0, sold_day=0, open=0,
+                                       closed=0, wins=0, _res=[]))
             g["picks"] += 1
             g["triggered"] += t["entry_date"] is not None
             g["target"] += t["status"] == "TARGET HIT"
             g["stop"] += t["status"] == "STOP HIT"
-            g["expired"] += t["status"] == "EXPIRED"
+            g["breakeven"] += t["status"] == "BREAKEVEN"
+            g["sold_day"] += t["status"].startswith("SOLD DAY")
             g["open"] += t["status"] == "OPEN"
+            if t["status"] in CLOSED:
+                g["closed"] += 1
+                g["wins"] += (t["result_pct"] or 0) > 0
+                g["_res"].append(t["result_pct"] or 0)
         for g in out.values():
-            n = g["target"] + g["stop"]
-            g["win_rate"] = round(g["target"] / n * 100) if n else None
+            res = g.pop("_res")
+            g["win_rate"] = round(g["wins"] / g["closed"] * 100) if g["closed"] else None
+            g["avg_result_pct"] = round(sum(res) / len(res), 2) if res else None
         return out
 
     count = lambda s: sum(t["status"] == s for t in trades)
     return dict(
         stock_ideas=len(trades), triggered=sum(t["entry_date"] is not None for t in trades),
-        target_hit=len(tgt), stop_hit=len(stp), expired=count("EXPIRED"), open=count("OPEN"),
+        target_hit=len(tgt), stop_hit=len(stp), open=count("OPEN"),
         waiting=count("WAITING"), not_triggered=count("NOT TRIGGERED"), skipped=count("SKIPPED"),
         data_issue=count("DATA ISSUE"),
-        win_rate=round(len(tgt) / (len(tgt) + len(stp)) * 100) if tgt or stp else None,
+        breakeven=count("BREAKEVEN"), sold_day=count("SOLD DAY %d" % MAX_DAYS), closed=len(done),
+        win_rate=round(sum((t["result_pct"] or 0) > 0 for t in done) / len(done) * 100) if done else None,
         avg_days_to_target=avg([t["days"] for t in tgt]), avg_days_to_stop=avg([t["days"] for t in stp]),
         avg_result_pct=avg([t["result_pct"] for t in done]), avg_r=avg([t["r_mult"] for t in done if t["r_mult"] is not None]),
         by_setup=group(lambda t: t["setup"]),
+        by_regime=group(lambda t: t.get("regime") or "?"),
         by_times_suggested=group(lambda t: "3+ days" if t["times_suggested"] >= 3 else f"{t['times_suggested']} day" + ("s" if t["times_suggested"] > 1 else "")),
     )
 
@@ -188,7 +209,7 @@ def run(data_dir):
     data_date = prices(daily, "nifty 500", "2000-01-01")[-1].Date if os.path.exists(nifty) else None
     return dict(generated=dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).isoformat(timespec="minutes"),
                 data_date=data_date, first_pick=min((t["suggested"][0] for t in trades), default=None),
-                rules=dict(skip_gap_pct=SKIP_GAP_PCT, max_days=MAX_DAYS), missing_price_files=missing,
+                rules=dict(skip_gap_pct=SKIP_GAP_PCT, max_days=MAX_DAYS, breakeven_at_r=BE_AT_R), missing_price_files=missing,
                 summary=summarize(trades), trades=trades)
 
 

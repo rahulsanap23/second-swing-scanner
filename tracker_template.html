@@ -24,7 +24,8 @@ body { background: var(--bg); color: var(--fg); font-family: var(--sans); font-s
 .wrap > * { min-width: 0; }
 h1 { font-size: 32px; font-weight: 700; margin: 0 0 4px; }
 .meta { color: var(--muted); font-size: 16px; }
-.score { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.score { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+@media (max-width: 860px) { .score { grid-template-columns: repeat(2, 1fr); } }
 .tile { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 18px 20px; display: grid; gap: 4px; }
 .tile .k { font-size: 14px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; }
 .tile .v { font-family: var(--mono); font-size: 38px; font-weight: 600; font-variant-numeric: tabular-nums; }
@@ -60,6 +61,7 @@ td .chg.neg { color: var(--loss); background: var(--loss-bg); }
     <div class="meta" id="meta"></div>
   </header>
   <div class="score" id="score"></div>
+  <div class="tscroll"><table id="moods"></table></div>
   <div class="tscroll"><table id="ledger"></table></div>
   <p class="note" id="note"></p>
 </div>
@@ -82,24 +84,40 @@ $("score").innerHTML =
    <div class="tile loss"><span class="k">Stop hit</span><span class="v">${S.stop_hit ?? 0}</span>
      <span class="s">${S.avg_days_to_stop == null ? "none yet" : "in " + days(S.avg_days_to_stop) + " on average"}</span></div>
    <div class="tile"><span class="k">Win rate</span><span class="v">${S.win_rate == null ? "–" : S.win_rate + "%"}</span>
-     <span class="s">${S.open ?? 0} still open</span></div>`;
+     <span class="s">of ${S.closed ?? 0} closed trades · ${S.open ?? 0} open</span></div>
+   <div class="tile ${S.avg_result_pct > 0 ? "win" : S.avg_result_pct < 0 ? "loss" : ""}"><span class="k">Avg result</span>
+     <span class="v">${S.avg_result_pct == null ? "–" : pct(S.avg_result_pct)}</span>
+     <span class="s">per closed trade, before charges</span></div>`;
+
+const MOODS = S.by_regime || {};
+const moodRows = ["GREEN", "YELLOW", "RED"].filter(k => MOODS[k]).map(k => {
+  const g = MOODS[k];
+  return `<tr><td><b>${k}</b></td><td class="r num">${g.picks}</td><td class="r num">${g.triggered}</td>
+    <td class="r num">${g.closed ?? 0}</td><td class="r num">${g.win_rate == null ? "–" : g.win_rate + "%"}</td>
+    <td class="r num">${g.avg_result_pct == null ? "–" : pct(g.avg_result_pct)}</td></tr>`;
+}).join("");
+$("moods").innerHTML = moodRows ? `<thead><tr><th>Market when picked</th><th class="r">Picks</th><th class="r">Bought</th>
+  <th class="r">Closed</th><th class="r">Win rate</th><th class="r">Avg result</th></tr></thead><tbody>${moodRows}</tbody>`
+  : `<tr><td class="empty">Scores by market mood appear once picks are tracked.</td></tr>`;
 
 const STATUS = {
   "TARGET HIT": ["Target hit", "p-win"], "STOP HIT": ["Stop hit", "p-loss"], "OPEN": ["Open", "p-open"],
   "WAITING": ["Waiting", "p-idle"], "NOT TRIGGERED": ["Not bought", "p-idle"], "SKIPPED": ["Not bought", "p-idle"],
-  "EXPIRED": ["Expired", "p-idle"], "DATA ISSUE": ["Check data", "p-idle"],
+  "BREAKEVEN": ["Breakeven", "p-idle"], "DATA ISSUE": ["Check data", "p-idle"],
 };
+const SOLD = "SOLD DAY " + ((DATA.rules || {}).max_days || 5);
+STATUS[SOLD] = ["Sold day " + ((DATA.rules || {}).max_days || 5), "p-idle"];
 function when(t) {
-  if (t.status === "TARGET HIT" || t.status === "STOP HIT") return `day ${t.days}, ${esc(day(t.exit_date))}`;
+  if (["TARGET HIT", "STOP HIT", "BREAKEVEN", SOLD].includes(t.status))
+    return `day ${t.days}, ${esc(day(t.exit_date))}<span class="sub">${pct(t.result_pct)}</span>`;
   if (t.status === "OPEN") return `day ${t.days} so far`;
-  if (t.status === "EXPIRED") return `day ${t.days}, expired`;
   return "–";
 }
 if (!T.length) {
   $("ledger").innerHTML = `<tr><td class="empty">Picks appear here the evening after the scanner suggests them.</td></tr>`;
 } else {
   $("ledger").innerHTML = `<thead><tr><th>Stock</th><th>Suggested</th><th class="r">Buy above</th><th class="r">Target 1</th>
-    <th class="r">Stop</th><th class="r">Price now</th><th>Status</th><th>Hit on</th></tr></thead><tbody>` +
+    <th class="r">Stop</th><th class="r">Price now</th><th>Status</th><th>Closed on</th></tr></thead><tbody>` +
     T.map(t => {
       const s = t.suggested || [], st = STATUS[t.status] || [t.status, "p-idle"];
       return `<tr>
@@ -114,6 +132,8 @@ if (!T.length) {
     }).join("") + "</tbody>";
 }
 
-$("note").textContent = "Day 1 is the day the stock was bought. Not bought = it didn't reach Buy above the next trading day. " +
-  "×2, ×3 = suggested on that many days. Price now is the latest NSE close (with % from Buy above), updated every trading day. Win rate = target hits out of target + stop hits.";
+$("note").textContent = "Day 1 is the day the stock was bought. Not bought = it didn't reach Buy above the next trading day (or opened more than " +
+  ((DATA.rules || {}).skip_gap_pct || 3) + "% above it). Each trade is sold at Target 1, the stop, or the close of day " + ((DATA.rules || {}).max_days || 5) +
+  "; after a day up 1R the stop moves to the buy price (Breakeven). ×2, ×3 = suggested on that many days. Price now is the latest NSE close (with % from Buy above). " +
+  "Win rate = closed trades that made money. Results are before Zerodha charges (about 0.25% a trade).";
 </script>
