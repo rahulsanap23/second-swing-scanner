@@ -140,7 +140,10 @@ def track_symbol(picks, rows):
         trades.append(cur)
     for t in trades:
         t.pop("eval_date", None)
-        t.pop("active_stop", None)
+        a = t.pop("active_stop", None)
+        if t["status"] == "OPEN":                             # for the morning to-do list
+            t["stop_now"] = round(a or t["stop"], 2)
+            t["sell_day_is_next"] = t["days"] + 1 >= MAX_DAYS
         t["cmp"] = rows[-1].Close if rows else None          # latest NSE close for the dashboard
         t["cmp_date"] = rows[-1].Date if rows else None
         t["times_suggested"] = len(t["suggested"])
