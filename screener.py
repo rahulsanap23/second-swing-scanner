@@ -31,16 +31,16 @@ P = dict(
     max_stop_pct=7.0,      # Kasliwal / Minervini: stop no wider than ~7%
     risk_per_trade=0.5,    # Qullamaggie: risk 0.25-1% of capital per trade
     max_position=25.0,     # Qullamaggie: positions 5-25% of capital
-    # ---- one-week swing plan (checked against 5 years of NSE data by backtest.py; see results/backtest.md)
+    # ---- one-week swing plan
     hold_sessions=5,       # time stop: sell at the close of the 5th session after buying (user's one-week hold)
-    t1_adr=2.5,            # Target 1 = entry + 2.5 x ADR. History test: closer targets (1-1.5 ADR, 2R) did worse
+    t1_adr=2.5,            # Target 1 = entry + 2.5 x ADR
     breakeven_at_r=1.0,    # move the stop to the buy price once the trade is up 1R
     gap_skip_pct=3.0,      # don't buy if the stock opens more than 3% above "Buy above"
     picks_green=5, picks_yellow=5, picks_red=3,   # how many picks per market mood
     size_yellow=0.5, size_red=0.5,                # position size multiplier per market mood
     shortlist_n=10,        # ranked candidates handed to the morning Claude checks
     setups_allowed=("PULLBACK",),  # only these setup types can be picked (user's choice, Nov 2026);
-                                   # set to None to let the history test choose the types again
+                                   # None = BREAKOUT, READY and PULLBACK, in that order
 )
 
 SECTORS = ["nifty auto", "nifty bank", "nifty it", "nifty pharma", "nifty fmcg", "nifty metal",
@@ -306,22 +306,19 @@ def to_markdown(o, status=None):
     if "best5" in o:
         hold = o.get("params", P).get("hold_sessions", 5)
         L += [f"## Best {len(o['best5'])} (one-week plan)" if o["best5"] else "## Best picks (one-week plan)", ""]
-        ev = o.get("evidence") or {}
-        if ev.get("line"):
-            L += [ev["line"], ""]
+        if o.get("mood_line"):
+            L += [o["mood_line"], ""]
         L += ["| # | Symbol | Setup | RS | Close | Buy above | Skip if opens above | Stop | Target 1 | Sell by | "
-              "History (avg 1-week) | Qty | Amount | Profit YoY | Next results |",
-              "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+              "Qty | Amount | Profit YoY | Next results |",
+              "|---|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
         for i, c in enumerate(o["best5"], 1):
             yoy = f"{c['profit_yoy_pct']:+.0f}% ({c.get('latest_quarter')})" if c.get("profit_yoy_pct") is not None else "n/a"
-            hist = c.get("history") or {}
-            hs = (f"{hist['avg_ret']:+.2f}%, wins {hist['win_pct']:.0f}%" if hist.get("avg_ret") is not None else "n/a")
             L.append(f"| {i} | {c['symbol']} ({c.get('company') or 'name n/a'}) | {c['setup']} | {c['rs_rating']} | "
                      f"{c['close']:.2f} | {c['entry']:.2f} | {c['skip_above']:.2f} | {c['stop']:.2f} | {c['t1']:.2f} | "
-                     f"close of day {hold} | {hs} | {c['qty']:.0f} | {c['amount']:,.0f} | {yoy} | "
+                     f"close of day {hold} | {c['qty']:.0f} | {c['amount']:,.0f} | {yoy} | "
                      f"{c.get('next_results') or 'not announced'} |")
         if not o["best5"]:
-            L.append("| - | no stock passed today | | | | | | | | | | | | | |")
+            L.append("| - | no stock passed today | | | | | | | | | | | | |")
         L += ["", f"How to trade: buy-stop at Buy above (never at the open); skip if it opens above the skip price; "
               f"stop-loss order the same day you're filled; move the stop to your buy price once up 1R; "
               f"sell at Target 1 or at the close of day {hold}, whichever comes first."]

@@ -7,7 +7,6 @@ results/latest.md     readable summary
 results/history/      one JSON per data date
 results/tracker.json  every past best-5 pick followed to Target 1 / Stop / day-5 sell (tracker.html = dashboard page)
 results/plans/        one plan file per shortlisted stock, in the india-timemachine skill's plan format
-results/backtest.*    the 5-year history test (written weekly by backtest.py, read here for ranking)
 Env: EOD2_DIR (default /tmp/eod2_data), FORCE=1 to re-run, FINAL_ATTEMPT=1 to fail the job if data is stale,
      TRACKER_ONLY=1 to refresh prices and rebuild only results/tracker.* (scan results untouched).
 """

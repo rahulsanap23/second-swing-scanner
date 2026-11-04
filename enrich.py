@@ -4,12 +4,8 @@
 Results calendar: NSE event calendar (board meetings for financial results).
 Profit growth:    Screener.in quarterly table (latest quarter vs same quarter a year earlier).
 Ranking rules:
-  - only BREAKOUT / READY / PULLBACK setups (Qullamaggie, Minervini, stock-signals)
-  - order by EVIDENCE: the average one-week result of that setup in today's market mood over the last
-    5 years (results/backtest.json, written weekly by backtest.py). A setup that lost money on average
-    (with enough history) is dropped that day; if every setup lost money in this market mood, only the
-    least-bad one is kept and the report says so plainly.
-    Without backtest.json the old fixed order is used (BREAKOUT > READY > PULLBACK).
+  - only the setup types in screener.P["setups_allowed"] (PULLBACK only, the user's choice);
+    with setups_allowed = None: BREAKOUT / READY / PULLBACK, in that order
   - then positive profit growth first (earnings momentum, AAMJAF 2015), then RS rating
   - skip if results are due within the hold period + 2 sessions; skip if the 90-day 15% gap flag is set
   - picks per market mood and size multipliers come from screener.P (picks_*/size_*)
@@ -18,8 +14,6 @@ Ranking rules:
 """
 import datetime as dt
 import io
-import json
-import os
 import math
 import re
 import time
@@ -33,41 +27,6 @@ HEADERS = {
     "Accept-Language": "en-US,en;q=0.9",
 }
 SETUP_RANK = {"BREAKOUT": 0, "READY": 1, "PULLBACK": 2}
-BACKTEST = os.path.join(os.path.dirname(os.path.abspath(__file__)), "results", "backtest.json")
-
-
-def evidence(regime):
-    """Per setup: the history test's one-week stats in this market mood, and which setups to keep."""
-    try:
-        bt = json.load(open(BACKTEST))
-    except (OSError, ValueError):
-        return dict(available=False, keep=set(SETUP_RANK), stats={},
-                    line="No history test yet (results/backtest.json missing): using the fixed setup order.")
-    stats = {s: bt.get("by_setup_regime", {}).get(s, {}).get(regime, {}) for s in SETUP_RANK}
-    known = {s: v for s, v in stats.items() if v.get("enough")}
-    pos = {s for s, v in known.items() if v["avg_ret"] > 0}
-    unknown = {s for s in SETUP_RANK if s not in known}
-    if pos:
-        keep, line = pos | unknown, None
-    elif known:
-        best = max(known, key=lambda s: known[s]["avg_ret"])
-        keep = {best} | unknown
-        v = known[best]
-        line = (f"**History warning:** in a {regime} market no setup made money over one week in the last 5 years. "
-                f"The least-bad, {best}, averaged {v['avg_ret']:+.2f}% a trade after charges "
-                f"({v['win_pct']:.0f}% winners, {v['trades']} past trades). Picks are cut and sized down; "
-                f"waiting is the safer choice.")
-    else:
-        keep, line = set(SETUP_RANK), None
-    dropped = [s for s in known if s not in keep]
-    if line is None:
-        parts = [f"{s} {stats[s]['avg_ret']:+.2f}%" for s in SETUP_RANK if stats[s].get("avg_ret") is not None]
-        line = (f"History ({bt.get('start')} to {bt.get('end')}), average one-week result per trade in a {regime} "
-                f"market after charges: " + ", ".join(parts) + ".")
-        if dropped:
-            line += " Dropped today because they lost money on average: " + ", ".join(dropped) + "."
-    return dict(available=True, keep=keep, stats=stats, line=line, dropped=dropped,
-                period=f"{bt.get('start')} to {bt.get('end')}", generated=bt.get("generated"))
 NAMES = {}
 MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
                                       "nov", "dec"], 1)}
@@ -172,33 +131,16 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
     regime = out["regime"]
     n_pick = n_pick or P.get(f"picks_{regime.lower()}", 5)
     size = P.get(f"size_{regime.lower()}", 1.0)
-    ev = evidence(regime)
-    allowed = P.get("setups_allowed")
-    if allowed:                                         # user's fixed choice overrides the history test
-        allowed = [s for s in allowed if s in SETUP_RANK]
-        ev["keep"] = set(allowed)
-        parts = []
-        for s in allowed:
-            st = ev["stats"].get(s) or {}
-            if st.get("avg_ret") is not None:
-                parts.append(f"{s} {st['avg_ret']:+.2f}% a trade after charges ({st['win_pct']:.0f}% winners, "
-                             f"{st['trades']} past trades)")
-        if ev["available"] and parts:
-            ev["line"] = (f"History ({ev.get('period')}), one-week result in a {regime} market: " + "; ".join(parts)
-                          + ". Only " + ", ".join(s.lower() + "s" for s in allowed) + " are picked (your setting).")
-            bad = [s for s in allowed if (ev["stats"].get(s) or {}).get("enough") and ev["stats"][s]["avg_ret"] <= 0]
-            if bad:
-                ev["line"] = "**History warning:** " + ev["line"] + (" In this market they lost money on average; "
-                             "picks are cut and sized down, and waiting is the safer choice.")
-        ev["dropped"] = [s for s in SETUP_RANK if s not in ev["keep"]]
-    exp = lambda c: (ev["stats"].get(c["setup"], {}).get("avg_ret") if ev["available"] else None)
-    rank = lambda c: (-(exp(c) if exp(c) is not None else -99), SETUP_RANK[c["setup"]], -c["rs_rating"])
+    allowed = [s for s in (P.get("setups_allowed") or SETUP_RANK) if s in SETUP_RANK]
+    rank = lambda c: (SETUP_RANK[c["setup"]], -c["rs_rating"])
+    mood_line = {"RED": f"Market RED (falling): {n_pick} picks at {size:.0%} size.",
+                 "YELLOW": f"Market YELLOW (mixed): {n_pick} picks at {size:.0%} size, RS 85+ only."}.get(regime)
 
     asof = dt.date.fromisoformat(out["asof"])
     cands = out["candidates"]
     allsetups = [c for c in cands if c["setup"] in SETUP_RANK]
-    dropped_by_history = [c for c in allsetups if c["setup"] not in ev["keep"]]
-    setups = sorted([c for c in allsetups if c["setup"] in ev["keep"]], key=rank)[:20]
+    not_allowed = [c for c in allsetups if c["setup"] not in allowed]
+    setups = sorted([c for c in allsetups if c["setup"] in allowed], key=rank)[:20]
     trend = [c for c in cands if c["setup"] == "TREND"][:5]
     cal, cal_err = results_calendar()
     master = nse_names()
@@ -216,8 +158,6 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
         c["next_results"] = nxt.isoformat() if nxt else None
         c["results_in_sessions"] = trading_days_between(asof, nxt, hol) if nxt else None
         c["reported_latest_quarter"] = info.get("latest_quarter") == lq_label
-        st = ev["stats"].get(c["setup"]) or {}
-        c["history"] = {k: st.get(k) for k in ("avg_ret", "win_pct", "target_pct", "stop_pct", "trades")} if st else None
         time.sleep(1.5)
 
     results_window = P.get("hold_sessions", 5) + 2
@@ -232,7 +172,7 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
             why = "YELLOW market needs RS 85+"
         (skipped if why else picks).append(dict(c, skip_reason=why) if why else c)
     growth_ok = lambda c: 0 if (c.get("profit_yoy_pct") or -1) > 0 else 1
-    picks.sort(key=lambda c: (rank(c)[0], growth_ok(c), rank(c)[1], rank(c)[2]))
+    picks.sort(key=lambda c: (rank(c)[0], growth_ok(c), rank(c)[1]))
     shortlist = picks[:P.get("shortlist_n", 10)]
     best, reserve = shortlist[:n_pick], shortlist[n_pick:]
 
@@ -252,13 +192,12 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
     out["shortlist"] = shortlist
     out["picks_today"] = n_pick
     out["size_multiplier"] = size
-    out["evidence"] = dict(line=ev["line"], available=ev["available"], keep=sorted(ev["keep"]),
-                           dropped=ev.get("dropped", []), period=ev.get("period"),
-                           stats={k: v for k, v in ev["stats"].items() if v})
+    out["mood_line"] = mood_line
+    out["setups_allowed"] = allowed
     out["skipped"] = ([dict(symbol=c["symbol"], reason=c["skip_reason"]) for c in skipped] +
-                      [dict(symbol=c["symbol"], reason=(f"{c['setup']} not picked (setting: pullbacks only)" if allowed
-                                                        else f"{c['setup']} lost money on average in {regime} markets"))
-                       for c in dropped_by_history][:15])
+                      [dict(symbol=c["symbol"], reason=f"{c['setup']} not picked (setting: "
+                                                        + ", ".join(s.lower() + "s" for s in allowed) + " only)")
+                       for c in not_allowed][:15])
     out["watch_trend"] = trend
     out["enrich_notes"] = dict(results_calendar=cal_err or f"NSE event calendar: {len(cal)} companies",
                                latest_quarter_expected=lq_label)
