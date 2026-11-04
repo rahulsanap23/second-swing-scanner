@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-04T13:41+05:30",
+ "generated": "2026-11-04T14:04+05:30",
  "data_date": "2026-11-03",
  "first_pick": "2026-10-28",
  "rules": {
@@ -9,12 +9,12 @@
  },
  "missing_price_files": [],
  "summary": {
-  "stock_ideas": 21,
+  "stock_ideas": 23,
   "triggered": 11,
   "target_hit": 1,
   "stop_hit": 1,
   "open": 9,
-  "waiting": 2,
+  "waiting": 4,
   "not_triggered": 8,
   "skipped": 0,
   "data_issue": 0,
@@ -28,7 +28,7 @@
   "avg_r": 0.0,
   "by_setup": {
    "PULLBACK": {
-    "picks": 13,
+    "picks": 14,
     "triggered": 7,
     "target": 1,
     "stop": 0,
@@ -41,7 +41,7 @@
     "avg_result_pct": 7.35
    },
    "BREAKOUT": {
-    "picks": 8,
+    "picks": 9,
     "triggered": 4,
     "target": 0,
     "stop": 1,
@@ -56,7 +56,7 @@
   },
   "by_regime": {
    "RED": {
-    "picks": 21,
+    "picks": 23,
     "triggered": 11,
     "target": 1,
     "stop": 1,
@@ -71,7 +71,7 @@
   },
   "by_times_suggested": {
    "1 day": {
-    "picks": 19,
+    "picks": 21,
     "triggered": 9,
     "target": 1,
     "stop": 1,
@@ -126,6 +126,62 @@
    "times_suggested": 1,
    "t1_pct": 15.9,
    "stop_pct": -7.0
+  },
+  {
+   "symbol": "NAVINFLUOR",
+   "company": "Navin Fluorine International Limited",
+   "setup": "PULLBACK",
+   "regime": "RED",
+   "suggested": [
+    "2026-11-03"
+   ],
+   "close_at_pick": 8530.0,
+   "entry": 8627.22,
+   "stop": 8242.0,
+   "t1": 9375.19,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 8530.0,
+   "cmp_date": "2026-11-03",
+   "times_suggested": 1,
+   "t1_pct": 8.7,
+   "stop_pct": -4.5
+  },
+  {
+   "symbol": "MCX",
+   "company": "Multi Commodity Exchange of India Limited",
+   "setup": "BREAKOUT",
+   "regime": "RED",
+   "suggested": [
+    "2026-11-03"
+   ],
+   "close_at_pick": 3490.1,
+   "entry": 3545.08,
+   "stop": 3419.99,
+   "t1": 3857.79,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 3490.1,
+   "cmp_date": "2026-11-03",
+   "times_suggested": 1,
+   "t1_pct": 8.8,
+   "stop_pct": -3.5
   },
   {
    "symbol": "GRWRHITECH",
