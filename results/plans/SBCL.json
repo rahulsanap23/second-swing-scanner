@@ -1,0 +1,14 @@
+{
+ "symbol": "SBCL",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-04",
+ "entry": 1146.29,
+ "stop": 1066.05,
+ "target": 1350.43,
+ "risk_per_share": 80.24,
+ "risk_pct": 7.0,
+ "reward_risk": 2.54,
+ "max_hold_days": 5,
+ "stop_rule": "price:1066.05",
+ "qty": 31
+}

@@ -1,14 +1,14 @@
 {
  "symbol": "GRWRHITECH",
  "setup": "second-scanner pullback",
- "asof": "2026-11-03",
- "entry": 7439.85,
- "stop": 6919.06,
- "target": 8369.92,
- "risk_per_share": 520.79,
+ "asof": "2026-11-04",
+ "entry": 7651.77,
+ "stop": 7116.15,
+ "target": 8622.63,
+ "risk_per_share": 535.62,
  "risk_pct": 7.0,
- "reward_risk": 1.79,
+ "reward_risk": 1.81,
  "max_hold_days": 5,
- "stop_rule": "price:6919.06",
- "qty": 2
+ "stop_rule": "price:7116.15",
+ "qty": 4
 }
