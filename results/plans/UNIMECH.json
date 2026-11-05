@@ -1,0 +1,14 @@
+{
+ "symbol": "UNIMECH",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-05",
+ "entry": 1847.29,
+ "stop": 1717.98,
+ "target": 2131.85,
+ "risk_per_share": 129.31,
+ "risk_pct": 7.0,
+ "reward_risk": 2.2,
+ "max_hold_days": 5,
+ "stop_rule": "price:1717.98",
+ "qty": 19
+}

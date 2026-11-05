@@ -1,0 +1,14 @@
+{
+ "symbol": "TFCILTD",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-05",
+ "entry": 162.32,
+ "stop": 151.21,
+ "target": 179.78,
+ "risk_per_share": 11.11,
+ "risk_pct": 6.84,
+ "reward_risk": 1.57,
+ "max_hold_days": 5,
+ "stop_rule": "price:151.21",
+ "qty": 224
+}

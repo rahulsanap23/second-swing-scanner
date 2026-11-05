@@ -1,0 +1,14 @@
+{
+ "symbol": "EBGNG",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-05",
+ "entry": 751.5,
+ "stop": 698.9,
+ "target": 852.75,
+ "risk_per_share": 52.6,
+ "risk_pct": 7.0,
+ "reward_risk": 1.92,
+ "max_hold_days": 5,
+ "stop_rule": "price:698.90",
+ "qty": 47
+}

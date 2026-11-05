@@ -1,6 +1,6 @@
 {
- "run_at_ist": "2026-11-04T19:56+05:30",
- "expected_date": "2026-11-04",
+ "run_at_ist": "2026-11-05T19:57+05:30",
+ "expected_date": "2026-11-05",
  "eod2_last_update": "2026-10-23",
  "days_needed": [
   "2026-10-26",
@@ -10,7 +10,8 @@
   "2026-10-30",
   "2026-11-02",
   "2026-11-03",
-  "2026-11-04"
+  "2026-11-04",
+  "2026-11-05"
  ],
  "days": [
   {
@@ -66,13 +67,20 @@
    "date": "2026-11-04",
    "stocks_source": "nse-sec_bhavdata_full",
    "stocks_rows": 2935,
-   "indices_rows": 145,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-11-05",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2941,
+   "indices_rows": 156,
    "indices_source": "nse-ind_close_all"
   }
  ],
  "errors": [],
- "data_date": "2026-11-04",
+ "data_date": "2026-11-05",
  "fresh": true,
  "sectors_stale": false,
- "scan_asof": "2026-11-04"
+ "scan_asof": "2026-11-05"
 }
