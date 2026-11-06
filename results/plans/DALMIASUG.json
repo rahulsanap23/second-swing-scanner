@@ -1,0 +1,14 @@
+{
+ "symbol": "DALMIASUG",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-06",
+ "entry": 484.57,
+ "stop": 450.65,
+ "target": 556.79,
+ "risk_per_share": 33.92,
+ "risk_pct": 7.0,
+ "reward_risk": 2.13,
+ "max_hold_days": 5,
+ "stop_rule": "price:450.65",
+ "qty": 73
+}

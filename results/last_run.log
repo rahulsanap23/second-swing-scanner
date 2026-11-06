@@ -1,1 +1,174 @@
-Already up to date for 2026-11-05; nothing to do.
+{
+ "run_at_ist": "2026-11-06T19:54+05:30",
+ "expected_date": "2026-11-06",
+ "eod2_last_update": "2026-10-23",
+ "days_needed": [
+  "2026-10-26",
+  "2026-10-27",
+  "2026-10-28",
+  "2026-10-29",
+  "2026-10-30",
+  "2026-11-02",
+  "2026-11-03",
+  "2026-11-04",
+  "2026-11-05",
+  "2026-11-06"
+ ],
+ "days": [
+  {
+   "date": "2026-10-26",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2971,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-10-27",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2955,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-10-28",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2947,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-10-29",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2950,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-10-30",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2929,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-11-02",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2947,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-11-03",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2943,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-11-04",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2935,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-11-05",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2941,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
+  },
+  {
+   "date": "2026-11-06",
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2944,
+   "indices_rows": 156,
+   "indices_source": "nse-ind_close_all"
+  }
+ ],
+ "errors": [],
+ "data_date": "2026-11-06",
+ "fresh": true,
+ "sectors_stale": false
+}
+# Swing shortlist: data as of 2026-11-06
+
+Data status: fresh. Run at 2026-11-06T19:54+05:30.
+
+**Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
+Nifty 50 25030.35 (50-day 23248.02, 200-day 23994.73); Nifty 500 23456.95 (200-day 22759.1)
+Breadth: 31.2% above 50-day, 38.2% above 200-day, net new highs 7
+Top sectors (50-day RS vs Nifty): Private Bank +4.5, IT +4.2, Pharma +2.3
+Funnel: {'equities_with_1y_history': 2002, 'tradable': 1086, 'trend_template': 159, 'rs_70_plus': 158, 'actionable_setups': 29}
+
+## Best 5 (one-week plan)
+
+| # | Symbol | Setup | RS | Close | Buy above | Skip if opens above | Stop | Target 1 | Sell by | Qty | Amount | Profit YoY | Next results |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | NEOGEN (Neogen Chemicals Limited) | PULLBACK | 96 | 2548.60 | 2594.88 | 2672.73 | 2413.24 | 2991.36 | close of day 5 | 13 | 33,733 | +133% (Sep 2026) | not announced |
+| 2 | MCX (Multi Commodity Exchange of India Limited) | PULLBACK | 94 | 3528.00 | 3557.10 | 3663.81 | 3308.10 | 3891.53 | close of day 5 | 10 | 35,571 | +160% (Sep 2026) | not announced |
+| 3 | CEMPRO (Cemindia Projects Limited) | PULLBACK | 94 | 1323.30 | 1359.71 | 1400.51 | 1264.53 | 1554.52 | close of day 5 | 26 | 35,353 | +18% (Sep 2026) | not announced |
+| 4 | DALMIASUG (Dalmia Bharat Sugar and Industries Limited) | PULLBACK | 92 | 477.50 | 484.57 | 499.10 | 450.65 | 556.79 | close of day 5 | 73 | 35,373 | +209% (Sep 2026) | not announced |
+| 5 | NYKAA (FSN E-Commerce Ventures Limited) | PULLBACK | 89 | 353.00 | 354.01 | 364.63 | 342.01 | 382.38 | close of day 5 | 208 | 73,633 | +42% (Sep 2026) | not announced |
+
+How to trade: buy-stop at Buy above (never at the open); skip if it opens above the skip price; stop-loss order the same day you're filled; move the stop to your buy price once up 1R; sell at Target 1 or at the close of day 5, whichever comes first.
+
+Skipped: MANORAMA (results on 2026-11-12), NPST (results on 2026-11-11), STYLEBAAZA (results on 2026-11-13), DIVISLAB (BREAKOUT not picked (setting: pullbacks only)), NAVINFLUOR (BREAKOUT not picked (setting: pullbacks only)), MOTILALOFS (BREAKOUT not picked (setting: pullbacks only)), KALYANKJIL (BREAKOUT not picked (setting: pullbacks only)), TITAN (BREAKOUT not picked (setting: pullbacks only))
+
+Reserve (next in line): VIJAYA (PULLBACK), GALAPREC (PULLBACK), ANTHEM (PULLBACK), AARTIPHARM (PULLBACK), KARURVYSYA (PULLBACK)
+
+## Setups
+
+| Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |
+|---|---|---|---|---|---|---|---|---|---|---|
+| DIVISLAB | BREAKOUT | 94 | 10320.50 | 10341.14 | 10072.17 | 2.6 | 9 | 93,070 | 11013.56 | 20 EMA |
+| NAVINFLUOR | BREAKOUT | 90 | 9010.00 | 9053.07 | 8729.12 | 3.6 | 7 | 63,371 | 9862.96 | 20 EMA |
+| MOTILALOFS | BREAKOUT | 89 | 1102.00 | 1107.21 | 1057.60 | 4.5 | 50 | 55,360 | 1231.22 | 20 EMA |
+| KALYANKJIL | BREAKOUT | 87 | 590.75 | 599.50 | 578.18 | 3.6 | 117 | 70,141 | 652.78 | 20 EMA |
+| TITAN | BREAKOUT | 82 | 5000.00 | 5023.93 | 4899.39 | 2.5 | 20 | 100,479 | 5335.26 | 20 EMA |
+| RPEL | PULLBACK | 98 | 1780.80 | 1793.48 | 1693.42 | 5.6 | 24 | 43,044 | 2055.78 | 10 EMA |
+| NEOGEN | PULLBACK | 96 | 2548.60 | 2594.88 | 2413.24 | 7.0 | 13 | 33,733 | 2991.36 | 10 EMA |
+| MCX | PULLBACK | 94 | 3528.00 | 3557.10 | 3308.10 | 7.0 | 10 | 35,571 | 3891.53 | 20 EMA |
+| CEMPRO | PULLBACK | 94 | 1323.30 | 1359.71 | 1264.53 | 7.0 | 26 | 35,353 | 1554.52 | 10 EMA |
+| PTCIL | PULLBACK | 92 | 24335.00 | 24528.96 | 23455.00 | 4.4 | 2 | 49,058 | 26861.38 | 20 EMA |
+| DALMIASUG | PULLBACK | 92 | 477.50 | 484.57 | 450.65 | 7.0 | 73 | 35,373 | 556.79 | 10 EMA |
+| MANORAMA | PULLBACK | 90 | 1957.80 | 1971.94 | 1833.90 | 7.0 | 18 | 35,495 | 2185.44 | 20 EMA |
+| NYKAA | PULLBACK | 89 | 353.00 | 354.01 | 342.01 | 3.4 | 208 | 73,633 | 382.38 | 20 EMA |
+| VIJAYA | PULLBACK | 89 | 1468.60 | 1480.96 | 1381.40 | 6.7 | 25 | 37,024 | 1606.63 | 20 EMA |
+| GALAPREC | PULLBACK | 89 | 1165.40 | 1177.25 | 1094.84 | 7.0 | 30 | 35,317 | 1326.27 | 10 EMA |
+| ANTHEM | PULLBACK | 88 | 915.55 | 923.84 | 859.17 | 7.0 | 38 | 35,106 | 997.52 | 20 EMA |
+| NPST | PULLBACK | 88 | 1776.20 | 1791.38 | 1666.10 | 7.0 | 19 | 34,036 | 2023.90 | 10 EMA |
+| AARTIPHARM | PULLBACK | 88 | 929.10 | 934.57 | 889.87 | 4.8 | 55 | 51,401 | 1045.85 | 20 EMA |
+| KARURVYSYA | PULLBACK | 87 | 370.05 | 372.34 | 346.28 | 7.0 | 95 | 35,373 | 413.60 | 20 EMA |
+| MAHABANK | PULLBACK | 87 | 86.91 | 87.08 | 80.99 | 7.0 | 410 | 35,704 | 94.21 | 20 EMA |
+| GLENMARK | PULLBACK | 86 | 2590.00 | 2687.86 | 2499.71 | 7.0 | 13 | 34,942 | 2927.24 | 20 EMA |
+| ABDL | PULLBACK | 86 | 708.00 | 714.28 | 676.00 | 5.4 | 65 | 46,428 | 792.00 | 20 EMA |
+| ZYDUSLIFE | PULLBACK | 85 | 1197.90 | 1209.92 | 1172.00 | 3.1 | 65 | 78,644 | 1300.50 | 20 EMA |
+| STYLEBAAZA | PULLBACK | 85 | 390.75 | 397.79 | 369.95 | 7.0 | 89 | 35,404 | 446.94 | 20 EMA |
+| LALPATHLAB | PULLBACK | 84 | 1970.00 | 2015.02 | 1901.00 | 5.7 | 21 | 42,315 | 2203.18 | 20 EMA |
+| MINDACORP | PULLBACK | 83 | 712.65 | 718.43 | 668.14 | 7.0 | 49 | 35,203 | 796.70 | 20 EMA |
+| ACE | PULLBACK | 82 | 1167.70 | 1177.85 | 1095.40 | 7.0 | 30 | 35,336 | 1304.12 | 20 EMA |
+| MAHLOG | PULLBACK | 77 | 421.10 | 425.65 | 403.44 | 5.2 | 112 | 47,673 | 479.73 | 10 EMA |
+| WEWORK | PULLBACK | 74 | 681.65 | 683.86 | 655.55 | 4.1 | 88 | 60,180 | 744.89 | 20 EMA |
+
+## Strongest without a setup
+
+| Symbol | RS | Close | % off high | Pivot |
+|---|---|---|---|---|
+| CUPID | 99 | 338.9 | -8.1 | 368.95 |
+| SHREEJISPG | 99 | 884.55 | -0.4 | 883.5 |
+| GCSL | 99 | 786.05 | -1.4 | 797.3 |
+| WHEELS | 99 | 2314.6 | -8.0 | 2515.8 |
+| SBC | 98 | 68.7 | -1.0 | 68.34 |
+
+Extended, don't chase: SPECTRUM, MENONBE, CCAVENUE, SSWL, ATHERENERG, KRISHANA, MACPOWER, MBAPL, SAILIFE, CNL, ENTERO, LUMAXTECH, THELEELA, ORIENTHOT, SAREGAMA, ROLEXRINGS, SHYAMMETL, MMFL, SATIN, SHRINGARMS, EMCURE, INDHOTEL, ICICIBANK, PRINCEPIPE
+
+## Previous shortlist (2026-11-05) today
+
+- WHEELS: STOP LEVEL BROKEN, setup void
+- SANSERA: STOP LEVEL BROKEN, setup void
+- CPPLUS: TRIGGERED
+- DIACABS: STOP LEVEL BROKEN, setup void
+- TFCILTD: not triggered
+
+Tracker: {"stock_ideas": 48, "triggered": 20, "target_hit": 2, "stop_hit": 3, "open": 10, "waiting": 10, "not_triggered": 18, "skipped": 0, "data_issue": 0, "breakeven": 0, "sold_day": 5, "closed": 10, "win_rate": 60, "avg_days_to_target": 3.5, "avg_days_to_stop": 1.7, "avg_result_pct": -0.5, "avg_r": 0.0}
