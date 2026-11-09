@@ -1,0 +1,14 @@
+{
+ "symbol": "TCPLPACK",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-09",
+ "entry": 4534.05,
+ "stop": 4228.1,
+ "target": 5206.37,
+ "risk_per_share": 305.95,
+ "risk_pct": 6.75,
+ "reward_risk": 2.2,
+ "max_hold_days": 5,
+ "stop_rule": "price:4228.10",
+ "qty": 8
+}

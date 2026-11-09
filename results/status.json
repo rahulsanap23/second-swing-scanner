@@ -1,94 +1,12 @@
 {
- "run_at_ist": "2026-11-06T19:54+05:30",
- "expected_date": "2026-11-06",
- "eod2_last_update": "2026-10-23",
- "days_needed": [
-  "2026-10-26",
-  "2026-10-27",
-  "2026-10-28",
-  "2026-10-29",
-  "2026-10-30",
-  "2026-11-02",
-  "2026-11-03",
-  "2026-11-04",
-  "2026-11-05",
-  "2026-11-06"
- ],
- "days": [
-  {
-   "date": "2026-10-26",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2971,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-10-27",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2955,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-10-28",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2947,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-10-29",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2950,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-10-30",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2929,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-11-02",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2947,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-11-03",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2943,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-11-04",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2935,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-11-05",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2941,
-   "indices_rows": 161,
-   "indices_source": "nse-ind_close_all"
-  },
-  {
-   "date": "2026-11-06",
-   "stocks_source": "nse-sec_bhavdata_full",
-   "stocks_rows": 2944,
-   "indices_rows": 156,
-   "indices_source": "nse-ind_close_all"
-  }
- ],
+ "run_at_ist": "2026-11-09T19:55+05:30",
+ "expected_date": "2026-11-09",
+ "eod2_last_update": "2026-11-09",
+ "days_needed": [],
+ "days": [],
  "errors": [],
- "data_date": "2026-11-06",
+ "data_date": "2026-11-09",
  "fresh": true,
  "sectors_stale": false,
- "scan_asof": "2026-11-06"
+ "scan_asof": "2026-11-09"
 }

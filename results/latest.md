@@ -1,79 +1,93 @@
-# Swing shortlist: data as of 2026-11-06
+# Swing shortlist: data as of 2026-11-09
 
-Data status: fresh. Run at 2026-11-06T19:54+05:30.
+Data status: fresh. Run at 2026-11-09T19:55+05:30.
 
 **Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
-Nifty 50 25030.35 (50-day 23248.02, 200-day 23994.73); Nifty 500 23456.95 (200-day 22759.1)
-Breadth: 31.2% above 50-day, 38.2% above 200-day, net new highs 7
-Top sectors (50-day RS vs Nifty): Private Bank +4.5, IT +4.2, Pharma +2.3
-Funnel: {'equities_with_1y_history': 2002, 'tradable': 1086, 'trend_template': 159, 'rs_70_plus': 158, 'actionable_setups': 29}
+Nifty 50 25044.65 (50-day 23282.67, 200-day 23988.49); Nifty 500 23567.0 (200-day 22760.09)
+Breadth: 37.4% above 50-day, 41.3% above 200-day, net new highs 23
+Top sectors (50-day RS vs Nifty): Pharma +3.5, IT +3.3, Media +2.8
+Funnel: {'equities_with_1y_history': 2009, 'tradable': 1075, 'trend_template': 184, 'rs_70_plus': 184, 'actionable_setups': 43}
 
 ## Best 5 (one-week plan)
 
 | # | Symbol | Setup | RS | Close | Buy above | Skip if opens above | Stop | Target 1 | Sell by | Qty | Amount | Profit YoY | Next results |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | NEOGEN (Neogen Chemicals Limited) | PULLBACK | 96 | 2548.60 | 2594.88 | 2672.73 | 2413.24 | 2991.36 | close of day 5 | 13 | 33,733 | +133% (Sep 2026) | not announced |
-| 2 | MCX (Multi Commodity Exchange of India Limited) | PULLBACK | 94 | 3528.00 | 3557.10 | 3663.81 | 3308.10 | 3891.53 | close of day 5 | 10 | 35,571 | +160% (Sep 2026) | not announced |
-| 3 | CEMPRO (Cemindia Projects Limited) | PULLBACK | 94 | 1323.30 | 1359.71 | 1400.51 | 1264.53 | 1554.52 | close of day 5 | 26 | 35,353 | +18% (Sep 2026) | not announced |
-| 4 | DALMIASUG (Dalmia Bharat Sugar and Industries Limited) | PULLBACK | 92 | 477.50 | 484.57 | 499.10 | 450.65 | 556.79 | close of day 5 | 73 | 35,373 | +209% (Sep 2026) | not announced |
-| 5 | NYKAA (FSN E-Commerce Ventures Limited) | PULLBACK | 89 | 353.00 | 354.01 | 364.63 | 342.01 | 382.38 | close of day 5 | 208 | 73,633 | +42% (Sep 2026) | not announced |
+| 1 | WHEELS (Wheels India Limited) | PULLBACK | 99 | 2387.50 | 2468.93 | 2543.00 | 2296.10 | 2904.02 | close of day 5 | 14 | 34,565 | +89% (Sep 2026) | not announced |
+| 2 | BHAGERIA (Bhageria Industries Limited) | PULLBACK | 99 | 396.10 | 402.80 | 414.89 | 374.61 | 479.93 | close of day 5 | 88 | 35,447 | +383% (Sep 2026) | not announced |
+| 3 | RUBICON (Rubicon Research Limited) | PULLBACK | 98 | 1771.70 | 1781.46 | 1834.90 | 1656.75 | 1991.94 | close of day 5 | 20 | 35,629 | +33% (Sep 2026) | not announced |
+| 4 | IOLCP (IOL Chemicals and Pharmaceuticals Limited) | PULLBACK | 98 | 202.95 | 215.28 | 221.74 | 200.21 | 248.64 | close of day 5 | 165 | 35,521 | +117% (Sep 2026) | not announced |
+| 5 | PGIL (Pearl Global Industries Limited) | PULLBACK | 95 | 1343.60 | 1416.13 | 1458.61 | 1317.00 | 1596.43 | close of day 5 | 25 | 35,403 | +7% (Sep 2026) | not announced |
 
 How to trade: buy-stop at Buy above (never at the open); skip if it opens above the skip price; stop-loss order the same day you're filled; move the stop to your buy price once up 1R; sell at Target 1 or at the close of day 5, whichever comes first.
 
-Skipped: MANORAMA (results on 2026-11-12), NPST (results on 2026-11-11), STYLEBAAZA (results on 2026-11-13), DIVISLAB (BREAKOUT not picked (setting: pullbacks only)), NAVINFLUOR (BREAKOUT not picked (setting: pullbacks only)), MOTILALOFS (BREAKOUT not picked (setting: pullbacks only)), KALYANKJIL (BREAKOUT not picked (setting: pullbacks only)), TITAN (BREAKOUT not picked (setting: pullbacks only))
+Skipped: LOKESHMACH (results on 2026-11-12), STEELCAS (results on 2026-11-13), PTCIL (results on 2026-11-14), ASTRAMICRO (results on 2026-11-12), SANSERA (BREAKOUT not picked (setting: pullbacks only)), GLAND (BREAKOUT not picked (setting: pullbacks only)), AUROPHARMA (BREAKOUT not picked (setting: pullbacks only)), ANTHEM (BREAKOUT not picked (setting: pullbacks only))
 
-Reserve (next in line): VIJAYA (PULLBACK), GALAPREC (PULLBACK), ANTHEM (PULLBACK), AARTIPHARM (PULLBACK), KARURVYSYA (PULLBACK)
+Reserve (next in line): SGFIN (PULLBACK), TCPLPACK (PULLBACK), KTKBANK (PULLBACK), GHCLTEXTIL (PULLBACK), AKUMS (PULLBACK)
 
 ## Setups
 
 | Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |
 |---|---|---|---|---|---|---|---|---|---|---|
-| DIVISLAB | BREAKOUT | 94 | 10320.50 | 10341.14 | 10072.17 | 2.6 | 9 | 93,070 | 11013.56 | 20 EMA |
-| NAVINFLUOR | BREAKOUT | 90 | 9010.00 | 9053.07 | 8729.12 | 3.6 | 7 | 63,371 | 9862.96 | 20 EMA |
-| MOTILALOFS | BREAKOUT | 89 | 1102.00 | 1107.21 | 1057.60 | 4.5 | 50 | 55,360 | 1231.22 | 20 EMA |
-| KALYANKJIL | BREAKOUT | 87 | 590.75 | 599.50 | 578.18 | 3.6 | 117 | 70,141 | 652.78 | 20 EMA |
-| TITAN | BREAKOUT | 82 | 5000.00 | 5023.93 | 4899.39 | 2.5 | 20 | 100,479 | 5335.26 | 20 EMA |
-| RPEL | PULLBACK | 98 | 1780.80 | 1793.48 | 1693.42 | 5.6 | 24 | 43,044 | 2055.78 | 10 EMA |
-| NEOGEN | PULLBACK | 96 | 2548.60 | 2594.88 | 2413.24 | 7.0 | 13 | 33,733 | 2991.36 | 10 EMA |
-| MCX | PULLBACK | 94 | 3528.00 | 3557.10 | 3308.10 | 7.0 | 10 | 35,571 | 3891.53 | 20 EMA |
-| CEMPRO | PULLBACK | 94 | 1323.30 | 1359.71 | 1264.53 | 7.0 | 26 | 35,353 | 1554.52 | 10 EMA |
-| PTCIL | PULLBACK | 92 | 24335.00 | 24528.96 | 23455.00 | 4.4 | 2 | 49,058 | 26861.38 | 20 EMA |
-| DALMIASUG | PULLBACK | 92 | 477.50 | 484.57 | 450.65 | 7.0 | 73 | 35,373 | 556.79 | 10 EMA |
-| MANORAMA | PULLBACK | 90 | 1957.80 | 1971.94 | 1833.90 | 7.0 | 18 | 35,495 | 2185.44 | 20 EMA |
-| NYKAA | PULLBACK | 89 | 353.00 | 354.01 | 342.01 | 3.4 | 208 | 73,633 | 382.38 | 20 EMA |
-| VIJAYA | PULLBACK | 89 | 1468.60 | 1480.96 | 1381.40 | 6.7 | 25 | 37,024 | 1606.63 | 20 EMA |
-| GALAPREC | PULLBACK | 89 | 1165.40 | 1177.25 | 1094.84 | 7.0 | 30 | 35,317 | 1326.27 | 10 EMA |
-| ANTHEM | PULLBACK | 88 | 915.55 | 923.84 | 859.17 | 7.0 | 38 | 35,106 | 997.52 | 20 EMA |
-| NPST | PULLBACK | 88 | 1776.20 | 1791.38 | 1666.10 | 7.0 | 19 | 34,036 | 2023.90 | 10 EMA |
-| AARTIPHARM | PULLBACK | 88 | 929.10 | 934.57 | 889.87 | 4.8 | 55 | 51,401 | 1045.85 | 20 EMA |
-| KARURVYSYA | PULLBACK | 87 | 370.05 | 372.34 | 346.28 | 7.0 | 95 | 35,373 | 413.60 | 20 EMA |
-| MAHABANK | PULLBACK | 87 | 86.91 | 87.08 | 80.99 | 7.0 | 410 | 35,704 | 94.21 | 20 EMA |
-| GLENMARK | PULLBACK | 86 | 2590.00 | 2687.86 | 2499.71 | 7.0 | 13 | 34,942 | 2927.24 | 20 EMA |
-| ABDL | PULLBACK | 86 | 708.00 | 714.28 | 676.00 | 5.4 | 65 | 46,428 | 792.00 | 20 EMA |
-| ZYDUSLIFE | PULLBACK | 85 | 1197.90 | 1209.92 | 1172.00 | 3.1 | 65 | 78,644 | 1300.50 | 20 EMA |
-| STYLEBAAZA | PULLBACK | 85 | 390.75 | 397.79 | 369.95 | 7.0 | 89 | 35,404 | 446.94 | 20 EMA |
-| LALPATHLAB | PULLBACK | 84 | 1970.00 | 2015.02 | 1901.00 | 5.7 | 21 | 42,315 | 2203.18 | 20 EMA |
-| MINDACORP | PULLBACK | 83 | 712.65 | 718.43 | 668.14 | 7.0 | 49 | 35,203 | 796.70 | 20 EMA |
-| ACE | PULLBACK | 82 | 1167.70 | 1177.85 | 1095.40 | 7.0 | 30 | 35,336 | 1304.12 | 20 EMA |
-| MAHLOG | PULLBACK | 77 | 421.10 | 425.65 | 403.44 | 5.2 | 112 | 47,673 | 479.73 | 10 EMA |
-| WEWORK | PULLBACK | 74 | 681.65 | 683.86 | 655.55 | 4.1 | 88 | 60,180 | 744.89 | 20 EMA |
+| SANSERA | BREAKOUT | 98 | 4653.40 | 4724.43 | 4512.87 | 4.5 | 11 | 51,969 | 5253.33 | 20 EMA |
+| GLAND | BREAKOUT | 96 | 3302.40 | 3380.75 | 3259.62 | 3.6 | 20 | 67,615 | 3683.56 | 20 EMA |
+| AUROPHARMA | BREAKOUT | 91 | 1855.30 | 1859.81 | 1809.31 | 2.7 | 49 | 91,131 | 1986.06 | 20 EMA |
+| ANTHEM | BREAKOUT | 89 | 958.15 | 991.08 | 958.99 | 3.2 | 77 | 76,313 | 1071.29 | 20 EMA |
+| WHEELS | PULLBACK | 99 | 2387.50 | 2468.93 | 2296.10 | 7.0 | 14 | 34,565 | 2904.02 | 10 EMA |
+| BHAGERIA | PULLBACK | 99 | 396.10 | 402.80 | 374.61 | 7.0 | 88 | 35,447 | 479.93 | 10 EMA |
+| RUBICON | PULLBACK | 98 | 1771.70 | 1781.46 | 1656.75 | 7.0 | 20 | 35,629 | 1991.94 | 20 EMA |
+| RPEL | PULLBACK | 98 | 1919.60 | 1938.87 | 1803.15 | 7.0 | 18 | 34,900 | 2223.78 | 10 EMA |
+| IOLCP | PULLBACK | 98 | 202.95 | 215.28 | 200.21 | 7.0 | 165 | 35,521 | 248.64 | 10 EMA |
+| LOKESHMACH | PULLBACK | 97 | 409.30 | 417.58 | 388.35 | 7.0 | 85 | 35,495 | 495.16 | 10 EMA |
+| PGIL | PULLBACK | 95 | 1343.60 | 1416.13 | 1317.00 | 7.0 | 25 | 35,403 | 1596.43 | 10 EMA |
+| SGFIN | PULLBACK | 94 | 703.60 | 706.31 | 656.87 | 7.0 | 50 | 35,315 | 811.39 | 10 EMA |
+| TCPLPACK | PULLBACK | 94 | 4471.00 | 4534.05 | 4228.10 | 6.8 | 8 | 36,272 | 5206.37 | 10 EMA |
+| KTKBANK | PULLBACK | 93 | 331.90 | 333.77 | 316.60 | 5.1 | 145 | 48,396 | 364.08 | 20 EMA |
+| GHCLTEXTIL | PULLBACK | 93 | 132.74 | 133.77 | 124.40 | 7.0 | 266 | 35,582 | 151.80 | 10 EMA |
+| STEELCAS | PULLBACK | 93 | 374.90 | 383.87 | 357.00 | 7.0 | 93 | 35,700 | 432.17 | 10 EMA |
+| AKUMS | PULLBACK | 92 | 765.85 | 786.47 | 732.00 | 6.9 | 45 | 35,391 | 870.62 | 20 EMA |
+| QUESS | PULLBACK | 92 | 345.70 | 348.70 | 324.29 | 7.0 | 102 | 35,567 | 390.61 | 20 EMA |
+| NAZARA | PULLBACK | 92 | 407.90 | 414.58 | 400.08 | 3.5 | 172 | 71,307 | 451.69 | 20 EMA |
+| GNA | PULLBACK | 92 | 574.60 | 581.01 | 540.34 | 7.0 | 61 | 35,442 | 655.94 | 10 EMA |
+| PTCIL | PULLBACK | 92 | 24745.00 | 25120.14 | 23455.00 | 6.6 | 1 | 25,120 | 27383.27 | 20 EMA |
+| DBOL | PULLBACK | 92 | 138.12 | 139.28 | 129.53 | 7.0 | 256 | 35,655 | 159.94 | 10 EMA |
+| ASTRAMICRO | PULLBACK | 91 | 1659.70 | 1666.93 | 1550.24 | 7.0 | 21 | 35,005 | 1816.14 | 20 EMA |
+| NYKAA | PULLBACK | 90 | 359.70 | 360.42 | 344.55 | 4.4 | 157 | 56,586 | 388.66 | 20 EMA |
+| IPCALAB | PULLBACK | 90 | 1959.70 | 1995.68 | 1914.40 | 4.1 | 30 | 59,870 | 2184.24 | 20 EMA |
+| WABAG | PULLBACK | 90 | 2009.90 | 2039.87 | 1897.08 | 7.0 | 17 | 34,678 | 2250.41 | 20 EMA |
+| TEXINFRA | PULLBACK | 88 | 131.21 | 133.98 | 124.60 | 7.0 | 266 | 35,638 | 149.49 | 20 EMA |
+| BHEL | PULLBACK | 88 | 422.95 | 427.10 | 399.60 | 6.4 | 90 | 38,439 | 465.14 | 20 EMA |
+| GOODLUCK | PULLBACK | 88 | 555.35 | 561.12 | 521.84 | 7.0 | 63 | 35,351 | 637.03 | 10 EMA |
+| VIJAYA | PULLBACK | 87 | 1478.30 | 1500.39 | 1424.00 | 5.1 | 32 | 48,013 | 1630.89 | 20 EMA |
+| MOTHERSON | PULLBACK | 86 | 161.91 | 164.73 | 153.20 | 7.0 | 216 | 35,581 | 178.20 | 20 EMA |
+| ZYDUSLIFE | PULLBACK | 85 | 1215.90 | 1234.76 | 1187.60 | 3.8 | 53 | 65,443 | 1327.75 | 20 EMA |
+| LALPATHLAB | PULLBACK | 85 | 2016.50 | 2083.16 | 1937.34 | 7.0 | 17 | 35,414 | 2273.91 | 20 EMA |
+| ABDL | PULLBACK | 85 | 719.10 | 723.24 | 694.50 | 4.0 | 86 | 62,199 | 798.19 | 20 EMA |
+| DELTACORP | PULLBACK | 84 | 81.13 | 81.75 | 76.03 | 7.0 | 436 | 35,644 | 92.99 | 10 EMA |
+| DCBBANK | PULLBACK | 82 | 210.33 | 213.07 | 198.15 | 7.0 | 167 | 35,582 | 231.91 | 20 EMA |
+| FEDERALBNK | PULLBACK | 81 | 344.10 | 344.79 | 333.25 | 3.4 | 216 | 74,474 | 369.48 | 20 EMA |
+| ACE | PULLBACK | 81 | 1166.65 | 1179.40 | 1097.10 | 7.0 | 30 | 35,382 | 1303.31 | 20 EMA |
+| TORNTPHARM | PULLBACK | 77 | 4780.00 | 4844.67 | 4699.10 | 3.0 | 17 | 82,359 | 5119.14 | 20 EMA |
+| WEWORK | PULLBACK | 77 | 683.90 | 694.14 | 665.35 | 4.2 | 86 | 59,696 | 756.63 | 20 EMA |
+| GRINDWELL | PULLBACK | 74 | 1961.70 | 1983.66 | 1880.00 | 5.2 | 24 | 47,608 | 2178.33 | 20 EMA |
+| PRIVISCL | PULLBACK | 74 | 3491.90 | 3528.04 | 3281.08 | 7.0 | 10 | 35,280 | 3876.91 | 20 EMA |
+| HAL | PULLBACK | 73 | 4999.00 | 5028.04 | 4828.00 | 4.0 | 12 | 60,336 | 5343.79 | 20 EMA |
 
 ## Strongest without a setup
 
 | Symbol | RS | Close | % off high | Pivot |
 |---|---|---|---|---|
-| CUPID | 99 | 338.9 | -8.1 | 368.95 |
-| SHREEJISPG | 99 | 884.55 | -0.4 | 883.5 |
-| GCSL | 99 | 786.05 | -1.4 | 797.3 |
-| WHEELS | 99 | 2314.6 | -8.0 | 2515.8 |
-| SBC | 98 | 68.7 | -1.0 | 68.34 |
+| CUPID | 99 | 342.85 | -7.1 | 368.95 |
+| SBC | 99 | 68.73 | -1.9 | 69.7 |
+| GCSL | 99 | 784.6 | -2.2 | 802.0 |
+| RATNAVEER | 99 | 364.6 | -6.5 | 389.9 |
+| SHREEJISPG | 98 | 881.3 | -2.6 | 904.5 |
 
-Extended, don't chase: SPECTRUM, MENONBE, CCAVENUE, SSWL, ATHERENERG, KRISHANA, MACPOWER, MBAPL, SAILIFE, CNL, ENTERO, LUMAXTECH, THELEELA, ORIENTHOT, SAREGAMA, ROLEXRINGS, SHYAMMETL, MMFL, SATIN, SHRINGARMS, EMCURE, INDHOTEL, ICICIBANK, PRINCEPIPE
+Extended, don't chase: SPECTRUM, MENONBE, SSWL, CCAVENUE, LAURUSLABS, ATHERENERG, MACPOWER, MBAPL, SAILIFE, ENTERO, CNL, STLNETWORK, DIVISLAB, SAREGAMA, NEOGEN, ROLEXRINGS, MMFL, SHRINGARMS, GUFICBIO, MANAKCOAT, EMCURE, MOTILALOFS, GLENMARK, KALYANKJIL, PPLPHARMA, WESTLIFE, STYLEBAAZA, AARTIDRUGS, ICICIBANK, PRINCEPIPE
 
-## Previous shortlist (2026-11-05) today
+## Previous shortlist (2026-11-06) today
 
-- WHEELS: STOP LEVEL BROKEN, setup void
-- SANSERA: STOP LEVEL BROKEN, setup void
-- CPPLUS: TRIGGERED
-- DIACABS: STOP LEVEL BROKEN, setup void
-- TFCILTD: not triggered
+- NEOGEN: TRIGGERED
+- MCX: TRIGGERED
+- CEMPRO: not triggered
+- DALMIASUG: not triggered
+- NYKAA: TRIGGERED
