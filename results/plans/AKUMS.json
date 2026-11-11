@@ -1,14 +1,14 @@
 {
  "symbol": "AKUMS",
  "setup": "second-scanner pullback",
- "asof": "2026-11-09",
- "entry": 786.47,
- "stop": 732.0,
- "target": 870.62,
- "risk_per_share": 54.47,
- "risk_pct": 6.93,
- "reward_risk": 1.54,
+ "asof": "2026-11-11",
+ "entry": 780.86,
+ "stop": 735.0,
+ "target": 861.36,
+ "risk_per_share": 45.86,
+ "risk_pct": 5.87,
+ "reward_risk": 1.76,
  "max_hold_days": 5,
- "stop_rule": "price:732.00",
- "qty": 45
+ "stop_rule": "price:735.00",
+ "qty": 54
 }

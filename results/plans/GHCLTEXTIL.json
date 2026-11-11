@@ -1,14 +1,14 @@
 {
  "symbol": "GHCLTEXTIL",
  "setup": "second-scanner pullback",
- "asof": "2026-11-09",
- "entry": 133.77,
- "stop": 124.4,
- "target": 151.8,
- "risk_per_share": 9.37,
+ "asof": "2026-11-11",
+ "entry": 135.39,
+ "stop": 125.91,
+ "target": 152.76,
+ "risk_per_share": 9.48,
  "risk_pct": 7.0,
- "reward_risk": 1.92,
+ "reward_risk": 1.83,
  "max_hold_days": 5,
- "stop_rule": "price:124.40",
- "qty": 266
+ "stop_rule": "price:125.91",
+ "qty": 263
 }

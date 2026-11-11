@@ -1,0 +1,14 @@
+{
+ "symbol": "KOPRAN",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-11",
+ "entry": 268.08,
+ "stop": 254.04,
+ "target": 309.23,
+ "risk_per_share": 14.04,
+ "risk_pct": 5.24,
+ "reward_risk": 2.93,
+ "max_hold_days": 5,
+ "stop_rule": "price:254.04",
+ "qty": 178
+}

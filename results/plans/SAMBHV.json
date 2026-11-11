@@ -1,0 +1,14 @@
+{
+ "symbol": "SAMBHV",
+ "setup": "second-scanner pullback",
+ "asof": "2026-11-11",
+ "entry": 171.09,
+ "stop": 161.78,
+ "target": 194.55,
+ "risk_per_share": 9.31,
+ "risk_pct": 5.44,
+ "reward_risk": 2.52,
+ "max_hold_days": 5,
+ "stop_rule": "price:161.78",
+ "qty": 268
+}
