@@ -1,6 +1,6 @@
 # Swing shortlist: data as of 2026-11-12
 
-Data status: fresh. Run at 2026-11-13T08:04+05:30.
+Data status: fresh. Run at 2026-11-13T08:12+05:30.
 
 **Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
 Nifty 50 25299.35 (50-day 23328.63, 200-day 23989.31); Nifty 500 23865.8 (200-day 22769.4)
@@ -12,7 +12,7 @@ Funnel: {'equities_with_1y_history': 2011, 'tradable': 1085, 'trend_template': 2
 
 | # | Symbol | Setup | RS | Close | Buy at | Stop | Sell when | Sell by | Qty | Amount | Profit YoY | Next results |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | TECHM (Tech Mahindra Limited) | DIP | 80 | 1774.00 | limit 1738.52 | 1529.90 | close > 10 EMA (now 1792.62) | close of day 5 | 11 | 19,124 | n/a | not announced |
+| 1 | TECHM (Tech Mahindra Limited) | DIP | 80 | 1774.00 | limit 1738.52 | 1529.90 | close > 10 EMA (now 1792.62) | close of day 5 | 11 | 19,124 | +37% (Sep 2026) | not announced |
 
 How to trade (DIP): place a day LIMIT buy at 'Buy at' before the open; if it doesn't fill, cancel it. When filled, put a stop-loss at 'Stop' (disaster stop). Sell when the stock closes above its 10-day EMA (at that close or the next open), or at the close of day 5, whichever comes first.
 

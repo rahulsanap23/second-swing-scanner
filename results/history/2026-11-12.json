@@ -228,11 +228,14 @@
    "r10": 0.0,
    "rsi2": 5.87,
    "ema10": 1792.62,
-   "screener_error": "ProxyError",
    "company": "Tech Mahindra Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 1614.0,
+   "profit_year_ago_cr": 1176.0,
+   "profit_yoy_pct": 37.2,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "CCAVENUE",
@@ -264,11 +267,14 @@
    "r10": -0.02,
    "rsi2": 6.29,
    "ema10": 123.1,
-   "screener_error": "ProxyError",
    "company": "AvenuesAI Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 25.0,
+   "profit_year_ago_cr": 59.0,
+   "profit_yoy_pct": -57.6,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "KMEW",
@@ -1726,11 +1732,14 @@
    "r10": 0.1,
    "rsi2": 29.01,
    "ema10": 4312.74,
-   "screener_error": "ProxyError",
    "company": "Spectrum Electrical Industries Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 18.0,
+   "profit_year_ago_cr": 8.0,
+   "profit_yoy_pct": 125.0,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "GCSL",
@@ -1762,11 +1771,14 @@
    "r10": 0.03,
    "rsi2": 28.26,
    "ema10": 777.39,
-   "screener_error": "ProxyError",
    "company": "Gretex Corporate Services Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 1.66,
+   "profit_year_ago_cr": 8.1,
+   "profit_yoy_pct": -79.5,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "WHEELS",
@@ -1798,11 +1810,14 @@
    "r10": 0.11,
    "rsi2": 87.37,
    "ema10": 2341.6,
-   "screener_error": "ProxyError",
    "company": "Wheels India Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 53.0,
+   "profit_year_ago_cr": 28.0,
+   "profit_yoy_pct": 89.3,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "RAYMOND",
@@ -1834,11 +1849,14 @@
    "r10": 0.02,
    "rsi2": 89.86,
    "ema10": 1108.94,
-   "screener_error": "ProxyError",
    "company": "Raymond Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 1.59,
+   "profit_year_ago_cr": -2.85,
+   "profit_yoy_pct": 155.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "SBC",
@@ -1870,11 +1888,15 @@
    "r10": 0.05,
    "rsi2": 80.59,
    "ema10": 67.78,
-   "screener_error": "ProxyError",
    "company": "SBC Exports Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 11.0,
+   "profit_year_ago_cr": 8.0,
+   "profit_yoy_pct": 37.5,
+   "board_meeting_mentioned": "2026-10-15",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "SHREEJISPG",
@@ -7147,11 +7169,14 @@
    "r10": 0.0,
    "rsi2": 5.87,
    "ema10": 1792.62,
-   "screener_error": "ProxyError",
    "company": "Tech Mahindra Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 1614.0,
+   "profit_year_ago_cr": 1176.0,
+   "profit_yoy_pct": 37.2,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   }
  ],
  "reserve": [],
@@ -7186,11 +7211,14 @@
    "r10": 0.0,
    "rsi2": 5.87,
    "ema10": 1792.62,
-   "screener_error": "ProxyError",
    "company": "Tech Mahindra Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 1614.0,
+   "profit_year_ago_cr": 1176.0,
+   "profit_yoy_pct": 37.2,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   }
  ],
  "picks_today": 5,
@@ -7296,11 +7324,14 @@
    "r10": 0.1,
    "rsi2": 29.01,
    "ema10": 4312.74,
-   "screener_error": "ProxyError",
    "company": "Spectrum Electrical Industries Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 18.0,
+   "profit_year_ago_cr": 8.0,
+   "profit_yoy_pct": 125.0,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "GCSL",
@@ -7332,11 +7363,14 @@
    "r10": 0.03,
    "rsi2": 28.26,
    "ema10": 777.39,
-   "screener_error": "ProxyError",
    "company": "Gretex Corporate Services Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 1.66,
+   "profit_year_ago_cr": 8.1,
+   "profit_yoy_pct": -79.5,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "WHEELS",
@@ -7368,11 +7402,14 @@
    "r10": 0.11,
    "rsi2": 87.37,
    "ema10": 2341.6,
-   "screener_error": "ProxyError",
    "company": "Wheels India Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 53.0,
+   "profit_year_ago_cr": 28.0,
+   "profit_yoy_pct": 89.3,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "RAYMOND",
@@ -7404,11 +7441,14 @@
    "r10": 0.02,
    "rsi2": 89.86,
    "ema10": 1108.94,
-   "screener_error": "ProxyError",
    "company": "Raymond Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 1.59,
+   "profit_year_ago_cr": -2.85,
+   "profit_yoy_pct": 155.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   },
   {
    "symbol": "SBC",
@@ -7440,11 +7480,15 @@
    "r10": 0.05,
    "rsi2": 80.59,
    "ema10": 67.78,
-   "screener_error": "ProxyError",
    "company": "SBC Exports Limited",
+   "latest_quarter": "Sep 2026",
+   "profit_latest_cr": 11.0,
+   "profit_year_ago_cr": 8.0,
+   "profit_yoy_pct": 37.5,
+   "board_meeting_mentioned": "2026-10-15",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": false
+   "reported_latest_quarter": true
   }
  ],
  "enrich_notes": {
