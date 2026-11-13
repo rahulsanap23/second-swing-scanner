@@ -1,0 +1,14 @@
+{
+ "symbol": "SHREEPUSHK",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-13",
+ "entry": 538.66,
+ "stop": 474.02,
+ "target": 564.47,
+ "risk_per_share": 64.64,
+ "risk_pct": 12.0,
+ "reward_risk": 0.4,
+ "max_hold_days": 5,
+ "stop_rule": "price:474.02",
+ "qty": 38
+}

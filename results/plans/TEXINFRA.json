@@ -1,0 +1,14 @@
+{
+ "symbol": "TEXINFRA",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-13",
+ "entry": 120.52,
+ "stop": 106.06,
+ "target": 124.92,
+ "risk_per_share": 14.46,
+ "risk_pct": 12.0,
+ "reward_risk": 0.3,
+ "max_hold_days": 5,
+ "stop_rule": "price:106.06",
+ "qty": 172
+}

@@ -1,0 +1,14 @@
+{
+ "symbol": "RUBICON",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-13",
+ "entry": 1643.66,
+ "stop": 1446.42,
+ "target": 1688.37,
+ "risk_per_share": 197.24,
+ "risk_pct": 12.0,
+ "reward_risk": 0.23,
+ "max_hold_days": 5,
+ "stop_rule": "price:1446.42",
+ "qty": 12
+}

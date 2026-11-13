@@ -1,0 +1,14 @@
+{
+ "symbol": "IGPL",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-13",
+ "entry": 552.13,
+ "stop": 485.88,
+ "target": 570.67,
+ "risk_per_share": 66.25,
+ "risk_pct": 12.0,
+ "reward_risk": 0.28,
+ "max_hold_days": 5,
+ "stop_rule": "price:485.88",
+ "qty": 37
+}

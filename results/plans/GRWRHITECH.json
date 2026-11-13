@@ -1,0 +1,14 @@
+{
+ "symbol": "GRWRHITECH",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-13",
+ "entry": 7372.05,
+ "stop": 6487.4,
+ "target": 7569.07,
+ "risk_per_share": 884.65,
+ "risk_pct": 12.0,
+ "reward_risk": 0.22,
+ "max_hold_days": 5,
+ "stop_rule": "price:6487.40",
+ "qty": 2
+}

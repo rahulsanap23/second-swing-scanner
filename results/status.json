@@ -1,12 +1,12 @@
 {
- "run_at_ist": "2026-11-13T09:15+05:30",
- "expected_date": "2026-11-12",
- "eod2_last_update": "2026-11-09",
+ "run_at_ist": "2026-11-13T19:54+05:30",
+ "expected_date": "2026-11-13",
+ "eod2_last_update": "2026-11-13",
  "days_needed": [],
  "days": [],
  "errors": [],
- "data_date": "2026-11-12",
+ "data_date": "2026-11-13",
  "fresh": true,
  "sectors_stale": false,
- "scan_asof": "2026-11-12"
+ "scan_asof": "2026-11-13"
 }
