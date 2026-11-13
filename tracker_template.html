@@ -117,13 +117,14 @@ function summary(T) {
 }
 
 const STATUS = {
-  "TARGET HIT": ["Target hit", "p-win"], "EXIT 10EMA": ["Sold: close > 10 EMA", "p-idle"], "STOP HIT": ["Stop hit", "p-loss"], "OPEN": ["Open", "p-open"],
-  "WAITING": ["Waiting", "p-idle"], "NOT TRIGGERED": ["Not bought", "p-idle"], "SKIPPED": ["Not bought", "p-idle"],
-  "BREAKEVEN": ["Breakeven", "p-idle"], "DATA ISSUE": ["Check data", "p-idle"], [SOLD]: ["Sold day " + MAXD, "p-idle"],
+  "TARGET HIT": ["Sold at target", "p-win"], "EXIT 10EMA": ["Sold at target", "p-win"], "STOP HIT": ["Stop loss hit", "p-loss"], "OPEN": ["Holding", "p-open"],
+  "WAITING": ["Waiting to buy", "p-idle"], "NOT TRIGGERED": ["Not bought", "p-idle"], "SKIPPED": ["Not bought", "p-idle"],
+  "BREAKEVEN": ["Sold at buy price", "p-idle"], "DATA ISSUE": ["Check data", "p-idle"], [SOLD]: ["Sold on day " + MAXD, "p-idle"],
 };
 function when(t) {
-  if (CLOSED.includes(t.status)) return `day ${t.days}, ${esc(day(t.exit_date))}<span class="sub">${pct(t.result_pct)}</span>`;
-  if (t.status === "OPEN") return `day ${t.days} so far`;
+  if (CLOSED.includes(t.status)) return `<b>${pct(t.result_pct)}</b><span class="sub">sold ${esc(day(t.exit_date))}, day ${t.days}</span>`;
+  if (t.status === "OPEN") return `${pct(t.result_pct)} so far<span class="sub">day ${t.days}${t.sell_by ? ", sell by " + esc(day(t.sell_by)) : ""}</span>`;
+  if (t.status === "WAITING" && t.sell_by) return `–<span class="sub">sell by ${esc(day(t.sell_by))} if bought</span>`;
   return "–";
 }
 
@@ -134,9 +135,9 @@ function render() {
   $("meta").textContent = ALL.length ? `Price now = NSE close on ${day(DATA.data_date)} · picks since ${day(DATA.first_pick)}` : "No picks tracked yet.";
   $("showing").textContent = MODE === "all" ? `${T.length} stocks: every day's ranked top 10` : `${T.length} stocks from the morning reports`;
   $("score").innerHTML =
-    `<div class="tile win"><span class="k">Target / 10 EMA exit</span><span class="v">${S.target}</span>
+    `<div class="tile win"><span class="k">Sold at target</span><span class="v">${S.target}</span>
        <span class="s">${S.dTgt == null ? "none yet" : "in " + days(+S.dTgt.toFixed(1)) + " on average"}</span></div>
-     <div class="tile loss"><span class="k">Stop hit</span><span class="v">${S.stop}</span>
+     <div class="tile loss"><span class="k">Stop loss hit</span><span class="v">${S.stop}</span>
        <span class="s">${S.dStp == null ? "none yet" : "in " + days(+S.dStp.toFixed(1)) + " on average"}</span></div>
      <div class="tile"><span class="k">Win rate</span><span class="v">${S.win == null ? "–" : S.win + "%"}</span>
        <span class="s">of ${S.closed} closed trades · ${S.open} open</span></div>
@@ -152,16 +153,17 @@ function render() {
   if (!T.length) {
     $("ledger").innerHTML = `<tr><td class="empty">${ALL.length ? "No report picks to show yet. Switch to All top 10." : "Picks appear here the evening after the scanner suggests them."}</td></tr>`;
   } else {
-    $("ledger").innerHTML = `<thead><tr><th>Stock</th><th>Suggested</th><th class="r">Buy at</th><th class="r">Sell at</th>
-      <th class="r">Stop</th><th class="r">Price now</th><th>Status</th><th>Closed on</th></tr></thead><tbody>` +
+    $("ledger").innerHTML = `<thead><tr><th>Stock</th><th>Picked on</th><th class="r">Buy at</th><th class="r">Sell at</th>
+      <th class="r">Stop loss</th><th class="r">Price now</th><th>Status</th><th>Result</th></tr></thead><tbody>` +
       T.map(t => {
         const s = t.suggested || [], st = STATUS[t.status] || [t.status, "p-idle"];
         return `<tr>
           <td class="stock"><b>${esc(t.symbol)}</b>${MODE === "all" && inReport(t) ? '<span class="tag">report</span>' : ""}<span class="sub">${esc(t.company || "")}</span></td>
           <td>${esc(day(s[0]))}${s.length > 1 ? `<span class="x" title="Suggested ${s.length} days">×${s.length}</span>` : ""}</td>
-          <td class="r num">${fmt(t.entry)}<span class="sub">${t.setup === "DIP" ? "limit" : "buy-stop"}</span></td>
-          <td class="r num">${t.setup === "DIP" ? `close &gt; 10 EMA<span class="sub">${t.ema_now != null ? "EMA now " + fmt(t.ema_now) : "EMA at pick " + fmt(t.t1)}</span>` : `${fmt(t.t1)}<span class="sub">${pct(t.t1_pct)}</span>`}</td>
-          <td class="r num">${fmt(t.stop)}<span class="sub">${pct(t.stop_pct)}</span></td>
+          <td class="r num">${fmt(t.entry)}<span class="sub">${t.fill ? "bought at " + fmt(t.fill) : t.setup === "DIP" ? "limit order" : "buy-stop"}</span></td>
+          <td class="r num">${(() => { const lvl = t.setup === "DIP" && t.status === "OPEN" && t.ema_now != null ? t.ema_now : t.t1, base = t.fill || t.entry;
+            return `${fmt(lvl)}<span class="sub">${pct((lvl / base - 1) * 100)}${t.setup === "DIP" ? " · close above" : ""}</span>`; })()}</td>
+          <td class="r num">${fmt(t.stop)}<span class="sub">${pct(((t.stop_now || t.stop) / (t.fill || t.entry) - 1) * 100)}</span></td>
           <td class="r num">${fmt(t.cmp)}${t.cmp == null || !t.fill ? "" : (() => { const b = t.status === "OPEN" ? t.cmp : t.exit_price; if (b == null) return ""; const c = (b / t.fill - 1) * 100;
             return `<span class="chg ${c > 0 ? "pos" : c < 0 ? "neg" : ""}" title="vs your buy price">${c > 0 ? "▲ " : c < 0 ? "▼ " : ""}${Math.abs(c).toFixed(1)}%</span>`; })()}</td>
           <td><span class="pill ${st[1]}">${st[0]}</span></td>
@@ -177,10 +179,10 @@ fetch("reported.json", {cache: "no-store"}).then(r => r.ok ? r.json() : null).th
   if (j && j.days && typeof j.days === "object") { REP = j; render(); }
 }).catch(() => {});
 
-$("note").textContent = "Report picks = the stocks the 7:45 AM report gave you (days before the report started saving its list show GitHub's own best picks). " +
-  "All top 10 = every stock in each day's ranked shortlist. Day 1 is the day the stock was bought. " +
-  "DIP picks (since 13 Nov): a limit buy below the close, valid the next trading day only (Not bought = the price never came down to it); sold when the stock closes above its 10-day EMA, at the disaster stop, or at the close of day " + MAXD + ". " +
-  "Older PULLBACK/BREAKOUT picks: a buy-stop at Buy above, sold at Target 1, the stop (moved to the buy price after a day up 1R) or the close of day " + MAXD + ". " +
-  "×2, ×3 = suggested on that many days. Price now is the latest NSE close; the % shows bought trades only, against your buy price (at the sell price once closed). " +
+$("note").textContent = "Report picks = the stocks the 7:45 AM report gave you. All top 10 = every stock in each day's ranked shortlist. " +
+  "Buy at = the limit buy price, good for the next trading day only (Not bought = the price never dipped to it). " +
+  "Sell at = the stock's 10-day average: sell on the first day it closes above it (Sold at target). For a stock you hold it shows today's level, which moves a little each day; % is against your buy price. " +
+  "Stop loss = sell if it falls to this price (% against your buy price). If neither happens, sell at the close of day " + MAXD + " (Sold on day " + MAXD + "). " +
+  "Price now = the latest NSE close; the arrow % shows bought trades only, against your buy price. Older PULLBACK/BREAKOUT picks (before 13 Nov) used a buy-stop and Target 1. " +
   "Win rate = closed trades that made money. Results are before Zerodha charges (about 0.25% a trade).";
 </script>

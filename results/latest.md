@@ -1,6 +1,6 @@
 # Swing shortlist: data as of 2026-11-12
 
-Data status: fresh. Run at 2026-11-13T08:30+05:30.
+Data status: fresh. Run at 2026-11-13T09:15+05:30.
 
 **Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
 Nifty 50 25299.35 (50-day 23328.63, 200-day 23989.31); Nifty 500 23865.8 (200-day 22769.4)
@@ -10,15 +10,15 @@ Funnel: {'equities_with_1y_history': 2011, 'tradable': 1085, 'trend_template': 2
 
 ## Best 5 (one-week plan)
 
-| # | Symbol | Setup | RS | Close | Buy at | Stop | Sell when | Sell by | Qty | Amount | Profit YoY | Next results |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | TECHM (Tech Mahindra Limited) | DIP | 80 | 1774.00 | limit 1738.52 | 1529.90 | close > 10 EMA (now 1792.62) | close of day 5 | 11 | 19,124 | +37% (Sep 2026) | not announced |
-| 2 | TCPLPACK (TCPL Packaging Limited) | DIP | 88 | 4278.50 | limit 4192.93 | 3689.78 | close > 10 EMA (now 4346.29) | close of day 5 | 4 | 16,772 | +61% (Sep 2026) | not announced |
-| 3 | METROPOLIS (Metropolis Healthcare Limited) | DIP | 72 | 565.20 | limit 553.90 | 487.43 | close > 10 EMA (now 567.68) | close of day 5 | 37 | 20,494 | +47% (Sep 2026) | not announced |
-| 4 | MUFIN (Mufin Green Finance Limited) | DIP | 78 | 140.08 | limit 137.28 | 120.80 | close > 10 EMA (now 139.39) | close of day 5 | 151 | 20,729 | +150% (Sep 2026) | not announced |
-| 5 | ONEPOINT (One Point One Solutions Limited) | DIP | 89 | 73.07 | limit 71.61 | 63.02 | close > 10 EMA (now 74.31) | close of day 5 | 290 | 20,766 | +18% (Sep 2026) | not announced |
+| # | Stock | Price now | Buy at | Sell at | Stop loss | Sell by | Shares | Invest (Rs) | Profit vs last year | Results date |
+|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | TECHM (Tech Mahindra Limited) | 1774.00 | 1738.52 (-2.0%) | 1792.62 (+3.1%) | 1529.90 (-12.0%) | 2026-11-19 | 11 | 19,124 | n/a | not announced |
+| 2 | TCPLPACK (TCPL Packaging Limited) | 4278.50 | 4192.93 (-2.0%) | 4346.29 (+3.7%) | 3689.78 (-12.0%) | 2026-11-19 | 4 | 16,772 | n/a | not announced |
+| 3 | METROPOLIS (Metropolis Healthcare Limited) | 565.20 | 553.90 (-2.0%) | 567.68 (+2.5%) | 487.43 (-12.0%) | 2026-11-19 | 37 | 20,494 | n/a | not announced |
+| 4 | MUFIN (Mufin Green Finance Limited) | 140.08 | 137.28 (-2.0%) | 139.39 (+1.5%) | 120.80 (-12.0%) | 2026-11-19 | 151 | 20,729 | n/a | not announced |
+| 5 | ONEPOINT (One Point One Solutions Limited) | 73.07 | 71.61 (-2.0%) | 74.31 (+3.8%) | 63.02 (-12.0%) | 2026-11-19 | 290 | 20,766 | n/a | not announced |
 
-How to trade (DIP): place a day LIMIT buy at 'Buy at' before the open; if it doesn't fill, cancel it. When filled, put a stop-loss at 'Stop' (disaster stop). Sell when the stock closes above its 10-day EMA (at that close or the next open), or at the close of day 5, whichever comes first.
+Buy at = limit buy price for the next trading day (% vs price now); cancel it if it doesn't fill. Sell at = the stock's 10-day average (% vs your buy price): sell on the first day it closes above it; the level moves a little each day. Stop loss = sell if it falls here (% vs your buy price). Sell by = if still held, sell at that day's close.
 
 Skipped: CCAVENUE (15% gap in last 90 days), PTCIL (results on 2026-11-14), KMEW (BREAKOUT not picked (setting: dips only)), MANORAMA (BREAKOUT not picked (setting: dips only)), TMB (BREAKOUT not picked (setting: dips only)), RADICO (BREAKOUT not picked (setting: dips only)), INDGN (BREAKOUT not picked (setting: dips only)), CUB (BREAKOUT not picked (setting: dips only)), SHILPAMED (PULLBACK not picked (setting: dips only)), MANINDS (PULLBACK not picked (setting: dips only)), FILATEX (PULLBACK not picked (setting: dips only)), KOPRAN (PULLBACK not picked (setting: dips only)), NITINSPIN (PULLBACK not picked (setting: dips only)), AETHER (PULLBACK not picked (setting: dips only)), SAMBHV (PULLBACK not picked (setting: dips only)), CENTUM (PULLBACK not picked (setting: dips only)), AVTNPL (PULLBACK not picked (setting: dips only))
 

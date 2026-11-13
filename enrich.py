@@ -121,6 +121,15 @@ def trading_days_between(a, b, hol):
     return n
 
 
+def add_trading_days(d, n, hol):
+    """The n-th NSE trading day after date d."""
+    while n > 0:
+        d += dt.timedelta(days=1)
+        if d.weekday() < 5 and d not in hol:
+            n -= 1
+    return d
+
+
 def last_quarter_end(asof):
     q = (asof.month - 1) // 3
     return dt.date(asof.year, 3 * q, 1) if q else dt.date(asof.year - 1, 12, 1)
@@ -179,6 +188,15 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
     picks.sort(key=lambda c: (rank(c)[0], growth_ok(c), rank(c)[1]))
     shortlist = picks[:P.get("shortlist_n", 10)]
     best, reserve = shortlist[:n_pick], shortlist[n_pick:]
+
+    hold = P.get("hold_sessions", 5)
+    buy_day = add_trading_days(asof, 1, hol)                # the limit buy is good for this day only
+    for c in shortlist:                                     # dates and % for the report and dashboard
+        c["buy_date"] = buy_day.isoformat()
+        c["sell_by"] = add_trading_days(buy_day, hold - 1, hol).isoformat()   # close of day `hold`
+        c["buy_pct"] = round((c["entry"] / c["close"] - 1) * 100, 1)        # buy price vs last close
+        c["sell_pct"] = round((c["t1"] / c["entry"] - 1) * 100, 1)          # sell level vs buy price
+        c["stop_pct"] = round((c["stop"] / c["entry"] - 1) * 100, 1)        # stop loss vs buy price
 
     if size < 1:                                       # smaller positions when the market is not GREEN
         for c in shortlist:

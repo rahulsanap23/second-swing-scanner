@@ -78,6 +78,7 @@ def prices(daily, symbol, since):
 def new_trade(p):
     return dict(symbol=p["symbol"], company=p.get("company"), setup=p["setup"], regime=p.get("regime"),
                 suggested=[p["asof"]], best_on=[p["asof"]] if p.get("in_best") else [], close_at_pick=p["close"], entry=p["entry"], stop=p["stop"], t1=p["t1"],
+                sell_by=p.get("sell_by"),
                 status="WAITING", entry_date=None, fill=None, exit_date=None, exit_price=None,
                 days=None, last_close=None, result_pct=None, r_mult=None, flag="")
 
@@ -166,7 +167,8 @@ def track_symbol(picks, rows):
             add_day(cur, p, r.Date)
         elif cur and cur["status"] in ("NOT TRIGGERED", "SKIPPED") and cur.get("eval_date") == r.Date:
             add_day(cur, p, r.Date)
-            cur.update(status="WAITING", entry=p["entry"], stop=p["stop"], t1=p["t1"], setup=p["setup"], flag="")
+            cur.update(status="WAITING", entry=p["entry"], stop=p["stop"], t1=p["t1"], setup=p["setup"], flag="",
+                       sell_by=p.get("sell_by"))
         else:
             if cur:
                 trades.append(cur)

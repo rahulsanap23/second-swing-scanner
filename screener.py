@@ -344,22 +344,24 @@ def to_markdown(o, status=None):
         L += [f"## Best {len(o['best5'])} (one-week plan)" if o["best5"] else "## Best picks (one-week plan)", ""]
         if o.get("mood_line"):
             L += [o["mood_line"], ""]
-        L += ["| # | Symbol | Setup | RS | Close | Buy at | Stop | Sell when | Sell by | "
-              "Qty | Amount | Profit YoY | Next results |",
-              "|---|---|---|---|---|---|---|---|---|---|---|---|---|"]
+        L += ["| # | Stock | Price now | Buy at | Sell at | Stop loss | Sell by | Shares | Invest (Rs) | Profit vs last year | Results date |",
+              "|---|---|---|---|---|---|---|---|---|---|---|"]
         for i, c in enumerate(o["best5"], 1):
             yoy = f"{c['profit_yoy_pct']:+.0f}% ({c.get('latest_quarter')})" if c.get("profit_yoy_pct") is not None else "n/a"
-            buy = (f"limit {c['entry']:.2f}" if c["setup"] == "DIP" else
-                   f"above {c['entry']:.2f} (skip if opens > {c['skip_above']:.2f})")
-            sell = (f"close > 10 EMA (now {c['t1']:.2f})" if c["setup"] == "DIP" else f"Target 1 {c['t1']:.2f}")
-            L.append(f"| {i} | {c['symbol']} ({c.get('company') or 'name n/a'}) | {c['setup']} | {c['rs_rating']} | "
-                     f"{c['close']:.2f} | {buy} | {c['stop']:.2f} | {sell} | close of day {hold} | "
-                     f"{c['qty']:.0f} | {c['amount']:,.0f} | {yoy} | {c.get('next_results') or 'not announced'} |")
+            pc = lambda k: f" ({c[k]:+.1f}%)" if c.get(k) is not None else ""
+            if c["setup"] == "DIP":
+                buy, sell = f"{c['entry']:.2f}{pc('buy_pct')}", f"{c['t1']:.2f}{pc('sell_pct')}"
+            else:
+                buy, sell = f"{c['entry']:.2f} or higher", f"{c['t1']:.2f}{pc('sell_pct')}"
+            L.append(f"| {i} | {c['symbol']} ({c.get('company') or 'name n/a'}) | {c['close']:.2f} | {buy} | {sell} | "
+                     f"{c['stop']:.2f}{pc('stop_pct')} | {c.get('sell_by') or f'day {hold} close'} | {c['qty']:.0f} | "
+                     f"{c['amount']:,.0f} | {yoy} | {c.get('next_results') or 'not announced'} |")
         if not o["best5"]:
-            L.append("| - | no stock passed today | | | | | | | | | | | |")
-        L += ["", "How to trade (DIP): place a day LIMIT buy at 'Buy at' before the open; if it doesn't fill, cancel it. "
-              "When filled, put a stop-loss at 'Stop' (disaster stop). Sell when the stock closes above its 10-day EMA "
-              f"(at that close or the next open), or at the close of day {hold}, whichever comes first."]
+            L.append("| - | no stock passed today | | | | | | | | | |")
+        L += ["", "Buy at = limit buy price for the next trading day (% vs price now); cancel it if it doesn't fill. "
+              "Sell at = the stock's 10-day average (% vs your buy price): sell on the first day it closes above it; "
+              "the level moves a little each day. Stop loss = sell if it falls here (% vs your buy price). "
+              "Sell by = if still held, sell at that day's close."]
         if o.get("skipped"):
             L += ["", "Skipped: " + ", ".join(f"{x['symbol']} ({x['reason']})" for x in o["skipped"])]
         if o.get("reserve"):
