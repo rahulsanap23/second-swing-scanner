@@ -42,7 +42,8 @@ P = dict(
     setups_allowed=("DIP",),       # only these setup types can be picked (Nov 13 2026: DIP only, see README
                                    # "Why DIP"); None = DIP, BREAKOUT, READY and PULLBACK, in that order
     # ---- DIP setup (buy a sharp 1-3 day dip in a trend-template stock; 2018-2026 backtest in README)
-    dip_rsi2_max=10.0,     # Connors RSI(2) below 10 at the close = a sharp short-term dip
+    dip_rsi2_max=30.0,     # RSI(2) below 30 at the close = a short-term dip (13 Nov 2026: raised from 10 so
+                           # 3+ picks come on ~94% of days; deepest dips are still ranked first)
     dip_limit_pct=2.0,     # next day's buy LIMIT this % below the signal close (day order; cancel if not filled)
     dip_limit_pct_red=3.0, # deeper limit when the market is RED
     dip_stop_pct=12.0,     # disaster stop % below the buy price (a tight stop hurts this setup; sizing uses it)

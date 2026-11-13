@@ -33,7 +33,7 @@ Days appended from the daily files are not split-adjusted until EOD2 catches up;
 1. Tradable: NSE EQ series, ≥1 year history, price ≥ ₹20, 20-day median turnover ≥ ₹2.5 cr (50× a ₹5 lakh account), circuit hits < 20% of days
 2. Minervini trend template (price/50/150/200-day SMA order, 200-day rising, ≥30% above 52-week low, within 25% of high)
 3. RS rating ≥ 70 (40% 3-month + 20% each 6/9/12-month return, percentile)
-4. Setups: **DIP** (RSI(2) < 10 at the close: a sharp 1–3 day dip in a trend-template leader), BREAKOUT (close > 21-day high on ≥1.5× volume), READY (tight base within 3% of pivot), PULLBACK (up-day bounce off a rising 20 EMA)
+4. Setups: **DIP** (RSI(2) < 30 at the close: a 1–3 day dip in a trend-template leader; deepest dips ranked first), BREAKOUT (close > 21-day high on ≥1.5× volume), READY (tight base within 3% of pivot), PULLBACK (up-day bounce off a rising 20 EMA)
 5. Setup types: only DIP setups are picked since 13 Nov 2026 (`setups_allowed` in `screener.py`; `None` = DIP, BREAKOUT, READY and PULLBACK, in that order). DIP stocks are ranked deepest dip first (lowest RSI(2)). Skip if results fall within 7 sessions or the stock gapped 15% in 90 days (split check)
 6. Picks: 5 in GREEN, 5 at half size in YELLOW, 3 at half size in RED
 7. DIP plan: next day's LIMIT buy 2% below the signal close (3% in RED), valid that day only; 12% disaster stop (`dip_stop_pct`; also sets the size: 0.5% of ₹5 lakh = ₹2,500 risk ÷ 12% ≈ ₹21k a position before the market-mood size cut); sell when the stock CLOSES above its 10-day EMA (at that close or the next open), or at the close of day 5
@@ -46,9 +46,11 @@ trade was followed with the tracker's rules, after about 0.25% Zerodha charges a
 | Rules | Trades | Win rate | Avg per trade | Years positive |
 |---|---|---|---|---|
 | Old: PULLBACK, buy-stop above the high, top 5 by RS, Target 1 / 7% stop / day 5 | 5,747 | 39% | −0.30% | 2 of 9 |
-| New: DIP, limit 2% below close (3% in RED), sell on close > 10 EMA or day 5 | 2,528 | 58.5% | +0.84% | 9 of 9 |
+| New: DIP (RSI(2) < 10), limit 2% below close (3% in RED), sell on close > 10 EMA or day 5 | 2,528 | 58.5% | +0.84% | 9 of 9 |
+| Live setting: same with RSI(2) < 30, top 5 by deepest dip (limit 2%) | 3,562 | 59% | +0.69% | 9 of 9 |
 
-New rules by market mood: GREEN +0.95%, YELLOW +0.89%, RED +0.21% a trade. Train 2018–22 and test 2023–26 were both positive.
+RSI(2) < 30 (live since 13 Nov) gives 3+ picks on about 94% of days (RSI(2) < 10: 65%) for nearly the same average: the deepest dips are still taken first and the shallower ones only fill quiet days. With it, about 35% of limit orders fill (1.6 a day), 59% of filled trades win, the middle trade ends +1.4%, an average winner +4.5% and an average loser −4.8%.
+RSI(2) < 10 rules by market mood: GREEN +0.95%, YELLOW +0.89%, RED +0.21% a trade. Train 2018–22 and test 2023–26 were both positive.
 About 36% of the limit orders fill (22% in RED). With the 12% disaster stop the average drops to about +0.5% a trade (a stop
 costs this setup some edge, but caps the rare large loss: 1 trade in 20 lost about 10% or more without it).
 Why the old rules lost: over a 1-week hold, Indian stocks that just ran up (high RSI(2), volume spikes, RS 94–99) tend to give
