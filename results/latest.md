@@ -1,6 +1,6 @@
 # Swing shortlist: data as of 2026-11-12
 
-Data status: fresh. Run at 2026-11-13T07:36+05:30.
+Data status: fresh. Run at 2026-11-13T08:04+05:30.
 
 **Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
 Nifty 50 25299.35 (50-day 23328.63, 200-day 23989.31); Nifty 500 23865.8 (200-day 22769.4)

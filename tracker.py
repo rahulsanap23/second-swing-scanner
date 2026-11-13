@@ -45,12 +45,15 @@ MAX_DAYS = screener.P.get("hold_sessions", 5)
 BE_AT_R = screener.P.get("breakeven_at_r", 1.0)
 CLOSED = ("TARGET HIT", "EXIT 10EMA", "STOP HIT", "BREAKEVEN", "SOLD DAY %d" % MAX_DAYS)
 EXIT_EMA = screener.P.get("dip_exit_ema", 10)
+TRACK_SINCE = screener.P.get("track_since") or "0000-00-00"
 
 
 def load_picks():
     picks = {}
     for f in sorted(glob.glob(os.path.join(RES, "history", "*.json"))):
         d = json.load(open(f))
+        if d.get("asof", "") < TRACK_SINCE:              # fresh start: older scans are kept but not tracked
+            continue
         best = {c["symbol"] for c in d.get("best5") or []}
         for c in d.get("shortlist") or d.get("best5") or []:
             if c.get("entry") is None or c.get("stop") is None or c.get("t1") is None:
@@ -256,7 +259,7 @@ def run(data_dir):
     return dict(generated=dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).isoformat(timespec="minutes"),
                 data_date=data_date, first_pick=min((t["suggested"][0] for t in trades), default=None),
                 rules=dict(skip_gap_pct=SKIP_GAP_PCT, max_days=MAX_DAYS, breakeven_at_r=BE_AT_R, exit_ema=EXIT_EMA,
-                           dip_since="2026-11-12"), missing_price_files=missing,
+                           dip_since="2026-11-12", track_since=TRACK_SINCE), missing_price_files=missing,
                 summary=summarize(trades), trades=trades)
 
 

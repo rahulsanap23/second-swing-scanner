@@ -47,6 +47,8 @@ P = dict(
     dip_limit_pct_red=3.0, # deeper limit when the market is RED
     dip_stop_pct=12.0,     # disaster stop % below the buy price (a tight stop hurts this setup; sizing uses it)
     dip_exit_ema=10,       # sell when the stock CLOSES above its 10-day EMA, or at the close of day hold_sessions
+    track_since="2026-11-12",  # the tracker/dashboard follows picks from this data date on (fresh start with
+                               # the DIP rules; older scans stay in results/history but are not tracked)
 )
 
 SECTORS = ["nifty auto", "nifty bank", "nifty it", "nifty pharma", "nifty fmcg", "nifty metal",

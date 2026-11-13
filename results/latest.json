@@ -141,7 +141,8 @@
   "dip_limit_pct": 2.0,
   "dip_limit_pct_red": 3.0,
   "dip_stop_pct": 12.0,
-  "dip_exit_ema": 10
+  "dip_exit_ema": 10,
+  "track_since": "2026-11-12"
  },
  "previous_asof": "2026-11-11",
  "yesterday": [
