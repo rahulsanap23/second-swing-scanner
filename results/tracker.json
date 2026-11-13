@@ -1,20 +1,23 @@
 {
- "generated": "2026-11-12T19:57+05:30",
+ "generated": "2026-11-13T07:37+05:30",
  "data_date": "2026-11-12",
  "first_pick": "2026-10-28",
  "rules": {
   "skip_gap_pct": 3.0,
   "max_days": 5,
-  "breakeven_at_r": 1.0
+  "breakeven_at_r": 1.0,
+  "exit_ema": 10,
+  "dip_since": "2026-11-12"
  },
  "missing_price_files": [],
  "summary": {
-  "stock_ideas": 72,
+  "stock_ideas": 67,
   "triggered": 40,
   "target_hit": 3,
+  "exit_10ema": 0,
   "stop_hit": 4,
   "open": 19,
-  "waiting": 6,
+  "waiting": 1,
   "not_triggered": 26,
   "skipped": 0,
   "data_issue": 0,
@@ -27,8 +30,22 @@
   "avg_result_pct": 0.1,
   "avg_r": 0.1,
   "by_setup": {
+   "DIP": {
+    "picks": 1,
+    "triggered": 0,
+    "target": 0,
+    "stop": 0,
+    "breakeven": 0,
+    "sold_day": 0,
+    "open": 0,
+    "closed": 0,
+    "wins": 0,
+    "exit_ema": 0,
+    "win_rate": null,
+    "avg_result_pct": null
+   },
    "PULLBACK": {
-    "picks": 63,
+    "picks": 57,
     "triggered": 36,
     "target": 3,
     "stop": 3,
@@ -37,6 +54,7 @@
     "open": 19,
     "closed": 17,
     "wins": 7,
+    "exit_ema": 0,
     "win_rate": 41,
     "avg_result_pct": -0.27
    },
@@ -50,13 +68,14 @@
     "open": 0,
     "closed": 4,
     "wins": 3,
+    "exit_ema": 0,
     "win_rate": 75,
     "avg_result_pct": 1.46
    }
   },
   "by_regime": {
    "GREEN": {
-    "picks": 49,
+    "picks": 44,
     "triggered": 27,
     "target": 1,
     "stop": 3,
@@ -65,6 +84,7 @@
     "open": 19,
     "closed": 8,
     "wins": 1,
+    "exit_ema": 0,
     "win_rate": 12,
     "avg_result_pct": -5.11
    },
@@ -78,34 +98,37 @@
     "open": 0,
     "closed": 13,
     "wins": 9,
+    "exit_ema": 0,
     "win_rate": 69,
     "avg_result_pct": 3.25
    }
   },
   "by_times_suggested": {
    "1 day": {
-    "picks": 60,
-    "triggered": 29,
+    "picks": 59,
+    "triggered": 33,
     "target": 2,
     "stop": 3,
     "breakeven": 0,
     "sold_day": 10,
-    "open": 14,
+    "open": 18,
     "closed": 15,
     "wins": 7,
+    "exit_ema": 0,
     "win_rate": 47,
     "avg_result_pct": -0.52
    },
    "2 days": {
-    "picks": 11,
-    "triggered": 10,
+    "picks": 7,
+    "triggered": 6,
     "target": 1,
     "stop": 1,
     "breakeven": 0,
     "sold_day": 3,
-    "open": 5,
+    "open": 1,
     "closed": 5,
     "wins": 2,
+    "exit_ema": 0,
     "win_rate": 40,
     "avg_result_pct": 0.74
    },
@@ -119,6 +142,7 @@
     "open": 0,
     "closed": 1,
     "wins": 1,
+    "exit_ema": 0,
     "win_rate": 100,
     "avg_result_pct": 5.48
    }
@@ -126,9 +150,9 @@
  },
  "trades": [
   {
-   "symbol": "SHILPAMED",
-   "company": "Shilpa Medicare Limited",
-   "setup": "PULLBACK",
+   "symbol": "TECHM",
+   "company": "Tech Mahindra Limited",
+   "setup": "DIP",
    "regime": "GREEN",
    "suggested": [
     "2026-11-12"
@@ -136,10 +160,10 @@
    "best_on": [
     "2026-11-12"
    ],
-   "close_at_pick": 989.65,
-   "entry": 1007.01,
-   "stop": 936.52,
-   "t1": 1145.74,
+   "close_at_pick": 1774.0,
+   "entry": 1738.52,
+   "stop": 1529.9,
+   "t1": 1792.62,
    "status": "WAITING",
    "entry_date": null,
    "fill": null,
@@ -150,158 +174,11 @@
    "result_pct": null,
    "r_mult": null,
    "flag": "",
-   "cmp": 989.65,
+   "cmp": 1774.0,
    "cmp_date": "2026-11-12",
    "times_suggested": 1,
-   "t1_pct": 13.8,
-   "stop_pct": -7.0
-  },
-  {
-   "symbol": "NAZARA",
-   "company": "Nazara Technologies Limited",
-   "setup": "PULLBACK",
-   "regime": "GREEN",
-   "suggested": [
-    "2026-11-12"
-   ],
-   "best_on": [],
-   "close_at_pick": 414.3,
-   "entry": 417.33,
-   "stop": 402.55,
-   "t1": 453.22,
-   "status": "WAITING",
-   "entry_date": null,
-   "fill": null,
-   "exit_date": null,
-   "exit_price": null,
-   "days": null,
-   "last_close": null,
-   "result_pct": null,
-   "r_mult": null,
-   "flag": "",
-   "cmp": 414.3,
-   "cmp_date": "2026-11-12",
-   "times_suggested": 1,
-   "t1_pct": 8.6,
-   "stop_pct": -3.5
-  },
-  {
-   "symbol": "MANINDS",
-   "company": "Man Industries (India) Limited",
-   "setup": "PULLBACK",
-   "regime": "GREEN",
-   "suggested": [
-    "2026-11-12"
-   ],
-   "best_on": [
-    "2026-11-12"
-   ],
-   "close_at_pick": 872.3,
-   "entry": 917.83,
-   "stop": 853.58,
-   "t1": 1073.61,
-   "status": "WAITING",
-   "entry_date": null,
-   "fill": null,
-   "exit_date": null,
-   "exit_price": null,
-   "days": null,
-   "last_close": null,
-   "result_pct": null,
-   "r_mult": null,
-   "flag": "",
-   "cmp": 872.3,
-   "cmp_date": "2026-11-12",
-   "times_suggested": 1,
-   "t1_pct": 17.0,
-   "stop_pct": -7.0
-  },
-  {
-   "symbol": "GNA",
-   "company": "GNA Axles Limited",
-   "setup": "PULLBACK",
-   "regime": "GREEN",
-   "suggested": [
-    "2026-11-12"
-   ],
-   "best_on": [],
-   "close_at_pick": 588.65,
-   "entry": 605.36,
-   "stop": 562.98,
-   "t1": 684.0,
-   "status": "WAITING",
-   "entry_date": null,
-   "fill": null,
-   "exit_date": null,
-   "exit_price": null,
-   "days": null,
-   "last_close": null,
-   "result_pct": null,
-   "r_mult": null,
-   "flag": "",
-   "cmp": 588.65,
-   "cmp_date": "2026-11-12",
-   "times_suggested": 1,
-   "t1_pct": 13.0,
-   "stop_pct": -7.0
-  },
-  {
-   "symbol": "CENTUM",
-   "company": "Centum Electronics Limited",
-   "setup": "PULLBACK",
-   "regime": "GREEN",
-   "suggested": [
-    "2026-11-12"
-   ],
-   "best_on": [],
-   "close_at_pick": 4239.5,
-   "entry": 4298.58,
-   "stop": 4110.1,
-   "t1": 4799.24,
-   "status": "WAITING",
-   "entry_date": null,
-   "fill": null,
-   "exit_date": null,
-   "exit_price": null,
-   "days": null,
-   "last_close": null,
-   "result_pct": null,
-   "r_mult": null,
-   "flag": "",
-   "cmp": 4239.5,
-   "cmp_date": "2026-11-12",
-   "times_suggested": 1,
-   "t1_pct": 11.6,
-   "stop_pct": -4.4
-  },
-  {
-   "symbol": "AVTNPL",
-   "company": "AVT Natural Products Limited",
-   "setup": "PULLBACK",
-   "regime": "GREEN",
-   "suggested": [
-    "2026-11-12"
-   ],
-   "best_on": [],
-   "close_at_pick": 99.34,
-   "entry": 100.89,
-   "stop": 93.91,
-   "t1": 115.37,
-   "status": "WAITING",
-   "entry_date": null,
-   "fill": null,
-   "exit_date": null,
-   "exit_price": null,
-   "days": null,
-   "last_close": null,
-   "result_pct": null,
-   "r_mult": null,
-   "flag": "",
-   "cmp": 99.34,
-   "cmp_date": "2026-11-12",
-   "times_suggested": 1,
-   "t1_pct": 14.4,
-   "stop_pct": -6.9
+   "t1_pct": 3.1,
+   "stop_pct": -12.0
   },
   {
    "symbol": "SKYGOLD",
@@ -328,6 +205,7 @@
    "result_pct": 3.97,
    "r_mult": null,
    "flag": "",
+   "ema_now": 962.53,
    "stop_now": 924.27,
    "sell_day_is_next": false,
    "cmp": 1050.05,
@@ -342,8 +220,7 @@
    "setup": "PULLBACK",
    "regime": "GREEN",
    "suggested": [
-    "2026-11-11",
-    "2026-11-12"
+    "2026-11-11"
    ],
    "best_on": [
     "2026-11-11"
@@ -362,11 +239,12 @@
    "result_pct": -2.11,
    "r_mult": null,
    "flag": "",
+   "ema_now": 165.14,
    "stop_now": 161.78,
    "sell_day_is_next": false,
    "cmp": 167.48,
    "cmp_date": "2026-11-12",
-   "times_suggested": 2,
+   "times_suggested": 1,
    "t1_pct": 13.7,
    "stop_pct": -5.4
   },
@@ -395,6 +273,7 @@
    "result_pct": -0.91,
    "r_mult": null,
    "flag": "",
+   "ema_now": 1014.07,
    "stop_now": 1006.41,
    "sell_day_is_next": false,
    "cmp": 1072.3,
@@ -455,6 +334,7 @@
    "result_pct": -2.1,
    "r_mult": null,
    "flag": "",
+   "ema_now": 1445.34,
    "stop_now": 1405.24,
    "sell_day_is_next": false,
    "cmp": 1493.2,
@@ -469,12 +349,10 @@
    "setup": "PULLBACK",
    "regime": "GREEN",
    "suggested": [
-    "2026-11-11",
-    "2026-11-12"
+    "2026-11-11"
    ],
    "best_on": [
-    "2026-11-11",
-    "2026-11-12"
+    "2026-11-11"
    ],
    "close_at_pick": 664.7,
    "entry": 672.59,
@@ -490,11 +368,12 @@
    "result_pct": 0.01,
    "r_mult": null,
    "flag": "",
+   "ema_now": 659.34,
    "stop_now": 641.9,
    "sell_day_is_next": false,
    "cmp": 672.65,
    "cmp_date": "2026-11-12",
-   "times_suggested": 2,
+   "times_suggested": 1,
    "t1_pct": 12.4,
    "stop_pct": -4.6
   },
@@ -504,12 +383,10 @@
    "setup": "PULLBACK",
    "regime": "GREEN",
    "suggested": [
-    "2026-11-11",
-    "2026-11-12"
+    "2026-11-11"
    ],
    "best_on": [
-    "2026-11-11",
-    "2026-11-12"
+    "2026-11-11"
    ],
    "close_at_pick": 263.89,
    "entry": 268.08,
@@ -525,11 +402,12 @@
    "result_pct": 4.39,
    "r_mult": null,
    "flag": "",
+   "ema_now": 262.08,
    "stop_now": 268.08,
    "sell_day_is_next": false,
    "cmp": 279.86,
    "cmp_date": "2026-11-12",
-   "times_suggested": 2,
+   "times_suggested": 1,
    "t1_pct": 15.3,
    "stop_pct": -5.2
   },
@@ -539,12 +417,9 @@
    "setup": "PULLBACK",
    "regime": "GREEN",
    "suggested": [
-    "2026-11-11",
-    "2026-11-12"
+    "2026-11-11"
    ],
-   "best_on": [
-    "2026-11-12"
-   ],
+   "best_on": [],
    "close_at_pick": 1635.9,
    "entry": 1644.68,
    "stop": 1569.48,
@@ -559,11 +434,12 @@
    "result_pct": 2.48,
    "r_mult": null,
    "flag": "",
+   "ema_now": 1598.03,
    "stop_now": 1569.48,
    "sell_day_is_next": false,
    "cmp": 1689.4,
    "cmp_date": "2026-11-12",
-   "times_suggested": 2,
+   "times_suggested": 1,
    "t1_pct": 12.2,
    "stop_pct": -4.6
   },
@@ -650,6 +526,7 @@
    "result_pct": 0.78,
    "r_mult": null,
    "flag": "",
+   "ema_now": 695.72,
    "stop_now": 656.87,
    "sell_day_is_next": false,
    "cmp": 711.8,
@@ -804,6 +681,7 @@
    "result_pct": -2.34,
    "r_mult": null,
    "flag": "",
+   "ema_now": 128.35,
    "stop_now": 124.4,
    "sell_day_is_next": false,
    "cmp": 130.64,
@@ -837,6 +715,7 @@
    "result_pct": -4.65,
    "r_mult": null,
    "flag": "",
+   "ema_now": 374.85,
    "stop_now": 374.61,
    "sell_day_is_next": false,
    "cmp": 384.05,
@@ -898,6 +777,7 @@
    "result_pct": -4.41,
    "r_mult": null,
    "flag": "",
+   "ema_now": 1440.46,
    "stop_now": 1381.4,
    "sell_day_is_next": true,
    "cmp": 1415.6,
@@ -931,6 +811,7 @@
    "result_pct": 1.78,
    "r_mult": null,
    "flag": "",
+   "ema_now": 353.36,
    "stop_now": 342.01,
    "sell_day_is_next": true,
    "cmp": 360.3,
@@ -964,6 +845,7 @@
    "result_pct": 8.81,
    "r_mult": null,
    "flag": "",
+   "ema_now": 2557.23,
    "stop_now": 2625.0,
    "sell_day_is_next": true,
    "cmp": 2856.3,
@@ -997,6 +879,7 @@
    "result_pct": 1.59,
    "r_mult": null,
    "flag": "",
+   "ema_now": 3472.26,
    "stop_now": 3308.1,
    "sell_day_is_next": true,
    "cmp": 3624.7,
@@ -1028,6 +911,7 @@
    "result_pct": 1.49,
    "r_mult": null,
    "flag": "",
+   "ema_now": 366.58,
    "stop_now": 346.28,
    "sell_day_is_next": true,
    "cmp": 380.6,
@@ -1059,6 +943,7 @@
    "result_pct": 3.57,
    "r_mult": null,
    "flag": "",
+   "ema_now": 1161.05,
    "stop_now": 1188.0,
    "sell_day_is_next": true,
    "cmp": 1230.4,
@@ -1123,6 +1008,7 @@
    "result_pct": -3.24,
    "r_mult": null,
    "flag": "",
+   "ema_now": 1295.88,
    "stop_now": 1264.53,
    "sell_day_is_next": true,
    "cmp": 1325.6,
@@ -1154,6 +1040,7 @@
    "result_pct": 1.58,
    "r_mult": null,
    "flag": "",
+   "ema_now": 912.48,
    "stop_now": 923.84,
    "sell_day_is_next": true,
    "cmp": 938.45,
@@ -1185,6 +1072,7 @@
    "result_pct": 7.86,
    "r_mult": null,
    "flag": "",
+   "ema_now": 930.93,
    "stop_now": 936.9,
    "sell_day_is_next": true,
    "cmp": 1010.5,

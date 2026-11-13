@@ -6,7 +6,13 @@ is tracked. "best_on" lists the days a stock was in GitHub's own best picks (bef
 the dashboard shows the morning report's final picks (reported.json, saved into the dashboard by the
 morning task) and falls back to best_on for days without that file.
 
-Rules (kept in line with the morning report's "How to trade" lines):
+DIP picks (since 13 Nov 2026):
+  - The limit buy is valid on the next trading day only: FILLED if that day's low reaches the limit,
+    fill = min(open, limit); otherwise NOT TRIGGERED (shown as "Not bought").
+  - From the fill day on: low <= disaster stop -> STOP HIT (at min(open, stop)); else a CLOSE above the
+    10-day EMA -> EXIT 10EMA at that close; else no exit by the close of day 5 -> SOLD DAY 5 at that close.
+
+Other setups (BREAKOUT / READY / PULLBACK, the rules before 13 Nov 2026):
   - A pick's buy-stop is valid on the next trading day only.
   - If that day opens more than 3% above "Buy above", the trade is SKIPPED (report rule).
   - Otherwise it TRIGGERS when the day's high reaches "Buy above"; fill = max(open, Buy above).
@@ -37,7 +43,8 @@ RES = os.path.join(ROOT, "results")
 SKIP_GAP_PCT = screener.P.get("gap_skip_pct", 3.0)
 MAX_DAYS = screener.P.get("hold_sessions", 5)
 BE_AT_R = screener.P.get("breakeven_at_r", 1.0)
-CLOSED = ("TARGET HIT", "STOP HIT", "BREAKEVEN", "SOLD DAY %d" % MAX_DAYS)
+CLOSED = ("TARGET HIT", "EXIT 10EMA", "STOP HIT", "BREAKEVEN", "SOLD DAY %d" % MAX_DAYS)
+EXIT_EMA = screener.P.get("dip_exit_ema", 10)
 
 
 def load_picks():
@@ -59,7 +66,9 @@ def prices(daily, symbol, since):
         return None
     d = pd.read_csv(f, usecols=["Date", "Open", "High", "Low", "Close"])
     d["Date"] = d["Date"].astype(str).str[:10]
-    d = d[d["Date"] >= since].drop_duplicates("Date", keep="last").sort_values("Date")
+    d = d.drop_duplicates("Date", keep="last").sort_values("Date")
+    d["Ema"] = d["Close"].ewm(span=EXIT_EMA, adjust=False).mean()   # same EMA as the screener's ema10
+    d = d[d["Date"] >= since]
     return [r for r in d.itertuples(index=False)]
 
 
@@ -82,7 +91,19 @@ def finish(t, status, date, price):
     t["r_mult"] = round((price - t["fill"]) / (t["fill"] - t["stop"]), 2) if t["fill"] > t["stop"] else None
 
 
+def check_exit_dip(t, r):
+    o, l, c = r.Open, r.Low, r.Close
+    if l <= t["stop"]:
+        return finish(t, "STOP HIT", r.Date, min(o, t["stop"]))
+    if c > r.Ema:
+        return finish(t, "EXIT 10EMA", r.Date, c)
+    if t["days"] >= MAX_DAYS:
+        return finish(t, "SOLD DAY %d" % MAX_DAYS, r.Date, c)
+
+
 def check_exit(t, r):
+    if t.get("setup") == "DIP":
+        return check_exit_dip(t, r)
     o, h, l, c = r.Open, r.High, r.Low, r.Close
     stop = t.get("active_stop") or t["stop"]
     stop_name = "BREAKEVEN" if stop >= t["fill"] else "STOP HIT"
@@ -114,7 +135,13 @@ def track_symbol(picks, rows):
         # 1) evaluate today's bar
         if cur and cur["status"] == "WAITING" and r.Date > cur["suggested"][-1]:
             cur["eval_date"] = r.Date
-            if r.Open > cur["entry"] * (1 + SKIP_GAP_PCT / 100):
+            if cur["setup"] == "DIP":                          # limit buy below the signal close
+                if r.Low <= cur["entry"]:
+                    cur.update(status="OPEN", entry_date=r.Date, fill=round(min(r.Open, cur["entry"]), 2), days=1)
+                    check_exit(cur, r)
+                else:
+                    cur["status"] = "NOT TRIGGERED"
+            elif r.Open > cur["entry"] * (1 + SKIP_GAP_PCT / 100):
                 cur.update(status="SKIPPED", flag=f"opened {(r.Open / cur['entry'] - 1) * 100:.1f}% above Buy above")
             elif r.High >= cur["entry"]:
                 cur.update(status="OPEN", entry_date=r.Date, fill=round(max(r.Open, cur["entry"]), 2), days=1)
@@ -126,6 +153,7 @@ def track_symbol(picks, rows):
             check_exit(cur, r)
         if cur and cur["status"] == "OPEN":
             cur["last_close"] = r.Close
+            cur["ema_now"] = round(r.Ema, 2)
             cur["result_pct"] = round((r.Close / cur["fill"] - 1) * 100, 2)
         # 2) a new pick published after today's close
         p = by_date.get(r.Date)
@@ -153,6 +181,8 @@ def track_symbol(picks, rows):
     for t in trades:
         t.pop("eval_date", None)
         a = t.pop("active_stop", None)
+        if t["status"] != "OPEN":
+            t.pop("ema_now", None)
         if t["status"] == "OPEN":                             # for the morning to-do list
             t["stop_now"] = round(a or t["stop"], 2)
             t["sell_day_is_next"] = t["days"] + 1 >= MAX_DAYS
@@ -179,6 +209,7 @@ def summarize(trades):
             g["picks"] += 1
             g["triggered"] += t["entry_date"] is not None
             g["target"] += t["status"] == "TARGET HIT"
+            g["exit_ema"] = g.get("exit_ema", 0) + (t["status"] == "EXIT 10EMA")
             g["stop"] += t["status"] == "STOP HIT"
             g["breakeven"] += t["status"] == "BREAKEVEN"
             g["sold_day"] += t["status"].startswith("SOLD DAY")
@@ -196,7 +227,7 @@ def summarize(trades):
     count = lambda s: sum(t["status"] == s for t in trades)
     return dict(
         stock_ideas=len(trades), triggered=sum(t["entry_date"] is not None for t in trades),
-        target_hit=len(tgt), stop_hit=len(stp), open=count("OPEN"),
+        target_hit=len(tgt), exit_10ema=count("EXIT 10EMA"), stop_hit=len(stp), open=count("OPEN"),
         waiting=count("WAITING"), not_triggered=count("NOT TRIGGERED"), skipped=count("SKIPPED"),
         data_issue=count("DATA ISSUE"),
         breakeven=count("BREAKEVEN"), sold_day=count("SOLD DAY %d" % MAX_DAYS), closed=len(done),
@@ -224,7 +255,8 @@ def run(data_dir):
     data_date = prices(daily, "nifty 500", "2000-01-01")[-1].Date if os.path.exists(nifty) else None
     return dict(generated=dt.datetime.now(dt.timezone(dt.timedelta(hours=5, minutes=30))).isoformat(timespec="minutes"),
                 data_date=data_date, first_pick=min((t["suggested"][0] for t in trades), default=None),
-                rules=dict(skip_gap_pct=SKIP_GAP_PCT, max_days=MAX_DAYS, breakeven_at_r=BE_AT_R), missing_price_files=missing,
+                rules=dict(skip_gap_pct=SKIP_GAP_PCT, max_days=MAX_DAYS, breakeven_at_r=BE_AT_R, exit_ema=EXIT_EMA,
+                           dip_since="2026-11-12"), missing_price_files=missing,
                 summary=summarize(trades), trades=trades)
 
 

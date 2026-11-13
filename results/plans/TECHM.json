@@ -1,0 +1,14 @@
+{
+ "symbol": "TECHM",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-12",
+ "entry": 1738.52,
+ "stop": 1529.9,
+ "target": 1792.62,
+ "risk_per_share": 208.62,
+ "risk_pct": 12.0,
+ "reward_risk": 0.26,
+ "max_hold_days": 5,
+ "stop_rule": "price:1529.90",
+ "qty": 11
+}

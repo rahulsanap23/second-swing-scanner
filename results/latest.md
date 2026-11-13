@@ -1,33 +1,29 @@
 # Swing shortlist: data as of 2026-11-12
 
-Data status: fresh. Run at 2026-11-12T19:55+05:30.
+Data status: fresh. Run at 2026-11-13T07:36+05:30.
 
 **Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
 Nifty 50 25299.35 (50-day 23328.63, 200-day 23989.31); Nifty 500 23865.8 (200-day 22769.4)
 Breadth: 49.0% above 50-day, 44.9% above 200-day, net new highs 39
 Top sectors (50-day RS vs Nifty): Media +7.6, PSU Bank +2.9, Private Bank +2.7
-Funnel: {'equities_with_1y_history': 2011, 'tradable': 1085, 'trend_template': 227, 'rs_70_plus': 222, 'actionable_setups': 46}
+Funnel: {'equities_with_1y_history': 2011, 'tradable': 1085, 'trend_template': 227, 'rs_70_plus': 222, 'actionable_setups': 48}
 
-## Best 5 (one-week plan)
+## Best 1 (one-week plan)
 
-| # | Symbol | Setup | RS | Close | Buy above | Skip if opens above | Stop | Target 1 | Sell by | Qty | Amount | Profit YoY | Next results |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| 1 | SHILPAMED (Shilpa Medicare Limited) | PULLBACK | 98 | 989.65 | 1007.01 | 1037.22 | 936.52 | 1145.74 | close of day 5 | 35 | 35,245 | +61% (Sep 2026) | not announced |
-| 2 | MANINDS (Man Industries (India) Limited) | PULLBACK | 98 | 872.30 | 917.83 | 945.37 | 853.58 | 1073.61 | close of day 5 | 38 | 34,878 | +11% (Sep 2026) | not announced |
-| 3 | KOPRAN (Kopran Limited) | PULLBACK | 97 | 279.86 | 290.38 | 299.09 | 270.05 | 335.29 | close of day 5 | 122 | 35,426 | +258% (Sep 2026) | not announced |
-| 4 | NITINSPIN (Nitin Spinners Limited) | PULLBACK | 96 | 672.65 | 680.31 | 700.72 | 649.10 | 760.60 | close of day 5 | 80 | 54,425 | +154% (Sep 2026) | not announced |
-| 5 | AETHER (Aether Industries Limited) | PULLBACK | 94 | 1689.40 | 1698.49 | 1749.44 | 1579.60 | 1904.07 | close of day 5 | 21 | 35,668 | +18% (Sep 2026) | not announced |
+| # | Symbol | Setup | RS | Close | Buy at | Stop | Sell when | Sell by | Qty | Amount | Profit YoY | Next results |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| 1 | TECHM (Tech Mahindra Limited) | DIP | 80 | 1774.00 | limit 1738.52 | 1529.90 | close > 10 EMA (now 1792.62) | close of day 5 | 11 | 19,124 | n/a | not announced |
 
-How to trade: buy-stop at Buy above (never at the open); skip if it opens above the skip price; stop-loss order the same day you're filled; move the stop to your buy price once up 1R; sell at Target 1 or at the close of day 5, whichever comes first.
+How to trade (DIP): place a day LIMIT buy at 'Buy at' before the open; if it doesn't fill, cancel it. When filled, put a stop-loss at 'Stop' (disaster stop). Sell when the stock closes above its 10-day EMA (at that close or the next open), or at the close of day 5, whichever comes first.
 
-Skipped: FILATEX (results on 2026-11-13), INNOVACAP (results on 2026-11-13), KMEW (BREAKOUT not picked (setting: pullbacks only)), MANORAMA (BREAKOUT not picked (setting: pullbacks only)), TMB (BREAKOUT not picked (setting: pullbacks only)), RADICO (BREAKOUT not picked (setting: pullbacks only)), INDGN (BREAKOUT not picked (setting: pullbacks only)), CUB (BREAKOUT not picked (setting: pullbacks only))
-
-Reserve (next in line): SAMBHV (PULLBACK), CENTUM (PULLBACK), AVTNPL (PULLBACK), NAZARA (PULLBACK), GNA (PULLBACK)
+Skipped: CCAVENUE (15% gap in last 90 days), KMEW (BREAKOUT not picked (setting: dips only)), MANORAMA (BREAKOUT not picked (setting: dips only)), TMB (BREAKOUT not picked (setting: dips only)), RADICO (BREAKOUT not picked (setting: dips only)), INDGN (BREAKOUT not picked (setting: dips only)), CUB (BREAKOUT not picked (setting: dips only)), SHILPAMED (PULLBACK not picked (setting: dips only)), MANINDS (PULLBACK not picked (setting: dips only)), FILATEX (PULLBACK not picked (setting: dips only)), KOPRAN (PULLBACK not picked (setting: dips only)), NITINSPIN (PULLBACK not picked (setting: dips only)), AETHER (PULLBACK not picked (setting: dips only)), SAMBHV (PULLBACK not picked (setting: dips only)), CENTUM (PULLBACK not picked (setting: dips only)), AVTNPL (PULLBACK not picked (setting: dips only))
 
 ## Setups
 
 | Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |
 |---|---|---|---|---|---|---|---|---|---|---|
+| TECHM | DIP | 80 | 1774.00 | 1738.52 | 1529.90 | 12.0 | 11 | 19,124 | 1792.62 | exit: close > 10 EMA |
+| CCAVENUE | DIP | 99 | 121.20 | 118.78 | 104.52 | 12.0 | 175 | 20,786 | 123.10 | exit: close > 10 EMA |
 | KMEW | BREAKOUT | 97 | 713.00 | 725.25 | 680.37 | 6.2 | 55 | 39,889 | 837.44 | 10 EMA |
 | MANORAMA | BREAKOUT | 93 | 2100.10 | 2165.32 | 2068.12 | 4.5 | 25 | 54,133 | 2408.32 | 20 EMA |
 | TMB | BREAKOUT | 89 | 890.80 | 916.83 | 883.10 | 3.7 | 74 | 67,845 | 1001.16 | 20 EMA |
@@ -85,7 +81,7 @@ Reserve (next in line): SAMBHV (PULLBACK), CENTUM (PULLBACK), AVTNPL (PULLBACK),
 | RAYMOND | 99 | 1126.4 | -15.9 | 1209.0 |
 | SBC | 98 | 69.52 | -1.2 | 70.08 |
 
-Extended, don't chase: CUPID, MENONBE, SSWL, SKYGOLD, CCAVENUE, MACPOWER, ATHERENERG, SAILIFE, CNL, UNIMECH, ICIL, STLNETWORK, DIVISLAB, ENTERO, SAREGAMA, NEOGEN, KTKBANK, ROLEXRINGS, KALYANKJIL, EIMCOELECO, ASTRAMICRO, PVRINOX, SOUTHBANK, MANAKCOAT, PAYTM, LUMAXTECH, MMFL, EMCURE, NAVINFLUOR, GUFICBIO, MANCREDIT, NILKAMAL, MOTILALOFS, GABRIEL, TANLA, SANATHAN, PHOENIXLTD, RKFORGE, STYLEBAAZA, APLLTD, DCBBANK, SIMPLEXINF, AARTIPHARM, AARTIDRUGS, HINDOILEXP, PRINCEPIPE, LODHA, BAJFINANCE
+Extended, don't chase: CUPID, MENONBE, SSWL, SKYGOLD, MACPOWER, ATHERENERG, SAILIFE, CNL, UNIMECH, ICIL, STLNETWORK, DIVISLAB, ENTERO, SAREGAMA, NEOGEN, KTKBANK, ROLEXRINGS, KALYANKJIL, EIMCOELECO, ASTRAMICRO, PVRINOX, SOUTHBANK, MANAKCOAT, PAYTM, LUMAXTECH, MMFL, EMCURE, NAVINFLUOR, GUFICBIO, MANCREDIT, NILKAMAL, MOTILALOFS, GABRIEL, TANLA, SANATHAN, PHOENIXLTD, RKFORGE, STYLEBAAZA, APLLTD, DCBBANK, SIMPLEXINF, AARTIPHARM, AARTIDRUGS, HINDOILEXP, PRINCEPIPE, LODHA, BAJFINANCE
 
 ## Previous shortlist (2026-11-11) today
 

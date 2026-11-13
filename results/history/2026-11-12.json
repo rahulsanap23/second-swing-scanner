@@ -103,7 +103,7 @@
   "tradable": 1085,
   "trend_template": 227,
   "rs_70_plus": 222,
-  "actionable_setups": 46
+  "actionable_setups": 48
  },
  "params": {
   "capital": 500000,
@@ -135,8 +135,13 @@
   "size_red": 0.5,
   "shortlist_n": 10,
   "setups_allowed": [
-   "PULLBACK"
-  ]
+   "DIP"
+  ],
+  "dip_rsi2_max": 10.0,
+  "dip_limit_pct": 2.0,
+  "dip_limit_pct_red": 3.0,
+  "dip_stop_pct": 12.0,
+  "dip_exit_ema": 10
  },
  "previous_asof": "2026-11-11",
  "yesterday": [
@@ -193,6 +198,78 @@
  ],
  "candidates": [
   {
+   "symbol": "TECHM",
+   "setup": "DIP",
+   "rs_rating": 80,
+   "close": 1774.0,
+   "off_high": -4.62,
+   "ext_ema21": 0.95,
+   "adr": 2.69,
+   "turnover_cr": 503.33,
+   "r63": 0.09,
+   "r126": 0.29,
+   "rs65": 0.08,
+   "volmom": 0.96,
+   "sma50": 1644.23,
+   "ema21": 1757.32,
+   "pivot": 1860.0,
+   "entry": 1738.52,
+   "stop": 1529.9,
+   "risk_pct": 12.0,
+   "pos_pct": 3.82,
+   "qty": 11.0,
+   "amount": 19123.72,
+   "t1": 1792.62,
+   "skip_above": null,
+   "breakeven_at": null,
+   "trail": "exit: close > 10 EMA",
+   "note": "",
+   "r10": 0.0,
+   "rsi2": 5.87,
+   "ema10": 1792.62,
+   "screener_error": "ProxyError",
+   "company": "Tech Mahindra Limited",
+   "next_results": null,
+   "results_in_sessions": null,
+   "reported_latest_quarter": false
+  },
+  {
+   "symbol": "CCAVENUE",
+   "setup": "DIP",
+   "rs_rating": 99,
+   "close": 121.2,
+   "off_high": -10.65,
+   "ext_ema21": 14.57,
+   "adr": 5.26,
+   "turnover_cr": 16.2,
+   "r63": 6.08,
+   "r126": 7.6,
+   "rs65": 6.09,
+   "volmom": 2.81,
+   "sma50": 54.81,
+   "ema21": 105.79,
+   "pivot": 135.65,
+   "entry": 118.78,
+   "stop": 104.52,
+   "risk_pct": 12.0,
+   "pos_pct": 4.16,
+   "qty": 175.0,
+   "amount": 20785.8,
+   "t1": 123.1,
+   "skip_above": null,
+   "breakeven_at": null,
+   "trail": "exit: close > 10 EMA",
+   "note": "gap>=15% in 90d (check news/split)",
+   "r10": -0.02,
+   "rsi2": 6.29,
+   "ema10": 123.1,
+   "screener_error": "ProxyError",
+   "company": "AvenuesAI Limited",
+   "next_results": null,
+   "results_in_sessions": null,
+   "reported_latest_quarter": false
+  },
+  {
    "symbol": "KMEW",
    "setup": "BREAKOUT",
    "rs_rating": 97,
@@ -219,7 +296,9 @@
    "breakeven_at": 770.12,
    "trail": "10 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 86.65,
+   "ema10": 661.51
   },
   {
    "symbol": "MANORAMA",
@@ -248,7 +327,9 @@
    "breakeven_at": 2262.52,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 93.67,
+   "ema10": 1961.05
   },
   {
    "symbol": "TMB",
@@ -277,7 +358,9 @@
    "breakeven_at": 950.56,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 99.75,
+   "ema10": 840.33
   },
   {
    "symbol": "RADICO",
@@ -306,7 +389,9 @@
    "breakeven_at": 4815.22,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 77.75,
+   "ema10": 4453.12
   },
   {
    "symbol": "INDGN",
@@ -335,7 +420,9 @@
    "breakeven_at": 697.68,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 95.76,
+   "ema10": 620.9
   },
   {
    "symbol": "CUB",
@@ -364,7 +451,9 @@
    "breakeven_at": 249.12,
    "trail": "20 EMA",
    "note": "or entry-day low if tighter",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 99.14,
+   "ema10": 223.65
   },
   {
    "symbol": "SHILPAMED",
@@ -394,15 +483,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.06,
-   "company": "Shilpa Medicare Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 50.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 61.3,
-   "board_meeting_mentioned": "2026-11-05",
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 91.58,
+   "ema10": 944.02
   },
   {
    "symbol": "MANINDS",
@@ -432,14 +514,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.09,
-   "company": "Man Industries (India) Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 40.0,
-   "profit_year_ago_cr": 36.0,
-   "profit_yoy_pct": 11.1,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 94.77,
+   "ema10": 811.91
   },
   {
    "symbol": "FILATEX",
@@ -469,15 +545,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.09,
-   "company": "Filatex India Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 49.0,
-   "profit_year_ago_cr": 41.0,
-   "profit_yoy_pct": 19.5,
-   "board_meeting_mentioned": "2026-11-13",
-   "next_results": "2026-11-13",
-   "results_in_sessions": 1,
-   "reported_latest_quarter": false
+   "rsi2": 92.69,
+   "ema10": 96.09
   },
   {
    "symbol": "KOPRAN",
@@ -507,14 +576,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.11,
-   "company": "Kopran Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 6.29,
-   "profit_year_ago_cr": -3.99,
-   "profit_yoy_pct": 257.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 94.58,
+   "ema10": 262.08
   },
   {
    "symbol": "NITINSPIN",
@@ -544,14 +607,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.04,
-   "company": "Nitin Spinners Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 89.0,
-   "profit_year_ago_cr": 35.0,
-   "profit_yoy_pct": 154.3,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 75.65,
+   "ema10": 659.34
   },
   {
    "symbol": "AETHER",
@@ -581,14 +638,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.07,
-   "company": "Aether Industries Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 52.0,
-   "profit_year_ago_cr": 44.0,
-   "profit_yoy_pct": 18.2,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 95.54,
+   "ema10": 1598.03
   },
   {
    "symbol": "SAMBHV",
@@ -618,14 +669,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.05,
-   "company": "Sambhv Steel Tubes Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 61.0,
-   "profit_year_ago_cr": 30.0,
-   "profit_yoy_pct": 103.3,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 67.37,
+   "ema10": 165.14
   },
   {
    "symbol": "CENTUM",
@@ -655,14 +700,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.06,
-   "company": "Centum Electronics Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 23.0,
-   "profit_year_ago_cr": 13.0,
-   "profit_yoy_pct": 76.9,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 84.33,
+   "ema10": 4147.25
   },
   {
    "symbol": "AVTNPL",
@@ -692,15 +731,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.11,
-   "company": "AVT Natural Products Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 27.0,
-   "profit_year_ago_cr": 9.0,
-   "profit_yoy_pct": 200.0,
-   "board_meeting_mentioned": "2026-11-11",
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 63.13,
+   "ema10": 97.24
   },
   {
    "symbol": "NAZARA",
@@ -730,14 +762,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.02,
-   "company": "Nazara Technologies Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 0.37,
-   "profit_year_ago_cr": -966.95,
-   "profit_yoy_pct": 100.0,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 76.65,
+   "ema10": 409.51
   },
   {
    "symbol": "GNA",
@@ -767,15 +793,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.05,
-   "company": "GNA Axles Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 44.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 41.9,
-   "board_meeting_mentioned": "2026-10-23",
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 99.43,
+   "ema10": 566.15
   },
   {
    "symbol": "DIFFNKG",
@@ -805,14 +824,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.12,
-   "company": "Diffusion Engineers Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 15.0,
-   "profit_year_ago_cr": 10.0,
-   "profit_yoy_pct": 50.0,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 95.17,
+   "ema10": 425.42
   },
   {
    "symbol": "INNOVACAP",
@@ -842,15 +855,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.11,
-   "company": "Innova Captab Limited",
-   "latest_quarter": "Jun 2026",
-   "profit_latest_cr": 32.0,
-   "profit_year_ago_cr": 20.0,
-   "profit_yoy_pct": 60.0,
-   "board_meeting_mentioned": "2026-11-13",
-   "next_results": "2026-11-13",
-   "results_in_sessions": 1,
-   "reported_latest_quarter": false
+   "rsi2": 98.76,
+   "ema10": 1070.67
   },
   {
    "symbol": "DYNAMATECH",
@@ -880,14 +886,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.08,
-   "company": "Dynamatic Technologies Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 6.82,
-   "profit_year_ago_cr": 14.75,
-   "profit_yoy_pct": -53.8,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 78.04,
+   "ema10": 12818.42
   },
   {
    "symbol": "MAXESTATES",
@@ -917,14 +917,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.1,
-   "company": "Max Estates Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 14.0,
-   "profit_year_ago_cr": 12.0,
-   "profit_yoy_pct": 16.7,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 98.27,
+   "ema10": 527.08
   },
   {
    "symbol": "QPOWER",
@@ -954,14 +948,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.04,
-   "company": "Quality Power Electrical Equipments Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 22.0,
-   "profit_year_ago_cr": 13.0,
-   "profit_yoy_pct": 69.2,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 81.55,
+   "ema10": 1445.34
   },
   {
    "symbol": "GOODLUCK",
@@ -991,14 +979,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.1,
-   "company": "Goodluck India Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 51.0,
-   "profit_year_ago_cr": 41.0,
-   "profit_yoy_pct": 24.4,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 92.05,
+   "ema10": 545.35
   },
   {
    "symbol": "CEIGALL",
@@ -1028,14 +1010,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.01,
-   "company": "Ceigall India Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 82.0,
-   "profit_year_ago_cr": 56.0,
-   "profit_yoy_pct": 46.4,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 85.63,
+   "ema10": 389.21
   },
   {
    "symbol": "ABDL",
@@ -1065,14 +1041,8 @@
    "trail": "20 EMA",
    "note": "",
    "r10": 0.07,
-   "company": "Allied Blenders and Distillers Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 85.0,
-   "profit_year_ago_cr": 72.0,
-   "profit_yoy_pct": 18.1,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 99.61,
+   "ema10": 719.92
   },
   {
    "symbol": "PARACABLES",
@@ -1102,14 +1072,8 @@
    "trail": "10 EMA",
    "note": "",
    "r10": 0.03,
-   "company": "Paramount Communications Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 24.0,
-   "profit_year_ago_cr": 13.0,
-   "profit_yoy_pct": 84.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "rsi2": 80.11,
+   "ema10": 65.12
   },
   {
    "symbol": "NYKAA",
@@ -1138,7 +1102,9 @@
    "breakeven_at": 378.25,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.02
+   "r10": 0.02,
+   "rsi2": 75.94,
+   "ema10": 353.36
   },
   {
    "symbol": "VSSL",
@@ -1167,7 +1133,9 @@
    "breakeven_at": 411.06,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.16
+   "r10": 0.16,
+   "rsi2": 99.82,
+   "ema10": 364.4
   },
   {
    "symbol": "RACLGEAR",
@@ -1196,7 +1164,9 @@
    "breakeven_at": 1693.66,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 97.36,
+   "ema10": 1463.16
   },
   {
    "symbol": "AEROENTER",
@@ -1225,7 +1195,9 @@
    "breakeven_at": 140.18,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.02
+   "r10": 0.02,
+   "rsi2": 78.86,
+   "ema10": 126.18
   },
   {
    "symbol": "COFORGE",
@@ -1254,7 +1226,9 @@
    "breakeven_at": 2114.79,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 44.26,
+   "ema10": 2036.51
   },
   {
    "symbol": "JAMNAAUTO",
@@ -1283,7 +1257,9 @@
    "breakeven_at": 158.96,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.16
+   "r10": 0.16,
+   "rsi2": 93.38,
+   "ema10": 135.45
   },
   {
    "symbol": "63MOONS",
@@ -1312,7 +1288,9 @@
    "breakeven_at": 1014.29,
    "trail": "10 EMA",
    "note": "",
-   "r10": -0.01
+   "r10": -0.01,
+   "rsi2": 86.76,
+   "ema10": 914.66
   },
   {
    "symbol": "VARROC",
@@ -1341,7 +1319,9 @@
    "breakeven_at": 898.27,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.03
+   "r10": 0.03,
+   "rsi2": 96.11,
+   "ema10": 804.33
   },
   {
    "symbol": "ARFIN",
@@ -1370,7 +1350,9 @@
    "breakeven_at": 99.91,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.03
+   "r10": 0.03,
+   "rsi2": 33.74,
+   "ema10": 94.5
   },
   {
    "symbol": "FEDERALBNK",
@@ -1399,7 +1381,9 @@
    "breakeven_at": 391.2,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 96.07,
+   "ema10": 347.03
   },
   {
    "symbol": "SUDARSCHEM",
@@ -1428,7 +1412,9 @@
    "breakeven_at": 1276.22,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 95.91,
+   "ema10": 1099.79
   },
   {
    "symbol": "ZYDUSLIFE",
@@ -1457,7 +1443,9 @@
    "breakeven_at": 1247.6,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.02
+   "r10": 0.02,
+   "rsi2": 55.77,
+   "ema10": 1200.21
   },
   {
    "symbol": "GRAPHITE",
@@ -1486,7 +1474,9 @@
    "breakeven_at": 858.78,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 97.22,
+   "ema10": 758.08
   },
   {
    "symbol": "EDELWEISS",
@@ -1515,7 +1505,9 @@
    "breakeven_at": 141.7,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 89.4,
+   "ema10": 128.26
   },
   {
    "symbol": "UDS",
@@ -1544,7 +1536,9 @@
    "breakeven_at": 236.94,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 95.26,
+   "ema10": 206.79
   },
   {
    "symbol": "ARIS",
@@ -1573,7 +1567,9 @@
    "breakeven_at": 163.15,
    "trail": "10 EMA",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 81.35,
+   "ema10": 145.41
   },
   {
    "symbol": "PNBHOUSING",
@@ -1602,7 +1598,9 @@
    "breakeven_at": 1224.03,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.02
+   "r10": 0.02,
+   "rsi2": 99.48,
+   "ema10": 1109.11
   },
   {
    "symbol": "BEML",
@@ -1631,7 +1629,9 @@
    "breakeven_at": 2298.35,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 92.55,
+   "ema10": 2034.5
   },
   {
    "symbol": "FEDFINA",
@@ -1660,7 +1660,9 @@
    "breakeven_at": 175.32,
    "trail": "20 EMA",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 97.01,
+   "ema10": 156.93
   },
   {
    "symbol": "KOLTEPATIL",
@@ -1689,7 +1691,9 @@
    "breakeven_at": 480.71,
    "trail": "20 EMA",
    "note": "",
-   "r10": -0.03
+   "r10": -0.03,
+   "rsi2": 69.8,
+   "ema10": 452.57
   },
   {
    "symbol": "SPECTRUM",
@@ -1719,14 +1723,13 @@
    "trail": "",
    "note": "",
    "r10": 0.1,
+   "rsi2": 29.01,
+   "ema10": 4312.74,
+   "screener_error": "ProxyError",
    "company": "Spectrum Electrical Industries Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 18.0,
-   "profit_year_ago_cr": 8.0,
-   "profit_yoy_pct": 125.0,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "GCSL",
@@ -1756,14 +1759,13 @@
    "trail": "",
    "note": "",
    "r10": 0.03,
+   "rsi2": 28.26,
+   "ema10": 777.39,
+   "screener_error": "ProxyError",
    "company": "Gretex Corporate Services Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 1.66,
-   "profit_year_ago_cr": 8.1,
-   "profit_yoy_pct": -79.5,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "WHEELS",
@@ -1793,14 +1795,13 @@
    "trail": "",
    "note": "",
    "r10": 0.11,
+   "rsi2": 87.37,
+   "ema10": 2341.6,
+   "screener_error": "ProxyError",
    "company": "Wheels India Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 53.0,
-   "profit_year_ago_cr": 28.0,
-   "profit_yoy_pct": 89.3,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "RAYMOND",
@@ -1830,14 +1831,13 @@
    "trail": "",
    "note": "",
    "r10": 0.02,
+   "rsi2": 89.86,
+   "ema10": 1108.94,
+   "screener_error": "ProxyError",
    "company": "Raymond Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 1.59,
-   "profit_year_ago_cr": -2.85,
-   "profit_yoy_pct": 155.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SBC",
@@ -1867,15 +1867,13 @@
    "trail": "",
    "note": "",
    "r10": 0.05,
+   "rsi2": 80.59,
+   "ema10": 67.78,
+   "screener_error": "ProxyError",
    "company": "SBC Exports Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 11.0,
-   "profit_year_ago_cr": 8.0,
-   "profit_yoy_pct": 37.5,
-   "board_meeting_mentioned": "2026-10-15",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SHREEJISPG",
@@ -1904,7 +1902,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 79.55,
+   "ema10": 870.1
   },
   {
    "symbol": "LAURUSLABS",
@@ -1933,7 +1933,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 37.96,
+   "ema10": 2350.13
   },
   {
    "symbol": "SANSERA",
@@ -1962,7 +1964,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 94.48,
+   "ema10": 4468.4
   },
   {
    "symbol": "DIACABS",
@@ -1991,7 +1995,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 80.05,
+   "ema10": 369.35
   },
   {
    "symbol": "CPPLUS",
@@ -2020,7 +2026,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 63.08,
+   "ema10": 4119.19
   },
   {
    "symbol": "TFCILTD",
@@ -2049,7 +2057,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 54.45,
+   "ema10": 163.28
   },
   {
    "symbol": "RPEL",
@@ -2078,7 +2088,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 73.09,
+   "ema10": 1822.39
   },
   {
    "symbol": "KRISHANA",
@@ -2107,7 +2119,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 54.27,
+   "ema10": 237.21
   },
   {
    "symbol": "RATNAVEER",
@@ -2136,7 +2150,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 69.45,
+   "ema10": 367.21
   },
   {
    "symbol": "SAKAR",
@@ -2165,7 +2181,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.13
+   "r10": 0.13,
+   "rsi2": 85.33,
+   "ema10": 1014.07
   },
   {
    "symbol": "BLUSPRING",
@@ -2194,7 +2212,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 81.13,
+   "ema10": 159.41
   },
   {
    "symbol": "BHAGERIA",
@@ -2223,7 +2243,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 48.33,
+   "ema10": 374.85
   },
   {
    "symbol": "IOLCP",
@@ -2252,7 +2274,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 67.31,
+   "ema10": 193.03
   },
   {
    "symbol": "RUBICON",
@@ -2281,7 +2305,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 36.92,
+   "ema10": 1690.86
   },
   {
    "symbol": "MBAPL",
@@ -2310,7 +2336,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 39.23,
+   "ema10": 189.24
   },
   {
    "symbol": "SGMART",
@@ -2339,7 +2367,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 86.64,
+   "ema10": 881.24
   },
   {
    "symbol": "MARINE",
@@ -2368,7 +2398,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 85.79,
+   "ema10": 416.51
   },
   {
    "symbol": "ROSSTECH",
@@ -2397,7 +2429,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 85.86,
+   "ema10": 1427.58
   },
   {
    "symbol": "WELSPUNLIV",
@@ -2426,7 +2460,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.17
+   "r10": 0.17,
+   "rsi2": 27.53,
+   "ema10": 245.52
   },
   {
    "symbol": "ACUTAAS",
@@ -2455,7 +2491,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.0
+   "r10": 0.0,
+   "rsi2": 89.36,
+   "ema10": 3844.49
   },
   {
    "symbol": "IBULLSLTD",
@@ -2484,7 +2522,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.01
+   "r10": -0.01,
+   "rsi2": 71.86,
+   "ema10": 30.97
   },
   {
    "symbol": "GLAND",
@@ -2513,7 +2553,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 78.62,
+   "ema10": 3187.51
   },
   {
    "symbol": "GRWRHITECH",
@@ -2542,7 +2584,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 32.68,
+   "ema10": 7579.42
   },
   {
    "symbol": "KROSS",
@@ -2571,7 +2615,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "gap>=15% in 90d (check news/split)",
-   "r10": 0.01
+   "r10": 0.01,
+   "rsi2": 93.67,
+   "ema10": 294.34
   },
   {
    "symbol": "SMSPHARMA",
@@ -2600,7 +2646,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 85.77,
+   "ema10": 506.65
   },
   {
    "symbol": "OPTIEMUS",
@@ -2629,7 +2677,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.05
+   "r10": -0.05,
+   "rsi2": 56.16,
+   "ema10": 773.46
   },
   {
    "symbol": "UTTAMSUGAR",
@@ -2658,7 +2708,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.02
+   "r10": 0.02,
+   "rsi2": 69.82,
+   "ema10": 358.67
   },
   {
    "symbol": "SONACOMS",
@@ -2687,7 +2739,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 86.76,
+   "ema10": 902.32
   },
   {
    "symbol": "PGIL",
@@ -2716,7 +2770,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 62.57,
+   "ema10": 1324.89
   },
   {
    "symbol": "SHYAMMETL",
@@ -2745,7 +2801,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 38.18,
+   "ema10": 1276.29
   },
   {
    "symbol": "THELEELA",
@@ -2774,7 +2832,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 56.79,
+   "ema10": 659.01
   },
   {
    "symbol": "KDDL",
@@ -2803,7 +2863,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 70.36,
+   "ema10": 4058.38
   },
   {
    "symbol": "ORIENTHOT",
@@ -2832,7 +2894,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 60.35,
+   "ema10": 169.56
   },
   {
    "symbol": "SGFIN",
@@ -2861,7 +2925,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.03
+   "r10": -0.03,
+   "rsi2": 85.15,
+   "ema10": 695.72
   },
   {
    "symbol": "SHREEPUSHK",
@@ -2890,7 +2956,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.03
+   "r10": -0.03,
+   "rsi2": 24.53,
+   "ema10": 567.77
   },
   {
    "symbol": "HONASA",
@@ -2919,7 +2987,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 94.03,
+   "ema10": 473.85
   },
   {
    "symbol": "MARKSANS",
@@ -2948,7 +3018,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.01
+   "r10": 0.01,
+   "rsi2": 88.54,
+   "ema10": 309.36
   },
   {
    "symbol": "SATIN",
@@ -2977,7 +3049,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 89.29,
+   "ema10": 256.85
   },
   {
    "symbol": "ACMESOLAR",
@@ -3006,7 +3080,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.01
+   "r10": 0.01,
+   "rsi2": 86.58,
+   "ema10": 411.02
   },
   {
    "symbol": "CEMPRO",
@@ -3035,7 +3111,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.03
+   "r10": 0.03,
+   "rsi2": 75.46,
+   "ema10": 1295.88
   },
   {
    "symbol": "APOLLO",
@@ -3064,7 +3142,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 55.3,
+   "ema10": 426.0
   },
   {
    "symbol": "ENGINERSIN",
@@ -3093,7 +3173,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.18
+   "r10": 0.18,
+   "rsi2": 65.14,
+   "ema10": 294.28
   },
   {
    "symbol": "GHCLTEXTIL",
@@ -3122,7 +3204,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 35.68,
+   "ema10": 128.35
   },
   {
    "symbol": "MCX",
@@ -3151,7 +3235,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 91.27,
+   "ema10": 3472.26
   },
   {
    "symbol": "STEELCAS",
@@ -3180,7 +3266,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 91.43,
+   "ema10": 369.23
   },
   {
    "symbol": "LOTUSDEV",
@@ -3209,7 +3297,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.07
+   "r10": -0.07,
+   "rsi2": 47.05,
+   "ema10": 231.75
   },
   {
    "symbol": "SHRINGARMS",
@@ -3238,7 +3328,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 32.95,
+   "ema10": 304.39
   },
   {
    "symbol": "QUESS",
@@ -3267,7 +3359,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 49.36,
+   "ema10": 332.85
   },
   {
    "symbol": "WABAG",
@@ -3296,7 +3390,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 96.07,
+   "ema10": 1967.25
   },
   {
    "symbol": "IGPL",
@@ -3325,7 +3421,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 32.73,
+   "ema10": 572.29
   },
   {
    "symbol": "DALMIASUG",
@@ -3354,7 +3452,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 83.49,
+   "ema10": 461.77
   },
   {
    "symbol": "RGL",
@@ -3383,7 +3483,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 83.15,
+   "ema10": 149.71
   },
   {
    "symbol": "ANANDRATHI",
@@ -3412,7 +3514,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 93.47,
+   "ema10": 2340.72
   },
   {
    "symbol": "PTCIL",
@@ -3441,7 +3545,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.02
+   "r10": -0.02,
+   "rsi2": 23.3,
+   "ema10": 24283.06
   },
   {
    "symbol": "SMCGLOBAL",
@@ -3470,7 +3576,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 98.72,
+   "ema10": 95.46
   },
   {
    "symbol": "YATHARTH",
@@ -3499,7 +3607,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 77.55,
+   "ema10": 1022.83
   },
   {
    "symbol": "AUROPHARMA",
@@ -3528,7 +3638,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 33.33,
+   "ema10": 1771.53
   },
   {
    "symbol": "ALIVUS",
@@ -3557,7 +3669,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.03
+   "r10": 0.03,
+   "rsi2": 19.86,
+   "ema10": 1457.42
   },
   {
    "symbol": "TIPSMUSIC",
@@ -3586,7 +3700,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.01
+   "r10": -0.01,
+   "rsi2": 61.52,
+   "ema10": 776.67
   },
   {
    "symbol": "WOCKPHARMA",
@@ -3615,7 +3731,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 92.78,
+   "ema10": 1983.75
   },
   {
    "symbol": "PPLPHARMA",
@@ -3644,7 +3762,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 57.6,
+   "ema10": 238.16
   },
   {
    "symbol": "ONEPOINT",
@@ -3673,7 +3793,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.02
+   "r10": -0.02,
+   "rsi2": 17.42,
+   "ema10": 74.31
   },
   {
    "symbol": "JYOTICNC",
@@ -3702,7 +3824,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 95.24,
+   "ema10": 1020.18
   },
   {
    "symbol": "TCPLPACK",
@@ -3731,7 +3855,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.03
+   "r10": -0.03,
+   "rsi2": 10.78,
+   "ema10": 4346.29
   },
   {
    "symbol": "SEJALLTD",
@@ -3760,7 +3886,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "gap>=15% in 90d (check news/split)",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 56.39,
+   "ema10": 880.73
   },
   {
    "symbol": "INDHOTEL",
@@ -3789,7 +3917,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 55.8,
+   "ema10": 861.18
   },
   {
    "symbol": "ASKAUTOLTD",
@@ -3818,7 +3948,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 88.64,
+   "ema10": 617.75
   },
   {
    "symbol": "CRAFTSMAN",
@@ -3847,7 +3979,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.01
+   "r10": 0.01,
+   "rsi2": 91.17,
+   "ema10": 10670.8
   },
   {
    "symbol": "KARURVYSYA",
@@ -3876,7 +4010,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 65.41,
+   "ema10": 366.58
   },
   {
    "symbol": "MAHABANK",
@@ -3905,7 +4041,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.13
+   "r10": 0.13,
+   "rsi2": 96.81,
+   "ema10": 86.08
   },
   {
    "symbol": "BHEL",
@@ -3934,7 +4072,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 84.18,
+   "ema10": 419.62
   },
   {
    "symbol": "SUNFLAG",
@@ -3963,7 +4103,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.02
+   "r10": -0.02,
+   "rsi2": 61.88,
+   "ema10": 394.45
   },
   {
    "symbol": "BOSCHLTD",
@@ -3992,7 +4134,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 57.66,
+   "ema10": 49725.83
   },
   {
    "symbol": "GLENMARK",
@@ -4021,7 +4165,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.14
+   "r10": 0.14,
+   "rsi2": 63.45,
+   "ema10": 2545.73
   },
   {
    "symbol": "ETERNAL",
@@ -4050,7 +4196,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 73.83,
+   "ema10": 354.86
   },
   {
    "symbol": "URBANCO",
@@ -4079,7 +4227,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 92.54,
+   "ema10": 159.0
   },
   {
    "symbol": "NPST",
@@ -4108,7 +4258,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 35.51,
+   "ema10": 1737.92
   },
   {
    "symbol": "DELTACORP",
@@ -4137,7 +4289,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 95.81,
+   "ema10": 78.65
   },
   {
    "symbol": "STYLAMIND",
@@ -4166,7 +4320,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.16
+   "r10": 0.16,
+   "rsi2": 99.53,
+   "ema10": 3130.06
   },
   {
    "symbol": "MOTHERSON",
@@ -4195,7 +4351,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 52.37,
+   "ema10": 162.61
   },
   {
    "symbol": "KOTAKBANK",
@@ -4224,7 +4382,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 95.84,
+   "ema10": 473.95
   },
   {
    "symbol": "KINGFA",
@@ -4253,7 +4413,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": -0.07
+   "r10": -0.07,
+   "rsi2": 80.2,
+   "ema10": 6393.05
   },
   {
    "symbol": "JASH",
@@ -4282,7 +4444,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 47.58,
+   "ema10": 534.38
   },
   {
    "symbol": "FLUOROCHEM",
@@ -4311,7 +4475,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 84.0,
+   "ema10": 4616.16
   },
   {
    "symbol": "TEXINFRA",
@@ -4340,7 +4506,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 31.24,
+   "ema10": 125.35
   },
   {
    "symbol": "ANTHEM",
@@ -4369,7 +4537,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.13
+   "r10": 0.13,
+   "rsi2": 31.52,
+   "ema10": 912.48
   },
   {
    "symbol": "TALBROAUTO",
@@ -4398,7 +4568,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.17
+   "r10": 0.17,
+   "rsi2": 85.23,
+   "ema10": 389.04
   },
   {
    "symbol": "NUVAMA",
@@ -4427,7 +4599,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 72.66,
+   "ema10": 1840.82
   },
   {
    "symbol": "GRANULES",
@@ -4456,7 +4630,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.0
+   "r10": 0.0,
+   "rsi2": 98.47,
+   "ema10": 811.63
   },
   {
    "symbol": "PIRAMALFIN",
@@ -4485,7 +4661,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "gap>=15% in 90d (check news/split)",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 74.97,
+   "ema10": 2060.84
   },
   {
    "symbol": "LALPATHLAB",
@@ -4514,7 +4692,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 40.62,
+   "ema10": 1980.69
   },
   {
    "symbol": "GREAVESCOT",
@@ -4543,7 +4723,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.19
+   "r10": 0.19,
+   "rsi2": 93.23,
+   "ema10": 208.35
   },
   {
    "symbol": "ARIHANTCAP",
@@ -4572,7 +4754,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 55.79,
+   "ema10": 93.0
   },
   {
    "symbol": "ADANIPORTS",
@@ -4601,7 +4785,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.03
+   "r10": 0.03,
+   "rsi2": 58.56,
+   "ema10": 1897.29
   },
   {
    "symbol": "ACE",
@@ -4630,7 +4816,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 92.8,
+   "ema10": 1132.85
   },
   {
    "symbol": "WINDLAS",
@@ -4659,7 +4847,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.1
+   "r10": 0.1,
+   "rsi2": 75.92,
+   "ema10": 963.52
   },
   {
    "symbol": "FOSECOIND",
@@ -4688,7 +4878,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 83.31,
+   "ema10": 6094.98
   },
   {
    "symbol": "WESTLIFE",
@@ -4717,7 +4909,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 21.35,
+   "ema10": 643.55
   },
   {
    "symbol": "ICICIBANK",
@@ -4746,7 +4940,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.15
+   "r10": 0.15,
+   "rsi2": 76.8,
+   "ema10": 1519.68
   },
   {
    "symbol": "MINDACORP",
@@ -4775,7 +4971,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.13
+   "r10": 0.13,
+   "rsi2": 90.84,
+   "ema10": 693.09
   },
   {
    "symbol": "TVSMOTOR",
@@ -4804,36 +5002,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
-  },
-  {
-   "symbol": "TECHM",
-   "setup": "TREND",
-   "rs_rating": 80,
-   "close": 1774.0,
-   "off_high": -4.62,
-   "ext_ema21": 0.95,
-   "adr": 2.69,
-   "turnover_cr": 503.33,
-   "r63": 0.09,
-   "r126": 0.29,
-   "rs65": 0.08,
-   "volmom": 0.96,
-   "sma50": 1644.23,
-   "ema21": 1757.32,
-   "pivot": 1860.0,
-   "entry": null,
-   "stop": null,
-   "risk_pct": null,
-   "pos_pct": null,
-   "qty": null,
-   "amount": null,
-   "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
-   "trail": "",
-   "note": "",
-   "r10": 0.0
+   "r10": 0.05,
+   "rsi2": 40.1,
+   "ema10": 4411.92
   },
   {
    "symbol": "DLF",
@@ -4862,7 +5033,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 81.22,
+   "ema10": 734.82
   },
   {
    "symbol": "HARSHA",
@@ -4891,7 +5064,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 77.0,
+   "ema10": 452.43
   },
   {
    "symbol": "JSWINFRA",
@@ -4920,7 +5095,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 46.19,
+   "ema10": 337.48
   },
   {
    "symbol": "ABCAPITAL",
@@ -4949,7 +5126,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.17
+   "r10": 0.17,
+   "rsi2": 89.23,
+   "ema10": 393.67
   },
   {
    "symbol": "PRICOLLTD",
@@ -4978,7 +5157,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.14
+   "r10": 0.14,
+   "rsi2": 86.25,
+   "ema10": 703.19
   },
   {
    "symbol": "MUFIN",
@@ -5007,7 +5188,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.05
+   "r10": 0.05,
+   "rsi2": 16.83,
+   "ema10": 139.39
   },
   {
    "symbol": "MEDANTA",
@@ -5036,7 +5219,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 97.43,
+   "ema10": 1383.43
   },
   {
    "symbol": "MAHLOG",
@@ -5065,7 +5250,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.01
+   "r10": 0.01,
+   "rsi2": 42.92,
+   "ema10": 424.01
   },
   {
    "symbol": "MANKIND",
@@ -5094,7 +5281,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 52.59,
+   "ema10": 2567.24
   },
   {
    "symbol": "KRBL",
@@ -5123,7 +5312,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.18
+   "r10": 0.18,
+   "rsi2": 93.37,
+   "ema10": 401.17
   },
   {
    "symbol": "TITAN",
@@ -5152,7 +5343,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 23.4,
+   "ema10": 4819.18
   },
   {
    "symbol": "WEWORK",
@@ -5181,7 +5374,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.07
+   "r10": 0.07,
+   "rsi2": 88.41,
+   "ema10": 674.39
   },
   {
    "symbol": "FINEORG",
@@ -5210,7 +5405,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 86.15,
+   "ema10": 5230.34
   },
   {
    "symbol": "TIIL",
@@ -5239,7 +5436,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.12
+   "r10": 0.12,
+   "rsi2": 93.29,
+   "ema10": 2758.01
   },
   {
    "symbol": "KPRMILL",
@@ -5268,7 +5467,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.06
+   "r10": 0.06,
+   "rsi2": 24.28,
+   "ema10": 1143.28
   },
   {
    "symbol": "LGEINDIA",
@@ -5297,7 +5498,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.03
+   "r10": 0.03,
+   "rsi2": 20.89,
+   "ema10": 1734.1
   },
   {
    "symbol": "GAIL",
@@ -5326,7 +5529,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.14
+   "r10": 0.14,
+   "rsi2": 47.22,
+   "ema10": 183.36
   },
   {
    "symbol": "LMW",
@@ -5355,7 +5560,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.04
+   "r10": 0.04,
+   "rsi2": 38.31,
+   "ema10": 17149.6
   },
   {
    "symbol": "METROPOLIS",
@@ -5384,7 +5591,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.02
+   "r10": 0.02,
+   "rsi2": 15.73,
+   "ema10": 567.68
   },
   {
    "symbol": "SMARTWORKS",
@@ -5413,7 +5622,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 87.59,
+   "ema10": 501.64
   },
   {
    "symbol": "EPL",
@@ -5442,7 +5653,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 91.16,
+   "ema10": 228.77
   },
   {
    "symbol": "CUPID",
@@ -5471,7 +5684,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.2
+   "r10": 0.2,
+   "rsi2": 99.47,
+   "ema10": 347.94
   },
   {
    "symbol": "MENONBE",
@@ -5500,7 +5715,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.41
+   "r10": 0.41,
+   "rsi2": 77.47,
+   "ema10": 328.22
   },
   {
    "symbol": "SSWL",
@@ -5529,7 +5746,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 88.34,
+   "ema10": 535.06
   },
   {
    "symbol": "SKYGOLD",
@@ -5558,36 +5777,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.2
-  },
-  {
-   "symbol": "CCAVENUE",
-   "setup": "EXTENDED",
-   "rs_rating": 99,
-   "close": 121.2,
-   "off_high": -10.65,
-   "ext_ema21": 14.57,
-   "adr": 5.26,
-   "turnover_cr": 16.2,
-   "r63": 6.08,
-   "r126": 7.6,
-   "rs65": 6.09,
-   "volmom": 2.81,
-   "sma50": 54.81,
-   "ema21": 105.79,
-   "pivot": 135.65,
-   "entry": null,
-   "stop": null,
-   "risk_pct": null,
-   "pos_pct": null,
-   "qty": null,
-   "amount": null,
-   "t1": null,
-   "skip_above": null,
-   "breakeven_at": null,
-   "trail": "",
-   "note": "gap>=15% in 90d (check news/split)",
-   "r10": -0.02
+   "r10": 0.2,
+   "rsi2": 94.55,
+   "ema10": 962.53
   },
   {
    "symbol": "MACPOWER",
@@ -5616,7 +5808,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.22
+   "r10": 0.22,
+   "rsi2": 74.95,
+   "ema10": 2241.86
   },
   {
    "symbol": "ATHERENERG",
@@ -5645,7 +5839,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.16
+   "r10": 0.16,
+   "rsi2": 97.39,
+   "ema10": 1809.13
   },
   {
    "symbol": "SAILIFE",
@@ -5674,7 +5870,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.27
+   "r10": 0.27,
+   "rsi2": 80.55,
+   "ema10": 1733.35
   },
   {
    "symbol": "CNL",
@@ -5703,7 +5901,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.23
+   "r10": 0.23,
+   "rsi2": 84.12,
+   "ema10": 1340.25
   },
   {
    "symbol": "UNIMECH",
@@ -5732,7 +5932,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.19
+   "r10": 0.19,
+   "rsi2": 96.2,
+   "ema10": 1804.64
   },
   {
    "symbol": "ICIL",
@@ -5761,7 +5963,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.24
+   "r10": 0.24,
+   "rsi2": 93.57,
+   "ema10": 503.98
   },
   {
    "symbol": "STLNETWORK",
@@ -5790,7 +5994,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.28
+   "r10": 0.28,
+   "rsi2": 99.68,
+   "ema10": 41.07
   },
   {
    "symbol": "DIVISLAB",
@@ -5819,7 +6025,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.19
+   "r10": 0.19,
+   "rsi2": 77.77,
+   "ema10": 10716.29
   },
   {
    "symbol": "ENTERO",
@@ -5848,7 +6056,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.26
+   "r10": 0.26,
+   "rsi2": 36.66,
+   "ema10": 1862.68
   },
   {
    "symbol": "SAREGAMA",
@@ -5877,7 +6087,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.2
+   "r10": 0.2,
+   "rsi2": 65.8,
+   "ema10": 609.79
   },
   {
    "symbol": "NEOGEN",
@@ -5906,7 +6118,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.26
+   "r10": 0.26,
+   "rsi2": 99.72,
+   "ema10": 2557.23
   },
   {
    "symbol": "KTKBANK",
@@ -5935,7 +6149,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.2
+   "r10": 0.2,
+   "rsi2": 98.91,
+   "ema10": 330.83
   },
   {
    "symbol": "ROLEXRINGS",
@@ -5964,7 +6180,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.29
+   "r10": 0.29,
+   "rsi2": 89.74,
+   "ema10": 198.27
   },
   {
    "symbol": "KALYANKJIL",
@@ -5993,7 +6211,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.38
+   "r10": 0.38,
+   "rsi2": 99.95,
+   "ema10": 602.28
   },
   {
    "symbol": "EIMCOELECO",
@@ -6022,7 +6242,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.2
+   "r10": 0.2,
+   "rsi2": 88.7,
+   "ema10": 2423.32
   },
   {
    "symbol": "ASTRAMICRO",
@@ -6051,7 +6273,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.13
+   "r10": 0.13,
+   "rsi2": 99.25,
+   "ema10": 1640.6
   },
   {
    "symbol": "PVRINOX",
@@ -6080,7 +6304,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.11
+   "r10": 0.11,
+   "rsi2": 92.64,
+   "ema10": 1566.84
   },
   {
    "symbol": "SOUTHBANK",
@@ -6109,7 +6335,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.08
+   "r10": 0.08,
+   "rsi2": 99.5,
+   "ema10": 57.83
   },
   {
    "symbol": "MANAKCOAT",
@@ -6138,7 +6366,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.19
+   "r10": 0.19,
+   "rsi2": 94.29,
+   "ema10": 158.32
   },
   {
    "symbol": "PAYTM",
@@ -6167,7 +6397,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.14
+   "r10": 0.14,
+   "rsi2": 97.62,
+   "ema10": 1782.05
   },
   {
    "symbol": "LUMAXTECH",
@@ -6196,7 +6428,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.14
+   "r10": 0.14,
+   "rsi2": 78.05,
+   "ema10": 2209.57
   },
   {
    "symbol": "MMFL",
@@ -6225,7 +6459,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.29
+   "r10": 0.29,
+   "rsi2": 59.48,
+   "ema10": 591.68
   },
   {
    "symbol": "EMCURE",
@@ -6254,7 +6490,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.24
+   "r10": 0.24,
+   "rsi2": 85.36,
+   "ema10": 2157.24
   },
   {
    "symbol": "NAVINFLUOR",
@@ -6283,7 +6521,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.21
+   "r10": 0.21,
+   "rsi2": 99.79,
+   "ema10": 9109.37
   },
   {
    "symbol": "GUFICBIO",
@@ -6312,7 +6552,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.16
+   "r10": 0.16,
+   "rsi2": 88.93,
+   "ema10": 448.14
   },
   {
    "symbol": "MANCREDIT",
@@ -6341,7 +6583,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.13
+   "r10": 0.13,
+   "rsi2": 99.44,
+   "ema10": 248.72
   },
   {
    "symbol": "NILKAMAL",
@@ -6370,7 +6614,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 85.84,
+   "ema10": 2038.32
   },
   {
    "symbol": "MOTILALOFS",
@@ -6399,7 +6645,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.23
+   "r10": 0.23,
+   "rsi2": 99.88,
+   "ema10": 1105.57
   },
   {
    "symbol": "GABRIEL",
@@ -6428,7 +6676,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.14
+   "r10": 0.14,
+   "rsi2": 96.65,
+   "ema10": 1450.09
   },
   {
    "symbol": "TANLA",
@@ -6457,7 +6707,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.18
+   "r10": 0.18,
+   "rsi2": 98.61,
+   "ema10": 661.41
   },
   {
    "symbol": "SANATHAN",
@@ -6486,7 +6738,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.18
+   "r10": 0.18,
+   "rsi2": 91.73,
+   "ema10": 555.22
   },
   {
    "symbol": "PHOENIXLTD",
@@ -6515,7 +6769,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.16
+   "r10": 0.16,
+   "rsi2": 97.87,
+   "ema10": 2123.64
   },
   {
    "symbol": "RKFORGE",
@@ -6544,7 +6800,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.17
+   "r10": 0.17,
+   "rsi2": 92.01,
+   "ema10": 721.16
   },
   {
    "symbol": "STYLEBAAZA",
@@ -6573,7 +6831,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.21
+   "r10": 0.21,
+   "rsi2": 99.24,
+   "ema10": 402.26
   },
   {
    "symbol": "APLLTD",
@@ -6602,7 +6862,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.32
+   "r10": 0.32,
+   "rsi2": 98.9,
+   "ema10": 950.09
   },
   {
    "symbol": "DCBBANK",
@@ -6631,7 +6893,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.14
+   "r10": 0.14,
+   "rsi2": 99.57,
+   "ema10": 208.55
   },
   {
    "symbol": "SIMPLEXINF",
@@ -6660,7 +6924,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.2
+   "r10": 0.2,
+   "rsi2": 97.78,
+   "ema10": 279.69
   },
   {
    "symbol": "AARTIPHARM",
@@ -6689,7 +6955,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.09
+   "r10": 0.09,
+   "rsi2": 97.6,
+   "ema10": 930.93
   },
   {
    "symbol": "AARTIDRUGS",
@@ -6718,7 +6986,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.13
+   "r10": 0.13,
+   "rsi2": 85.49,
+   "ema10": 467.71
   },
   {
    "symbol": "HINDOILEXP",
@@ -6747,7 +7017,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.23
+   "r10": 0.23,
+   "rsi2": 96.15,
+   "ema10": 164.25
   },
   {
    "symbol": "PRINCEPIPE",
@@ -6776,7 +7048,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.23
+   "r10": 0.23,
+   "rsi2": 81.99,
+   "ema10": 301.87
   },
   {
    "symbol": "LODHA",
@@ -6805,7 +7079,9 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.17
+   "r10": 0.17,
+   "rsi2": 84.48,
+   "ema10": 1148.28
   },
   {
    "symbol": "BAJFINANCE",
@@ -6834,799 +7110,158 @@
    "breakeven_at": null,
    "trail": "",
    "note": "",
-   "r10": 0.19
+   "r10": 0.19,
+   "rsi2": 90.46,
+   "ema10": 1046.95
   }
  ],
  "best5": [
   {
-   "symbol": "SHILPAMED",
-   "setup": "PULLBACK",
-   "rs_rating": 98,
-   "close": 989.65,
-   "off_high": -9.62,
-   "ext_ema21": 5.0,
-   "adr": 5.51,
-   "turnover_cr": 72.43,
-   "r63": 0.23,
-   "r126": 1.26,
-   "rs65": 0.22,
-   "volmom": 3.41,
-   "sma50": 964.89,
-   "ema21": 942.5,
-   "pivot": 1024.0,
-   "entry": 1007.01,
-   "stop": 936.52,
-   "risk_pct": 7.0,
-   "pos_pct": 7.05,
-   "qty": 35.0,
-   "amount": 35245.35,
-   "t1": 1145.74,
-   "skip_above": 1037.22,
-   "breakeven_at": 1077.5,
-   "trail": "10 EMA",
+   "symbol": "TECHM",
+   "setup": "DIP",
+   "rs_rating": 80,
+   "close": 1774.0,
+   "off_high": -4.62,
+   "ext_ema21": 0.95,
+   "adr": 2.69,
+   "turnover_cr": 503.33,
+   "r63": 0.09,
+   "r126": 0.29,
+   "rs65": 0.08,
+   "volmom": 0.96,
+   "sma50": 1644.23,
+   "ema21": 1757.32,
+   "pivot": 1860.0,
+   "entry": 1738.52,
+   "stop": 1529.9,
+   "risk_pct": 12.0,
+   "pos_pct": 3.82,
+   "qty": 11.0,
+   "amount": 19123.72,
+   "t1": 1792.62,
+   "skip_above": null,
+   "breakeven_at": null,
+   "trail": "exit: close > 10 EMA",
    "note": "",
-   "r10": 0.06,
-   "company": "Shilpa Medicare Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 50.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 61.3,
-   "board_meeting_mentioned": "2026-11-05",
+   "r10": 0.0,
+   "rsi2": 5.87,
+   "ema10": 1792.62,
+   "screener_error": "ProxyError",
+   "company": "Tech Mahindra Limited",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "MANINDS",
-   "setup": "PULLBACK",
-   "rs_rating": 98,
-   "close": 872.3,
-   "off_high": -16.1,
-   "ext_ema21": 7.29,
-   "adr": 6.79,
-   "turnover_cr": 43.59,
-   "r63": 0.46,
-   "r126": 0.64,
-   "rs65": 0.58,
-   "volmom": 1.6,
-   "sma50": 841.78,
-   "ema21": 813.05,
-   "pivot": 915.0,
-   "entry": 917.83,
-   "stop": 853.58,
-   "risk_pct": 7.0,
-   "pos_pct": 6.98,
-   "qty": 38.0,
-   "amount": 34877.62,
-   "t1": 1073.61,
-   "skip_above": 945.37,
-   "breakeven_at": 982.08,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.09,
-   "company": "Man Industries (India) Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 40.0,
-   "profit_year_ago_cr": 36.0,
-   "profit_yoy_pct": 11.1,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "KOPRAN",
-   "setup": "PULLBACK",
-   "rs_rating": 97,
-   "close": 279.86,
-   "off_high": -5.4,
-   "ext_ema21": 7.68,
-   "adr": 6.19,
-   "turnover_cr": 8.25,
-   "r63": 0.62,
-   "r126": 0.82,
-   "rs65": 0.57,
-   "volmom": 1.51,
-   "sma50": 259.41,
-   "ema21": 259.9,
-   "pivot": 291.7,
-   "entry": 290.38,
-   "stop": 270.05,
-   "risk_pct": 7.0,
-   "pos_pct": 7.09,
-   "qty": 122.0,
-   "amount": 35426.31,
-   "t1": 335.29,
-   "skip_above": 299.09,
-   "breakeven_at": 310.71,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "Kopran Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 6.29,
-   "profit_year_ago_cr": -3.99,
-   "profit_yoy_pct": 257.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "NITINSPIN",
-   "setup": "PULLBACK",
-   "rs_rating": 96,
-   "close": 672.65,
-   "off_high": -3.51,
-   "ext_ema21": 3.85,
-   "adr": 4.72,
-   "turnover_cr": 7.48,
-   "r63": 0.25,
-   "r126": 0.33,
-   "rs65": 0.2,
-   "volmom": 2.02,
-   "sma50": 630.87,
-   "ema21": 647.73,
-   "pivot": 697.15,
-   "entry": 680.31,
-   "stop": 649.1,
-   "risk_pct": 4.59,
-   "pos_pct": 10.88,
-   "qty": 80.0,
-   "amount": 54424.63,
-   "t1": 760.6,
-   "skip_above": 700.72,
-   "breakeven_at": 711.52,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.04,
-   "company": "Nitin Spinners Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 89.0,
-   "profit_year_ago_cr": 35.0,
-   "profit_yoy_pct": 154.3,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "AETHER",
-   "setup": "PULLBACK",
-   "rs_rating": 94,
-   "close": 1689.4,
-   "off_high": -6.87,
-   "ext_ema21": 6.16,
-   "adr": 4.84,
-   "turnover_cr": 47.64,
-   "r63": 0.05,
-   "r126": 0.47,
-   "rs65": 0.05,
-   "volmom": 2.08,
-   "sma50": 1626.62,
-   "ema21": 1591.41,
-   "pivot": 1798.0,
-   "entry": 1698.49,
-   "stop": 1579.6,
-   "risk_pct": 7.0,
-   "pos_pct": 7.13,
-   "qty": 21.0,
-   "amount": 35668.29,
-   "t1": 1904.07,
-   "skip_above": 1749.44,
-   "breakeven_at": 1817.38,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.07,
-   "company": "Aether Industries Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 52.0,
-   "profit_year_ago_cr": 44.0,
-   "profit_yoy_pct": 18.2,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   }
  ],
- "reserve": [
-  {
-   "symbol": "SAMBHV",
-   "setup": "PULLBACK",
-   "rs_rating": 94,
-   "close": 167.48,
-   "off_high": -6.38,
-   "ext_ema21": 2.8,
-   "adr": 5.48,
-   "turnover_cr": 31.92,
-   "r63": 0.41,
-   "r126": 0.47,
-   "rs65": 0.37,
-   "volmom": 0.89,
-   "sma50": 153.77,
-   "ema21": 162.92,
-   "pivot": 178.9,
-   "entry": 172.34,
-   "stop": 162.7,
-   "risk_pct": 5.6,
-   "pos_pct": 8.93,
-   "qty": 259.0,
-   "amount": 44637.1,
-   "t1": 195.94,
-   "skip_above": 177.51,
-   "breakeven_at": 181.99,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "Sambhv Steel Tubes Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 61.0,
-   "profit_year_ago_cr": 30.0,
-   "profit_yoy_pct": 103.3,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "CENTUM",
-   "setup": "PULLBACK",
-   "rs_rating": 93,
-   "close": 4239.5,
-   "off_high": -15.2,
-   "ext_ema21": 2.48,
-   "adr": 4.66,
-   "turnover_cr": 20.79,
-   "r63": 0.12,
-   "r126": 0.4,
-   "rs65": 0.09,
-   "volmom": 1.17,
-   "sma50": 4219.67,
-   "ema21": 4136.95,
-   "pivot": 4398.0,
-   "entry": 4298.58,
-   "stop": 4110.1,
-   "risk_pct": 4.38,
-   "pos_pct": 11.18,
-   "qty": 13.0,
-   "amount": 55881.54,
-   "t1": 4799.24,
-   "skip_above": 4427.54,
-   "breakeven_at": 4487.06,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.06,
-   "company": "Centum Electronics Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 23.0,
-   "profit_year_ago_cr": 13.0,
-   "profit_yoy_pct": 76.9,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "AVTNPL",
-   "setup": "PULLBACK",
-   "rs_rating": 93,
-   "close": 99.34,
-   "off_high": -8.29,
-   "ext_ema21": 4.12,
-   "adr": 5.74,
-   "turnover_cr": 3.9,
-   "r63": 0.41,
-   "r126": 0.5,
-   "rs65": 0.38,
-   "volmom": 1.09,
-   "sma50": 92.48,
-   "ema21": 95.41,
-   "pivot": 108.32,
-   "entry": 100.89,
-   "stop": 93.91,
-   "risk_pct": 6.92,
-   "pos_pct": 7.22,
-   "qty": 358.0,
-   "amount": 36119.11,
-   "t1": 115.37,
-   "skip_above": 103.92,
-   "breakeven_at": 107.87,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "AVT Natural Products Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 27.0,
-   "profit_year_ago_cr": 9.0,
-   "profit_yoy_pct": 200.0,
-   "board_meeting_mentioned": "2026-11-11",
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "NAZARA",
-   "setup": "PULLBACK",
-   "rs_rating": 92,
-   "close": 414.3,
-   "off_high": -2.87,
-   "ext_ema21": 2.54,
-   "adr": 3.44,
-   "turnover_cr": 40.95,
-   "r63": 0.18,
-   "r126": 0.55,
-   "rs65": 0.16,
-   "volmom": 1.45,
-   "sma50": 387.97,
-   "ema21": 404.04,
-   "pivot": 426.55,
-   "entry": 417.33,
-   "stop": 402.55,
-   "risk_pct": 3.54,
-   "pos_pct": 14.11,
-   "qty": 169.0,
-   "amount": 70529.28,
-   "t1": 453.22,
-   "skip_above": 429.85,
-   "breakeven_at": 432.12,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.02,
-   "company": "Nazara Technologies Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 0.37,
-   "profit_year_ago_cr": -966.95,
-   "profit_yoy_pct": 100.0,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "GNA",
-   "setup": "PULLBACK",
-   "rs_rating": 92,
-   "close": 588.65,
-   "off_high": -9.16,
-   "ext_ema21": 5.18,
-   "adr": 5.2,
-   "turnover_cr": 12.4,
-   "r63": 0.07,
-   "r126": 0.52,
-   "rs65": 0.09,
-   "volmom": 1.44,
-   "sma50": 557.98,
-   "ema21": 559.67,
-   "pivot": 595.0,
-   "entry": 605.36,
-   "stop": 562.98,
-   "risk_pct": 7.0,
-   "pos_pct": 7.02,
-   "qty": 58.0,
-   "amount": 35110.78,
-   "t1": 684.0,
-   "skip_above": 623.52,
-   "breakeven_at": 647.73,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "GNA Axles Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 44.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 41.9,
-   "board_meeting_mentioned": "2026-10-23",
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  }
- ],
+ "reserve": [],
  "shortlist": [
   {
-   "symbol": "SHILPAMED",
-   "setup": "PULLBACK",
-   "rs_rating": 98,
-   "close": 989.65,
-   "off_high": -9.62,
-   "ext_ema21": 5.0,
-   "adr": 5.51,
-   "turnover_cr": 72.43,
-   "r63": 0.23,
-   "r126": 1.26,
-   "rs65": 0.22,
-   "volmom": 3.41,
-   "sma50": 964.89,
-   "ema21": 942.5,
-   "pivot": 1024.0,
-   "entry": 1007.01,
-   "stop": 936.52,
-   "risk_pct": 7.0,
-   "pos_pct": 7.05,
-   "qty": 35.0,
-   "amount": 35245.35,
-   "t1": 1145.74,
-   "skip_above": 1037.22,
-   "breakeven_at": 1077.5,
-   "trail": "10 EMA",
+   "symbol": "TECHM",
+   "setup": "DIP",
+   "rs_rating": 80,
+   "close": 1774.0,
+   "off_high": -4.62,
+   "ext_ema21": 0.95,
+   "adr": 2.69,
+   "turnover_cr": 503.33,
+   "r63": 0.09,
+   "r126": 0.29,
+   "rs65": 0.08,
+   "volmom": 0.96,
+   "sma50": 1644.23,
+   "ema21": 1757.32,
+   "pivot": 1860.0,
+   "entry": 1738.52,
+   "stop": 1529.9,
+   "risk_pct": 12.0,
+   "pos_pct": 3.82,
+   "qty": 11.0,
+   "amount": 19123.72,
+   "t1": 1792.62,
+   "skip_above": null,
+   "breakeven_at": null,
+   "trail": "exit: close > 10 EMA",
    "note": "",
-   "r10": 0.06,
-   "company": "Shilpa Medicare Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 50.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 61.3,
-   "board_meeting_mentioned": "2026-11-05",
+   "r10": 0.0,
+   "rsi2": 5.87,
+   "ema10": 1792.62,
+   "screener_error": "ProxyError",
+   "company": "Tech Mahindra Limited",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "MANINDS",
-   "setup": "PULLBACK",
-   "rs_rating": 98,
-   "close": 872.3,
-   "off_high": -16.1,
-   "ext_ema21": 7.29,
-   "adr": 6.79,
-   "turnover_cr": 43.59,
-   "r63": 0.46,
-   "r126": 0.64,
-   "rs65": 0.58,
-   "volmom": 1.6,
-   "sma50": 841.78,
-   "ema21": 813.05,
-   "pivot": 915.0,
-   "entry": 917.83,
-   "stop": 853.58,
-   "risk_pct": 7.0,
-   "pos_pct": 6.98,
-   "qty": 38.0,
-   "amount": 34877.62,
-   "t1": 1073.61,
-   "skip_above": 945.37,
-   "breakeven_at": 982.08,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.09,
-   "company": "Man Industries (India) Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 40.0,
-   "profit_year_ago_cr": 36.0,
-   "profit_yoy_pct": 11.1,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "KOPRAN",
-   "setup": "PULLBACK",
-   "rs_rating": 97,
-   "close": 279.86,
-   "off_high": -5.4,
-   "ext_ema21": 7.68,
-   "adr": 6.19,
-   "turnover_cr": 8.25,
-   "r63": 0.62,
-   "r126": 0.82,
-   "rs65": 0.57,
-   "volmom": 1.51,
-   "sma50": 259.41,
-   "ema21": 259.9,
-   "pivot": 291.7,
-   "entry": 290.38,
-   "stop": 270.05,
-   "risk_pct": 7.0,
-   "pos_pct": 7.09,
-   "qty": 122.0,
-   "amount": 35426.31,
-   "t1": 335.29,
-   "skip_above": 299.09,
-   "breakeven_at": 310.71,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "Kopran Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 6.29,
-   "profit_year_ago_cr": -3.99,
-   "profit_yoy_pct": 257.6,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "NITINSPIN",
-   "setup": "PULLBACK",
-   "rs_rating": 96,
-   "close": 672.65,
-   "off_high": -3.51,
-   "ext_ema21": 3.85,
-   "adr": 4.72,
-   "turnover_cr": 7.48,
-   "r63": 0.25,
-   "r126": 0.33,
-   "rs65": 0.2,
-   "volmom": 2.02,
-   "sma50": 630.87,
-   "ema21": 647.73,
-   "pivot": 697.15,
-   "entry": 680.31,
-   "stop": 649.1,
-   "risk_pct": 4.59,
-   "pos_pct": 10.88,
-   "qty": 80.0,
-   "amount": 54424.63,
-   "t1": 760.6,
-   "skip_above": 700.72,
-   "breakeven_at": 711.52,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.04,
-   "company": "Nitin Spinners Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 89.0,
-   "profit_year_ago_cr": 35.0,
-   "profit_yoy_pct": 154.3,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "AETHER",
-   "setup": "PULLBACK",
-   "rs_rating": 94,
-   "close": 1689.4,
-   "off_high": -6.87,
-   "ext_ema21": 6.16,
-   "adr": 4.84,
-   "turnover_cr": 47.64,
-   "r63": 0.05,
-   "r126": 0.47,
-   "rs65": 0.05,
-   "volmom": 2.08,
-   "sma50": 1626.62,
-   "ema21": 1591.41,
-   "pivot": 1798.0,
-   "entry": 1698.49,
-   "stop": 1579.6,
-   "risk_pct": 7.0,
-   "pos_pct": 7.13,
-   "qty": 21.0,
-   "amount": 35668.29,
-   "t1": 1904.07,
-   "skip_above": 1749.44,
-   "breakeven_at": 1817.38,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.07,
-   "company": "Aether Industries Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 52.0,
-   "profit_year_ago_cr": 44.0,
-   "profit_yoy_pct": 18.2,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "SAMBHV",
-   "setup": "PULLBACK",
-   "rs_rating": 94,
-   "close": 167.48,
-   "off_high": -6.38,
-   "ext_ema21": 2.8,
-   "adr": 5.48,
-   "turnover_cr": 31.92,
-   "r63": 0.41,
-   "r126": 0.47,
-   "rs65": 0.37,
-   "volmom": 0.89,
-   "sma50": 153.77,
-   "ema21": 162.92,
-   "pivot": 178.9,
-   "entry": 172.34,
-   "stop": 162.7,
-   "risk_pct": 5.6,
-   "pos_pct": 8.93,
-   "qty": 259.0,
-   "amount": 44637.1,
-   "t1": 195.94,
-   "skip_above": 177.51,
-   "breakeven_at": 181.99,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "Sambhv Steel Tubes Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 61.0,
-   "profit_year_ago_cr": 30.0,
-   "profit_yoy_pct": 103.3,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "CENTUM",
-   "setup": "PULLBACK",
-   "rs_rating": 93,
-   "close": 4239.5,
-   "off_high": -15.2,
-   "ext_ema21": 2.48,
-   "adr": 4.66,
-   "turnover_cr": 20.79,
-   "r63": 0.12,
-   "r126": 0.4,
-   "rs65": 0.09,
-   "volmom": 1.17,
-   "sma50": 4219.67,
-   "ema21": 4136.95,
-   "pivot": 4398.0,
-   "entry": 4298.58,
-   "stop": 4110.1,
-   "risk_pct": 4.38,
-   "pos_pct": 11.18,
-   "qty": 13.0,
-   "amount": 55881.54,
-   "t1": 4799.24,
-   "skip_above": 4427.54,
-   "breakeven_at": 4487.06,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.06,
-   "company": "Centum Electronics Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 23.0,
-   "profit_year_ago_cr": 13.0,
-   "profit_yoy_pct": 76.9,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "AVTNPL",
-   "setup": "PULLBACK",
-   "rs_rating": 93,
-   "close": 99.34,
-   "off_high": -8.29,
-   "ext_ema21": 4.12,
-   "adr": 5.74,
-   "turnover_cr": 3.9,
-   "r63": 0.41,
-   "r126": 0.5,
-   "rs65": 0.38,
-   "volmom": 1.09,
-   "sma50": 92.48,
-   "ema21": 95.41,
-   "pivot": 108.32,
-   "entry": 100.89,
-   "stop": 93.91,
-   "risk_pct": 6.92,
-   "pos_pct": 7.22,
-   "qty": 358.0,
-   "amount": 36119.11,
-   "t1": 115.37,
-   "skip_above": 103.92,
-   "breakeven_at": 107.87,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.11,
-   "company": "AVT Natural Products Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 27.0,
-   "profit_year_ago_cr": 9.0,
-   "profit_yoy_pct": 200.0,
-   "board_meeting_mentioned": "2026-11-11",
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "NAZARA",
-   "setup": "PULLBACK",
-   "rs_rating": 92,
-   "close": 414.3,
-   "off_high": -2.87,
-   "ext_ema21": 2.54,
-   "adr": 3.44,
-   "turnover_cr": 40.95,
-   "r63": 0.18,
-   "r126": 0.55,
-   "rs65": 0.16,
-   "volmom": 1.45,
-   "sma50": 387.97,
-   "ema21": 404.04,
-   "pivot": 426.55,
-   "entry": 417.33,
-   "stop": 402.55,
-   "risk_pct": 3.54,
-   "pos_pct": 14.11,
-   "qty": 169.0,
-   "amount": 70529.28,
-   "t1": 453.22,
-   "skip_above": 429.85,
-   "breakeven_at": 432.12,
-   "trail": "20 EMA",
-   "note": "",
-   "r10": 0.02,
-   "company": "Nazara Technologies Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 0.37,
-   "profit_year_ago_cr": -966.95,
-   "profit_yoy_pct": 100.0,
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
-  },
-  {
-   "symbol": "GNA",
-   "setup": "PULLBACK",
-   "rs_rating": 92,
-   "close": 588.65,
-   "off_high": -9.16,
-   "ext_ema21": 5.18,
-   "adr": 5.2,
-   "turnover_cr": 12.4,
-   "r63": 0.07,
-   "r126": 0.52,
-   "rs65": 0.09,
-   "volmom": 1.44,
-   "sma50": 557.98,
-   "ema21": 559.67,
-   "pivot": 595.0,
-   "entry": 605.36,
-   "stop": 562.98,
-   "risk_pct": 7.0,
-   "pos_pct": 7.02,
-   "qty": 58.0,
-   "amount": 35110.78,
-   "t1": 684.0,
-   "skip_above": 623.52,
-   "breakeven_at": 647.73,
-   "trail": "10 EMA",
-   "note": "",
-   "r10": 0.05,
-   "company": "GNA Axles Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 44.0,
-   "profit_year_ago_cr": 31.0,
-   "profit_yoy_pct": 41.9,
-   "board_meeting_mentioned": "2026-10-23",
-   "next_results": null,
-   "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   }
  ],
  "picks_today": 5,
  "size_multiplier": 1.0,
  "mood_line": null,
  "setups_allowed": [
-  "PULLBACK"
+  "DIP"
  ],
  "skipped": [
   {
-   "symbol": "FILATEX",
-   "reason": "results on 2026-11-13"
-  },
-  {
-   "symbol": "INNOVACAP",
-   "reason": "results on 2026-11-13"
+   "symbol": "CCAVENUE",
+   "reason": "15% gap in last 90 days"
   },
   {
    "symbol": "KMEW",
-   "reason": "BREAKOUT not picked (setting: pullbacks only)"
+   "reason": "BREAKOUT not picked (setting: dips only)"
   },
   {
    "symbol": "MANORAMA",
-   "reason": "BREAKOUT not picked (setting: pullbacks only)"
+   "reason": "BREAKOUT not picked (setting: dips only)"
   },
   {
    "symbol": "TMB",
-   "reason": "BREAKOUT not picked (setting: pullbacks only)"
+   "reason": "BREAKOUT not picked (setting: dips only)"
   },
   {
    "symbol": "RADICO",
-   "reason": "BREAKOUT not picked (setting: pullbacks only)"
+   "reason": "BREAKOUT not picked (setting: dips only)"
   },
   {
    "symbol": "INDGN",
-   "reason": "BREAKOUT not picked (setting: pullbacks only)"
+   "reason": "BREAKOUT not picked (setting: dips only)"
   },
   {
    "symbol": "CUB",
-   "reason": "BREAKOUT not picked (setting: pullbacks only)"
+   "reason": "BREAKOUT not picked (setting: dips only)"
+  },
+  {
+   "symbol": "SHILPAMED",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "MANINDS",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "FILATEX",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "KOPRAN",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "NITINSPIN",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "AETHER",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "SAMBHV",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "CENTUM",
+   "reason": "PULLBACK not picked (setting: dips only)"
+  },
+  {
+   "symbol": "AVTNPL",
+   "reason": "PULLBACK not picked (setting: dips only)"
   }
  ],
  "watch_trend": [
@@ -7658,14 +7293,13 @@
    "trail": "",
    "note": "",
    "r10": 0.1,
+   "rsi2": 29.01,
+   "ema10": 4312.74,
+   "screener_error": "ProxyError",
    "company": "Spectrum Electrical Industries Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 18.0,
-   "profit_year_ago_cr": 8.0,
-   "profit_yoy_pct": 125.0,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "GCSL",
@@ -7695,14 +7329,13 @@
    "trail": "",
    "note": "",
    "r10": 0.03,
+   "rsi2": 28.26,
+   "ema10": 777.39,
+   "screener_error": "ProxyError",
    "company": "Gretex Corporate Services Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 1.66,
-   "profit_year_ago_cr": 8.1,
-   "profit_yoy_pct": -79.5,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "WHEELS",
@@ -7732,14 +7365,13 @@
    "trail": "",
    "note": "",
    "r10": 0.11,
+   "rsi2": 87.37,
+   "ema10": 2341.6,
+   "screener_error": "ProxyError",
    "company": "Wheels India Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 53.0,
-   "profit_year_ago_cr": 28.0,
-   "profit_yoy_pct": 89.3,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "RAYMOND",
@@ -7769,14 +7401,13 @@
    "trail": "",
    "note": "",
    "r10": 0.02,
+   "rsi2": 89.86,
+   "ema10": 1108.94,
+   "screener_error": "ProxyError",
    "company": "Raymond Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 1.59,
-   "profit_year_ago_cr": -2.85,
-   "profit_yoy_pct": 155.8,
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   },
   {
    "symbol": "SBC",
@@ -7806,19 +7437,17 @@
    "trail": "",
    "note": "",
    "r10": 0.05,
+   "rsi2": 80.59,
+   "ema10": 67.78,
+   "screener_error": "ProxyError",
    "company": "SBC Exports Limited",
-   "latest_quarter": "Sep 2026",
-   "profit_latest_cr": 11.0,
-   "profit_year_ago_cr": 8.0,
-   "profit_yoy_pct": 37.5,
-   "board_meeting_mentioned": "2026-10-15",
    "next_results": null,
    "results_in_sessions": null,
-   "reported_latest_quarter": true
+   "reported_latest_quarter": false
   }
  ],
  "enrich_notes": {
-  "results_calendar": "NSE event calendar: 431 companies",
+  "results_calendar": "NSE event calendar: 192 companies",
   "latest_quarter_expected": "Sep 2026"
  }
 }

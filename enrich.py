@@ -4,9 +4,10 @@
 Results calendar: NSE event calendar (board meetings for financial results).
 Profit growth:    Screener.in quarterly table (latest quarter vs same quarter a year earlier).
 Ranking rules:
-  - only the setup types in screener.P["setups_allowed"] (PULLBACK only, the user's choice);
-    with setups_allowed = None: BREAKOUT / READY / PULLBACK, in that order
-  - then positive profit growth first (earnings momentum, AAMJAF 2015), then RS rating
+  - only the setup types in screener.P["setups_allowed"] (DIP only since 13 Nov 2026);
+    with setups_allowed = None: DIP / BREAKOUT / READY / PULLBACK, in that order
+  - DIP: deepest dip first (lowest RSI(2)), as in the 2018-2026 backtest (no growth or RS re-ordering)
+  - other setups: positive profit growth first (earnings momentum, AAMJAF 2015), then RS rating
   - skip if results are due within the hold period + 2 sessions; skip if the 90-day 15% gap flag is set
   - picks per market mood and size multipliers come from screener.P (picks_*/size_*)
   - total amount capped at capital (quantities scaled down if needed)
@@ -26,7 +27,7 @@ HEADERS = {
                   "(KHTML, like Gecko) Chrome/126.0 Safari/537.36",
     "Accept-Language": "en-US,en;q=0.9",
 }
-SETUP_RANK = {"BREAKOUT": 0, "READY": 1, "PULLBACK": 2}
+SETUP_RANK = {"DIP": 0, "BREAKOUT": 1, "READY": 2, "PULLBACK": 3}
 NAMES = {}
 MONTHS = {m: i for i, m in enumerate(["jan", "feb", "mar", "apr", "may", "jun", "jul", "aug", "sep", "oct",
                                       "nov", "dec"], 1)}
@@ -132,9 +133,12 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
     n_pick = n_pick or P.get(f"picks_{regime.lower()}", 5)
     size = P.get(f"size_{regime.lower()}", 1.0)
     allowed = [s for s in (P.get("setups_allowed") or SETUP_RANK) if s in SETUP_RANK]
-    rank = lambda c: (SETUP_RANK[c["setup"]], -c["rs_rating"])
-    mood_line = {"RED": f"Market RED (falling): {n_pick} picks at {size:.0%} size.",
-                 "YELLOW": f"Market YELLOW (mixed): {n_pick} picks at {size:.0%} size, RS 85+ only."}.get(regime)
+    rank = lambda c: (SETUP_RANK[c["setup"]], c.get("rsi2", 0) if c["setup"] == "DIP" else -c["rs_rating"])
+    dip_only = allowed == ["DIP"]
+    mood_line = {"RED": f"Market RED (falling): {n_pick} picks at {size:.0%} size"
+                        + (f", buy limits {P['dip_limit_pct_red']:g}% below the close." if dip_only else "."),
+                 "YELLOW": f"Market YELLOW (mixed): {n_pick} picks at {size:.0%} size"
+                           + ("." if dip_only else ", RS 85+ only.")}.get(regime)
 
     asof = dt.date.fromisoformat(out["asof"])
     cands = out["candidates"]
@@ -168,10 +172,10 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
             why = f"results on {c['next_results']}"
         elif c.get("note") and "gap" in c["note"]:
             why = "15% gap in last 90 days"
-        elif regime == "YELLOW" and c["rs_rating"] < 85:
+        elif regime == "YELLOW" and c["setup"] != "DIP" and c["rs_rating"] < 85:
             why = "YELLOW market needs RS 85+"
         (skipped if why else picks).append(dict(c, skip_reason=why) if why else c)
-    growth_ok = lambda c: 0 if (c.get("profit_yoy_pct") or -1) > 0 else 1
+    growth_ok = lambda c: 0 if c["setup"] == "DIP" or (c.get("profit_yoy_pct") or -1) > 0 else 1
     picks.sort(key=lambda c: (rank(c)[0], growth_ok(c), rank(c)[1]))
     shortlist = picks[:P.get("shortlist_n", 10)]
     best, reserve = shortlist[:n_pick], shortlist[n_pick:]
