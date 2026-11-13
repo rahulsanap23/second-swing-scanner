@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-13T08:12+05:30",
+ "generated": "2026-11-13T08:32+05:30",
  "data_date": "2026-11-12",
  "first_pick": "2026-11-12",
  "rules": {
@@ -12,13 +12,13 @@
  },
  "missing_price_files": [],
  "summary": {
-  "stock_ideas": 1,
+  "stock_ideas": 10,
   "triggered": 0,
   "target_hit": 0,
   "exit_10ema": 0,
   "stop_hit": 0,
   "open": 0,
-  "waiting": 1,
+  "waiting": 10,
   "not_triggered": 0,
   "skipped": 0,
   "data_issue": 0,
@@ -32,7 +32,7 @@
   "avg_r": null,
   "by_setup": {
    "DIP": {
-    "picks": 1,
+    "picks": 10,
     "triggered": 0,
     "target": 0,
     "stop": 0,
@@ -48,7 +48,7 @@
   },
   "by_regime": {
    "GREEN": {
-    "picks": 1,
+    "picks": 10,
     "triggered": 0,
     "target": 0,
     "stop": 0,
@@ -64,7 +64,7 @@
   },
   "by_times_suggested": {
    "1 day": {
-    "picks": 1,
+    "picks": 10,
     "triggered": 0,
     "target": 0,
     "stop": 0,
@@ -80,6 +80,64 @@
   }
  },
  "trades": [
+  {
+   "symbol": "WESTLIFE",
+   "company": "WESTLIFE FOODWORLD LIMITED",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [],
+   "close_at_pick": 654.05,
+   "entry": 640.97,
+   "stop": 564.05,
+   "t1": 643.55,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 654.05,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 0.4,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "TITAN",
+   "company": "Titan Company Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [],
+   "close_at_pick": 4921.9,
+   "entry": 4823.46,
+   "stop": 4244.65,
+   "t1": 4819.18,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 4921.9,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": -0.1,
+   "stop_pct": -12.0
+  },
   {
    "symbol": "TECHM",
    "company": "Tech Mahindra Limited",
@@ -109,6 +167,217 @@
    "cmp_date": "2026-11-12",
    "times_suggested": 1,
    "t1_pct": 3.1,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "TCPLPACK",
+   "company": "TCPL Packaging Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [
+    "2026-11-12"
+   ],
+   "close_at_pick": 4278.5,
+   "entry": 4192.93,
+   "stop": 3689.78,
+   "t1": 4346.29,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 4278.5,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 3.7,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "ONEPOINT",
+   "company": "One Point One Solutions Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [
+    "2026-11-12"
+   ],
+   "close_at_pick": 73.07,
+   "entry": 71.61,
+   "stop": 63.02,
+   "t1": 74.31,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 73.07,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 3.8,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "MUFIN",
+   "company": "Mufin Green Finance Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [
+    "2026-11-12"
+   ],
+   "close_at_pick": 140.08,
+   "entry": 137.28,
+   "stop": 120.8,
+   "t1": 139.39,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 140.08,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 1.5,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "METROPOLIS",
+   "company": "Metropolis Healthcare Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [
+    "2026-11-12"
+   ],
+   "close_at_pick": 565.2,
+   "entry": 553.9,
+   "stop": 487.43,
+   "t1": 567.68,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 565.2,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 2.5,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "LGEINDIA",
+   "company": "LG Electronics India Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [],
+   "close_at_pick": 1728.8,
+   "entry": 1694.22,
+   "stop": 1490.92,
+   "t1": 1734.1,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 1728.8,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 2.4,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "KPRMILL",
+   "company": "K.P.R. Mill Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [],
+   "close_at_pick": 1149.8,
+   "entry": 1126.8,
+   "stop": 991.59,
+   "t1": 1143.28,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 1149.8,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 1.5,
+   "stop_pct": -12.0
+  },
+  {
+   "symbol": "ALIVUS",
+   "company": "Alivus Life Sciences Limited",
+   "setup": "DIP",
+   "regime": "GREEN",
+   "suggested": [
+    "2026-11-12"
+   ],
+   "best_on": [],
+   "close_at_pick": 1443.7,
+   "entry": 1414.83,
+   "stop": 1245.05,
+   "t1": 1457.42,
+   "status": "WAITING",
+   "entry_date": null,
+   "fill": null,
+   "exit_date": null,
+   "exit_price": null,
+   "days": null,
+   "last_close": null,
+   "result_pct": null,
+   "r_mult": null,
+   "flag": "",
+   "cmp": 1443.7,
+   "cmp_date": "2026-11-12",
+   "times_suggested": 1,
+   "t1_pct": 3.0,
    "stop_pct": -12.0
   }
  ]

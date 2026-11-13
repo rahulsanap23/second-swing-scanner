@@ -1,0 +1,14 @@
+{
+ "symbol": "TITAN",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-12",
+ "entry": 4823.46,
+ "stop": 4244.65,
+ "target": 4819.18,
+ "risk_per_share": 578.81,
+ "risk_pct": 12.0,
+ "reward_risk": -0.01,
+ "max_hold_days": 5,
+ "stop_rule": "price:4244.65",
+ "qty": 4
+}

@@ -1,0 +1,14 @@
+{
+ "symbol": "MUFIN",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-12",
+ "entry": 137.28,
+ "stop": 120.8,
+ "target": 139.39,
+ "risk_per_share": 16.48,
+ "risk_pct": 12.0,
+ "reward_risk": 0.13,
+ "max_hold_days": 5,
+ "stop_rule": "price:120.80",
+ "qty": 151
+}

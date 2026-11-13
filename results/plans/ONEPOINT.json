@@ -1,0 +1,14 @@
+{
+ "symbol": "ONEPOINT",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-12",
+ "entry": 71.61,
+ "stop": 63.02,
+ "target": 74.31,
+ "risk_per_share": 8.59,
+ "risk_pct": 12.0,
+ "reward_risk": 0.31,
+ "max_hold_days": 5,
+ "stop_rule": "price:63.02",
+ "qty": 290
+}

@@ -1,22 +1,28 @@
 # Swing shortlist: data as of 2026-11-12
 
-Data status: fresh. Run at 2026-11-13T08:12+05:30.
+Data status: fresh. Run at 2026-11-13T08:30+05:30.
 
 **Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
 Nifty 50 25299.35 (50-day 23328.63, 200-day 23989.31); Nifty 500 23865.8 (200-day 22769.4)
 Breadth: 49.0% above 50-day, 44.9% above 200-day, net new highs 39
 Top sectors (50-day RS vs Nifty): Media +7.6, PSU Bank +2.9, Private Bank +2.7
-Funnel: {'equities_with_1y_history': 2011, 'tradable': 1085, 'trend_template': 227, 'rs_70_plus': 222, 'actionable_setups': 48}
+Funnel: {'equities_with_1y_history': 2011, 'tradable': 1085, 'trend_template': 227, 'rs_70_plus': 222, 'actionable_setups': 62}
 
-## Best 1 (one-week plan)
+## Best 5 (one-week plan)
 
 | # | Symbol | Setup | RS | Close | Buy at | Stop | Sell when | Sell by | Qty | Amount | Profit YoY | Next results |
 |---|---|---|---|---|---|---|---|---|---|---|---|---|
 | 1 | TECHM (Tech Mahindra Limited) | DIP | 80 | 1774.00 | limit 1738.52 | 1529.90 | close > 10 EMA (now 1792.62) | close of day 5 | 11 | 19,124 | +37% (Sep 2026) | not announced |
+| 2 | TCPLPACK (TCPL Packaging Limited) | DIP | 88 | 4278.50 | limit 4192.93 | 3689.78 | close > 10 EMA (now 4346.29) | close of day 5 | 4 | 16,772 | +61% (Sep 2026) | not announced |
+| 3 | METROPOLIS (Metropolis Healthcare Limited) | DIP | 72 | 565.20 | limit 553.90 | 487.43 | close > 10 EMA (now 567.68) | close of day 5 | 37 | 20,494 | +47% (Sep 2026) | not announced |
+| 4 | MUFIN (Mufin Green Finance Limited) | DIP | 78 | 140.08 | limit 137.28 | 120.80 | close > 10 EMA (now 139.39) | close of day 5 | 151 | 20,729 | +150% (Sep 2026) | not announced |
+| 5 | ONEPOINT (One Point One Solutions Limited) | DIP | 89 | 73.07 | limit 71.61 | 63.02 | close > 10 EMA (now 74.31) | close of day 5 | 290 | 20,766 | +18% (Sep 2026) | not announced |
 
 How to trade (DIP): place a day LIMIT buy at 'Buy at' before the open; if it doesn't fill, cancel it. When filled, put a stop-loss at 'Stop' (disaster stop). Sell when the stock closes above its 10-day EMA (at that close or the next open), or at the close of day 5, whichever comes first.
 
-Skipped: CCAVENUE (15% gap in last 90 days), KMEW (BREAKOUT not picked (setting: dips only)), MANORAMA (BREAKOUT not picked (setting: dips only)), TMB (BREAKOUT not picked (setting: dips only)), RADICO (BREAKOUT not picked (setting: dips only)), INDGN (BREAKOUT not picked (setting: dips only)), CUB (BREAKOUT not picked (setting: dips only)), SHILPAMED (PULLBACK not picked (setting: dips only)), MANINDS (PULLBACK not picked (setting: dips only)), FILATEX (PULLBACK not picked (setting: dips only)), KOPRAN (PULLBACK not picked (setting: dips only)), NITINSPIN (PULLBACK not picked (setting: dips only)), AETHER (PULLBACK not picked (setting: dips only)), SAMBHV (PULLBACK not picked (setting: dips only)), CENTUM (PULLBACK not picked (setting: dips only)), AVTNPL (PULLBACK not picked (setting: dips only))
+Skipped: CCAVENUE (15% gap in last 90 days), PTCIL (results on 2026-11-14), KMEW (BREAKOUT not picked (setting: dips only)), MANORAMA (BREAKOUT not picked (setting: dips only)), TMB (BREAKOUT not picked (setting: dips only)), RADICO (BREAKOUT not picked (setting: dips only)), INDGN (BREAKOUT not picked (setting: dips only)), CUB (BREAKOUT not picked (setting: dips only)), SHILPAMED (PULLBACK not picked (setting: dips only)), MANINDS (PULLBACK not picked (setting: dips only)), FILATEX (PULLBACK not picked (setting: dips only)), KOPRAN (PULLBACK not picked (setting: dips only)), NITINSPIN (PULLBACK not picked (setting: dips only)), AETHER (PULLBACK not picked (setting: dips only)), SAMBHV (PULLBACK not picked (setting: dips only)), CENTUM (PULLBACK not picked (setting: dips only)), AVTNPL (PULLBACK not picked (setting: dips only))
+
+Reserve (next in line): ALIVUS (DIP), LGEINDIA (DIP), WESTLIFE (DIP), TITAN (DIP), KPRMILL (DIP)
 
 ## Setups
 
@@ -24,6 +30,20 @@ Skipped: CCAVENUE (15% gap in last 90 days), KMEW (BREAKOUT not picked (setting:
 |---|---|---|---|---|---|---|---|---|---|---|
 | TECHM | DIP | 80 | 1774.00 | 1738.52 | 1529.90 | 12.0 | 11 | 19,124 | 1792.62 | exit: close > 10 EMA |
 | CCAVENUE | DIP | 99 | 121.20 | 118.78 | 104.52 | 12.0 | 175 | 20,786 | 123.10 | exit: close > 10 EMA |
+| TCPLPACK | DIP | 88 | 4278.50 | 4192.93 | 3689.78 | 12.0 | 4 | 16,772 | 4346.29 | exit: close > 10 EMA |
+| METROPOLIS | DIP | 72 | 565.20 | 553.90 | 487.43 | 12.0 | 37 | 20,494 | 567.68 | exit: close > 10 EMA |
+| MUFIN | DIP | 78 | 140.08 | 137.28 | 120.80 | 12.0 | 151 | 20,729 | 139.39 | exit: close > 10 EMA |
+| ONEPOINT | DIP | 89 | 73.07 | 71.61 | 63.02 | 12.0 | 290 | 20,766 | 74.31 | exit: close > 10 EMA |
+| ALIVUS | DIP | 89 | 1443.70 | 1414.83 | 1245.05 | 12.0 | 14 | 19,808 | 1457.42 | exit: close > 10 EMA |
+| LGEINDIA | DIP | 75 | 1728.80 | 1694.22 | 1490.92 | 12.0 | 12 | 20,331 | 1734.10 | exit: close > 10 EMA |
+| WESTLIFE | DIP | 81 | 654.05 | 640.97 | 564.05 | 12.0 | 32 | 20,511 | 643.55 | exit: close > 10 EMA |
+| PTCIL | DIP | 90 | 24100.00 | 23618.00 | 20783.84 | 12.0 | 0 | 0 | 24283.06 | exit: close > 10 EMA |
+| TITAN | DIP | 77 | 4921.90 | 4823.46 | 4244.65 | 12.0 | 4 | 19,294 | 4819.18 | exit: close > 10 EMA |
+| KPRMILL | DIP | 77 | 1149.80 | 1126.80 | 991.59 | 12.0 | 18 | 20,282 | 1143.28 | exit: close > 10 EMA |
+| SHREEPUSHK | DIP | 94 | 558.90 | 547.72 | 482.00 | 12.0 | 38 | 20,813 | 567.77 | exit: close > 10 EMA |
+| WELSPUNLIV | DIP | 96 | 247.62 | 242.67 | 213.55 | 12.0 | 85 | 20,627 | 245.52 | exit: close > 10 EMA |
+| GCSL | DIP | 99 | 783.10 | 767.44 | 675.35 | 12.0 | 27 | 20,721 | 777.39 | exit: close > 10 EMA |
+| SPECTRUM | DIP | 99 | 4421.40 | 4332.97 | 3813.02 | 12.0 | 4 | 17,332 | 4312.74 | exit: close > 10 EMA |
 | KMEW | BREAKOUT | 97 | 713.00 | 725.25 | 680.37 | 6.2 | 55 | 39,889 | 837.44 | 10 EMA |
 | MANORAMA | BREAKOUT | 93 | 2100.10 | 2165.32 | 2068.12 | 4.5 | 25 | 54,133 | 2408.32 | 20 EMA |
 | TMB | BREAKOUT | 89 | 890.80 | 916.83 | 883.10 | 3.7 | 74 | 67,845 | 1001.16 | 20 EMA |
@@ -75,11 +95,11 @@ Skipped: CCAVENUE (15% gap in last 90 days), KMEW (BREAKOUT not picked (setting:
 
 | Symbol | RS | Close | % off high | Pivot |
 |---|---|---|---|---|
-| SPECTRUM | 99 | 4421.4 | -5.8 | 4695.2 |
-| GCSL | 99 | 783.1 | -2.4 | 802.0 |
 | WHEELS | 99 | 2447.8 | -4.0 | 2515.8 |
 | RAYMOND | 99 | 1126.4 | -15.9 | 1209.0 |
 | SBC | 98 | 69.52 | -1.2 | 70.08 |
+| SHREEJISPG | 98 | 886.95 | -1.9 | 904.5 |
+| LAURUSLABS | 98 | 2400.0 | -3.5 | 2488.0 |
 
 Extended, don't chase: CUPID, MENONBE, SSWL, SKYGOLD, MACPOWER, ATHERENERG, SAILIFE, CNL, UNIMECH, ICIL, STLNETWORK, DIVISLAB, ENTERO, SAREGAMA, NEOGEN, KTKBANK, ROLEXRINGS, KALYANKJIL, EIMCOELECO, ASTRAMICRO, PVRINOX, SOUTHBANK, MANAKCOAT, PAYTM, LUMAXTECH, MMFL, EMCURE, NAVINFLUOR, GUFICBIO, MANCREDIT, NILKAMAL, MOTILALOFS, GABRIEL, TANLA, SANATHAN, PHOENIXLTD, RKFORGE, STYLEBAAZA, APLLTD, DCBBANK, SIMPLEXINF, AARTIPHARM, AARTIDRUGS, HINDOILEXP, PRINCEPIPE, LODHA, BAJFINANCE
 

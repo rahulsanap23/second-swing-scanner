@@ -1,0 +1,14 @@
+{
+ "symbol": "METROPOLIS",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-12",
+ "entry": 553.9,
+ "stop": 487.43,
+ "target": 567.68,
+ "risk_per_share": 66.47,
+ "risk_pct": 12.0,
+ "reward_risk": 0.21,
+ "max_hold_days": 5,
+ "stop_rule": "price:487.43",
+ "qty": 37
+}
