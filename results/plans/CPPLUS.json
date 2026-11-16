@@ -1,14 +1,14 @@
 {
  "symbol": "CPPLUS",
  "setup": "second-scanner dip",
- "asof": "2026-11-13",
- "entry": 4065.04,
- "stop": 3577.24,
- "target": 4124.43,
- "risk_per_share": 487.8,
+ "asof": "2026-11-16",
+ "entry": 3884.13,
+ "stop": 3418.04,
+ "target": 4095.15,
+ "risk_per_share": 466.09,
  "risk_pct": 12.0,
- "reward_risk": 0.12,
+ "reward_risk": 0.45,
  "max_hold_days": 5,
- "stop_rule": "price:3577.24",
+ "stop_rule": "price:3418.04",
  "qty": 5
 }

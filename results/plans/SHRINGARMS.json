@@ -1,0 +1,14 @@
+{
+ "symbol": "SHRINGARMS",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-16",
+ "entry": 292.33,
+ "stop": 257.25,
+ "target": 303.8,
+ "risk_per_share": 35.08,
+ "risk_pct": 12.0,
+ "reward_risk": 0.33,
+ "max_hold_days": 5,
+ "stop_rule": "price:257.25",
+ "qty": 71
+}

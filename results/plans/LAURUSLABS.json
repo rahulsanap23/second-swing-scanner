@@ -1,0 +1,14 @@
+{
+ "symbol": "LAURUSLABS",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-16",
+ "entry": 2175.6,
+ "stop": 1914.53,
+ "target": 2337.46,
+ "risk_per_share": 261.07,
+ "risk_pct": 12.0,
+ "reward_risk": 0.62,
+ "max_hold_days": 5,
+ "stop_rule": "price:1914.53",
+ "qty": 9
+}
