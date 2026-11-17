@@ -1,14 +1,14 @@
 {
  "symbol": "SONACOMS",
  "setup": "second-scanner dip",
- "asof": "2026-11-16",
- "entry": 881.02,
- "stop": 775.3,
- "target": 904.2,
- "risk_per_share": 105.72,
+ "asof": "2026-11-17",
+ "entry": 881.71,
+ "stop": 775.9,
+ "target": 903.38,
+ "risk_per_share": 105.81,
  "risk_pct": 12.0,
- "reward_risk": 0.22,
+ "reward_risk": 0.2,
  "max_hold_days": 5,
- "stop_rule": "price:775.30",
+ "stop_rule": "price:775.90",
  "qty": 23
 }

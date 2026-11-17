@@ -1,14 +1,14 @@
 {
  "symbol": "DIACABS",
  "setup": "second-scanner dip",
- "asof": "2026-11-16",
- "entry": 360.74,
- "stop": 317.45,
- "target": 370.43,
- "risk_per_share": 43.29,
+ "asof": "2026-11-17",
+ "entry": 358.53,
+ "stop": 315.51,
+ "target": 369.6,
+ "risk_per_share": 43.02,
  "risk_pct": 12.0,
- "reward_risk": 0.22,
+ "reward_risk": 0.26,
  "max_hold_days": 5,
- "stop_rule": "price:317.45",
- "qty": 57
+ "stop_rule": "price:315.51",
+ "qty": 58
 }
