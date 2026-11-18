@@ -1,14 +1,14 @@
 {
  "symbol": "STEELCAS",
  "setup": "second-scanner dip",
- "asof": "2026-11-17",
- "entry": 354.56,
- "stop": 312.02,
- "target": 368.81,
- "risk_per_share": 42.54,
+ "asof": "2026-11-18",
+ "entry": 349.27,
+ "stop": 307.36,
+ "target": 366.55,
+ "risk_per_share": 41.91,
  "risk_pct": 12.0,
- "reward_risk": 0.33,
+ "reward_risk": 0.41,
  "max_hold_days": 5,
- "stop_rule": "price:312.02",
- "qty": 58
+ "stop_rule": "price:307.36",
+ "qty": 59
 }

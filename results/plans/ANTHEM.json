@@ -1,14 +1,14 @@
 {
  "symbol": "ANTHEM",
  "setup": "second-scanner dip",
- "asof": "2026-11-17",
- "entry": 905.76,
- "stop": 797.07,
- "target": 920.42,
- "risk_per_share": 108.69,
+ "asof": "2026-11-18",
+ "entry": 896.06,
+ "stop": 788.54,
+ "target": 919.32,
+ "risk_per_share": 107.52,
  "risk_pct": 12.0,
- "reward_risk": 0.13,
+ "reward_risk": 0.22,
  "max_hold_days": 5,
- "stop_rule": "price:797.07",
+ "stop_rule": "price:788.54",
  "qty": 23
 }
