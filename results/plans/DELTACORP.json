@@ -1,0 +1,14 @@
+{
+ "symbol": "DELTACORP",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-19",
+ "entry": 76.29,
+ "stop": 67.14,
+ "target": 80.66,
+ "risk_per_share": 9.15,
+ "risk_pct": 11.99,
+ "reward_risk": 0.48,
+ "max_hold_days": 5,
+ "stop_rule": "price:67.14",
+ "qty": 273
+}

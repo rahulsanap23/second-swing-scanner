@@ -1,0 +1,14 @@
+{
+ "symbol": "SATIN",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-19",
+ "entry": 249.46,
+ "stop": 219.52,
+ "target": 257.16,
+ "risk_per_share": 29.94,
+ "risk_pct": 12.0,
+ "reward_risk": 0.26,
+ "max_hold_days": 5,
+ "stop_rule": "price:219.52",
+ "qty": 83
+}

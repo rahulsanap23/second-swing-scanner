@@ -1,0 +1,14 @@
+{
+ "symbol": "LALPATHLAB",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-19",
+ "entry": 1923.94,
+ "stop": 1693.06,
+ "target": 1978.17,
+ "risk_per_share": 230.88,
+ "risk_pct": 12.0,
+ "reward_risk": 0.23,
+ "max_hold_days": 5,
+ "stop_rule": "price:1693.06",
+ "qty": 10
+}

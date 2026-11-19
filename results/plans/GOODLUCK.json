@@ -1,0 +1,14 @@
+{
+ "symbol": "GOODLUCK",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-19",
+ "entry": 533.81,
+ "stop": 469.75,
+ "target": 549.88,
+ "risk_per_share": 64.06,
+ "risk_pct": 12.0,
+ "reward_risk": 0.25,
+ "max_hold_days": 5,
+ "stop_rule": "price:469.75",
+ "qty": 39
+}
