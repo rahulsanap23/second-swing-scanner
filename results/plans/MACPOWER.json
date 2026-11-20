@@ -1,14 +1,14 @@
 {
  "symbol": "MACPOWER",
  "setup": "second-scanner dip",
- "asof": "2026-11-19",
- "entry": 2088.18,
- "stop": 1837.6,
- "target": 2222.08,
- "risk_per_share": 250.58,
+ "asof": "2026-11-20",
+ "entry": 2038.4,
+ "stop": 1793.79,
+ "target": 2196.25,
+ "risk_per_share": 244.61,
  "risk_pct": 12.0,
- "reward_risk": 0.53,
+ "reward_risk": 0.65,
  "max_hold_days": 5,
- "stop_rule": "price:1837.60",
- "qty": 9
+ "stop_rule": "price:1793.79",
+ "qty": 10
 }

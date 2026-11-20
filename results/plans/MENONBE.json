@@ -1,14 +1,14 @@
 {
  "symbol": "MENONBE",
  "setup": "second-scanner dip",
- "asof": "2026-11-19",
- "entry": 314.48,
- "stop": 276.74,
- "target": 334.38,
- "risk_per_share": 37.74,
+ "asof": "2026-11-20",
+ "entry": 301.01,
+ "stop": 264.89,
+ "target": 329.43,
+ "risk_per_share": 36.12,
  "risk_pct": 12.0,
- "reward_risk": 0.53,
+ "reward_risk": 0.79,
  "max_hold_days": 5,
- "stop_rule": "price:276.74",
- "qty": 66
+ "stop_rule": "price:264.89",
+ "qty": 69
 }

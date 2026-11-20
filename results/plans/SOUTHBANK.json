@@ -1,0 +1,14 @@
+{
+ "symbol": "SOUTHBANK",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-20",
+ "entry": 57.45,
+ "stop": 50.55,
+ "target": 59.51,
+ "risk_per_share": 6.9,
+ "risk_pct": 12.01,
+ "reward_risk": 0.3,
+ "max_hold_days": 5,
+ "stop_rule": "price:50.55",
+ "qty": 362
+}

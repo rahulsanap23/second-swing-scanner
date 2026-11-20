@@ -1,0 +1,14 @@
+{
+ "symbol": "ALEMBICLTD",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-20",
+ "entry": 106.73,
+ "stop": 93.92,
+ "target": 109.12,
+ "risk_per_share": 12.81,
+ "risk_pct": 12.0,
+ "reward_risk": 0.19,
+ "max_hold_days": 5,
+ "stop_rule": "price:93.92",
+ "qty": 195
+}

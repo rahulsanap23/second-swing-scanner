@@ -1,14 +1,14 @@
 {
  "symbol": "MANAKCOAT",
  "setup": "second-scanner dip",
- "asof": "2026-11-19",
- "entry": 157.12,
- "stop": 138.27,
- "target": 162.33,
- "risk_per_share": 18.85,
+ "asof": "2026-11-20",
+ "entry": 154.37,
+ "stop": 135.85,
+ "target": 161.46,
+ "risk_per_share": 18.52,
  "risk_pct": 12.0,
- "reward_risk": 0.28,
+ "reward_risk": 0.38,
  "max_hold_days": 5,
- "stop_rule": "price:138.27",
- "qty": 132
+ "stop_rule": "price:135.85",
+ "qty": 134
 }
