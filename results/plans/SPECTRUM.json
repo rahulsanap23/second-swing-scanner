@@ -1,0 +1,14 @@
+{
+ "symbol": "SPECTRUM",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-23",
+ "entry": 4159.9,
+ "stop": 3660.72,
+ "target": 4438.17,
+ "risk_per_share": 499.18,
+ "risk_pct": 12.0,
+ "reward_risk": 0.56,
+ "max_hold_days": 5,
+ "stop_rule": "price:3660.72",
+ "qty": 5
+}

@@ -1,14 +1,14 @@
 {
  "symbol": "ROLEXRINGS",
  "setup": "second-scanner dip",
- "asof": "2026-11-20",
- "entry": 189.93,
- "stop": 167.14,
- "target": 200.88,
- "risk_per_share": 22.79,
+ "asof": "2026-11-23",
+ "entry": 189.64,
+ "stop": 166.88,
+ "target": 199.54,
+ "risk_per_share": 22.76,
  "risk_pct": 12.0,
- "reward_risk": 0.48,
+ "reward_risk": 0.43,
  "max_hold_days": 5,
- "stop_rule": "price:167.14",
+ "stop_rule": "price:166.88",
  "qty": 109
 }

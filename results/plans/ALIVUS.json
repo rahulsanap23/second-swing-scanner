@@ -1,0 +1,14 @@
+{
+ "symbol": "ALIVUS",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-23",
+ "entry": 1382.09,
+ "stop": 1216.24,
+ "target": 1442.42,
+ "risk_per_share": 165.85,
+ "risk_pct": 12.0,
+ "reward_risk": 0.36,
+ "max_hold_days": 5,
+ "stop_rule": "price:1216.24",
+ "qty": 15
+}
