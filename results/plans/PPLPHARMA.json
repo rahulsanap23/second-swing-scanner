@@ -1,0 +1,14 @@
+{
+ "symbol": "PPLPHARMA",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-25",
+ "entry": 227.89,
+ "stop": 200.54,
+ "target": 238.12,
+ "risk_per_share": 27.35,
+ "risk_pct": 12.0,
+ "reward_risk": 0.37,
+ "max_hold_days": 5,
+ "stop_rule": "price:200.54",
+ "qty": 91
+}

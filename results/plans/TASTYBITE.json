@@ -1,14 +1,14 @@
 {
  "symbol": "TASTYBITE",
  "setup": "second-scanner dip",
- "asof": "2026-11-23",
- "entry": 9736.79,
- "stop": 8568.38,
- "target": 10572.63,
- "risk_per_share": 1168.41,
+ "asof": "2026-11-25",
+ "entry": 9667.21,
+ "stop": 8507.14,
+ "target": 10443.88,
+ "risk_per_share": 1160.07,
  "risk_pct": 12.0,
- "reward_risk": 0.72,
+ "reward_risk": 0.67,
  "max_hold_days": 5,
- "stop_rule": "price:8568.38",
+ "stop_rule": "price:8507.14",
  "qty": 2
 }

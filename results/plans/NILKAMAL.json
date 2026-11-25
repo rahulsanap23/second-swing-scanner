@@ -1,14 +1,14 @@
 {
  "symbol": "NILKAMAL",
  "setup": "second-scanner dip",
- "asof": "2026-11-23",
- "entry": 1979.89,
- "stop": 1742.31,
- "target": 2118.18,
- "risk_per_share": 237.58,
+ "asof": "2026-11-25",
+ "entry": 1904.92,
+ "stop": 1676.33,
+ "target": 2086.47,
+ "risk_per_share": 228.59,
  "risk_pct": 12.0,
- "reward_risk": 0.58,
+ "reward_risk": 0.79,
  "max_hold_days": 5,
- "stop_rule": "price:1742.31",
+ "stop_rule": "price:1676.33",
  "qty": 10
 }

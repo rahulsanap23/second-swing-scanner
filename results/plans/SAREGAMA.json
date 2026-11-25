@@ -1,0 +1,14 @@
+{
+ "symbol": "SAREGAMA",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-25",
+ "entry": 608.14,
+ "stop": 535.16,
+ "target": 646.98,
+ "risk_per_share": 72.98,
+ "risk_pct": 12.0,
+ "reward_risk": 0.53,
+ "max_hold_days": 5,
+ "stop_rule": "price:535.16",
+ "qty": 34
+}
