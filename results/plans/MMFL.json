@@ -1,0 +1,14 @@
+{
+ "symbol": "MMFL",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-26",
+ "entry": 590.06,
+ "stop": 519.25,
+ "target": 624.0,
+ "risk_per_share": 70.81,
+ "risk_pct": 12.0,
+ "reward_risk": 0.48,
+ "max_hold_days": 5,
+ "stop_rule": "price:519.25",
+ "qty": 35
+}

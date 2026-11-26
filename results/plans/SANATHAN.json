@@ -1,14 +1,14 @@
 {
  "symbol": "SANATHAN",
  "setup": "second-scanner dip",
- "asof": "2026-11-25",
- "entry": 546.99,
- "stop": 481.35,
- "target": 572.51,
- "risk_per_share": 65.64,
+ "asof": "2026-11-26",
+ "entry": 536.84,
+ "stop": 472.42,
+ "target": 568.02,
+ "risk_per_share": 64.42,
  "risk_pct": 12.0,
- "reward_risk": 0.39,
+ "reward_risk": 0.48,
  "max_hold_days": 5,
- "stop_rule": "price:481.35",
+ "stop_rule": "price:472.42",
  "qty": 38
 }
