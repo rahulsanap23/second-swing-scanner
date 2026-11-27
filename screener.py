@@ -56,9 +56,10 @@ P = dict(
     picks_weak=3,
     weak_limit_atr=1.25,
     dip_exit_ema=10,       # sell when the stock CLOSES above its 10-day EMA, or at the close of day hold_sessions
-    track_since="2026-11-12",
-    rules_version="2026-11-27",  # shown in the report and tracker (breadth check, 15% stop, skip stocks held)  # the tracker/dashboard follows picks from this data date on (fresh start with
-                               # the DIP rules; older scans stay in results/history but are not tracked)
+    track_since="2026-11-27",  # the tracker/dashboard follows picks from this data date on (fresh start with the
+                               # 27 Nov 2026 rules, first reported Mon 30 Nov; older scans stay in results/history
+                               # but are not tracked)
+    rules_version="2026-11-27",  # shown in the report and tracker (breadth check, 15% stop, skip stocks held)
 )
 
 SECTORS = ["nifty auto", "nifty bank", "nifty it", "nifty pharma", "nifty fmcg", "nifty metal",

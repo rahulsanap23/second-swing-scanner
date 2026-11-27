@@ -21,7 +21,7 @@ Days appended from the daily files are not split-adjusted until EOD2 catches up;
 - `fetch_data.py` – appends missing trading days to the EOD2 dataset; writes source/error details
 - `screener.py` – the filters (thresholds and their sources are in the `P` dict)
 - `tracker.py` – follows every stock in each day's ranked top 10 (so every stock the morning report can pick is covered): bought or not, then (DIP) close above the 10 EMA, disaster stop or Sold day 5, or (older picks) Target 1, Stop, Breakeven or Sold day 5, with scores by setup and market mood; writes `results/tracker.json` and the dashboard page `results/tracker.html` (from `tracker_template.html`). The dashboard shows the morning report's final picks by default (the morning task saves them into the dashboard as `reported.json`; days without that list fall back to GitHub's own best picks) and has an "All top 10" switch
-- Tracking starts from `track_since` in `screener.py` (12 Nov 2026 scan, the first with the DIP rules); older scans stay in `results/history/` but aren't tracked
+- Tracking starts from `track_since` in `screener.py` (27 Nov 2026 scan, the first with the breadth check; reported from Mon 30 Nov); older scans stay in `results/history/` but aren't tracked
 - `backtest.py` – replays the DIP rules on every trading day since 2018 with strict fills and the tracker's exits (`python3 backtest.py <eod2_dir>`); the source of the numbers below
 - `run_daily.py` – pipeline entry point (also passes the tracker's open trades to `enrich.py` so held stocks aren't picked again); skips if results are already fresh (`FORCE=1` to re-run)
 - `results/status.json` – `fresh: true/false`, data date, sources used, errors
