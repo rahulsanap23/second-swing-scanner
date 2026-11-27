@@ -10,6 +10,7 @@ results/plans/        one plan file per shortlisted stock, in the india-timemach
 Env: EOD2_DIR (default /tmp/eod2_data), FORCE=1 to re-run, FINAL_ATTEMPT=1 to fail the job if data is stale,
      TRACKER_ONLY=1 to refresh prices and rebuild only results/tracker.* (scan results untouched).
 """
+import datetime as dt
 import glob
 import json
 import os
@@ -72,11 +73,16 @@ def main():
     json.dump(status, open(status_path, "w"), indent=1)       # saved early so a later crash still leaves it
     prev = json.load(open(latest_path)) if os.path.exists(latest_path) else None
     out = screener.run(EOD2, prev)
-    held = {}
+    held, keep = {}, tracker.TRACK_SINCE
     try:                                       # stocks still held after today's bar: don't pick them again
+        # look back 3 weeks whatever the dashboard's track_since is, so a fresh dashboard start can't hide
+        # a stock bought from an earlier report
+        tracker.TRACK_SINCE = (dt.date.fromisoformat(out["asof"]) - dt.timedelta(days=21)).isoformat()
         held = {t["symbol"]: t["entry_date"] for t in tracker.run(EOD2)["trades"] if t["status"] == "OPEN"}
     except Exception as e:  # noqa: BLE001
         print(f"::warning::Holdings check failed: {type(e).__name__}: {e}")
+    finally:
+        tracker.TRACK_SINCE = keep
     try:
         out = enrich.enrich_and_pick(out, hol, screener.P["capital"], held=held)
     except Exception as e:  # noqa: BLE001  keep the scan even if the lookups fail
