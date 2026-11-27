@@ -1,0 +1,14 @@
+{
+ "symbol": "ORIENTHOT",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 168.0,
+ "stop": 142.8,
+ "target": 176.41,
+ "risk_per_share": 25.2,
+ "risk_pct": 15.0,
+ "reward_risk": 0.33,
+ "max_hold_days": 5,
+ "stop_rule": "price:142.80",
+ "qty": 99
+}

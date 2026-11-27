@@ -1,5 +1,5 @@
 {
- "run_at_ist": "2026-11-27T19:59+05:30",
+ "run_at_ist": "2026-11-27T20:06+05:30",
  "expected_date": "2026-11-27",
  "eod2_last_update": "2026-11-13",
  "days_needed": [
@@ -16,72 +16,71 @@
  "days": [
   {
    "date": "2026-11-16",
-   "stocks_source": "failed",
-   "indices_source": "failed"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2997,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-17",
-   "stocks_source": "failed",
-   "indices_source": "failed"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2985,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-18",
-   "stocks_source": "skipped (NSE unreachable)",
-   "indices_source": "skipped (NSE unreachable)"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2980,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-19",
-   "stocks_source": "skipped (NSE unreachable)",
-   "indices_source": "skipped (NSE unreachable)"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2980,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-20",
-   "stocks_source": "skipped (NSE unreachable)",
-   "indices_source": "skipped (NSE unreachable)"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2976,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-23",
-   "stocks_source": "skipped (NSE unreachable)",
-   "indices_source": "skipped (NSE unreachable)"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2988,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-25",
-   "stocks_source": "skipped (NSE unreachable)",
-   "indices_source": "skipped (NSE unreachable)"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2976,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-26",
-   "stocks_source": "skipped (NSE unreachable)",
-   "indices_source": "skipped (NSE unreachable)"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2978,
+   "indices_rows": 161,
+   "indices_source": "nse-ind_close_all"
   },
   {
    "date": "2026-11-27",
-   "stocks_source": "skipped (NSE unreachable)",
-   "indices_source": "skipped (NSE unreachable)"
+   "stocks_source": "nse-sec_bhavdata_full",
+   "stocks_rows": 2977,
+   "indices_rows": 145,
+   "indices_source": "nse-ind_close_all"
   }
  ],
- "errors": [
-  "2026-11-16 stocks: https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_16112026.csv: HTTP 403 (449 bytes) | https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20261116_F_0000.csv.zip: HTTP 403 (482 bytes)",
-  "2026-11-16 indices: https://nsearchives.nseindia.com/content/indices/ind_close_all_16112026.csv: HTTP 403 (444 bytes)",
-  "2026-11-17 stocks: https://nsearchives.nseindia.com/products/content/sec_bhavdata_full_17112026.csv: HTTP 403 (449 bytes) | https://nsearchives.nseindia.com/content/cm/BhavCopy_NSE_CM_0_0_0_20261117_F_0000.csv.zip: HTTP 403 (482 bytes)",
-  "2026-11-17 indices: https://nsearchives.nseindia.com/content/indices/ind_close_all_17112026.csv: HTTP 403 (442 bytes)"
- ],
- "yahoo_fallback": {
-  "days": [
-   "2026-11-16",
-   "2026-11-17",
-   "2026-11-18",
-   "2026-11-19",
-   "2026-11-20",
-   "2026-11-23",
-   "2026-11-25",
-   "2026-11-26",
-   "2026-11-27"
-  ],
-  "rows": 23859
- },
+ "errors": [],
  "data_date": "2026-11-27",
  "fresh": true,
- "sectors_stale": true,
+ "sectors_stale": false,
  "scan_asof": "2026-11-27"
 }

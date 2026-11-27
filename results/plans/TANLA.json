@@ -1,0 +1,14 @@
+{
+ "symbol": "TANLA",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 575.83,
+ "stop": 489.46,
+ "target": 656.64,
+ "risk_per_share": 86.37,
+ "risk_pct": 15.0,
+ "reward_risk": 0.94,
+ "max_hold_days": 5,
+ "stop_rule": "price:489.46",
+ "qty": 28
+}

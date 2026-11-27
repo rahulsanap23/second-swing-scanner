@@ -1,0 +1,14 @@
+{
+ "symbol": "PETRONET",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 314.13,
+ "stop": 267.01,
+ "target": 324.83,
+ "risk_per_share": 47.12,
+ "risk_pct": 15.0,
+ "reward_risk": 0.23,
+ "max_hold_days": 5,
+ "stop_rule": "price:267.01",
+ "qty": 53
+}
