@@ -1,0 +1,14 @@
+{
+ "symbol": "BOROLTD",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 294.79,
+ "stop": 250.57,
+ "target": 317.83,
+ "risk_per_share": 44.22,
+ "risk_pct": 15.0,
+ "reward_risk": 0.52,
+ "max_hold_days": 5,
+ "stop_rule": "price:250.57",
+ "qty": 56
+}

@@ -1,0 +1,14 @@
+{
+ "symbol": "ENTERO",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 1701.61,
+ "stop": 1446.36,
+ "target": 1886.14,
+ "risk_per_share": 255.25,
+ "risk_pct": 15.0,
+ "reward_risk": 0.72,
+ "max_hold_days": 5,
+ "stop_rule": "price:1446.36",
+ "qty": 9
+}

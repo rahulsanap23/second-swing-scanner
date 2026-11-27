@@ -1,14 +1,14 @@
 {
  "symbol": "WESTLIFE",
  "setup": "second-scanner dip",
- "asof": "2026-11-26",
- "entry": 611.37,
- "stop": 538.01,
- "target": 651.65,
- "risk_per_share": 73.36,
- "risk_pct": 12.0,
- "reward_risk": 0.55,
+ "asof": "2026-11-27",
+ "entry": 578.35,
+ "stop": 491.6,
+ "target": 644.5,
+ "risk_per_share": 86.75,
+ "risk_pct": 15.0,
+ "reward_risk": 0.76,
  "max_hold_days": 5,
- "stop_rule": "price:538.01",
- "qty": 34
+ "stop_rule": "price:491.60",
+ "qty": 28
 }

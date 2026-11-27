@@ -1,0 +1,14 @@
+{
+ "symbol": "KTKBANK",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 319.92,
+ "stop": 271.94,
+ "target": 341.47,
+ "risk_per_share": 47.98,
+ "risk_pct": 15.0,
+ "reward_risk": 0.45,
+ "max_hold_days": 5,
+ "stop_rule": "price:271.94",
+ "qty": 52
+}

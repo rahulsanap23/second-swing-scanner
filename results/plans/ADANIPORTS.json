@@ -1,0 +1,14 @@
+{
+ "symbol": "ADANIPORTS",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 1829.63,
+ "stop": 1555.19,
+ "target": 1906.04,
+ "risk_per_share": 274.44,
+ "risk_pct": 15.0,
+ "reward_risk": 0.28,
+ "max_hold_days": 5,
+ "stop_rule": "price:1555.19",
+ "qty": 9
+}

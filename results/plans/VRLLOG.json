@@ -1,14 +1,14 @@
 {
  "symbol": "VRLLOG",
  "setup": "second-scanner dip",
- "asof": "2026-11-26",
- "entry": 308.6,
- "stop": 271.57,
- "target": 329.36,
- "risk_per_share": 37.03,
- "risk_pct": 12.0,
- "reward_risk": 0.56,
+ "asof": "2026-11-27",
+ "entry": 294.43,
+ "stop": 250.27,
+ "target": 326.71,
+ "risk_per_share": 44.16,
+ "risk_pct": 15.0,
+ "reward_risk": 0.73,
  "max_hold_days": 5,
- "stop_rule": "price:271.57",
- "qty": 67
+ "stop_rule": "price:250.27",
+ "qty": 56
 }

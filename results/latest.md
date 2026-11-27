@@ -1,153 +1,167 @@
-# Swing shortlist: data as of 2026-11-26
+# Swing shortlist: data as of 2026-11-27
 
-Data status: fresh. Run at 2026-11-27T03:51+05:30.
+Data status: fresh. Run at 2026-11-27T19:59+05:30.
 
 **Regime: GREEN** (Nifty 500 above 200-day SMA: True; 10 EMA above 20 EMA: True)
-Nifty 50 25884.5 (50-day 23647.75, 200-day 24000.21); Nifty 500 24086.5 (200-day 22809.7)
-Breadth: 34.1% above 50-day, 36.7% above 200-day, net new highs -23
-Top sectors (50-day RS vs Nifty): IT +4.4, Realty +3.6, PSU Bank +3.2
-Funnel: {'equities_with_1y_history': 2034, 'tradable': 1060, 'trend_template': 207, 'rs_70_plus': 204, 'actionable_setups': 101}
+Nifty 50 25607.2 (50-day 23697.53, 200-day 23999.37); Nifty 500 23949.35 (200-day 22811.77)
+Breadth: 36.8% above 50-day, 38.6% above 200-day, net new highs 1 (10-day avg 0.3): **breadth WEAK**
+Top sectors (50-day RS vs Nifty): Media +7.7, Capital Markets +4.7, PSU Bank +4.1
+Funnel: {'equities_with_1y_history': 2197, 'tradable': 1069, 'trend_template': 227, 'rs_70_plus': 218, 'actionable_setups': 115}
 
-## Best 5 (one-week plan)
+## Best 3 (one-week plan)
+
+Breadth WEAK (36.8% of stocks above their 50-day average, net new highs 10-day avg 0.3): 3 picks, buy limits 1.25 x ATR below the close (deeper dips only).
 
 | # | Stock | Price now | Buy at | Sell at | Stop loss | Sell by | Shares | Invest (Rs) | Profit vs last year | Results date |
 |---|---|---|---|---|---|---|---|---|---|---|
-| 1 | ROLEXRINGS (Rolex Rings Limited) | 191.02 | 187.20 (-2.0%) | 196.87 (+5.2%) | 164.74 (-12.0%) | 2026-12-03 | 111 | 20,779 | +68% (Sep 2026) | not announced |
-| 2 | SANATHAN (Sanathan Textiles Limited) | 547.80 | 536.84 (-2.0%) | 568.02 (+5.8%) | 472.42 (-12.0%) | 2026-12-03 | 38 | 20,400 | +16% (Sep 2026) | not announced |
-| 3 | VRLLOG (VRL Logistics Limited) | 314.90 | 308.60 (-2.0%) | 329.36 (+6.7%) | 271.57 (-12.0%) | 2026-12-03 | 67 | 20,676 | +106% (Sep 2026) | not announced |
-| 4 | WESTLIFE (WESTLIFE FOODWORLD LIMITED) | 623.85 | 611.37 (-2.0%) | 651.65 (+6.6%) | 538.01 (-12.0%) | 2026-12-03 | 34 | 20,787 | +108% (Sep 2026) | not announced |
-| 5 | MMFL (MM Forgings Limited) | 602.10 | 590.06 (-2.0%) | 624.00 (+5.8%) | 519.25 (-12.0%) | 2026-12-03 | 35 | 20,652 | +156% (Sep 2026) | not announced |
+| 1 | ROLEXRINGS (Rolex Rings Ltd) | 188.90 | 178.41 (-5.6%) | 195.42 (+9.5%) | 151.65 (-15.0%) | 2026-12-07 | 93 | 16,592 | +68% (Sep 2026) | not announced |
+| 2 | VRLLOG (VRL Logistics Ltd) | 314.75 | 294.43 (-6.5%) | 326.71 (+11.0%) | 250.27 (-15.0%) | 2026-12-07 | 56 | 16,488 | +106% (Sep 2026) | not announced |
+| 3 | WESTLIFE (Westlife Foodworld Ltd) | 612.30 | 578.35 (-5.5%) | 644.50 (+11.4%) | 491.60 (-15.0%) | 2026-12-07 | 28 | 16,194 | +108% (Sep 2026) | not announced |
 
-Buy at = limit buy price for the next trading day (% vs price now); cancel it if it doesn't fill. Sell at = the stock's 10-day average (% vs your buy price): sell on the first day it closes above it; the level moves a little each day. Stop loss = sell if it falls here (% vs your buy price). Sell by = if still held, sell at that day's close.
+Buy at = limit buy price for the next trading day (% vs price now); cancel it if it doesn't fill. Sell at = the stock's 10-day average (% vs your buy price): once the stock CLOSES above it, sell at the next morning's open; the level moves a little each day. Stop loss = sell if it falls here (% vs your buy price; place it as a GTT, which stays active, not a day SL order). Sell by = if still held, sell at that day's 9:15 open.
+Rules version 2026-11-27.
 
-Skipped: RUBICON (BREAKOUT not picked (setting: dips only)), MCX (BREAKOUT not picked (setting: dips only)), WOCKPHARMA (BREAKOUT not picked (setting: dips only)), SHAILY (BREAKOUT not picked (setting: dips only)), DHAMPURSUG (BREAKOUT not picked (setting: dips only)), LODHA (BREAKOUT not picked (setting: dips only)), ANANDRATHI (READY not picked (setting: dips only)), RATNAVEER (PULLBACK not picked (setting: dips only)), CCAVENUE (PULLBACK not picked (setting: dips only)), LAURUSLABS (PULLBACK not picked (setting: dips only)), CPPLUS (PULLBACK not picked (setting: dips only)), ACUTAAS (PULLBACK not picked (setting: dips only)), KMEW (PULLBACK not picked (setting: dips only)), SAMBHV (PULLBACK not picked (setting: dips only)), THELEELA (PULLBACK not picked (setting: dips only))
+Skipped: ACMESOLAR (READY not picked (setting: dips only)), ANANDRATHI (READY not picked (setting: dips only)), CCAVENUE (PULLBACK not picked (setting: dips only)), RAYMOND (PULLBACK not picked (setting: dips only)), CPPLUS (PULLBACK not picked (setting: dips only)), RUBICON (PULLBACK not picked (setting: dips only)), MBAPL (PULLBACK not picked (setting: dips only)), SANSERA (PULLBACK not picked (setting: dips only)), AVADHSUGAR (PULLBACK not picked (setting: dips only)), SAMBHV (PULLBACK not picked (setting: dips only)), UTTAMSUGAR (PULLBACK not picked (setting: dips only)), THELEELA (PULLBACK not picked (setting: dips only)), NITINSPIN (PULLBACK not picked (setting: dips only)), PVRINOX (PULLBACK not picked (setting: dips only)), AETHER (PULLBACK not picked (setting: dips only))
 
-Reserve (next in line): SAREGAMA (DIP), DHANBANK (DIP), NILKAMAL (DIP), SOUTHBANK (DIP), SSWL (DIP)
+Reserve (next in line): SAREGAMA (DIP), KTKBANK (DIP), BOROLTD (DIP), POONAWALLA (DIP), ADANIPORTS (DIP), SONACOMS (DIP), ENTERO (DIP)
 
 ## Setups
 
 | Symbol | Setup | RS | Close | Entry | Stop | Risk % | Qty | Amount | Target 1 | Trail |
 |---|---|---|---|---|---|---|---|---|---|---|
-| ROLEXRINGS | DIP | 92 | 191.02 | 187.20 | 164.74 | 12.0 | 111 | 20,779 | 196.87 | exit: close > 10 EMA |
-| SANATHAN | DIP | 88 | 547.80 | 536.84 | 472.42 | 12.0 | 38 | 20,400 | 568.02 | exit: close > 10 EMA |
-| VRLLOG | DIP | 82 | 314.90 | 308.60 | 271.57 | 12.0 | 67 | 20,676 | 329.36 | exit: close > 10 EMA |
-| WESTLIFE | DIP | 84 | 623.85 | 611.37 | 538.01 | 12.0 | 34 | 20,787 | 651.65 | exit: close > 10 EMA |
-| MMFL | DIP | 90 | 602.10 | 590.06 | 519.25 | 12.0 | 35 | 20,652 | 624.00 | exit: close > 10 EMA |
-| SAREGAMA | DIP | 95 | 620.95 | 608.53 | 535.51 | 12.0 | 34 | 20,690 | 642.25 | exit: close > 10 EMA |
-| DHANBANK | DIP | 88 | 36.76 | 36.02 | 31.70 | 12.0 | 578 | 20,822 | 37.90 | exit: close > 10 EMA |
-| NILKAMAL | DIP | 87 | 1946.40 | 1907.47 | 1678.58 | 12.0 | 10 | 19,075 | 2061.00 | exit: close > 10 EMA |
-| SOUTHBANK | DIP | 93 | 57.59 | 56.44 | 49.67 | 12.0 | 369 | 20,826 | 58.98 | exit: close > 10 EMA |
-| SSWL | DIP | 98 | 474.25 | 464.76 | 408.99 | 12.0 | 44 | 20,450 | 517.15 | exit: close > 10 EMA |
-| AVTNPL | DIP | 91 | 96.59 | 94.66 | 83.30 | 12.0 | 220 | 20,825 | 98.92 | exit: close > 10 EMA |
-| CNL | DIP | 96 | 1295.60 | 1269.69 | 1117.33 | 12.0 | 16 | 20,315 | 1357.41 | exit: close > 10 EMA |
-| ENTERO | DIP | 94 | 1832.10 | 1795.46 | 1580.00 | 12.0 | 11 | 19,750 | 1900.08 | exit: close > 10 EMA |
-| PARAGMILK | DIP | 90 | 315.44 | 309.13 | 272.04 | 12.0 | 67 | 20,712 | 328.91 | exit: close > 10 EMA |
-| GRWRHITECH | DIP | 93 | 7447.50 | 7298.55 | 6422.72 | 12.0 | 2 | 14,597 | 7677.75 | exit: close > 10 EMA |
-| TANLA | DIP | 83 | 624.70 | 612.21 | 538.74 | 12.0 | 34 | 20,815 | 665.44 | exit: close > 10 EMA |
-| NITINSPIN | DIP | 95 | 676.45 | 662.92 | 583.37 | 12.0 | 31 | 20,551 | 683.46 | exit: close > 10 EMA |
-| BOROLTD | DIP | 86 | 314.80 | 308.50 | 271.48 | 12.0 | 67 | 20,670 | 319.38 | exit: close > 10 EMA |
-| SONACOMS | DIP | 94 | 881.50 | 863.87 | 760.21 | 12.0 | 24 | 20,733 | 892.13 | exit: close > 10 EMA |
-| MINDACORP | DIP | 80 | 708.90 | 694.72 | 611.36 | 12.0 | 29 | 20,147 | 718.68 | exit: close > 10 EMA |
-| KTKBANK | DIP | 93 | 339.70 | 332.91 | 292.96 | 12.0 | 62 | 20,640 | 342.86 | exit: close > 10 EMA |
-| KARURVYSYA | DIP | 86 | 370.00 | 362.60 | 319.09 | 12.0 | 57 | 20,668 | 378.03 | exit: close > 10 EMA |
-| MAHABANK | DIP | 91 | 94.20 | 92.32 | 81.24 | 12.0 | 225 | 20,771 | 94.80 | exit: close > 10 EMA |
-| INDHOTEL | DIP | 89 | 886.70 | 868.97 | 764.69 | 12.0 | 23 | 19,986 | 890.30 | exit: close > 10 EMA |
-| RAYMOND | DIP | 99 | 1183.20 | 1159.54 | 1020.39 | 12.0 | 17 | 19,712 | 1180.11 | exit: close > 10 EMA |
-| COFORGE | DIP | 87 | 2000.00 | 1960.00 | 1724.80 | 12.0 | 10 | 19,600 | 2051.19 | exit: close > 10 EMA |
-| AEGISVOPAK | DIP | 81 | 276.71 | 271.18 | 238.63 | 12.0 | 76 | 20,609 | 276.48 | exit: close > 10 EMA |
-| DCBBANK | DIP | 84 | 227.17 | 222.63 | 195.91 | 12.0 | 93 | 20,704 | 229.28 | exit: close > 10 EMA |
-| NYKAA | DIP | 86 | 353.00 | 345.94 | 304.43 | 12.0 | 60 | 20,756 | 356.78 | exit: close > 10 EMA |
-| PVRINOX | DIP | 95 | 1638.20 | 1605.44 | 1412.78 | 12.0 | 12 | 19,265 | 1658.25 | exit: close > 10 EMA |
-| ITDC | DIP | 77 | 655.30 | 642.19 | 565.13 | 12.0 | 32 | 20,550 | 657.42 | exit: close > 10 EMA |
-| KDDL | DIP | 95 | 4511.10 | 4420.88 | 3890.37 | 12.0 | 4 | 17,684 | 4463.38 | exit: close > 10 EMA |
-| HINDOILEXP | DIP | 94 | 213.01 | 208.75 | 183.70 | 12.0 | 99 | 20,666 | 208.68 | exit: close > 10 EMA |
-| IGIL | DIP | 87 | 423.20 | 414.74 | 364.97 | 12.0 | 50 | 20,737 | 428.86 | exit: close > 10 EMA |
-| KRBL | DIP | 72 | 417.30 | 408.95 | 359.88 | 12.0 | 50 | 20,448 | 417.71 | exit: close > 10 EMA |
-| CUB | DIP | 81 | 239.00 | 234.22 | 206.11 | 12.0 | 88 | 20,611 | 237.73 | exit: close > 10 EMA |
-| ORIENTHOT | DIP | 95 | 177.85 | 174.29 | 153.38 | 12.0 | 119 | 20,741 | 176.74 | exit: close > 10 EMA |
-| POONAWALLA | DIP | 79 | 508.60 | 498.43 | 438.62 | 12.0 | 41 | 20,436 | 501.92 | exit: close > 10 EMA |
-| RBLBANK | DIP | 80 | 389.25 | 381.46 | 335.69 | 12.0 | 54 | 20,599 | 388.01 | exit: close > 10 EMA |
-| DYNAMATECH | DIP | 88 | 13224.00 | 12959.52 | 11404.38 | 12.0 | 1 | 12,960 | 13208.07 | exit: close > 10 EMA |
-| ADANIPORTS | DIP | 83 | 1911.30 | 1873.07 | 1648.31 | 12.0 | 11 | 20,604 | 1911.83 | exit: close > 10 EMA |
-| LENSKART | DIP | 93 | 716.80 | 702.46 | 618.17 | 12.0 | 29 | 20,371 | 723.84 | exit: close > 10 EMA |
-| YATHARTH | DIP | 92 | 1079.45 | 1057.86 | 930.92 | 12.0 | 19 | 20,099 | 1073.60 | exit: close > 10 EMA |
-| NELCAST | DIP | 86 | 144.04 | 141.16 | 124.22 | 12.0 | 147 | 20,750 | 147.61 | exit: close > 10 EMA |
-| SANGAMIND | DIP | 92 | 676.05 | 662.53 | 583.03 | 12.0 | 31 | 20,538 | 666.39 | exit: close > 10 EMA |
-| APLLTD | DIP | 90 | 1018.80 | 998.42 | 878.61 | 12.0 | 20 | 19,968 | 1019.28 | exit: close > 10 EMA |
-| FEDERALBNK | DIP | 85 | 356.85 | 349.71 | 307.75 | 12.0 | 59 | 20,633 | 358.88 | exit: close > 10 EMA |
-| MOTILALOFS | DIP | 92 | 1215.25 | 1190.94 | 1048.03 | 12.0 | 17 | 20,246 | 1203.02 | exit: close > 10 EMA |
-| ABCAPITAL | DIP | 80 | 413.50 | 405.23 | 356.60 | 12.0 | 51 | 20,667 | 412.41 | exit: close > 10 EMA |
-| BOSCHLTD | DIP | 87 | 48830.00 | 47853.40 | 42110.99 | 12.0 | 0 | 0 | 49172.85 | exit: close > 10 EMA |
-| RUBICON | BREAKOUT | 98 | 1851.70 | 1862.62 | 1773.61 | 4.8 | 28 | 52,153 | 2085.15 | 20 EMA |
-| MCX | BREAKOUT | 94 | 3835.00 | 3872.73 | 3718.60 | 4.0 | 16 | 61,964 | 4258.06 | 20 EMA |
-| WOCKPHARMA | BREAKOUT | 94 | 2233.70 | 2250.59 | 2151.72 | 4.4 | 25 | 56,265 | 2497.76 | 20 EMA |
-| SHAILY | BREAKOUT | 89 | 3379.60 | 3480.35 | 3332.35 | 4.2 | 16 | 55,686 | 3850.34 | 20 EMA |
-| DHAMPURSUG | BREAKOUT | 88 | 180.01 | 186.24 | 177.23 | 4.8 | 277 | 51,589 | 208.76 | 20 EMA |
-| LODHA | BREAKOUT | 79 | 1261.20 | 1271.44 | 1217.13 | 4.3 | 46 | 58,486 | 1407.21 | 20 EMA |
-| ANANDRATHI | READY | 93 | 2410.00 | 2414.82 | 2381.53 | 1.4 | 51 | 123,156 | 2498.03 | 20 EMA |
-| RATNAVEER | PULLBACK | 99 | 405.00 | 412.47 | 383.60 | 7.0 | 86 | 35,473 | 458.74 | 20 EMA |
-| CCAVENUE | PULLBACK | 99 | 115.03 | 117.23 | 109.03 | 7.0 | 304 | 35,639 | 129.61 | 20 EMA |
-| LAURUSLABS | PULLBACK | 98 | 2505.00 | 2522.03 | 2345.49 | 7.0 | 14 | 35,308 | 2763.34 | 20 EMA |
-| CPPLUS | PULLBACK | 98 | 4235.00 | 4266.92 | 3991.60 | 6.5 | 9 | 38,402 | 4705.81 | 20 EMA |
-| ACUTAAS | PULLBACK | 97 | 4079.90 | 4132.25 | 3842.99 | 7.0 | 8 | 33,058 | 4569.39 | 20 EMA |
-| KMEW | PULLBACK | 97 | 693.80 | 700.30 | 661.00 | 5.6 | 63 | 44,119 | 802.36 | 10 EMA |
-| SAMBHV | PULLBACK | 96 | 174.04 | 177.82 | 165.38 | 7.0 | 200 | 35,565 | 201.82 | 10 EMA |
-| THELEELA | PULLBACK | 95 | 685.85 | 690.28 | 668.60 | 3.1 | 115 | 79,382 | 760.52 | 20 EMA |
-| AETHER | PULLBACK | 95 | 1700.80 | 1735.26 | 1613.80 | 7.0 | 20 | 34,705 | 1926.56 | 20 EMA |
-| UTTAMSUGAR | PULLBACK | 95 | 381.80 | 389.13 | 361.89 | 7.0 | 91 | 35,411 | 453.16 | 10 EMA |
-| EIMCOELECO | PULLBACK | 94 | 2547.60 | 2595.18 | 2413.52 | 7.0 | 13 | 33,737 | 2912.59 | 20 EMA |
-| SHYAMMETL | PULLBACK | 93 | 1293.00 | 1306.51 | 1260.30 | 3.5 | 54 | 70,551 | 1428.03 | 20 EMA |
-| SATIN | PULLBACK | 93 | 255.19 | 256.95 | 250.15 | 2.6 | 367 | 94,302 | 280.04 | 20 EMA |
-| GABRIEL | PULLBACK | 93 | 1537.30 | 1548.39 | 1470.30 | 5.0 | 32 | 49,548 | 1722.64 | 20 EMA |
-| PTCIL | PULLBACK | 92 | 24875.00 | 25014.93 | 23825.00 | 4.8 | 2 | 50,030 | 27198.43 | 20 EMA |
-| KALYANKJIL | PULLBACK | 92 | 639.80 | 651.30 | 614.07 | 5.7 | 67 | 43,637 | 732.28 | 20 EMA |
-| RKFORGE | PULLBACK | 91 | 787.85 | 791.58 | 736.17 | 7.0 | 45 | 35,621 | 876.27 | 20 EMA |
-| MANAKCOAT | PULLBACK | 91 | 160.46 | 167.72 | 155.98 | 7.0 | 212 | 35,558 | 195.77 | 10 EMA |
-| NPST | PULLBACK | 90 | 1766.10 | 1792.38 | 1685.20 | 6.0 | 23 | 41,225 | 1993.51 | 20 EMA |
-| PPLPHARMA | PULLBACK | 89 | 235.60 | 240.76 | 223.91 | 7.0 | 148 | 35,633 | 263.21 | 20 EMA |
-| JSWINFRA | PULLBACK | 88 | 365.65 | 368.74 | 342.92 | 7.0 | 96 | 35,399 | 397.71 | 20 EMA |
-| STYLAMIND | PULLBACK | 87 | 3298.40 | 3331.65 | 3212.00 | 3.6 | 20 | 66,633 | 3619.30 | 20 EMA |
-| FLUOROCHEM | PULLBACK | 87 | 4781.20 | 4839.16 | 4661.12 | 3.7 | 14 | 67,748 | 5310.67 | 20 EMA |
-| TECHM | PULLBACK | 87 | 1854.70 | 1861.62 | 1757.00 | 5.6 | 23 | 42,817 | 1963.36 | 20 EMA |
-| JYOTICNC | PULLBACK | 86 | 1050.35 | 1066.98 | 1011.15 | 5.2 | 44 | 46,947 | 1185.41 | 20 EMA |
-| GROWW | PULLBACK | 86 | 220.01 | 223.90 | 214.75 | 4.1 | 273 | 61,124 | 243.32 | 20 EMA |
-| URBANCO | PULLBACK | 86 | 170.72 | 175.09 | 163.34 | 6.7 | 212 | 37,119 | 194.91 | 20 EMA |
-| AARTIDRUGS | PULLBACK | 86 | 491.85 | 500.95 | 475.50 | 5.1 | 98 | 49,093 | 561.14 | 20 EMA |
-| SEJALLTD | PULLBACK | 86 | 889.20 | 902.80 | 846.49 | 6.2 | 44 | 39,723 | 1054.02 | 10 EMA |
-| SIMPLEXINF | PULLBACK | 85 | 296.70 | 298.60 | 284.25 | 4.8 | 174 | 51,956 | 334.86 | 20 EMA |
-| NEULANDLAB | PULLBACK | 84 | 21119.00 | 21298.51 | 20480.00 | 3.8 | 3 | 63,896 | 23245.52 | 20 EMA |
-| RACLGEAR | PULLBACK | 84 | 1608.20 | 1637.57 | 1529.10 | 6.6 | 23 | 37,664 | 1818.78 | 20 EMA |
-| KPRMILL | PULLBACK | 83 | 1190.50 | 1198.39 | 1160.41 | 3.2 | 65 | 77,895 | 1300.66 | 20 EMA |
-| COHANCE | PULLBACK | 83 | 502.60 | 507.86 | 472.31 | 7.0 | 70 | 35,550 | 564.38 | 20 EMA |
-| LTTS | PULLBACK | 82 | 4245.20 | 4306.60 | 4092.50 | 5.0 | 11 | 47,373 | 4605.56 | 20 EMA |
-| RAYMONDREL | PULLBACK | 82 | 619.05 | 629.01 | 601.50 | 4.4 | 90 | 56,610 | 701.05 | 20 EMA |
-| TORNTPHARM | PULLBACK | 81 | 5019.10 | 5040.06 | 4756.56 | 5.6 | 8 | 40,320 | 5297.82 | 20 EMA |
-| ALEMBICLTD | PULLBACK | 80 | 105.58 | 107.65 | 101.59 | 5.6 | 411 | 44,246 | 122.26 | 10 EMA |
-| KAJARIACER | PULLBACK | 79 | 1223.40 | 1228.45 | 1172.50 | 4.5 | 44 | 54,052 | 1309.05 | 20 EMA |
-| WEWORK | PULLBACK | 79 | 678.30 | 682.96 | 650.20 | 4.8 | 76 | 51,905 | 739.75 | 20 EMA |
-| METROPOLIS | PULLBACK | 78 | 580.30 | 613.12 | 570.21 | 7.0 | 58 | 35,561 | 663.92 | 20 EMA |
-| GAIL | PULLBACK | 77 | 188.00 | 190.52 | 184.77 | 3.0 | 434 | 82,686 | 201.03 | 20 EMA |
-| HIKAL | PULLBACK | 75 | 228.33 | 233.32 | 216.98 | 7.0 | 153 | 35,697 | 257.60 | 20 EMA |
-| ETHOSLTD | PULLBACK | 70 | 2774.60 | 2806.60 | 2652.50 | 5.5 | 16 | 44,906 | 3077.94 | 20 EMA |
-| SBC | BASING | 99 | 68.35 | - | - | - | - | - | - | - |
-| MANKIND | BASING | 84 | 2685.00 | - | - | - | - | - | - | - |
+| ROLEXRINGS | DIP | 89 | 188.90 | 178.41 | 151.65 | 15.0 | 93 | 16,592 | 195.42 | exit: close > 10 EMA |
+| VRLLOG | DIP | 81 | 314.75 | 294.43 | 250.27 | 15.0 | 56 | 16,488 | 326.71 | exit: close > 10 EMA |
+| WESTLIFE | DIP | 80 | 612.30 | 578.35 | 491.60 | 15.0 | 28 | 16,194 | 644.50 | exit: close > 10 EMA |
+| SAREGAMA | DIP | 94 | 618.35 | 589.85 | 501.37 | 15.0 | 28 | 16,516 | 637.90 | exit: close > 10 EMA |
+| KTKBANK | DIP | 90 | 335.25 | 319.92 | 271.94 | 15.0 | 52 | 16,636 | 341.47 | exit: close > 10 EMA |
+| BOROLTD | DIP | 83 | 310.90 | 294.79 | 250.57 | 15.0 | 56 | 16,508 | 317.83 | exit: close > 10 EMA |
+| POONAWALLA | DIP | 75 | 494.90 | 474.60 | 403.41 | 15.0 | 35 | 16,611 | 500.65 | exit: close > 10 EMA |
+| ADANIPORTS | DIP | 80 | 1880.00 | 1829.63 | 1555.19 | 15.0 | 9 | 16,467 | 1906.04 | exit: close > 10 EMA |
+| SONACOMS | DIP | 93 | 879.00 | 851.29 | 723.59 | 15.0 | 19 | 16,174 | 889.74 | exit: close > 10 EMA |
+| ENTERO | DIP | 93 | 1823.40 | 1701.61 | 1446.36 | 15.0 | 9 | 15,314 | 1886.14 | exit: close > 10 EMA |
+| ORIENTHOT | DIP | 94 | 174.88 | 168.00 | 142.80 | 15.0 | 99 | 16,632 | 176.41 | exit: close > 10 EMA |
+| TANLA | DIP | 83 | 617.05 | 575.83 | 489.46 | 15.0 | 28 | 16,123 | 656.64 | exit: close > 10 EMA |
+| PETRONET | DIP | 78 | 322.35 | 314.13 | 267.01 | 15.0 | 53 | 16,649 | 324.83 | exit: close > 10 EMA |
+| HONASA | DIP | 91 | 512.55 | 489.05 | 415.69 | 15.0 | 34 | 16,628 | 518.39 | exit: close > 10 EMA |
+| MOTHERSON | DIP | 81 | 161.50 | 155.03 | 131.77 | 15.0 | 107 | 16,588 | 163.84 | exit: close > 10 EMA |
+| CUB | DIP | 77 | 233.10 | 221.94 | 188.65 | 15.0 | 75 | 16,645 | 236.89 | exit: close > 10 EMA |
+| NYKAA | DIP | 83 | 350.65 | 339.87 | 288.89 | 15.0 | 49 | 16,654 | 355.66 | exit: close > 10 EMA |
+| PHOENIXLTD | DIP | 86 | 2229.70 | 2137.32 | 1816.73 | 15.0 | 7 | 14,961 | 2239.38 | exit: close > 10 EMA |
+| REGAAL | DIP | 80 | 95.25 | 88.32 | 75.07 | 15.0 | 188 | 16,605 | 96.43 | exit: close > 10 EMA |
+| DCBBANK | DIP | 79 | 223.66 | 211.33 | 179.63 | 15.0 | 78 | 16,484 | 228.25 | exit: close > 10 EMA |
+| INDHOTEL | DIP | 87 | 884.80 | 856.18 | 727.76 | 15.0 | 19 | 16,267 | 889.30 | exit: close > 10 EMA |
+| TI | DIP | 74 | 536.85 | 510.78 | 434.16 | 15.0 | 32 | 16,345 | 536.39 | exit: close > 10 EMA |
+| LALPATHLAB | DIP | 83 | 1983.30 | 1912.74 | 1625.83 | 15.0 | 8 | 15,302 | 2002.56 | exit: close > 10 EMA |
+| ASAHIINDIA | DIP | 85 | 1158.20 | 1113.60 | 946.56 | 15.0 | 14 | 15,590 | 1153.90 | exit: close > 10 EMA |
+| YATHARTH | DIP | 89 | 1076.85 | 1032.39 | 877.53 | 15.0 | 16 | 16,518 | 1074.19 | exit: close > 10 EMA |
+| GAIL | DIP | 73 | 185.00 | 180.64 | 153.54 | 15.0 | 92 | 16,619 | 187.11 | exit: close > 10 EMA |
+| MEDANTA | DIP | 80 | 1473.70 | 1424.18 | 1210.55 | 15.0 | 11 | 15,666 | 1471.94 | exit: close > 10 EMA |
+| NILKAMAL | DIP | 84 | 1953.30 | 1848.13 | 1570.91 | 15.0 | 9 | 16,633 | 2041.42 | exit: close > 10 EMA |
+| PNBHOUSING | DIP | 79 | 1162.00 | 1119.72 | 951.76 | 15.0 | 14 | 15,676 | 1157.14 | exit: close > 10 EMA |
+| APLLTD | DIP | 87 | 1013.40 | 971.09 | 825.43 | 15.0 | 17 | 16,509 | 1018.21 | exit: close > 10 EMA |
+| ABCAPITAL | DIP | 77 | 410.30 | 396.60 | 337.11 | 15.0 | 42 | 16,657 | 412.03 | exit: close > 10 EMA |
+| PPLPHARMA | DIP | 86 | 231.00 | 220.25 | 187.21 | 15.0 | 75 | 16,519 | 236.45 | exit: close > 10 EMA |
+| KOTAKBANK | DIP | 84 | 500.00 | 486.94 | 413.90 | 15.0 | 34 | 16,556 | 499.89 | exit: close > 10 EMA |
+| BAJFINANCE | DIP | 72 | 1080.00 | 1041.88 | 885.60 | 15.0 | 15 | 15,628 | 1095.07 | exit: close > 10 EMA |
+| ALEMBICLTD | DIP | 74 | 103.23 | 96.10 | 81.69 | 15.0 | 173 | 16,626 | 106.41 | exit: close > 10 EMA |
+| ASKAUTOLTD | DIP | 85 | 625.55 | 596.88 | 507.35 | 15.0 | 27 | 16,116 | 629.94 | exit: close > 10 EMA |
+| AMANTA | DIP | 94 | 208.66 | 186.14 | 158.22 | 15.0 | 89 | 16,567 | 215.78 | exit: close > 10 EMA |
+| KARURVYSYA | DIP | 84 | 371.10 | 355.89 | 302.50 | 15.0 | 46 | 16,371 | 376.77 | exit: close > 10 EMA |
+| UNOMINDA | DIP | 76 | 1354.00 | 1301.79 | 1106.52 | 15.0 | 12 | 15,621 | 1360.18 | exit: close > 10 EMA |
+| SBC | DIP | 98 | 68.10 | 66.27 | 56.33 | 15.0 | 251 | 16,633 | 68.36 | exit: close > 10 EMA |
+| AUROPHARMA | DIP | 89 | 1791.80 | 1743.25 | 1481.76 | 15.0 | 9 | 15,689 | 1801.51 | exit: close > 10 EMA |
+| ARHAM | DIP | 87 | 208.48 | 195.31 | 166.01 | 15.0 | 85 | 16,601 | 210.73 | exit: close > 10 EMA |
+| VIJAYA | DIP | 88 | 1552.50 | 1470.34 | 1249.79 | 15.0 | 11 | 16,174 | 1541.10 | exit: close > 10 EMA |
+| ETERNAL | DIP | 86 | 363.00 | 351.24 | 298.55 | 15.0 | 47 | 16,508 | 364.93 | exit: close > 10 EMA |
+| CNL | DIP | 96 | 1304.90 | 1208.86 | 1027.53 | 15.0 | 13 | 15,715 | 1347.86 | exit: close > 10 EMA |
+| ALIVUS | DIP | 89 | 1413.00 | 1348.08 | 1145.87 | 15.0 | 12 | 16,177 | 1432.67 | exit: close > 10 EMA |
+| KOPRAN | DIP | 96 | 268.16 | 247.80 | 210.63 | 15.0 | 67 | 16,603 | 271.79 | exit: close > 10 EMA |
+| EMCURE | DIP | 93 | 2308.60 | 2212.24 | 1880.41 | 15.0 | 7 | 15,486 | 2302.31 | exit: close > 10 EMA |
+| RADICO | DIP | 89 | 4646.60 | 4500.98 | 3825.84 | 15.0 | 3 | 13,503 | 4633.14 | exit: close > 10 EMA |
+| MARICO | DIP | 80 | 922.30 | 901.28 | 766.09 | 15.0 | 18 | 16,223 | 917.75 | exit: close > 10 EMA |
+| MINDACORP | DIP | 77 | 711.55 | 681.03 | 578.88 | 15.0 | 24 | 16,345 | 717.38 | exit: close > 10 EMA |
+| ICICIBANK | DIP | 81 | 1593.40 | 1550.35 | 1317.79 | 15.0 | 10 | 15,503 | 1595.89 | exit: close > 10 EMA |
+| ACMESOLAR | READY | 93 | 426.35 | 432.86 | 418.70 | 3.3 | 176 | 76,184 | 468.27 | 20 EMA |
+| ANANDRATHI | READY | 92 | 2412.20 | 2433.46 | 2399.53 | 1.4 | 51 | 124,106 | 2518.28 | 20 EMA |
+| CCAVENUE | PULLBACK | 99 | 119.09 | 121.14 | 112.66 | 7.0 | 294 | 35,616 | 134.77 | 20 EMA |
+| RAYMOND | PULLBACK | 98 | 1278.60 | 1297.59 | 1206.76 | 7.0 | 27 | 35,035 | 1459.68 | 20 EMA |
+| CPPLUS | PULLBACK | 98 | 4307.20 | 4327.64 | 4085.60 | 5.6 | 10 | 43,276 | 4766.08 | 20 EMA |
+| RUBICON | PULLBACK | 97 | 1869.30 | 1883.06 | 1751.24 | 7.0 | 18 | 33,895 | 2107.80 | 20 EMA |
+| MBAPL | PULLBACK | 97 | 198.24 | 199.40 | 191.50 | 4.0 | 316 | 63,010 | 218.72 | 20 EMA |
+| SANSERA | PULLBACK | 97 | 4742.20 | 4770.12 | 4562.80 | 4.3 | 12 | 57,241 | 5279.55 | 20 EMA |
+| AVADHSUGAR | PULLBACK | 97 | 875.30 | 895.59 | 832.90 | 7.0 | 39 | 34,928 | 1014.16 | 10 EMA |
+| SAMBHV | PULLBACK | 95 | 177.30 | 180.25 | 167.63 | 7.0 | 198 | 35,689 | 203.35 | 10 EMA |
+| UTTAMSUGAR | PULLBACK | 95 | 390.65 | 395.59 | 367.90 | 7.0 | 90 | 35,603 | 455.34 | 10 EMA |
+| THELEELA | PULLBACK | 94 | 690.00 | 696.99 | 668.60 | 4.1 | 88 | 61,335 | 764.18 | 20 EMA |
+| NITINSPIN | PULLBACK | 94 | 693.65 | 697.09 | 675.50 | 3.1 | 115 | 80,166 | 765.56 | 20 EMA |
+| PVRINOX | PULLBACK | 94 | 1679.10 | 1695.18 | 1626.00 | 4.1 | 36 | 61,027 | 1853.83 | 20 EMA |
+| AETHER | PULLBACK | 94 | 1761.40 | 1773.54 | 1649.39 | 7.0 | 20 | 35,471 | 1975.18 | 20 EMA |
+| QPOWER | PULLBACK | 94 | 1496.80 | 1532.76 | 1437.00 | 6.2 | 26 | 39,852 | 1737.10 | 10 EMA |
+| MCX | PULLBACK | 93 | 3900.00 | 3947.68 | 3671.34 | 7.0 | 9 | 35,529 | 4338.55 | 20 EMA |
+| EIMCOELECO | PULLBACK | 93 | 2647.50 | 2715.22 | 2525.15 | 7.0 | 13 | 35,298 | 3055.11 | 10 EMA |
+| GRWRHITECH | PULLBACK | 93 | 7580.00 | 7613.70 | 7325.00 | 3.8 | 8 | 60,910 | 8370.49 | 20 EMA |
+| SHYAMMETL | PULLBACK | 92 | 1305.40 | 1318.83 | 1260.30 | 4.4 | 42 | 55,391 | 1439.91 | 20 EMA |
+| PTCIL | PULLBACK | 92 | 25460.00 | 25651.20 | 24130.00 | 5.9 | 1 | 25,651 | 27885.67 | 20 EMA |
+| SOUTHBANK | PULLBACK | 92 | 58.12 | 59.00 | 57.16 | 3.1 | 1358 | 80,119 | 63.66 | 20 EMA |
+| KALYANKJIL | PULLBACK | 92 | 659.50 | 666.83 | 624.00 | 6.4 | 58 | 38,676 | 748.76 | 20 EMA |
+| KAMDHENU | PULLBACK | 92 | 38.37 | 38.67 | 36.11 | 6.6 | 977 | 37,778 | 44.12 | 10 EMA |
+| WOCKPHARMA | PULLBACK | 92 | 2244.40 | 2282.96 | 2123.15 | 7.0 | 15 | 34,244 | 2531.72 | 20 EMA |
+| AAREYDRUGS | PULLBACK | 92 | 112.07 | 114.93 | 106.88 | 7.0 | 310 | 35,628 | 129.17 | 20 EMA |
+| LENSKART | PULLBACK | 91 | 718.35 | 724.85 | 704.66 | 2.8 | 123 | 89,156 | 780.31 | 20 EMA |
+| SATIN | PULLBACK | 91 | 255.72 | 263.42 | 251.75 | 4.4 | 214 | 56,371 | 284.88 | 20 EMA |
+| AVTNPL | PULLBACK | 91 | 100.25 | 103.04 | 95.82 | 7.0 | 346 | 35,650 | 116.35 | 10 EMA |
+| GABRIEL | PULLBACK | 91 | 1546.80 | 1587.17 | 1476.07 | 7.0 | 22 | 34,918 | 1770.69 | 20 EMA |
+| MANAKCOAT | PULLBACK | 91 | 165.68 | 169.84 | 157.95 | 7.0 | 210 | 35,666 | 197.28 | 10 EMA |
+| MMFL | PULLBACK | 90 | 631.65 | 635.27 | 595.25 | 6.3 | 62 | 39,387 | 729.72 | 10 EMA |
+| DYNAMATECH | PULLBACK | 90 | 13877.00 | 14028.00 | 13046.04 | 7.0 | 2 | 28,056 | 15563.95 | 20 EMA |
+| DHANBANK | PULLBACK | 90 | 38.93 | 40.03 | 37.23 | 7.0 | 892 | 35,707 | 46.38 | 10 EMA |
+| PARAGMILK | PULLBACK | 90 | 321.63 | 334.67 | 313.13 | 6.4 | 116 | 38,821 | 388.53 | 10 EMA |
+| NPST | PULLBACK | 89 | 1772.50 | 1826.75 | 1698.87 | 7.0 | 19 | 34,708 | 2031.93 | 20 EMA |
+| SEJALLTD | PULLBACK | 89 | 934.00 | 965.28 | 897.71 | 7.0 | 36 | 34,750 | 1123.81 | 10 EMA |
+| COFORGE | PULLBACK | 88 | 2071.00 | 2095.18 | 1948.52 | 7.0 | 17 | 35,618 | 2285.22 | 20 EMA |
+| SANATHAN | PULLBACK | 88 | 564.35 | 570.99 | 537.90 | 5.8 | 75 | 42,824 | 635.56 | 20 EMA |
+| IGIL | PULLBACK | 87 | 429.65 | 452.15 | 420.50 | 7.0 | 78 | 35,268 | 499.37 | 20 EMA |
+| GROWW | PULLBACK | 86 | 222.41 | 225.64 | 216.47 | 4.1 | 272 | 61,374 | 245.23 | 20 EMA |
+| URBANCO | PULLBACK | 86 | 174.92 | 176.19 | 163.86 | 7.0 | 202 | 35,591 | 196.43 | 20 EMA |
+| NELCAST | PULLBACK | 86 | 147.85 | 150.70 | 142.09 | 5.7 | 290 | 43,703 | 173.73 | 10 EMA |
+| BOSCHLTD | PULLBACK | 85 | 49170.00 | 49418.64 | 48439.35 | 2.0 | 2 | 98,837 | 52218.02 | 20 EMA |
+| FLUOROCHEM | PULLBACK | 85 | 4824.50 | 4848.08 | 4671.98 | 3.6 | 14 | 67,873 | 5315.58 | 20 EMA |
+| RACLGEAR | PULLBACK | 85 | 1649.10 | 1673.24 | 1556.11 | 7.0 | 21 | 35,138 | 1854.95 | 20 EMA |
+| RAYMONDREL | PULLBACK | 85 | 651.60 | 656.31 | 610.37 | 7.0 | 54 | 35,441 | 733.06 | 20 EMA |
+| FEDERALBNK | PULLBACK | 84 | 360.00 | 364.38 | 353.60 | 3.0 | 231 | 84,171 | 387.80 | 20 EMA |
+| NEULANDLAB | PULLBACK | 84 | 21435.00 | 21543.00 | 20546.00 | 4.6 | 2 | 43,086 | 23441.17 | 20 EMA |
+| JYOTICNC | PULLBACK | 84 | 1058.65 | 1085.17 | 1011.15 | 6.8 | 33 | 35,810 | 1203.54 | 20 EMA |
+| GESHIP | PULLBACK | 83 | 1550.60 | 1560.11 | 1516.69 | 2.8 | 57 | 88,926 | 1695.31 | 20 EMA |
+| GRAPHITE | PULLBACK | 83 | 792.00 | 804.56 | 779.55 | 3.1 | 99 | 79,651 | 869.49 | 20 EMA |
+| KPRMILL | PULLBACK | 82 | 1217.30 | 1233.96 | 1164.10 | 5.7 | 35 | 43,189 | 1337.23 | 20 EMA |
+| ARTEMISMED | PULLBACK | 80 | 326.40 | 328.66 | 307.95 | 6.3 | 120 | 39,439 | 361.29 | 20 EMA |
+| WEWORK | PULLBACK | 78 | 695.00 | 702.40 | 653.23 | 7.0 | 50 | 35,120 | 760.92 | 20 EMA |
+| ITDC | PULLBACK | 78 | 674.00 | 694.19 | 651.10 | 6.2 | 58 | 40,263 | 762.26 | 20 EMA |
+| RBLBANK | PULLBACK | 77 | 390.00 | 403.76 | 385.95 | 4.4 | 140 | 56,526 | 433.15 | 20 EMA |
+| HAL | PULLBACK | 77 | 5074.00 | 5158.30 | 4797.22 | 7.0 | 6 | 30,950 | 5488.73 | 20 EMA |
+| METROPOLIS | PULLBACK | 76 | 580.90 | 590.28 | 563.05 | 4.6 | 91 | 53,715 | 638.63 | 20 EMA |
+| LGEINDIA | PULLBACK | 76 | 1770.90 | 1792.58 | 1739.24 | 3.0 | 46 | 82,459 | 1930.05 | 20 EMA |
+| PROTEAN | PULLBACK | 76 | 693.75 | 701.60 | 668.14 | 4.8 | 74 | 51,918 | 796.41 | 10 EMA |
+| IKIO | PULLBACK | 75 | 190.45 | 193.52 | 184.20 | 4.8 | 268 | 51,862 | 218.83 | 10 EMA |
+| HIKAL | PULLBACK | 74 | 230.86 | 235.47 | 218.99 | 7.0 | 151 | 35,556 | 260.19 | 20 EMA |
+| MANKIND | BASING | 82 | 2689.40 | - | - | - | - | - | - | - |
 
 ## Strongest without a setup
 
 | Symbol | RS | Close | % off high | Pivot |
 |---|---|---|---|---|
-| CUPID | 99 | 371.1 | -5.6 | 393.0 |
-| SHREEJISPG | 99 | 910.65 | -2.9 | 937.95 |
-| TFCILTD | 99 | 174.94 | -0.0 | 173.99 |
-| GCSL | 99 | 850.55 | -1.7 | 860.95 |
-| ATHERENERG | 99 | 1906.0 | -5.7 | 2021.5 |
+| CUPID | 99 | 389.5 | -0.9 | 393.0 |
+| SHREEJISPG | 98 | 923.7 | -1.5 | 937.95 |
+| LAURUSLABS | 98 | 2504.4 | -1.1 | 2517.0 |
+| TFCILTD | 98 | 173.97 | -0.6 | 175.0 |
+| GCSL | 98 | 851.55 | -1.6 | 865.5 |
 
-Extended, don't chase: WELSPUNLIV, GREAVESCOT, ICIL, STYLEBAAZA, ARIS, ACE
+Extended, don't chase: WELSPUNLIV, SPORTKING, GREAVESCOT, GHCLTEXTIL, SYNCOMF, STYLEBAAZA, HINDOILEXP, ARIS, ACE, DHAMPURSUG, BEML
 
-## Previous shortlist (2026-11-25) today
+## Previous shortlist (2026-11-26) today
 
-- ALEMBICLTD: limit not reached, not bought
-- SPECTRUM: FILLED
-- NILKAMAL: limit not reached, not bought
-- MANAKCOAT: limit not reached, not bought
-- ROLEXRINGS: limit not reached, not bought
+- ROLEXRINGS: FILLED
+- SANATHAN: limit not reached, not bought
+- VRLLOG: limit not reached, not bought
+- WESTLIFE: FILLED
+- MMFL: limit not reached, not bought

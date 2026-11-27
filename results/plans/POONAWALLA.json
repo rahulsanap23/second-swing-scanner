@@ -1,0 +1,14 @@
+{
+ "symbol": "POONAWALLA",
+ "setup": "second-scanner dip",
+ "asof": "2026-11-27",
+ "entry": 474.6,
+ "stop": 403.41,
+ "target": 500.65,
+ "risk_per_share": 71.19,
+ "risk_pct": 15.0,
+ "reward_risk": 0.37,
+ "max_hold_days": 5,
+ "stop_rule": "price:403.41",
+ "qty": 35
+}
