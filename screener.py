@@ -46,9 +46,18 @@ P = dict(
                            # 3+ picks come on ~94% of days; deepest dips are still ranked first)
     dip_limit_pct=2.0,     # next day's buy LIMIT this % below the signal close (day order; cancel if not filled)
     dip_limit_pct_red=3.0, # deeper limit when the market is RED
-    dip_stop_pct=12.0,     # disaster stop % below the buy price (a tight stop hurts this setup; sizing uses it)
+    dip_stop_pct=15.0,     # disaster stop % below the buy price (27 Nov 2026: 12 -> 15; a tight stop hurts this
+                           # setup, see README "27 Nov 2026 fix"; sizing uses it)
+    # ---- breadth check (27 Nov 2026): the Nifty 500 can look fine while most stocks fall. Breadth is WEAK when
+    # fewer than breadth_min % of stocks are above their 50-day average, or the 10-day average of net new
+    # 52-week highs is below 0. Then: at most picks_weak picks, and the buy limit goes weak_limit_atr x ATR(14)
+    # below the close (a deeper discount), because shallow dips keep falling in a weak tape.
+    breadth_min=45.0,
+    picks_weak=3,
+    weak_limit_atr=1.25,
     dip_exit_ema=10,       # sell when the stock CLOSES above its 10-day EMA, or at the close of day hold_sessions
-    track_since="2026-11-12",  # the tracker/dashboard follows picks from this data date on (fresh start with
+    track_since="2026-11-12",
+    rules_version="2026-11-27",  # shown in the report and tracker (breadth check, 15% stop, skip stocks held)  # the tracker/dashboard follows picks from this data date on (fresh start with
                                # the DIP rules; older scans stay in results/history but are not tracked)
 )
 
@@ -182,6 +191,8 @@ def run(data_dir, prev=None):
             sma50=sma50.iloc[-1], sma150=sma150.iloc[-1], sma200=sma200.iloc[-1], sma200_1m=sma200.iloc[-23],
             hi252=hi252, lo252=lo252,
             new_high=bool(h.iloc[-1] >= h.iloc[-252:-1].max()), new_low=bool(l.iloc[-1] <= l.iloc[-252:-1].min()),
+            nh10=list((h >= h.shift().rolling(251, min_periods=200).max()).tail(10).astype(int)),
+            nl10=list((l <= l.shift().rolling(251, min_periods=200).min()).tail(10).astype(int)),
             rs_raw=0.4 * r(63) + 0.2 * r(126) + 0.2 * r(189) + 0.2 * r(251),
             r10=r(10), r21=r(21), r63=r(63), r126=r(126), r251=r(251),
             volmom=(r(126) / sigma + r(251) / sigma) / 2 if sigma > 0 else np.nan,
@@ -207,6 +218,11 @@ def run(data_dir, prev=None):
                    pct_above_50dma=round(float((df.close > df.sma50).mean() * 100), 1),
                    pct_above_200dma=round(float((df.close > df.sma200).mean() * 100), 1),
                    net_new_highs=int(df.new_high.sum() - df.new_low.sum()))
+    nh = np.array([x for x in df.nh10 if len(x) == 10]).sum(axis=0)
+    nl = np.array([x for x in df.nl10 if len(x) == 10]).sum(axis=0)
+    breadth["net_new_highs_10d_avg"] = round(float((nh - nl).mean()), 1)
+    weak = bool(breadth["pct_above_50dma"] < P["breadth_min"] or breadth["net_new_highs_10d_avg"] < 0)
+    breadth["weak"] = weak
 
     funnel = {"equities_with_1y_history": len(df)}
     u = df[(df.close >= P["min_price"]) & (df.turnover_cr >= P["min_turnover_cr"]) &
@@ -253,7 +269,10 @@ def run(data_dir, prev=None):
                      t1=np.nan, skip_above=np.nan, breakeven_at=np.nan, trail="", note=note)
         if x.setup == "DIP":
             # limit buy below the close; disaster stop; exit = close above the 10 EMA (t1 shows today's 10 EMA)
-            lim = P["dip_limit_pct_red"] if regime == "RED" else P["dip_limit_pct"]
+            if weak:                                 # weak breadth: deeper limit, sized to the stock's ATR
+                lim = P["weak_limit_atr"] * x.atr_pct
+            else:
+                lim = P["dip_limit_pct_red"] if regime == "RED" else P["dip_limit_pct"]
             entry = x.close * (1 - lim / 100)
             stop = entry * (1 - P["dip_stop_pct"] / 100)
             risk = (entry - stop) / entry * 100
@@ -318,7 +337,7 @@ def run(data_dir, prev=None):
             follow.append(dict(symbol=c["symbol"], setup=c["setup"], entry=c["entry"], stop=c["stop"],
                                high=b["high"], low=b["low"], close=b["close"], result=res))
 
-    return dict(asof=str(asof.date()), regime=regime,
+    return dict(asof=str(asof.date()), regime=regime, breadth_weak=weak, rules_version=P["rules_version"],
                 regime_reason=dict(n500_above_200sma=bool(conds[0]), n500_ema10_above_ema20=bool(conds[1])),
                 nifty500=s500, nifty50=s50, breadth=breadth, sectors_top=sectors[:6], sectors_bottom=sectors[-3:],
                 funnel=funnel, params=P, previous_asof=(prev or {}).get("asof"), yesterday=follow,
@@ -336,7 +355,9 @@ def to_markdown(o, status=None):
           f"Nifty 50 {o['nifty50']['close']} (50-day {o['nifty50']['sma50']}, 200-day {o['nifty50']['sma200']}); "
           f"Nifty 500 {o['nifty500']['close']} (200-day {o['nifty500']['sma200']})",
           f"Breadth: {o['breadth']['pct_above_50dma']}% above 50-day, {o['breadth']['pct_above_200dma']}% above "
-          f"200-day, net new highs {o['breadth']['net_new_highs']}",
+          f"200-day, net new highs {o['breadth']['net_new_highs']} (10-day avg "
+          f"{o['breadth'].get('net_new_highs_10d_avg', 'n/a')}): "
+          + ("**breadth WEAK**" if o.get("breadth_weak") else "breadth OK"),
           "Top sectors (50-day RS vs Nifty): " + ", ".join(f"{s['sector']} {s['rs50_vs_nifty']:+}" for s in o["sectors_top"][:3]),
           f"Funnel: {o['funnel']}", ""]
     if "best5" in o:
@@ -362,6 +383,8 @@ def to_markdown(o, status=None):
               "Sell at = the stock's 10-day average (% vs your buy price): sell on the first day it closes above it; "
               "the level moves a little each day. Stop loss = sell if it falls here (% vs your buy price). "
               "Sell by = if still held, sell at that day's close."]
+        if o.get("rules_version"):
+            L += [f"Rules version {o['rules_version']}."]
         if o.get("skipped"):
             L += ["", "Skipped: " + ", ".join(f"{x['symbol']} ({x['reason']})" for x in o["skipped"])]
         if o.get("reserve"):

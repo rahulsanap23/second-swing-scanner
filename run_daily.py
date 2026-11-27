@@ -72,8 +72,13 @@ def main():
     json.dump(status, open(status_path, "w"), indent=1)       # saved early so a later crash still leaves it
     prev = json.load(open(latest_path)) if os.path.exists(latest_path) else None
     out = screener.run(EOD2, prev)
+    held = {}
+    try:                                       # stocks still held after today's bar: don't pick them again
+        held = {t["symbol"]: t["entry_date"] for t in tracker.run(EOD2)["trades"] if t["status"] == "OPEN"}
+    except Exception as e:  # noqa: BLE001
+        print(f"::warning::Holdings check failed: {type(e).__name__}: {e}")
     try:
-        out = enrich.enrich_and_pick(out, hol, screener.P["capital"])
+        out = enrich.enrich_and_pick(out, hol, screener.P["capital"], held=held)
     except Exception as e:  # noqa: BLE001  keep the scan even if the lookups fail
         out["enrich_error"] = f"{type(e).__name__}: {e}"[:300]
         out["best5"] = [c for c in out["candidates"] if c["setup"] in enrich.SETUP_RANK][:5]

@@ -6,7 +6,7 @@ is tracked. "best_on" lists the days a stock was in GitHub's own best picks (bef
 the dashboard shows the morning report's final picks (reported.json, saved into the dashboard by the
 morning task) and falls back to best_on for days without that file.
 
-DIP picks (since 13 Nov 2026):
+DIP picks (since 13 Nov 2026; 27 Nov 2026 rules add the breadth check and a 15% stop, see "rules" per trade):
   - The limit buy is valid on the next trading day only: FILLED if that day's low reaches the limit,
     fill = min(open, limit); otherwise NOT TRIGGERED (shown as "Not bought").
   - From the fill day on: low <= disaster stop -> STOP HIT (at min(open, stop)); else a CLOSE above the
@@ -58,7 +58,8 @@ def load_picks():
         for c in d.get("shortlist") or d.get("best5") or []:
             if c.get("entry") is None or c.get("stop") is None or c.get("t1") is None:
                 continue
-            c = dict(c, asof=d["asof"], regime=d.get("regime"), in_best=c["symbol"] in best)
+            c = dict(c, asof=d["asof"], regime=d.get("regime"), in_best=c["symbol"] in best,
+                     breadth_weak=d.get("breadth_weak"), rules=d.get("rules_version") or "2026-11-12")
             picks.setdefault(c["symbol"], []).append(c)
     return picks
 
@@ -77,6 +78,7 @@ def prices(daily, symbol, since):
 
 def new_trade(p):
     return dict(symbol=p["symbol"], company=p.get("company"), setup=p["setup"], regime=p.get("regime"),
+                weak=p.get("breadth_weak"), rules=p.get("rules"),
                 suggested=[p["asof"]], best_on=[p["asof"]] if p.get("in_best") else [], close_at_pick=p["close"], entry=p["entry"], stop=p["stop"], t1=p["t1"],
                 sell_by=p.get("sell_by"),
                 status="WAITING", entry_date=None, fill=None, exit_date=None, exit_price=None,
@@ -241,6 +243,7 @@ def summarize(trades):
         avg_result_pct=avg([t["result_pct"] for t in done]), avg_r=avg([t["r_mult"] for t in done if t["r_mult"] is not None]),
         by_setup=group(lambda t: t["setup"]),
         by_regime=group(lambda t: t.get("regime") or "?"),
+        by_rules=group(lambda t: t.get("rules") or "?"),
         by_times_suggested=group(lambda t: "3+ days" if t["times_suggested"] >= 3 else f"{t['times_suggested']} day" + ("s" if t["times_suggested"] > 1 else "")),
     )
 

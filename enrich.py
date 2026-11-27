@@ -9,6 +9,8 @@ Ranking rules:
   - DIP: deepest dip first (lowest RSI(2)), as in the 2018-2026 backtest (no growth or RS re-ordering)
   - other setups: positive profit growth first (earnings momentum, AAMJAF 2015), then RS rating
   - skip if results are due within the hold period + 2 sessions; skip if the 90-day 15% gap flag is set
+  - skip stocks already held (an open trade in the tracker): no averaging down into a falling stock
+  - weak breadth (screener's breadth_weak): at most P["picks_weak"] picks
   - picks per market mood and size multipliers come from screener.P (picks_*/size_*)
   - total amount capped at capital (quantities scaled down if needed)
   - the top P["shortlist_n"] ranked stocks go to "shortlist" for the morning Claude checks
@@ -135,12 +137,16 @@ def last_quarter_end(asof):
     return dt.date(asof.year, 3 * q, 1) if q else dt.date(asof.year - 1, 12, 1)
 
 
-def enrich_and_pick(out, hol, capital, n_pick=None):
+def enrich_and_pick(out, hol, capital, n_pick=None, held=None):
     import screener                                     # settings live in screener.P
     P = screener.P
     regime = out["regime"]
     n_pick = n_pick or P.get(f"picks_{regime.lower()}", 5)
     size = P.get(f"size_{regime.lower()}", 1.0)
+    weak = bool(out.get("breadth_weak"))
+    if weak:
+        n_pick = min(n_pick, P.get("picks_weak", 3))
+    held = held or {}
     allowed = [s for s in (P.get("setups_allowed") or SETUP_RANK) if s in SETUP_RANK]
     rank = lambda c: (SETUP_RANK[c["setup"]], c.get("rsi2", 0) if c["setup"] == "DIP" else -c["rs_rating"])
     dip_only = allowed == ["DIP"]
@@ -148,6 +154,12 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
                         + (f", buy limits {P['dip_limit_pct_red']:g}% below the close." if dip_only else "."),
                  "YELLOW": f"Market YELLOW (mixed): {n_pick} picks at {size:.0%} size"
                            + ("." if dip_only else ", RS 85+ only.")}.get(regime)
+    if weak:
+        b = out.get("breadth", {})
+        mood_line = ((mood_line + " ") if mood_line else "") + (
+            f"Breadth WEAK ({b.get('pct_above_50dma')}% of stocks above their 50-day average, net new highs "
+            f"10-day avg {b.get('net_new_highs_10d_avg')}): {n_pick} picks, buy limits "
+            f"{P['weak_limit_atr']:g} x ATR below the close (deeper dips only).")
 
     asof = dt.date.fromisoformat(out["asof"])
     cands = out["candidates"]
@@ -177,7 +189,9 @@ def enrich_and_pick(out, hol, capital, n_pick=None):
     picks, skipped = [], []
     for c in setups:
         why = None
-        if c.get("results_in_sessions") is not None and c["results_in_sessions"] <= results_window:
+        if c["symbol"] in held:
+            why = f"already holding (bought {held[c['symbol']]})"
+        elif c.get("results_in_sessions") is not None and c["results_in_sessions"] <= results_window:
             why = f"results on {c['next_results']}"
         elif c.get("note") and "gap" in c["note"]:
             why = "15% gap in last 90 days"

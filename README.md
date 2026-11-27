@@ -22,21 +22,52 @@ Days appended from the daily files are not split-adjusted until EOD2 catches up;
 - `screener.py` – the filters (thresholds and their sources are in the `P` dict)
 - `tracker.py` – follows every stock in each day's ranked top 10 (so every stock the morning report can pick is covered): bought or not, then (DIP) close above the 10 EMA, disaster stop or Sold day 5, or (older picks) Target 1, Stop, Breakeven or Sold day 5, with scores by setup and market mood; writes `results/tracker.json` and the dashboard page `results/tracker.html` (from `tracker_template.html`). The dashboard shows the morning report's final picks by default (the morning task saves them into the dashboard as `reported.json`; days without that list fall back to GitHub's own best picks) and has an "All top 10" switch
 - Tracking starts from `track_since` in `screener.py` (12 Nov 2026 scan, the first with the DIP rules); older scans stay in `results/history/` but aren't tracked
-- `run_daily.py` – pipeline entry point; skips if results are already fresh (`FORCE=1` to re-run)
+- `backtest.py` – replays the DIP rules on every trading day since 2018 with strict fills and the tracker's exits (`python3 backtest.py <eod2_dir>`); the source of the numbers below
+- `run_daily.py` – pipeline entry point (also passes the tracker's open trades to `enrich.py` so held stocks aren't picked again); skips if results are already fresh (`FORCE=1` to re-run)
 - `results/status.json` – `fresh: true/false`, data date, sources used, errors
 - `results/latest.json`, `results/latest.md` – today's scan (`best5`, `reserve`, `shortlist` = top 10 for the morning checks, `mood_line`); `results/history/` – one file per data date
 - `results/plans/` – one plan file per shortlisted stock in the india-timemachine skill's format (entry, stop, target = the 10 EMA at the pick for DIP, 5-session time stop)
 
 ## Filters (summary)
 
-0. Regime: Nifty 500 above its 200-day SMA and 10-day EMA above 20-day EMA → GREEN; one → YELLOW; none → RED (fewer, smaller picks)
+0. Regime: Nifty 500 above its 200-day SMA and 10-day EMA above 20-day EMA → GREEN; one → YELLOW; none → RED (fewer, smaller picks).
+   Breadth check (since 27 Nov 2026): breadth is WEAK when under 45% of stocks are above their 50-day average or the 10-day average of net new 52-week highs is below 0 (the index can look GREEN while most stocks fall)
 1. Tradable: NSE EQ series, ≥1 year history, price ≥ ₹20, 20-day median turnover ≥ ₹2.5 cr (50× a ₹5 lakh account), circuit hits < 20% of days
 2. Minervini trend template (price/50/150/200-day SMA order, 200-day rising, ≥30% above 52-week low, within 25% of high)
 3. RS rating ≥ 70 (40% 3-month + 20% each 6/9/12-month return, percentile)
 4. Setups: **DIP** (RSI(2) < 30 at the close: a 1–3 day dip in a trend-template leader; deepest dips ranked first), BREAKOUT (close > 21-day high on ≥1.5× volume), READY (tight base within 3% of pivot), PULLBACK (up-day bounce off a rising 20 EMA)
-5. Setup types: only DIP setups are picked since 13 Nov 2026 (`setups_allowed` in `screener.py`; `None` = DIP, BREAKOUT, READY and PULLBACK, in that order). DIP stocks are ranked deepest dip first (lowest RSI(2)). Skip if results fall within 7 sessions or the stock gapped 15% in 90 days (split check)
-6. Picks: 5 in GREEN, 5 at half size in YELLOW, 3 at half size in RED
-7. DIP plan: next day's LIMIT buy 2% below the signal close (3% in RED), valid that day only; 12% disaster stop (`dip_stop_pct`; also sets the size: 0.5% of ₹5 lakh = ₹2,500 risk ÷ 12% ≈ ₹21k a position before the market-mood size cut); sell when the stock CLOSES above its 10-day EMA (at that close or the next open), or at the close of day 5
+5. Setup types: only DIP setups are picked since 13 Nov 2026 (`setups_allowed` in `screener.py`; `None` = DIP, BREAKOUT, READY and PULLBACK, in that order). DIP stocks are ranked deepest dip first (lowest RSI(2)). Skip if results fall within 7 sessions, the stock gapped 15% in 90 days (split check), or it is already held (an open trade in the tracker)
+6. Picks: 5 in GREEN, 5 at half size in YELLOW, 3 at half size in RED; at most 3 when breadth is WEAK
+7. DIP plan: next day's LIMIT buy 2% below the signal close (3% in RED; 1.25 × ATR(14) below it when breadth is WEAK), valid that day only; 15% disaster stop (`dip_stop_pct`; also sets the size: 0.5% of ₹5 lakh = ₹2,500 risk ÷ 15% ≈ ₹16.7k a position before the market-mood size cut); sell when the stock CLOSES above its 10-day EMA (at that close or the next open), or at the close of day 5
+
+## 27 Nov 2026 fix: why the picks kept falling, and what changed
+
+Live, 12–26 Nov 2026: 25 of 60 ideas filled; of the 13 closed, 4 won (avg −2.0%), and the 29 limit orders
+that did not fill went UP (median +1.3%). Two causes, both confirmed by `backtest.py`:
+
+1. **The limit order fills mostly on stocks that keep falling.** In the backtest too, filled stocks are a median
+   −1.4% five days later while unfilled ones are +1.0%. This is the price of the discount, and the discount is
+   still the edge: buying the same dips at the next open, or waiting for a bounce day, loses money (below).
+2. **Weak breadth.** The Nifty 500 stayed above its 200-day average (GREEN), but only 11–47% of stocks were above
+   their 50-day average through October and November, and new 52-week lows outnumbered new highs. Dips don't get
+   bought back in that tape: the old rules made −1.35% a trade over Oct–Nov 2026 in the backtest, like the live result.
+
+Strict fills (the low must trade 0.2% through the limit, or the stock opens below it), 0.25% costs, 2018 – 13 Nov 2026:
+
+| Rules | Trades | Win | Avg / trade | 2018–22 | 2023–26 | 2025–26 | Weak breadth days | 5% worst | Years + |
+|---|---|---|---|---|---|---|---|---|---|
+| Old (12 Nov live): 2% limit, 12% stop | 2,777 | 57.6% | +0.23% | +0.18% | +0.30% | +0.14% | +0.02% | −12.2% | 6 of 9 |
+| **New (27 Nov live)**: + breadth check (weak: 3 picks, limit 1.25 × ATR), 15% stop, skip held | 1,641 | 58.3% | **+0.66%** | +0.54% | +0.80% | +0.95% | +1.32% | −8.9% | 7 of 9 |
+
+Orders are still placed on 93% of days (3+ a day), but fewer fill: about 0.8 trades a day instead of 1.3.
+
+Ideas tested and rejected (avg per trade, same strict fills): buy at the next open −0.16%; wait for a close above
+the prior high then buy −0.53% to −0.77%; turnover ≥ ₹10 cr 0.00%, ≥ ₹25 cr −0.14%; only the first dip day −0.04%;
+limit 0.5 × ATR in all markets +0.22%; skip trading on weak days +0.47% (fewer trades than the 3-pick rule);
+8% stop +0.18%; exit on a close above the prior high +0.06% better but not in both halves, so the 10 EMA exit stays.
+
+Even with the fix, about 4 in 10 trades lose and an average loser is −4.6%: judge the rules on 50+ closed trades,
+not a week or two.
 
 ## Why DIP (13 Nov 2026 backtest, NSE daily data 2018 – Nov 2026)
 
@@ -56,5 +87,7 @@ costs this setup some edge, but caps the rare large loss: 1 trade in 20 lost abo
 Why the old rules lost: over a 1-week hold, Indian stocks that just ran up (high RSI(2), volume spikes, RS 94–99) tend to give
 some of it back, while sharp dips in leaders tend to bounce. Caveats: the price data may lack delisted stocks; a limit is counted
 as filled when the day's low touches it.
+
+Note: the 13 Nov table above counted a limit as filled when the day's low touched it; `backtest.py` uses strict fills, which is why its old-rules numbers are lower.
 
 Rules-based screen, not investment advice.

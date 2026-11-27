@@ -108,6 +108,8 @@ function summary(T) {
     avg: avg(g.filter(t => CLOSED.includes(t.status)).map(t => t.result_pct || 0))});
   const moods = {};
   for (const k of ["GREEN", "YELLOW", "RED"]) { const g = T.filter(t => t.regime === k); if (g.length) moods[k] = one(g); }
+  { const w = T.filter(t => t.weak); if (w.length) moods["Weak breadth"] = one(w); }
+  for (const r of [...new Set(T.map(t => t.rules).filter(Boolean))].sort()) moods["Rules " + r] = one(T.filter(t => t.rules === r));
   const setups = {};
   for (const k of ["DIP", "PULLBACK", "BREAKOUT", "READY"]) { const g = T.filter(t => t.setup === k); if (g.length) setups[k] = one(g); }
   return {target: tgt.length, stop: stp.length, dTgt: avg(tgt.map(t => t.days)), dStp: avg(stp.map(t => t.days)),
