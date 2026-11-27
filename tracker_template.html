@@ -182,9 +182,9 @@ fetch("reported.json", {cache: "no-store"}).then(r => r.ok ? r.json() : null).th
 }).catch(() => {});
 
 $("note").textContent = "Report picks = the stocks the 7:45 AM report gave you. All top 10 = every stock in each day's ranked shortlist. " +
-  "Buy at = the limit buy price, good for the next trading day only (Not bought = the price never dipped to it). " +
-  "Sell at = the stock's 10-day average: sell on the first day it closes above it (Sold at target). For a stock you hold it shows today's level, which moves a little each day; % is against your buy price. " +
-  "Stop loss = sell if it falls to this price (% against your buy price). If neither happens, sell at the close of day " + MAXD + " (Sold on day " + MAXD + "). " +
+  "Buy at = the limit buy price, good for the next trading day only (Not bought = the price didn't trade at least 0.2% below it). " +
+  "Sell at = the stock's 10-day average: once the stock closes above it, sell at the next morning's open (Sold at target). For a stock you hold it shows today's level, which moves a little each day; % is against your buy price. " +
+  "Stop loss = sell if it falls to this price (% against your buy price). If neither happens, sell at the open after day " + MAXD + " (Sold on day " + MAXD + "). " +
   "Price now = the latest NSE close; the arrow % shows bought trades only, against your buy price. Older PULLBACK/BREAKOUT picks (before 13 Nov) used a buy-stop and Target 1. " +
   "Win rate = closed trades that made money. Results are before Zerodha charges (about 0.25% a trade).";
 </script>

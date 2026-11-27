@@ -207,7 +207,7 @@ def enrich_and_pick(out, hol, capital, n_pick=None, held=None):
     buy_day = add_trading_days(asof, 1, hol)                # the limit buy is good for this day only
     for c in shortlist:                                     # dates and % for the report and dashboard
         c["buy_date"] = buy_day.isoformat()
-        c["sell_by"] = add_trading_days(buy_day, hold - 1, hol).isoformat()   # close of day `hold`
+        c["sell_by"] = add_trading_days(buy_day, hold, hol).isoformat()       # the open after day `hold`
         c["buy_pct"] = round((c["entry"] / c["close"] - 1) * 100, 1)        # buy price vs last close
         c["sell_pct"] = round((c["t1"] / c["entry"] - 1) * 100, 1)          # sell level vs buy price
         c["stop_pct"] = round((c["stop"] / c["entry"] - 1) * 100, 1)        # stop loss vs buy price

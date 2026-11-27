@@ -106,7 +106,7 @@ def features(px):
 
 DEFAULT = dict(rsi2_max=30, limit_mode="pct", limit_pct=2.0, limit_pct_red=3.0, limit_atr=0.5, min_turnover=2.5,
                breadth_min=None, weak_min_turnover=None, weak_picks=None, first_dip_only=False, no_open_repeat=True,
-               confirm=False, entry="limit", exit_mode="ema10", weak_limit_atr=None, fill="strict", stop_pct=12.0, hold=5, picks=(5, 5, 3), start="2018-01-01",
+               confirm=False, entry="limit", exit_mode="ema10", weak_limit_atr=None, exit_next_open=True, extra=None, buy_days=1, fill="strict", stop_pct=12.0, hold=5, picks=(5, 5, 3), start="2018-01-01",
                end=None)
 
 
@@ -122,6 +122,8 @@ def simulate(px, f, **kw):
     syms = np.array(px["Close"].columns)
     base = (f["hist_ok"] & f["eq"] & (px["Close"] >= screener.P["min_price"]) & (f["circuit"] < screener.P["max_circuit_frac"])
             & f["tt"] & (f["rs"] >= screener.P["rs_min"]) & ~f["gap15"]).values
+    if k["extra"] is not None:
+        base = base & k["extra"].reindex_like(px["Close"]).fillna(False).values
     turn = f["turnover"].values
     rsi = f["rsi2"].values
     dip = rsi < k["rsi2_max"]
@@ -177,11 +179,17 @@ def simulate(px, f, **kw):
                 fill = O[d, j]
             else:
                 trig = lim * 0.998 if k["fill"] == "strict" else lim
-                if O[d, j] <= lim:
-                    fill = O[d, j]
-                elif L[d, j] <= trig:
-                    fill = lim
-                else:
+                fill = None
+                for dd in range(i + 1, min(i + 1 + k["buy_days"], len(dates))):
+                    if np.isnan(O[dd, j]):
+                        continue
+                    if O[dd, j] <= lim:
+                        fill, d = O[dd, j], dd
+                        break
+                    if L[dd, j] <= trig:
+                        fill, d = lim, dd
+                        break
+                if fill is None:
                     trades.append(dict(date=dates[i], sym=syms[j], filled=False, regime=reg, weak=weak,
                                        turn=turn[i, j], fwd=(C[min(d + 4, len(dates) - 1), j] / c - 1) * 100))
                     continue
@@ -195,10 +203,16 @@ def simulate(px, f, **kw):
                     exitp, why = min(O[t, j], stop) if t > d else stop, "stop"
                     break
                 if C[t, j] > E[t, j]:
-                    exitp, why = C[t, j], "ema"
+                    if k["exit_next_open"] and t + 1 < len(dates) and not np.isnan(O[t + 1, j]):
+                        exitp, why = O[t + 1, j], "ema"
+                    else:
+                        exitp, why = C[t, j], "ema"
                     break
                 if n >= k["hold"]:
-                    exitp, why = C[t, j], "day5"
+                    if k["exit_next_open"] and t + 1 < len(dates) and not np.isnan(O[t + 1, j]):
+                        exitp, why = O[t + 1, j], "day5"
+                    else:
+                        exitp, why = C[t, j], "day5"
                     break
             if exitp is None:            # ran out of data
                 continue

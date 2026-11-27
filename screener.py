@@ -55,7 +55,9 @@ P = dict(
     breadth_min=45.0,
     picks_weak=3,
     weak_limit_atr=1.25,
-    dip_exit_ema=10,       # sell when the stock CLOSES above its 10-day EMA, or at the close of day hold_sessions
+    dip_exit_ema=10,       # sell at the NEXT OPEN after the stock CLOSES above its 10-day EMA, or after the close of
+                           # day hold_sessions (27 Nov 2026: was "at that close"; next open +1.01% vs +0.66% a trade)
+    fill_through_pct=0.2,  # tracker/backtest: a limit fills only if the low trades this % through it (or opens below)
     track_since="2026-11-27",  # the tracker/dashboard follows picks from this data date on (fresh start with the
                                # 27 Nov 2026 rules, first reported Mon 30 Nov; older scans stay in results/history
                                # but are not tracked)
@@ -376,14 +378,15 @@ def to_markdown(o, status=None):
             else:
                 buy, sell = f"{c['entry']:.2f} or higher", f"{c['t1']:.2f}{pc('sell_pct')}"
             L.append(f"| {i} | {c['symbol']} ({c.get('company') or 'name n/a'}) | {c['close']:.2f} | {buy} | {sell} | "
-                     f"{c['stop']:.2f}{pc('stop_pct')} | {c.get('sell_by') or f'day {hold} close'} | {c['qty']:.0f} | "
+                     f"{c['stop']:.2f}{pc('stop_pct')} | {c.get('sell_by') or f'open after day {hold}'} | {c['qty']:.0f} | "
                      f"{c['amount']:,.0f} | {yoy} | {c.get('next_results') or 'not announced'} |")
         if not o["best5"]:
             L.append("| - | no stock passed today | | | | | | | | | |")
         L += ["", "Buy at = limit buy price for the next trading day (% vs price now); cancel it if it doesn't fill. "
-              "Sell at = the stock's 10-day average (% vs your buy price): sell on the first day it closes above it; "
-              "the level moves a little each day. Stop loss = sell if it falls here (% vs your buy price). "
-              "Sell by = if still held, sell at that day's close."]
+              "Sell at = the stock's 10-day average (% vs your buy price): once the stock CLOSES above it, sell at the "
+              "next morning's open; the level moves a little each day. Stop loss = sell if it falls here (% vs your buy "
+              "price; place it as a GTT, which stays active, not a day SL order). "
+              "Sell by = if still held, sell at that day's 9:15 open."]
         if o.get("rules_version"):
             L += [f"Rules version {o['rules_version']}."]
         if o.get("skipped"):

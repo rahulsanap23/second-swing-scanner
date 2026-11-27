@@ -7,10 +7,11 @@ the dashboard shows the morning report's final picks (reported.json, saved into 
 morning task) and falls back to best_on for days without that file.
 
 DIP picks (since 13 Nov 2026; 27 Nov 2026 rules add the breadth check and a 15% stop, see "rules" per trade):
-  - The limit buy is valid on the next trading day only: FILLED if that day's low reaches the limit,
-    fill = min(open, limit); otherwise NOT TRIGGERED (shown as "Not bought").
+  - The limit buy is valid on the next trading day only: FILLED if the stock opens at or below the limit or
+    that day's low trades 0.2% through it (a bare touch often doesn't fill), fill = min(open, limit);
+    otherwise NOT TRIGGERED (shown as "Not bought").
   - From the fill day on: low <= disaster stop -> STOP HIT (at min(open, stop)); else a CLOSE above the
-    10-day EMA -> EXIT 10EMA at that close; else no exit by the close of day 5 -> SOLD DAY 5 at that close.
+    10-day EMA -> EXIT 10EMA at the NEXT day's open; else after the close of day 5 -> SOLD DAY 5 at the next open.
 
 Other setups (BREAKOUT / READY / PULLBACK, the rules before 13 Nov 2026):
   - A pick's buy-stop is valid on the next trading day only.
@@ -45,6 +46,8 @@ MAX_DAYS = screener.P.get("hold_sessions", 5)
 BE_AT_R = screener.P.get("breakeven_at_r", 1.0)
 CLOSED = ("TARGET HIT", "EXIT 10EMA", "STOP HIT", "BREAKEVEN", "SOLD DAY %d" % MAX_DAYS)
 EXIT_EMA = screener.P.get("dip_exit_ema", 10)
+FILL_THROUGH = screener.P.get("fill_through_pct", 0.2)   # a limit counts as filled only if the low trades this % through it
+                                                         # (or the stock opens below it), as in backtest.py
 TRACK_SINCE = screener.P.get("track_since") or "0000-00-00"
 
 
@@ -98,13 +101,15 @@ def finish(t, status, date, price):
 
 
 def check_exit_dip(t, r):
+    """Stop: during the day (GTT). A close above the 10 EMA, or the close of day 5: sell at the NEXT open
+    (27 Nov 2026: you can't know the close in time to sell at it; the next open also tested better)."""
     o, l, c = r.Open, r.Low, r.Close
     if l <= t["stop"]:
         return finish(t, "STOP HIT", r.Date, min(o, t["stop"]))
     if c > r.Ema:
-        return finish(t, "EXIT 10EMA", r.Date, c)
-    if t["days"] >= MAX_DAYS:
-        return finish(t, "SOLD DAY %d" % MAX_DAYS, r.Date, c)
+        t["sell_next_open"] = "EXIT 10EMA"
+    elif t["days"] >= MAX_DAYS:
+        t["sell_next_open"] = "SOLD DAY %d" % MAX_DAYS
 
 
 def check_exit(t, r):
@@ -142,7 +147,7 @@ def track_symbol(picks, rows):
         if cur and cur["status"] == "WAITING" and r.Date > cur["suggested"][-1]:
             cur["eval_date"] = r.Date
             if cur["setup"] == "DIP":                          # limit buy below the signal close
-                if r.Low <= cur["entry"]:
+                if r.Open <= cur["entry"] or r.Low <= cur["entry"] * (1 - FILL_THROUGH / 100):
                     cur.update(status="OPEN", entry_date=r.Date, fill=round(min(r.Open, cur["entry"]), 2), days=1)
                     check_exit(cur, r)
                 else:
@@ -154,6 +159,8 @@ def track_symbol(picks, rows):
                 check_exit(cur, r)
             else:
                 cur["status"] = "NOT TRIGGERED"
+        elif cur and cur["status"] == "OPEN" and cur.get("sell_next_open"):
+            finish(cur, cur.pop("sell_next_open"), r.Date, r.Open)     # sell signal last close: out at this open
         elif cur and cur["status"] == "OPEN":
             cur["days"] += 1
             check_exit(cur, r)
@@ -187,12 +194,14 @@ def track_symbol(picks, rows):
         trades.append(cur)
     for t in trades:
         t.pop("eval_date", None)
+        sell = t.pop("sell_next_open", None)
         a = t.pop("active_stop", None)
         if t["status"] != "OPEN":
             t.pop("ema_now", None)
         if t["status"] == "OPEN":                             # for the morning to-do list
             t["stop_now"] = round(a or t["stop"], 2)
-            t["sell_day_is_next"] = t["days"] + 1 >= MAX_DAYS
+            t["sell_at_open"] = sell                          # sell at the next 9:15 open (reason), or None
+            t["last_day_today"] = sell is None and t["days"] + 1 >= MAX_DAYS   # day 5: sell at the open after it
         t["cmp"] = rows[-1].Close if rows else None          # latest NSE close for the dashboard
         t["cmp_date"] = rows[-1].Date if rows else None
         t["times_suggested"] = len(t["suggested"])

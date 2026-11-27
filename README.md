@@ -38,7 +38,7 @@ Days appended from the daily files are not split-adjusted until EOD2 catches up;
 4. Setups: **DIP** (RSI(2) < 30 at the close: a 1–3 day dip in a trend-template leader; deepest dips ranked first), BREAKOUT (close > 21-day high on ≥1.5× volume), READY (tight base within 3% of pivot), PULLBACK (up-day bounce off a rising 20 EMA)
 5. Setup types: only DIP setups are picked since 13 Nov 2026 (`setups_allowed` in `screener.py`; `None` = DIP, BREAKOUT, READY and PULLBACK, in that order). DIP stocks are ranked deepest dip first (lowest RSI(2)). Skip if results fall within 7 sessions, the stock gapped 15% in 90 days (split check), or it is already held (an open trade in the tracker)
 6. Picks: 5 in GREEN, 5 at half size in YELLOW, 3 at half size in RED; at most 3 when breadth is WEAK
-7. DIP plan: next day's LIMIT buy 2% below the signal close (3% in RED; 1.25 × ATR(14) below it when breadth is WEAK), valid that day only; 15% disaster stop (`dip_stop_pct`; also sets the size: 0.5% of ₹5 lakh = ₹2,500 risk ÷ 15% ≈ ₹16.7k a position before the market-mood size cut); sell when the stock CLOSES above its 10-day EMA (at that close or the next open), or at the close of day 5
+7. DIP plan: next day's LIMIT buy 2% below the signal close (3% in RED; 1.25 × ATR(14) below it when breadth is WEAK), valid that day only; 15% disaster stop placed as a GTT (`dip_stop_pct`; also sets the size: 0.5% of ₹5 lakh = ₹2,500 risk ÷ 15% ≈ ₹16.7k a position before the market-mood size cut); once the stock CLOSES above its 10-day EMA, sell at the next morning's open; if neither happens, sell at the open after day 5 (since 27 Nov 2026; before, the sale was at that close)
 
 ## 27 Nov 2026 fix: why the picks kept falling, and what changed
 
@@ -66,7 +66,23 @@ the prior high then buy −0.53% to −0.77%; turnover ≥ ₹10 cr 0.00%, ≥ �
 limit 0.5 × ATR in all markets +0.22%; skip trading on weak days +0.47% (fewer trades than the 3-pick rule);
 8% stop +0.18%; exit on a close above the prior high +0.06% better but not in both halves, so the 10 EMA exit stays.
 
-Even with the fix, about 4 in 10 trades lose and an average loser is −4.6%: judge the rules on 50+ closed trades,
+**Sell at the next open, GTT stop, strict tracker fills (27 Nov 2026, second change).** Nobody can know the close
+in time to sell at it, so the exit now happens at the 9:15 open after the signal close (or after day 5). It also
+tested better: +1.01% a trade instead of +0.66% (2018–22 +0.96%, 2023–26 +1.06%), 60.6% winners, 8 of 9 years
+positive. The stop is placed as a GTT (a Zerodha SL order expires at the close). The tracker now uses the same strict
+fill rule as the backtest. A buy order kept open 2 or 3 days instead of 1 did worse (+0.77%, +0.68%).
+Other filters tested and dropped: skip big-volume dip days (+0.05%, noise), skip stocks moving over 5–7% a day
+(worse), RS 85+/90+ (worse), skip one-day drops over 6% (no change).
+
+**Never-seen years, 2009–2017** (the rules were chosen on 2018–2026): new rules +0.57% a trade, 61% winners, 6 of 9
+years positive (2010, 2011, 2015 lost); old rules +0.22%. Expect the live edge nearer +0.5% than +1.0%.
+
+What to expect with the live rules (2018–2026 backtest, about ₹16.7k a position): about 1 in 5 limit orders fill,
+roughly 14 trades a month; 61% of trades make money, 23% make over 5%, 14% lose over 5%, 2% hit the stop; about
+2 months in 3 are positive; a stretch of 13 trades with 4 or fewer winners happened 8% of the time, and the longest
+losing run was 13. Judge the live rules after 50 closed trades: average +0.3% or better with 55%+ winners = working.
+
+Even with the fix, about 4 in 10 trades lose and an average loser is about −4.8%: judge the rules on 50+ closed trades,
 not a week or two.
 
 ## Why DIP (13 Nov 2026 backtest, NSE daily data 2018 – Nov 2026)
